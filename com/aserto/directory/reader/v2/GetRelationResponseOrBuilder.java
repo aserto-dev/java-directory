@@ -50,4 +50,58 @@ public interface GetRelationResponseOrBuilder extends
    */
   com.aserto.directory.common.v2.RelationOrBuilder getResultsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  int getObjectsCount();
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  boolean containsObjects(
+      java.lang.String key);
+  /**
+   * Use {@link #getObjectsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object>
+  getObjects();
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object>
+  getObjectsMap();
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  /* nullable */
+com.aserto.directory.common.v2.Object getObjectsOrDefault(
+      java.lang.String key,
+      /* nullable */
+com.aserto.directory.common.v2.Object defaultValue);
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  com.aserto.directory.common.v2.Object getObjectsOrThrow(
+      java.lang.String key);
 }

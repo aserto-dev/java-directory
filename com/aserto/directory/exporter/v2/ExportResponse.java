@@ -428,6 +428,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (objectBuilder_ != null) {
         objectBuilder_.clear();
       }
@@ -471,44 +472,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.exporter.v2.ExportResponse buildPartial() {
       com.aserto.directory.exporter.v2.ExportResponse result = new com.aserto.directory.exporter.v2.ExportResponse(this);
-      if (msgCase_ == 2) {
-        if (objectBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = objectBuilder_.build();
-        }
-      }
-      if (msgCase_ == 3) {
-        if (objectTypeBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = objectTypeBuilder_.build();
-        }
-      }
-      if (msgCase_ == 4) {
-        if (relationBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = relationBuilder_.build();
-        }
-      }
-      if (msgCase_ == 5) {
-        if (relationTypeBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = relationTypeBuilder_.build();
-        }
-      }
-      if (msgCase_ == 6) {
-        if (permissionBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = permissionBuilder_.build();
-        }
-      }
-      result.msgCase_ = msgCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.exporter.v2.ExportResponse result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.aserto.directory.exporter.v2.ExportResponse result) {
+      result.msgCase_ = msgCase_;
+      result.msg_ = this.msg_;
+      if (msgCase_ == 2 &&
+          objectBuilder_ != null) {
+        result.msg_ = objectBuilder_.build();
+      }
+      if (msgCase_ == 3 &&
+          objectTypeBuilder_ != null) {
+        result.msg_ = objectTypeBuilder_.build();
+      }
+      if (msgCase_ == 4 &&
+          relationBuilder_ != null) {
+        result.msg_ = relationBuilder_.build();
+      }
+      if (msgCase_ == 5 &&
+          relationTypeBuilder_ != null) {
+        result.msg_ = relationTypeBuilder_.build();
+      }
+      if (msgCase_ == 6 &&
+          permissionBuilder_ != null) {
+        result.msg_ = permissionBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -558,6 +554,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aserto.directory.common.v2.Object, com.aserto.directory.common.v2.Object.Builder, com.aserto.directory.common.v2.ObjectOrBuilder> objectBuilder_;
@@ -733,7 +730,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 2;
-      onChanged();;
+      onChanged();
       return objectBuilder_;
     }
 
@@ -911,7 +908,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 3;
-      onChanged();;
+      onChanged();
       return objectTypeBuilder_;
     }
 
@@ -1089,7 +1086,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 4;
-      onChanged();;
+      onChanged();
       return relationBuilder_;
     }
 
@@ -1267,7 +1264,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 5;
-      onChanged();;
+      onChanged();
       return relationTypeBuilder_;
     }
 
@@ -1445,7 +1442,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 6;
-      onChanged();;
+      onChanged();
       return permissionBuilder_;
     }
     @java.lang.Override

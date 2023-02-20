@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.aserto.directory.common.v2.Object> results_;
   /**
    * <pre>
@@ -227,6 +228,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
       } else {
@@ -260,7 +262,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.reader.v2.GetObjectManyResponse buildPartial() {
       com.aserto.directory.reader.v2.GetObjectManyResponse result = new com.aserto.directory.reader.v2.GetObjectManyResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.aserto.directory.reader.v2.GetObjectManyResponse result) {
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -270,8 +278,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.reader.v2.GetObjectManyResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

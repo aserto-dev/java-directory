@@ -89,7 +89,7 @@ public interface ObjectDependencyOrBuilder extends
 
   /**
    * <pre>
-   * object type id of target object 
+   * object type id of target object
    * </pre>
    *
    * <code>string subject_type = 7 [json_name = "subjectType"];</code>
@@ -98,7 +98,7 @@ public interface ObjectDependencyOrBuilder extends
   java.lang.String getSubjectType();
   /**
    * <pre>
-   * object type id of target object 
+   * object type id of target object
    * </pre>
    *
    * <code>string subject_type = 7 [json_name = "subjectType"];</code>

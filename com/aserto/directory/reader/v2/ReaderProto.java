@@ -95,6 +95,11 @@ public final class ReaderProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aserto_directory_reader_v2_GetRelationResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aserto_directory_reader_v2_GetRelationResponse_ObjectsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aserto_directory_reader_v2_GetRelationResponse_ObjectsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aserto_directory_reader_v2_GetRelationsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -211,108 +216,114 @@ public final class ReaderProto {
       "ponse\022<\n\007results\030\001 \003(\0132\".aserto.director" +
       "y.common.v2.ObjectR\007results\022B\n\004page\030\t \001(" +
       "\0132..aserto.directory.common.v2.Paginatio" +
-      "nResponseR\004page\"Z\n\022GetRelationRequest\022D\n" +
-      "\005param\030\001 \001(\0132..aserto.directory.common.v" +
-      "2.RelationIdentifierR\005param\"U\n\023GetRelati" +
-      "onResponse\022>\n\007results\030\001 \003(\0132$.aserto.dir" +
-      "ectory.common.v2.RelationR\007results\"\236\001\n\023G" +
-      "etRelationsRequest\022D\n\005param\030\001 \001(\0132..aser" +
-      "to.directory.common.v2.RelationIdentifie" +
-      "rR\005param\022A\n\004page\030\t \001(\0132-.aserto.director" +
-      "y.common.v2.PaginationRequestR\004page\"\232\001\n\024" +
-      "GetRelationsResponse\022>\n\007results\030\001 \003(\0132$." +
-      "aserto.directory.common.v2.RelationR\007res" +
-      "ults\022B\n\004page\030\t \001(\0132..aserto.directory.co" +
-      "mmon.v2.PaginationResponseR\004page\"^\n\024GetP" +
-      "ermissionRequest\022F\n\005param\030\001 \001(\01320.aserto" +
-      ".directory.common.v2.PermissionIdentifie" +
-      "rR\005param\"W\n\025GetPermissionResponse\022>\n\006res" +
-      "ult\030\001 \001(\0132&.aserto.directory.common.v2.P" +
-      "ermissionR\006result\"Z\n\025GetPermissionsReque" +
-      "st\022A\n\004page\030\t \001(\0132-.aserto.directory.comm" +
-      "on.v2.PaginationRequestR\004page\"\236\001\n\026GetPer" +
-      "missionsResponse\022@\n\007results\030\001 \003(\0132&.aser" +
-      "to.directory.common.v2.PermissionR\007resul" +
-      "ts\022B\n\004page\030\t \001(\0132..aserto.directory.comm" +
-      "on.v2.PaginationResponseR\004page\"\216\002\n\026Check" +
-      "PermissionRequest\022F\n\007subject\030\001 \001(\0132,.ase" +
+      "nResponseR\004page\"\223\001\n\022GetRelationRequest\022D" +
+      "\n\005param\030\001 \001(\0132..aserto.directory.common." +
+      "v2.RelationIdentifierR\005param\022&\n\014with_obj" +
+      "ects\030\002 \001(\010H\000R\013withObjects\210\001\001B\017\n\r_with_ob" +
+      "jects\"\215\002\n\023GetRelationResponse\022>\n\007results" +
+      "\030\001 \003(\0132$.aserto.directory.common.v2.Rela" +
+      "tionR\007results\022V\n\007objects\030\002 \003(\0132<.aserto." +
+      "directory.reader.v2.GetRelationResponse." +
+      "ObjectsEntryR\007objects\032^\n\014ObjectsEntry\022\020\n" +
+      "\003key\030\001 \001(\tR\003key\0228\n\005value\030\002 \001(\0132\".aserto." +
+      "directory.common.v2.ObjectR\005value:\0028\001\"\236\001" +
+      "\n\023GetRelationsRequest\022D\n\005param\030\001 \001(\0132..a" +
+      "serto.directory.common.v2.RelationIdenti" +
+      "fierR\005param\022A\n\004page\030\t \001(\0132-.aserto.direc" +
+      "tory.common.v2.PaginationRequestR\004page\"\232" +
+      "\001\n\024GetRelationsResponse\022>\n\007results\030\001 \003(\013" +
+      "2$.aserto.directory.common.v2.RelationR\007" +
+      "results\022B\n\004page\030\t \001(\0132..aserto.directory" +
+      ".common.v2.PaginationResponseR\004page\"^\n\024G" +
+      "etPermissionRequest\022F\n\005param\030\001 \001(\01320.ase" +
+      "rto.directory.common.v2.PermissionIdenti" +
+      "fierR\005param\"W\n\025GetPermissionResponse\022>\n\006" +
+      "result\030\001 \001(\0132&.aserto.directory.common.v" +
+      "2.PermissionR\006result\"Z\n\025GetPermissionsRe" +
+      "quest\022A\n\004page\030\t \001(\0132-.aserto.directory.c" +
+      "ommon.v2.PaginationRequestR\004page\"\236\001\n\026Get" +
+      "PermissionsResponse\022@\n\007results\030\001 \003(\0132&.a" +
+      "serto.directory.common.v2.PermissionR\007re" +
+      "sults\022B\n\004page\030\t \001(\0132..aserto.directory.c" +
+      "ommon.v2.PaginationResponseR\004page\"\216\002\n\026Ch" +
+      "eckPermissionRequest\022F\n\007subject\030\001 \001(\0132,." +
+      "aserto.directory.common.v2.ObjectIdentif" +
+      "ierR\007subject\022P\n\npermission\030\002 \001(\01320.asert" +
+      "o.directory.common.v2.PermissionIdentifi" +
+      "erR\npermission\022D\n\006object\030\003 \001(\0132,.aserto." +
+      "directory.common.v2.ObjectIdentifierR\006ob" +
+      "ject\022\024\n\005trace\030\007 \001(\010R\005trace\"E\n\027CheckPermi" +
+      "ssionResponse\022\024\n\005check\030\001 \001(\010R\005check\022\024\n\005t" +
+      "race\030\002 \003(\tR\005trace\"\212\002\n\024CheckRelationReque" +
+      "st\022F\n\007subject\030\001 \001(\0132,.aserto.directory.c" +
+      "ommon.v2.ObjectIdentifierR\007subject\022N\n\010re" +
+      "lation\030\002 \001(\01322.aserto.directory.common.v" +
+      "2.RelationTypeIdentifierR\010relation\022D\n\006ob" +
+      "ject\030\003 \001(\0132,.aserto.directory.common.v2." +
+      "ObjectIdentifierR\006object\022\024\n\005trace\030\007 \001(\010R" +
+      "\005trace\"C\n\025CheckRelationResponse\022\024\n\005check" +
+      "\030\001 \001(\010R\005check\022\024\n\005trace\030\002 \003(\tR\005trace\";\n\rC" +
+      "heckResponse\022\024\n\005check\030\001 \001(\010R\005check\022\024\n\005tr" +
+      "ace\030\002 \003(\tR\005trace\"\265\002\n\017GetGraphRequest\022D\n\006" +
+      "anchor\030\001 \001(\0132,.aserto.directory.common.v" +
+      "2.ObjectIdentifierR\006anchor\022F\n\007subject\030\002 " +
+      "\001(\0132,.aserto.directory.common.v2.ObjectI" +
+      "dentifierR\007subject\022N\n\010relation\030\003 \001(\01322.a" +
+      "serto.directory.common.v2.RelationTypeId" +
+      "entifierR\010relation\022D\n\006object\030\004 \001(\0132,.ase" +
       "rto.directory.common.v2.ObjectIdentifier" +
-      "R\007subject\022P\n\npermission\030\002 \001(\01320.aserto.d" +
-      "irectory.common.v2.PermissionIdentifierR" +
-      "\npermission\022D\n\006object\030\003 \001(\0132,.aserto.dir" +
-      "ectory.common.v2.ObjectIdentifierR\006objec" +
-      "t\022\024\n\005trace\030\007 \001(\010R\005trace\"E\n\027CheckPermissi" +
-      "onResponse\022\024\n\005check\030\001 \001(\010R\005check\022\024\n\005trac" +
-      "e\030\002 \003(\tR\005trace\"\212\002\n\024CheckRelationRequest\022" +
-      "F\n\007subject\030\001 \001(\0132,.aserto.directory.comm" +
-      "on.v2.ObjectIdentifierR\007subject\022N\n\010relat" +
-      "ion\030\002 \001(\01322.aserto.directory.common.v2.R" +
-      "elationTypeIdentifierR\010relation\022D\n\006objec" +
-      "t\030\003 \001(\0132,.aserto.directory.common.v2.Obj" +
-      "ectIdentifierR\006object\022\024\n\005trace\030\007 \001(\010R\005tr" +
-      "ace\"C\n\025CheckRelationResponse\022\024\n\005check\030\001 " +
-      "\001(\010R\005check\022\024\n\005trace\030\002 \003(\tR\005trace\";\n\rChec" +
-      "kResponse\022\024\n\005check\030\001 \001(\010R\005check\022\024\n\005trace" +
-      "\030\002 \003(\tR\005trace\"\265\002\n\017GetGraphRequest\022D\n\006anc" +
-      "hor\030\001 \001(\0132,.aserto.directory.common.v2.O" +
-      "bjectIdentifierR\006anchor\022F\n\007subject\030\002 \001(\013" +
-      "2,.aserto.directory.common.v2.ObjectIden" +
-      "tifierR\007subject\022N\n\010relation\030\003 \001(\01322.aser" +
-      "to.directory.common.v2.RelationTypeIdent" +
-      "ifierR\010relation\022D\n\006object\030\004 \001(\0132,.aserto" +
-      ".directory.common.v2.ObjectIdentifierR\006o" +
-      "bject\"Z\n\020GetGraphResponse\022F\n\007results\030\001 \003" +
-      "(\0132,.aserto.directory.common.v2.ObjectDe" +
-      "pendencyR\007results2\206\r\n\006Reader\022v\n\rGetObjec" +
-      "tType\0220.aserto.directory.reader.v2.GetOb" +
-      "jectTypeRequest\0321.aserto.directory.reade" +
-      "r.v2.GetObjectTypeResponse\"\000\022y\n\016GetObjec" +
-      "tTypes\0221.aserto.directory.reader.v2.GetO" +
-      "bjectTypesRequest\0322.aserto.directory.rea" +
-      "der.v2.GetObjectTypesResponse\"\000\022|\n\017GetRe" +
-      "lationType\0222.aserto.directory.reader.v2." +
-      "GetRelationTypeRequest\0323.aserto.director" +
-      "y.reader.v2.GetRelationTypeResponse\"\000\022\177\n" +
-      "\020GetRelationTypes\0223.aserto.directory.rea" +
-      "der.v2.GetRelationTypesRequest\0324.aserto." +
-      "directory.reader.v2.GetRelationTypesResp" +
-      "onse\"\000\022v\n\rGetPermission\0220.aserto.directo" +
-      "ry.reader.v2.GetPermissionRequest\0321.aser" +
-      "to.directory.reader.v2.GetPermissionResp" +
-      "onse\"\000\022y\n\016GetPermissions\0221.aserto.direct" +
-      "ory.reader.v2.GetPermissionsRequest\0322.as" +
-      "erto.directory.reader.v2.GetPermissionsR" +
-      "esponse\"\000\022j\n\tGetObject\022,.aserto.director" +
-      "y.reader.v2.GetObjectRequest\032-.aserto.di" +
-      "rectory.reader.v2.GetObjectResponse\"\000\022v\n" +
-      "\rGetObjectMany\0220.aserto.directory.reader" +
-      ".v2.GetObjectManyRequest\0321.aserto.direct" +
-      "ory.reader.v2.GetObjectManyResponse\"\000\022m\n" +
-      "\nGetObjects\022-.aserto.directory.reader.v2" +
-      ".GetObjectsRequest\032..aserto.directory.re" +
-      "ader.v2.GetObjectsResponse\"\000\022p\n\013GetRelat" +
-      "ion\022..aserto.directory.reader.v2.GetRela" +
-      "tionRequest\032/.aserto.directory.reader.v2" +
-      ".GetRelationResponse\"\000\022s\n\014GetRelations\022/" +
-      ".aserto.directory.reader.v2.GetRelations" +
-      "Request\0320.aserto.directory.reader.v2.Get" +
-      "RelationsResponse\"\000\022|\n\017CheckPermission\0222" +
-      ".aserto.directory.reader.v2.CheckPermiss" +
-      "ionRequest\0323.aserto.directory.reader.v2." +
-      "CheckPermissionResponse\"\000\022v\n\rCheckRelati" +
-      "on\0220.aserto.directory.reader.v2.CheckRel" +
-      "ationRequest\0321.aserto.directory.reader.v" +
-      "2.CheckRelationResponse\"\000\022g\n\010GetGraph\022+." +
-      "aserto.directory.reader.v2.GetGraphReque" +
-      "st\032,.aserto.directory.reader.v2.GetGraph" +
-      "Response\"\000B\205\002\n\036com.aserto.directory.read" +
-      "er.v2B\013ReaderProtoH\002P\001ZDgithub.com/asert" +
-      "o-dev/go-directory/aserto/directory/read" +
-      "er/v2;reader\370\001\000\242\002\003ADR\252\002\032Aserto.Directory" +
-      ".Reader.V2\312\002\033Aserto\\Directory_\\Reader\\V2" +
-      "\342\002\'Aserto\\Directory_\\Reader\\V2\\GPBMetada" +
-      "ta\352\002\035Aserto::Directory::Reader::V2b\006prot" +
-      "o3"
+      "R\006object\"Z\n\020GetGraphResponse\022F\n\007results\030" +
+      "\001 \003(\0132,.aserto.directory.common.v2.Objec" +
+      "tDependencyR\007results2\206\r\n\006Reader\022v\n\rGetOb" +
+      "jectType\0220.aserto.directory.reader.v2.Ge" +
+      "tObjectTypeRequest\0321.aserto.directory.re" +
+      "ader.v2.GetObjectTypeResponse\"\000\022y\n\016GetOb" +
+      "jectTypes\0221.aserto.directory.reader.v2.G" +
+      "etObjectTypesRequest\0322.aserto.directory." +
+      "reader.v2.GetObjectTypesResponse\"\000\022|\n\017Ge" +
+      "tRelationType\0222.aserto.directory.reader." +
+      "v2.GetRelationTypeRequest\0323.aserto.direc" +
+      "tory.reader.v2.GetRelationTypeResponse\"\000" +
+      "\022\177\n\020GetRelationTypes\0223.aserto.directory." +
+      "reader.v2.GetRelationTypesRequest\0324.aser" +
+      "to.directory.reader.v2.GetRelationTypesR" +
+      "esponse\"\000\022v\n\rGetPermission\0220.aserto.dire" +
+      "ctory.reader.v2.GetPermissionRequest\0321.a" +
+      "serto.directory.reader.v2.GetPermissionR" +
+      "esponse\"\000\022y\n\016GetPermissions\0221.aserto.dir" +
+      "ectory.reader.v2.GetPermissionsRequest\0322" +
+      ".aserto.directory.reader.v2.GetPermissio" +
+      "nsResponse\"\000\022j\n\tGetObject\022,.aserto.direc" +
+      "tory.reader.v2.GetObjectRequest\032-.aserto" +
+      ".directory.reader.v2.GetObjectResponse\"\000" +
+      "\022v\n\rGetObjectMany\0220.aserto.directory.rea" +
+      "der.v2.GetObjectManyRequest\0321.aserto.dir" +
+      "ectory.reader.v2.GetObjectManyResponse\"\000" +
+      "\022m\n\nGetObjects\022-.aserto.directory.reader" +
+      ".v2.GetObjectsRequest\032..aserto.directory" +
+      ".reader.v2.GetObjectsResponse\"\000\022p\n\013GetRe" +
+      "lation\022..aserto.directory.reader.v2.GetR" +
+      "elationRequest\032/.aserto.directory.reader" +
+      ".v2.GetRelationResponse\"\000\022s\n\014GetRelation" +
+      "s\022/.aserto.directory.reader.v2.GetRelati" +
+      "onsRequest\0320.aserto.directory.reader.v2." +
+      "GetRelationsResponse\"\000\022|\n\017CheckPermissio" +
+      "n\0222.aserto.directory.reader.v2.CheckPerm" +
+      "issionRequest\0323.aserto.directory.reader." +
+      "v2.CheckPermissionResponse\"\000\022v\n\rCheckRel" +
+      "ation\0220.aserto.directory.reader.v2.Check" +
+      "RelationRequest\0321.aserto.directory.reade" +
+      "r.v2.CheckRelationResponse\"\000\022g\n\010GetGraph" +
+      "\022+.aserto.directory.reader.v2.GetGraphRe" +
+      "quest\032,.aserto.directory.reader.v2.GetGr" +
+      "aphResponse\"\000B\205\002\n\036com.aserto.directory.r" +
+      "eader.v2B\013ReaderProtoH\002P\001ZDgithub.com/as" +
+      "erto-dev/go-directory/aserto/directory/r" +
+      "eader/v2;reader\370\001\000\242\002\003ADR\252\002\032Aserto.Direct" +
+      "ory.Reader.V2\312\002\033Aserto\\Directory_\\Reader" +
+      "\\V2\342\002\'Aserto\\Directory_\\Reader\\V2\\GPBMet" +
+      "adata\352\002\035Aserto::Directory::Reader::V2b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -408,13 +419,19 @@ public final class ReaderProto {
     internal_static_aserto_directory_reader_v2_GetRelationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_reader_v2_GetRelationRequest_descriptor,
-        new java.lang.String[] { "Param", });
+        new java.lang.String[] { "Param", "WithObjects", "WithObjects", });
     internal_static_aserto_directory_reader_v2_GetRelationResponse_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_aserto_directory_reader_v2_GetRelationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_reader_v2_GetRelationResponse_descriptor,
-        new java.lang.String[] { "Results", });
+        new java.lang.String[] { "Results", "Objects", });
+    internal_static_aserto_directory_reader_v2_GetRelationResponse_ObjectsEntry_descriptor =
+      internal_static_aserto_directory_reader_v2_GetRelationResponse_descriptor.getNestedTypes().get(0);
+    internal_static_aserto_directory_reader_v2_GetRelationResponse_ObjectsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aserto_directory_reader_v2_GetRelationResponse_ObjectsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_aserto_directory_reader_v2_GetRelationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_aserto_directory_reader_v2_GetRelationsRequest_fieldAccessorTable = new

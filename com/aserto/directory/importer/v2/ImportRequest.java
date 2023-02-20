@@ -92,7 +92,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OP_CODE_FIELD_NUMBER = 1;
-  private int opCode_;
+  private int opCode_ = 0;
   /**
    * <pre>
    * operation Opcode enum value
@@ -113,8 +113,7 @@ private static final long serialVersionUID = 0L;
    * @return The opCode.
    */
   @java.lang.Override public com.aserto.directory.importer.v2.Opcode getOpCode() {
-    @SuppressWarnings("deprecation")
-    com.aserto.directory.importer.v2.Opcode result = com.aserto.directory.importer.v2.Opcode.valueOf(opCode_);
+    com.aserto.directory.importer.v2.Opcode result = com.aserto.directory.importer.v2.Opcode.forNumber(opCode_);
     return result == null ? com.aserto.directory.importer.v2.Opcode.UNRECOGNIZED : result;
   }
 
@@ -456,8 +455,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       opCode_ = 0;
-
       if (objectTypeBuilder_ != null) {
         objectTypeBuilder_.clear();
       }
@@ -501,45 +500,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.importer.v2.ImportRequest buildPartial() {
       com.aserto.directory.importer.v2.ImportRequest result = new com.aserto.directory.importer.v2.ImportRequest(this);
-      result.opCode_ = opCode_;
-      if (msgCase_ == 2) {
-        if (objectTypeBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = objectTypeBuilder_.build();
-        }
-      }
-      if (msgCase_ == 3) {
-        if (permissionBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = permissionBuilder_.build();
-        }
-      }
-      if (msgCase_ == 4) {
-        if (relationTypeBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = relationTypeBuilder_.build();
-        }
-      }
-      if (msgCase_ == 5) {
-        if (objectBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = objectBuilder_.build();
-        }
-      }
-      if (msgCase_ == 6) {
-        if (relationBuilder_ == null) {
-          result.msg_ = msg_;
-        } else {
-          result.msg_ = relationBuilder_.build();
-        }
-      }
-      result.msgCase_ = msgCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.importer.v2.ImportRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.opCode_ = opCode_;
+      }
+    }
+
+    private void buildPartialOneofs(com.aserto.directory.importer.v2.ImportRequest result) {
+      result.msgCase_ = msgCase_;
+      result.msg_ = this.msg_;
+      if (msgCase_ == 2 &&
+          objectTypeBuilder_ != null) {
+        result.msg_ = objectTypeBuilder_.build();
+      }
+      if (msgCase_ == 3 &&
+          permissionBuilder_ != null) {
+        result.msg_ = permissionBuilder_.build();
+      }
+      if (msgCase_ == 4 &&
+          relationTypeBuilder_ != null) {
+        result.msg_ = relationTypeBuilder_.build();
+      }
+      if (msgCase_ == 5 &&
+          objectBuilder_ != null) {
+        result.msg_ = objectBuilder_.build();
+      }
+      if (msgCase_ == 6 &&
+          relationBuilder_ != null) {
+        result.msg_ = relationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -589,6 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int opCode_ = 0;
     /**
@@ -612,8 +609,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOpCodeValue(int value) {
-      
       opCode_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -627,8 +624,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.aserto.directory.importer.v2.Opcode getOpCode() {
-      @SuppressWarnings("deprecation")
-      com.aserto.directory.importer.v2.Opcode result = com.aserto.directory.importer.v2.Opcode.valueOf(opCode_);
+      com.aserto.directory.importer.v2.Opcode result = com.aserto.directory.importer.v2.Opcode.forNumber(opCode_);
       return result == null ? com.aserto.directory.importer.v2.Opcode.UNRECOGNIZED : result;
     }
     /**
@@ -644,7 +640,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       opCode_ = value.getNumber();
       onChanged();
       return this;
@@ -658,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOpCode() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       opCode_ = 0;
       onChanged();
       return this;
@@ -838,7 +834,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 2;
-      onChanged();;
+      onChanged();
       return objectTypeBuilder_;
     }
 
@@ -1016,7 +1012,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 3;
-      onChanged();;
+      onChanged();
       return permissionBuilder_;
     }
 
@@ -1194,7 +1190,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 4;
-      onChanged();;
+      onChanged();
       return relationTypeBuilder_;
     }
 
@@ -1372,7 +1368,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 5;
-      onChanged();;
+      onChanged();
       return objectBuilder_;
     }
 
@@ -1550,7 +1546,7 @@ private static final long serialVersionUID = 0L;
         msg_ = null;
       }
       msgCase_ = 6;
-      onChanged();;
+      onChanged();
       return relationBuilder_;
     }
     @java.lang.Override

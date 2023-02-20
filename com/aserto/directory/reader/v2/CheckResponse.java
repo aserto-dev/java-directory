@@ -45,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHECK_FIELD_NUMBER = 1;
-  private boolean check_;
+  private boolean check_ = false;
   /**
    * <pre>
    * check result (BOOL)
@@ -60,6 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRACE_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList trace_;
   /**
    * <pre>
@@ -233,10 +234,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       check_ = false;
-
       trace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -263,15 +264,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.reader.v2.CheckResponse buildPartial() {
       com.aserto.directory.reader.v2.CheckResponse result = new com.aserto.directory.reader.v2.CheckResponse(this);
-      int from_bitField0_ = bitField0_;
-      result.check_ = check_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        trace_ = trace_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.trace_ = trace_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.aserto.directory.reader.v2.CheckResponse result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        trace_ = trace_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.trace_ = trace_;
+    }
+
+    private void buildPartial0(com.aserto.directory.reader.v2.CheckResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.check_ = check_;
+      }
     }
 
     @java.lang.Override
@@ -333,6 +344,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCheck(boolean value) {
       
       check_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -345,7 +357,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCheck() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       check_ = false;
       onChanged();
       return this;
@@ -353,9 +365,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList trace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureTraceIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         trace_ = new com.google.protobuf.LazyStringArrayList(trace_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
     /**
@@ -418,10 +430,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrace(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTraceIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureTraceIsMutable();
       trace_.set(index, value);
       onChanged();
       return this;
@@ -437,10 +447,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addTrace(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTraceIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureTraceIsMutable();
       trace_.add(value);
       onChanged();
       return this;
@@ -472,7 +480,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTrace() {
       trace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -487,10 +495,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addTraceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureTraceIsMutable();
       trace_.add(value);
       onChanged();

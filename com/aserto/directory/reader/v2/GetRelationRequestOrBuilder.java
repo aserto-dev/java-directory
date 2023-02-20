@@ -33,4 +33,23 @@ public interface GetRelationRequestOrBuilder extends
    * <code>.aserto.directory.common.v2.RelationIdentifier param = 1 [json_name = "param"];</code>
    */
   com.aserto.directory.common.v2.RelationIdentifierOrBuilder getParamOrBuilder();
+
+  /**
+   * <pre>
+   * materialize relation objects
+   * </pre>
+   *
+   * <code>optional bool with_objects = 2 [json_name = "withObjects"];</code>
+   * @return Whether the withObjects field is set.
+   */
+  boolean hasWithObjects();
+  /**
+   * <pre>
+   * materialize relation objects
+   * </pre>
+   *
+   * <code>optional bool with_objects = 2 [json_name = "withObjects"];</code>
+   * @return The withObjects.
+   */
+  boolean getWithObjects();
 }

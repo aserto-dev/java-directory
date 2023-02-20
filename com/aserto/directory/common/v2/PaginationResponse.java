@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEXT_TOKEN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object nextToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object nextToken_ = "";
   /**
    * <pre>
    * next page token, when empty there are no more pages to fetch
@@ -95,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULT_SIZE_FIELD_NUMBER = 2;
-  private int resultSize_;
+  private int resultSize_ = 0;
   /**
    * <pre>
    * result size of the page returned
@@ -236,10 +237,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       nextToken_ = "";
-
       resultSize_ = 0;
-
       return this;
     }
 
@@ -266,10 +266,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.common.v2.PaginationResponse buildPartial() {
       com.aserto.directory.common.v2.PaginationResponse result = new com.aserto.directory.common.v2.PaginationResponse(this);
-      result.nextToken_ = nextToken_;
-      result.resultSize_ = resultSize_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.common.v2.PaginationResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.nextToken_ = nextToken_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.resultSize_ = resultSize_;
+      }
     }
 
     @java.lang.Override
@@ -304,6 +313,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private java.lang.Object nextToken_ = "";
     /**
@@ -358,11 +368,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       nextToken_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -375,8 +383,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNextToken() {
-      
       nextToken_ = getDefaultInstance().getNextToken();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -391,12 +399,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       nextToken_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -426,6 +432,7 @@ private static final long serialVersionUID = 0L;
     public Builder setResultSize(int value) {
       
       resultSize_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -438,7 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResultSize() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       resultSize_ = 0;
       onChanged();
       return this;

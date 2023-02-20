@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OBJECT_TYPE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object objectType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object objectType_ = "";
   /**
    * <pre>
    * object type name of source object
@@ -98,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OBJECT_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object objectId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object objectId_ = "";
   /**
    * <pre>
    * object id (uuid) of source object
@@ -144,7 +146,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OBJECT_KEY_FIELD_NUMBER = 4;
-  private volatile java.lang.Object objectKey_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object objectKey_ = "";
   /**
    * <pre>
    * object search key of source object
@@ -190,7 +193,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RELATION_FIELD_NUMBER = 5;
-  private volatile java.lang.Object relation_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object relation_ = "";
   /**
    * <pre>
    * relation identifier
@@ -236,10 +240,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUBJECT_TYPE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object subjectType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object subjectType_ = "";
   /**
    * <pre>
-   * object type id of target object 
+   * object type id of target object
    * </pre>
    *
    * <code>string subject_type = 7 [json_name = "subjectType"];</code>
@@ -260,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * object type id of target object 
+   * object type id of target object
    * </pre>
    *
    * <code>string subject_type = 7 [json_name = "subjectType"];</code>
@@ -282,7 +287,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUBJECT_ID_FIELD_NUMBER = 9;
-  private volatile java.lang.Object subjectId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object subjectId_ = "";
   /**
    * <pre>
    * object id (uuid) of target object
@@ -328,7 +334,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUBJECT_KEY_FIELD_NUMBER = 10;
-  private volatile java.lang.Object subjectKey_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object subjectKey_ = "";
   /**
    * <pre>
    * object search key of target object
@@ -374,7 +381,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEPTH_FIELD_NUMBER = 11;
-  private int depth_;
+  private int depth_ = 0;
   /**
    * <pre>
    * dependency depth
@@ -389,7 +396,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_CYCLE_FIELD_NUMBER = 12;
-  private boolean isCycle_;
+  private boolean isCycle_ = false;
   /**
    * <pre>
    * dependency cycle
@@ -404,6 +411,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList path_;
   /**
    * <pre>
@@ -577,26 +585,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       objectType_ = "";
-
       objectId_ = "";
-
       objectKey_ = "";
-
       relation_ = "";
-
       subjectType_ = "";
-
       subjectId_ = "";
-
       subjectKey_ = "";
-
       depth_ = 0;
-
       isCycle_ = false;
-
       path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -623,23 +623,49 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.common.v2.ObjectDependency buildPartial() {
       com.aserto.directory.common.v2.ObjectDependency result = new com.aserto.directory.common.v2.ObjectDependency(this);
-      int from_bitField0_ = bitField0_;
-      result.objectType_ = objectType_;
-      result.objectId_ = objectId_;
-      result.objectKey_ = objectKey_;
-      result.relation_ = relation_;
-      result.subjectType_ = subjectType_;
-      result.subjectId_ = subjectId_;
-      result.subjectKey_ = subjectKey_;
-      result.depth_ = depth_;
-      result.isCycle_ = isCycle_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        path_ = path_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.path_ = path_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.aserto.directory.common.v2.ObjectDependency result) {
+      if (((bitField0_ & 0x00000200) != 0)) {
+        path_ = path_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      }
+      result.path_ = path_;
+    }
+
+    private void buildPartial0(com.aserto.directory.common.v2.ObjectDependency result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.objectType_ = objectType_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.objectId_ = objectId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.objectKey_ = objectKey_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.relation_ = relation_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.subjectType_ = subjectType_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.subjectId_ = subjectId_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.subjectKey_ = subjectKey_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.depth_ = depth_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.isCycle_ = isCycle_;
+      }
     }
 
     @java.lang.Override
@@ -729,11 +755,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setObjectType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       objectType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -746,8 +770,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearObjectType() {
-      
       objectType_ = getDefaultInstance().getObjectType();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -762,12 +786,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setObjectTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       objectType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -825,11 +847,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setObjectId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       objectId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -842,8 +862,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearObjectId() {
-      
       objectId_ = getDefaultInstance().getObjectId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -858,12 +878,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setObjectIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       objectId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -921,11 +939,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setObjectKey(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       objectKey_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -938,8 +954,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearObjectKey() {
-      
       objectKey_ = getDefaultInstance().getObjectKey();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -954,12 +970,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setObjectKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       objectKey_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1017,11 +1031,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRelation(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       relation_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1034,8 +1046,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRelation() {
-      
       relation_ = getDefaultInstance().getRelation();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1050,12 +1062,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRelationBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       relation_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1063,7 +1073,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object subjectType_ = "";
     /**
      * <pre>
-     * object type id of target object 
+     * object type id of target object
      * </pre>
      *
      * <code>string subject_type = 7 [json_name = "subjectType"];</code>
@@ -1083,7 +1093,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * object type id of target object 
+     * object type id of target object
      * </pre>
      *
      * <code>string subject_type = 7 [json_name = "subjectType"];</code>
@@ -1104,7 +1114,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * object type id of target object 
+     * object type id of target object
      * </pre>
      *
      * <code>string subject_type = 7 [json_name = "subjectType"];</code>
@@ -1113,31 +1123,29 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubjectType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       subjectType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * object type id of target object 
+     * object type id of target object
      * </pre>
      *
      * <code>string subject_type = 7 [json_name = "subjectType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSubjectType() {
-      
       subjectType_ = getDefaultInstance().getSubjectType();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * object type id of target object 
+     * object type id of target object
      * </pre>
      *
      * <code>string subject_type = 7 [json_name = "subjectType"];</code>
@@ -1146,12 +1154,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubjectTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       subjectType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1209,11 +1215,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubjectId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       subjectId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1226,8 +1230,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSubjectId() {
-      
       subjectId_ = getDefaultInstance().getSubjectId();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1242,12 +1246,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubjectIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       subjectId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1305,11 +1307,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubjectKey(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       subjectKey_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1322,8 +1322,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSubjectKey() {
-      
       subjectKey_ = getDefaultInstance().getSubjectKey();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1338,12 +1338,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubjectKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       subjectKey_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1373,6 +1371,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDepth(int value) {
       
       depth_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1385,7 +1384,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDepth() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       depth_ = 0;
       onChanged();
       return this;
@@ -1416,6 +1415,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIsCycle(boolean value) {
       
       isCycle_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1428,7 +1428,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsCycle() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       isCycle_ = false;
       onChanged();
       return this;
@@ -1436,9 +1436,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensurePathIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         path_ = new com.google.protobuf.LazyStringArrayList(path_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000200;
        }
     }
     /**
@@ -1501,10 +1501,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePathIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePathIsMutable();
       path_.set(index, value);
       onChanged();
       return this;
@@ -1520,10 +1518,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPath(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePathIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePathIsMutable();
       path_.add(value);
       onChanged();
       return this;
@@ -1555,7 +1551,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPath() {
       path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -1570,10 +1566,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensurePathIsMutable();
       path_.add(value);
       onChanged();

@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.PaginationRequestOrBuilder getPageOrBuilder() {
-    return getPage();
+    return page_ == null ? com.aserto.directory.common.v2.PaginationRequest.getDefaultInstance() : page_;
   }
 
   public static com.aserto.directory.reader.v2.GetPermissionsRequest parseFrom(
@@ -204,10 +204,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (pageBuilder_ == null) {
-        page_ = null;
-      } else {
-        page_ = null;
+      bitField0_ = 0;
+      page_ = null;
+      if (pageBuilder_ != null) {
+        pageBuilder_.dispose();
         pageBuilder_ = null;
       }
       return this;
@@ -236,13 +236,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.reader.v2.GetPermissionsRequest buildPartial() {
       com.aserto.directory.reader.v2.GetPermissionsRequest result = new com.aserto.directory.reader.v2.GetPermissionsRequest(this);
-      if (pageBuilder_ == null) {
-        result.page_ = page_;
-      } else {
-        result.page_ = pageBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.reader.v2.GetPermissionsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.page_ = pageBuilder_ == null
+            ? page_
+            : pageBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -277,6 +282,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private com.aserto.directory.common.v2.PaginationRequest page_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -290,7 +296,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the page field is set.
      */
     public boolean hasPage() {
-      return pageBuilder_ != null || page_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -320,11 +326,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         page_ = value;
-        onChanged();
       } else {
         pageBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -338,11 +344,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.PaginationRequest.Builder builderForValue) {
       if (pageBuilder_ == null) {
         page_ = builderForValue.build();
-        onChanged();
       } else {
         pageBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -354,17 +360,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePage(com.aserto.directory.common.v2.PaginationRequest value) {
       if (pageBuilder_ == null) {
-        if (page_ != null) {
-          page_ =
-            com.aserto.directory.common.v2.PaginationRequest.newBuilder(page_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          page_ != null &&
+          page_ != com.aserto.directory.common.v2.PaginationRequest.getDefaultInstance()) {
+          getPageBuilder().mergeFrom(value);
         } else {
           page_ = value;
         }
-        onChanged();
       } else {
         pageBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -375,14 +382,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.PaginationRequest page = 9 [json_name = "page"];</code>
      */
     public Builder clearPage() {
-      if (pageBuilder_ == null) {
-        page_ = null;
-        onChanged();
-      } else {
-        page_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      page_ = null;
+      if (pageBuilder_ != null) {
+        pageBuilder_.dispose();
         pageBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -393,7 +399,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.PaginationRequest page = 9 [json_name = "page"];</code>
      */
     public com.aserto.directory.common.v2.PaginationRequest.Builder getPageBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getPageFieldBuilder().getBuilder();
     }

@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECV_FIELD_NUMBER = 1;
-  private long recv_;
+  private long recv_ = 0L;
   /**
    * <pre>
    * number of messages received
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SET_FIELD_NUMBER = 2;
-  private long set_;
+  private long set_ = 0L;
   /**
    * <pre>
    * number of messages with OPCODE_SET
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DELETE_FIELD_NUMBER = 3;
-  private long delete_;
+  private long delete_ = 0L;
   /**
    * <pre>
    * number of messages with OPCODE_DELETE
@@ -89,7 +89,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ERROR_FIELD_NUMBER = 4;
-  private long error_;
+  private long error_ = 0L;
   /**
    * <pre>
    * number of messages resulting in error
@@ -226,14 +226,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       recv_ = 0L;
-
       set_ = 0L;
-
       delete_ = 0L;
-
       error_ = 0L;
-
       return this;
     }
 
@@ -260,12 +257,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.importer.v2.ImportCounter buildPartial() {
       com.aserto.directory.importer.v2.ImportCounter result = new com.aserto.directory.importer.v2.ImportCounter(this);
-      result.recv_ = recv_;
-      result.set_ = set_;
-      result.delete_ = delete_;
-      result.error_ = error_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.importer.v2.ImportCounter result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.recv_ = recv_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.set_ = set_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.delete_ = delete_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.error_ = error_;
+      }
     }
 
     @java.lang.Override
@@ -300,6 +310,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private long recv_ ;
     /**
@@ -326,6 +337,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRecv(long value) {
       
       recv_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -338,7 +350,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecv() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       recv_ = 0L;
       onChanged();
       return this;
@@ -369,6 +381,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSet(long value) {
       
       set_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -381,7 +394,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSet() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       set_ = 0L;
       onChanged();
       return this;
@@ -412,6 +425,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDelete(long value) {
       
       delete_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -424,7 +438,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDelete() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       delete_ = 0L;
       onChanged();
       return this;
@@ -455,6 +469,7 @@ private static final long serialVersionUID = 0L;
     public Builder setError(long value) {
       
       error_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -467,7 +482,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearError() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       error_ = 0L;
       onChanged();
       return this;

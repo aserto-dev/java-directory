@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.ObjectOrBuilder getObjectOrBuilder() {
-    return getObject();
+    return object_ == null ? com.aserto.directory.common.v2.Object.getDefaultInstance() : object_;
   }
 
   public static com.aserto.directory.writer.v2.SetObjectRequest parseFrom(
@@ -204,10 +204,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (objectBuilder_ == null) {
-        object_ = null;
-      } else {
-        object_ = null;
+      bitField0_ = 0;
+      object_ = null;
+      if (objectBuilder_ != null) {
+        objectBuilder_.dispose();
         objectBuilder_ = null;
       }
       return this;
@@ -236,13 +236,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.writer.v2.SetObjectRequest buildPartial() {
       com.aserto.directory.writer.v2.SetObjectRequest result = new com.aserto.directory.writer.v2.SetObjectRequest(this);
-      if (objectBuilder_ == null) {
-        result.object_ = object_;
-      } else {
-        result.object_ = objectBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.writer.v2.SetObjectRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.object_ = objectBuilder_ == null
+            ? object_
+            : objectBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -277,6 +282,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private com.aserto.directory.common.v2.Object object_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -290,7 +296,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the object field is set.
      */
     public boolean hasObject() {
-      return objectBuilder_ != null || object_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -320,11 +326,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         object_ = value;
-        onChanged();
       } else {
         objectBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -338,11 +344,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.Object.Builder builderForValue) {
       if (objectBuilder_ == null) {
         object_ = builderForValue.build();
-        onChanged();
       } else {
         objectBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -354,17 +360,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeObject(com.aserto.directory.common.v2.Object value) {
       if (objectBuilder_ == null) {
-        if (object_ != null) {
-          object_ =
-            com.aserto.directory.common.v2.Object.newBuilder(object_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          object_ != null &&
+          object_ != com.aserto.directory.common.v2.Object.getDefaultInstance()) {
+          getObjectBuilder().mergeFrom(value);
         } else {
           object_ = value;
         }
-        onChanged();
       } else {
         objectBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -375,14 +382,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.Object object = 1 [json_name = "object"];</code>
      */
     public Builder clearObject() {
-      if (objectBuilder_ == null) {
-        object_ = null;
-        onChanged();
-      } else {
-        object_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      object_ = null;
+      if (objectBuilder_ != null) {
+        objectBuilder_.dispose();
         objectBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -393,7 +399,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.Object object = 1 [json_name = "object"];</code>
      */
     public com.aserto.directory.common.v2.Object.Builder getObjectBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getObjectFieldBuilder().getBuilder();
     }

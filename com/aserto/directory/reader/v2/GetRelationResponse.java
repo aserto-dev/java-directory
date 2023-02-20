@@ -36,6 +36,18 @@ private static final long serialVersionUID = 0L;
     return com.aserto.directory.reader.v2.ReaderProto.internal_static_aserto_directory_reader_v2_GetRelationResponse_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 2:
+        return internalGetObjects();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -45,6 +57,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.aserto.directory.common.v2.Relation> results_;
   /**
    * <pre>
@@ -102,6 +115,101 @@ private static final long serialVersionUID = 0L;
   public com.aserto.directory.common.v2.RelationOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
+  }
+
+  public static final int OBJECTS_FIELD_NUMBER = 2;
+  private static final class ObjectsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, com.aserto.directory.common.v2.Object> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, com.aserto.directory.common.v2.Object>newDefaultInstance(
+                com.aserto.directory.reader.v2.ReaderProto.internal_static_aserto_directory_reader_v2_GetRelationResponse_ObjectsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                com.aserto.directory.common.v2.Object.getDefaultInstance());
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, com.aserto.directory.common.v2.Object> objects_;
+  private com.google.protobuf.MapField<java.lang.String, com.aserto.directory.common.v2.Object>
+  internalGetObjects() {
+    if (objects_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          ObjectsDefaultEntryHolder.defaultEntry);
+    }
+    return objects_;
+  }
+  public int getObjectsCount() {
+    return internalGetObjects().getMap().size();
+  }
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  @java.lang.Override
+  public boolean containsObjects(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetObjects().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getObjectsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> getObjects() {
+    return getObjectsMap();
+  }
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> getObjectsMap() {
+    return internalGetObjects().getMap();
+  }
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+com.aserto.directory.common.v2.Object getObjectsOrDefault(
+      java.lang.String key,
+      /* nullable */
+com.aserto.directory.common.v2.Object defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> map =
+        internalGetObjects().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * map of materialized relation objects
+   * </pre>
+   *
+   * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+   */
+  @java.lang.Override
+  public com.aserto.directory.common.v2.Object getObjectsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> map =
+        internalGetObjects().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
   }
 
   public static com.aserto.directory.reader.v2.GetRelationResponse parseFrom(
@@ -206,6 +314,28 @@ private static final long serialVersionUID = 0L;
       return com.aserto.directory.reader.v2.ReaderProto.internal_static_aserto_directory_reader_v2_GetRelationResponse_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetObjects();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetMutableObjects();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -227,6 +357,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
       } else {
@@ -234,6 +365,7 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      internalGetMutableObjects().clear();
       return this;
     }
 
@@ -260,7 +392,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.reader.v2.GetRelationResponse buildPartial() {
       com.aserto.directory.reader.v2.GetRelationResponse result = new com.aserto.directory.reader.v2.GetRelationResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.aserto.directory.reader.v2.GetRelationResponse result) {
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -270,8 +408,14 @@ private static final long serialVersionUID = 0L;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.reader.v2.GetRelationResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.objects_ = internalGetObjects();
+        result.objects_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -618,6 +762,161 @@ private static final long serialVersionUID = 0L;
         results_ = null;
       }
       return resultsBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, com.aserto.directory.common.v2.Object> objects_;
+    private com.google.protobuf.MapField<java.lang.String, com.aserto.directory.common.v2.Object>
+        internalGetObjects() {
+      if (objects_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ObjectsDefaultEntryHolder.defaultEntry);
+      }
+      return objects_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, com.aserto.directory.common.v2.Object>
+        internalGetMutableObjects() {
+      if (objects_ == null) {
+        objects_ = com.google.protobuf.MapField.newMapField(
+            ObjectsDefaultEntryHolder.defaultEntry);
+      }
+      if (!objects_.isMutable()) {
+        objects_ = objects_.copy();
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return objects_;
+    }
+    public int getObjectsCount() {
+      return internalGetObjects().getMap().size();
+    }
+    /**
+     * <pre>
+     * map of materialized relation objects
+     * </pre>
+     *
+     * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+     */
+    @java.lang.Override
+    public boolean containsObjects(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetObjects().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getObjectsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> getObjects() {
+      return getObjectsMap();
+    }
+    /**
+     * <pre>
+     * map of materialized relation objects
+     * </pre>
+     *
+     * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> getObjectsMap() {
+      return internalGetObjects().getMap();
+    }
+    /**
+     * <pre>
+     * map of materialized relation objects
+     * </pre>
+     *
+     * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.aserto.directory.common.v2.Object getObjectsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.aserto.directory.common.v2.Object defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> map =
+          internalGetObjects().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * map of materialized relation objects
+     * </pre>
+     *
+     * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+     */
+    @java.lang.Override
+    public com.aserto.directory.common.v2.Object getObjectsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> map =
+          internalGetObjects().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearObjects() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      internalGetMutableObjects().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * map of materialized relation objects
+     * </pre>
+     *
+     * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+     */
+    public Builder removeObjects(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableObjects().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object>
+        getMutableObjects() {
+      bitField0_ |= 0x00000002;
+      return internalGetMutableObjects().getMutableMap();
+    }
+    /**
+     * <pre>
+     * map of materialized relation objects
+     * </pre>
+     *
+     * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+     */
+    public Builder putObjects(
+        java.lang.String key,
+        com.aserto.directory.common.v2.Object value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableObjects().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * map of materialized relation objects
+     * </pre>
+     *
+     * <code>map&lt;string, .aserto.directory.common.v2.Object&gt; objects = 2 [json_name = "objects"];</code>
+     */
+    public Builder putAllObjects(
+        java.util.Map<java.lang.String, com.aserto.directory.common.v2.Object> values) {
+      internalGetMutableObjects().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000002;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

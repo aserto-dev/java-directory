@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.PermissionOrBuilder getPermissionOrBuilder() {
-    return getPermission();
+    return permission_ == null ? com.aserto.directory.common.v2.Permission.getDefaultInstance() : permission_;
   }
 
   public static com.aserto.directory.writer.v2.SetPermissionRequest parseFrom(
@@ -204,10 +204,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (permissionBuilder_ == null) {
-        permission_ = null;
-      } else {
-        permission_ = null;
+      bitField0_ = 0;
+      permission_ = null;
+      if (permissionBuilder_ != null) {
+        permissionBuilder_.dispose();
         permissionBuilder_ = null;
       }
       return this;
@@ -236,13 +236,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.writer.v2.SetPermissionRequest buildPartial() {
       com.aserto.directory.writer.v2.SetPermissionRequest result = new com.aserto.directory.writer.v2.SetPermissionRequest(this);
-      if (permissionBuilder_ == null) {
-        result.permission_ = permission_;
-      } else {
-        result.permission_ = permissionBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.writer.v2.SetPermissionRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.permission_ = permissionBuilder_ == null
+            ? permission_
+            : permissionBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -277,6 +282,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private com.aserto.directory.common.v2.Permission permission_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -290,7 +296,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the permission field is set.
      */
     public boolean hasPermission() {
-      return permissionBuilder_ != null || permission_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -320,11 +326,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         permission_ = value;
-        onChanged();
       } else {
         permissionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -338,11 +344,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.Permission.Builder builderForValue) {
       if (permissionBuilder_ == null) {
         permission_ = builderForValue.build();
-        onChanged();
       } else {
         permissionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -354,17 +360,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePermission(com.aserto.directory.common.v2.Permission value) {
       if (permissionBuilder_ == null) {
-        if (permission_ != null) {
-          permission_ =
-            com.aserto.directory.common.v2.Permission.newBuilder(permission_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          permission_ != null &&
+          permission_ != com.aserto.directory.common.v2.Permission.getDefaultInstance()) {
+          getPermissionBuilder().mergeFrom(value);
         } else {
           permission_ = value;
         }
-        onChanged();
       } else {
         permissionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -375,14 +382,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.Permission permission = 1 [json_name = "permission"];</code>
      */
     public Builder clearPermission() {
-      if (permissionBuilder_ == null) {
-        permission_ = null;
-        onChanged();
-      } else {
-        permission_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      permission_ = null;
+      if (permissionBuilder_ != null) {
+        permissionBuilder_.dispose();
         permissionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -393,7 +399,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.Permission permission = 1 [json_name = "permission"];</code>
      */
     public com.aserto.directory.common.v2.Permission.Builder getPermissionBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getPermissionFieldBuilder().getBuilder();
     }

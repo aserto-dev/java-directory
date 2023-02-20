@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.RelationIdentifierOrBuilder getParamOrBuilder() {
-    return getParam();
+    return param_ == null ? com.aserto.directory.common.v2.RelationIdentifier.getDefaultInstance() : param_;
   }
 
   public static com.aserto.directory.writer.v2.DeleteRelationRequest parseFrom(
@@ -204,10 +204,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (paramBuilder_ == null) {
-        param_ = null;
-      } else {
-        param_ = null;
+      bitField0_ = 0;
+      param_ = null;
+      if (paramBuilder_ != null) {
+        paramBuilder_.dispose();
         paramBuilder_ = null;
       }
       return this;
@@ -236,13 +236,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.writer.v2.DeleteRelationRequest buildPartial() {
       com.aserto.directory.writer.v2.DeleteRelationRequest result = new com.aserto.directory.writer.v2.DeleteRelationRequest(this);
-      if (paramBuilder_ == null) {
-        result.param_ = param_;
-      } else {
-        result.param_ = paramBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.writer.v2.DeleteRelationRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.param_ = paramBuilder_ == null
+            ? param_
+            : paramBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -277,6 +282,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private com.aserto.directory.common.v2.RelationIdentifier param_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -290,7 +296,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the param field is set.
      */
     public boolean hasParam() {
-      return paramBuilder_ != null || param_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -320,11 +326,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         param_ = value;
-        onChanged();
       } else {
         paramBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -338,11 +344,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.RelationIdentifier.Builder builderForValue) {
       if (paramBuilder_ == null) {
         param_ = builderForValue.build();
-        onChanged();
       } else {
         paramBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -354,17 +360,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeParam(com.aserto.directory.common.v2.RelationIdentifier value) {
       if (paramBuilder_ == null) {
-        if (param_ != null) {
-          param_ =
-            com.aserto.directory.common.v2.RelationIdentifier.newBuilder(param_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          param_ != null &&
+          param_ != com.aserto.directory.common.v2.RelationIdentifier.getDefaultInstance()) {
+          getParamBuilder().mergeFrom(value);
         } else {
           param_ = value;
         }
-        onChanged();
       } else {
         paramBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -375,14 +382,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.RelationIdentifier param = 1 [json_name = "param"];</code>
      */
     public Builder clearParam() {
-      if (paramBuilder_ == null) {
-        param_ = null;
-        onChanged();
-      } else {
-        param_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      param_ = null;
+      if (paramBuilder_ != null) {
+        paramBuilder_.dispose();
         paramBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -393,7 +399,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.RelationIdentifier param = 1 [json_name = "param"];</code>
      */
     public com.aserto.directory.common.v2.RelationIdentifier.Builder getParamBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getParamFieldBuilder().getBuilder();
     }

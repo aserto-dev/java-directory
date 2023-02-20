@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPTIONS_FIELD_NUMBER = 1;
-  private int options_;
+  private int options_ = 0;
   /**
    * <pre>
    * data export options mask
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartFromOrBuilder() {
-    return getStartFrom();
+    return startFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startFrom_;
   }
 
   public static com.aserto.directory.exporter.v2.ExportRequest parseFrom(
@@ -219,12 +219,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       options_ = 0;
-
-      if (startFromBuilder_ == null) {
-        startFrom_ = null;
-      } else {
-        startFrom_ = null;
+      startFrom_ = null;
+      if (startFromBuilder_ != null) {
+        startFromBuilder_.dispose();
         startFromBuilder_ = null;
       }
       return this;
@@ -253,14 +252,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.exporter.v2.ExportRequest buildPartial() {
       com.aserto.directory.exporter.v2.ExportRequest result = new com.aserto.directory.exporter.v2.ExportRequest(this);
-      result.options_ = options_;
-      if (startFromBuilder_ == null) {
-        result.startFrom_ = startFrom_;
-      } else {
-        result.startFrom_ = startFromBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.exporter.v2.ExportRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.options_ = options_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.startFrom_ = startFromBuilder_ == null
+            ? startFrom_
+            : startFromBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -295,6 +301,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private int options_ ;
     /**
@@ -321,6 +328,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOptions(int value) {
       
       options_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -333,7 +341,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptions() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       options_ = 0;
       onChanged();
       return this;
@@ -351,7 +359,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startFrom field is set.
      */
     public boolean hasStartFrom() {
-      return startFromBuilder_ != null || startFrom_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -381,11 +389,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         startFrom_ = value;
-        onChanged();
       } else {
         startFromBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -399,11 +407,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (startFromBuilder_ == null) {
         startFrom_ = builderForValue.build();
-        onChanged();
       } else {
         startFromBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -415,17 +423,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStartFrom(com.google.protobuf.Timestamp value) {
       if (startFromBuilder_ == null) {
-        if (startFrom_ != null) {
-          startFrom_ =
-            com.google.protobuf.Timestamp.newBuilder(startFrom_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          startFrom_ != null &&
+          startFrom_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getStartFromBuilder().mergeFrom(value);
         } else {
           startFrom_ = value;
         }
-        onChanged();
       } else {
         startFromBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -436,14 +445,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_from = 20 [json_name = "startFrom"];</code>
      */
     public Builder clearStartFrom() {
-      if (startFromBuilder_ == null) {
-        startFrom_ = null;
-        onChanged();
-      } else {
-        startFrom_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      startFrom_ = null;
+      if (startFromBuilder_ != null) {
+        startFromBuilder_.dispose();
         startFromBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -454,7 +462,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_from = 20 [json_name = "startFrom"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartFromBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getStartFromFieldBuilder().getBuilder();
     }

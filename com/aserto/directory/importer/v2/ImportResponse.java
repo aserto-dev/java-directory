@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.importer.v2.ImportCounterOrBuilder getObjectTypeOrBuilder() {
-    return getObjectType();
+    return objectType_ == null ? com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance() : objectType_;
   }
 
   public static final int PERMISSION_FIELD_NUMBER = 2;
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.importer.v2.ImportCounterOrBuilder getPermissionOrBuilder() {
-    return getPermission();
+    return permission_ == null ? com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance() : permission_;
   }
 
   public static final int RELATION_TYPE_FIELD_NUMBER = 3;
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.importer.v2.ImportCounterOrBuilder getRelationTypeOrBuilder() {
-    return getRelationType();
+    return relationType_ == null ? com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance() : relationType_;
   }
 
   public static final int OBJECT_FIELD_NUMBER = 4;
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.importer.v2.ImportCounterOrBuilder getObjectOrBuilder() {
-    return getObject();
+    return object_ == null ? com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance() : object_;
   }
 
   public static final int RELATION_FIELD_NUMBER = 5;
@@ -230,7 +230,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.importer.v2.ImportCounterOrBuilder getRelationOrBuilder() {
-    return getRelation();
+    return relation_ == null ? com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance() : relation_;
   }
 
   public static com.aserto.directory.importer.v2.ImportResponse parseFrom(
@@ -356,34 +356,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (objectTypeBuilder_ == null) {
-        objectType_ = null;
-      } else {
-        objectType_ = null;
+      bitField0_ = 0;
+      objectType_ = null;
+      if (objectTypeBuilder_ != null) {
+        objectTypeBuilder_.dispose();
         objectTypeBuilder_ = null;
       }
-      if (permissionBuilder_ == null) {
-        permission_ = null;
-      } else {
-        permission_ = null;
+      permission_ = null;
+      if (permissionBuilder_ != null) {
+        permissionBuilder_.dispose();
         permissionBuilder_ = null;
       }
-      if (relationTypeBuilder_ == null) {
-        relationType_ = null;
-      } else {
-        relationType_ = null;
+      relationType_ = null;
+      if (relationTypeBuilder_ != null) {
+        relationTypeBuilder_.dispose();
         relationTypeBuilder_ = null;
       }
-      if (objectBuilder_ == null) {
-        object_ = null;
-      } else {
-        object_ = null;
+      object_ = null;
+      if (objectBuilder_ != null) {
+        objectBuilder_.dispose();
         objectBuilder_ = null;
       }
-      if (relationBuilder_ == null) {
-        relation_ = null;
-      } else {
-        relation_ = null;
+      relation_ = null;
+      if (relationBuilder_ != null) {
+        relationBuilder_.dispose();
         relationBuilder_ = null;
       }
       return this;
@@ -412,33 +408,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.importer.v2.ImportResponse buildPartial() {
       com.aserto.directory.importer.v2.ImportResponse result = new com.aserto.directory.importer.v2.ImportResponse(this);
-      if (objectTypeBuilder_ == null) {
-        result.objectType_ = objectType_;
-      } else {
-        result.objectType_ = objectTypeBuilder_.build();
-      }
-      if (permissionBuilder_ == null) {
-        result.permission_ = permission_;
-      } else {
-        result.permission_ = permissionBuilder_.build();
-      }
-      if (relationTypeBuilder_ == null) {
-        result.relationType_ = relationType_;
-      } else {
-        result.relationType_ = relationTypeBuilder_.build();
-      }
-      if (objectBuilder_ == null) {
-        result.object_ = object_;
-      } else {
-        result.object_ = objectBuilder_.build();
-      }
-      if (relationBuilder_ == null) {
-        result.relation_ = relation_;
-      } else {
-        result.relation_ = relationBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.importer.v2.ImportResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.objectType_ = objectTypeBuilder_ == null
+            ? objectType_
+            : objectTypeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.permission_ = permissionBuilder_ == null
+            ? permission_
+            : permissionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.relationType_ = relationTypeBuilder_ == null
+            ? relationType_
+            : relationTypeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.object_ = objectBuilder_ == null
+            ? object_
+            : objectBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.relation_ = relationBuilder_ == null
+            ? relation_
+            : relationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -473,6 +474,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private com.aserto.directory.importer.v2.ImportCounter objectType_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -486,7 +488,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the objectType field is set.
      */
     public boolean hasObjectType() {
-      return objectTypeBuilder_ != null || objectType_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -516,11 +518,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         objectType_ = value;
-        onChanged();
       } else {
         objectTypeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -534,11 +536,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.importer.v2.ImportCounter.Builder builderForValue) {
       if (objectTypeBuilder_ == null) {
         objectType_ = builderForValue.build();
-        onChanged();
       } else {
         objectTypeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -550,17 +552,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeObjectType(com.aserto.directory.importer.v2.ImportCounter value) {
       if (objectTypeBuilder_ == null) {
-        if (objectType_ != null) {
-          objectType_ =
-            com.aserto.directory.importer.v2.ImportCounter.newBuilder(objectType_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          objectType_ != null &&
+          objectType_ != com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance()) {
+          getObjectTypeBuilder().mergeFrom(value);
         } else {
           objectType_ = value;
         }
-        onChanged();
       } else {
         objectTypeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -571,14 +574,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter object_type = 1 [json_name = "objectType"];</code>
      */
     public Builder clearObjectType() {
-      if (objectTypeBuilder_ == null) {
-        objectType_ = null;
-        onChanged();
-      } else {
-        objectType_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      objectType_ = null;
+      if (objectTypeBuilder_ != null) {
+        objectTypeBuilder_.dispose();
         objectTypeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -589,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter object_type = 1 [json_name = "objectType"];</code>
      */
     public com.aserto.directory.importer.v2.ImportCounter.Builder getObjectTypeBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getObjectTypeFieldBuilder().getBuilder();
     }
@@ -641,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the permission field is set.
      */
     public boolean hasPermission() {
-      return permissionBuilder_ != null || permission_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -671,11 +673,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         permission_ = value;
-        onChanged();
       } else {
         permissionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -689,11 +691,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.importer.v2.ImportCounter.Builder builderForValue) {
       if (permissionBuilder_ == null) {
         permission_ = builderForValue.build();
-        onChanged();
       } else {
         permissionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -705,17 +707,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePermission(com.aserto.directory.importer.v2.ImportCounter value) {
       if (permissionBuilder_ == null) {
-        if (permission_ != null) {
-          permission_ =
-            com.aserto.directory.importer.v2.ImportCounter.newBuilder(permission_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          permission_ != null &&
+          permission_ != com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance()) {
+          getPermissionBuilder().mergeFrom(value);
         } else {
           permission_ = value;
         }
-        onChanged();
       } else {
         permissionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -726,14 +729,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter permission = 2 [json_name = "permission"];</code>
      */
     public Builder clearPermission() {
-      if (permissionBuilder_ == null) {
-        permission_ = null;
-        onChanged();
-      } else {
-        permission_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      permission_ = null;
+      if (permissionBuilder_ != null) {
+        permissionBuilder_.dispose();
         permissionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -744,7 +746,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter permission = 2 [json_name = "permission"];</code>
      */
     public com.aserto.directory.importer.v2.ImportCounter.Builder getPermissionBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getPermissionFieldBuilder().getBuilder();
     }
@@ -796,7 +798,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the relationType field is set.
      */
     public boolean hasRelationType() {
-      return relationTypeBuilder_ != null || relationType_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -826,11 +828,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         relationType_ = value;
-        onChanged();
       } else {
         relationTypeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -844,11 +846,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.importer.v2.ImportCounter.Builder builderForValue) {
       if (relationTypeBuilder_ == null) {
         relationType_ = builderForValue.build();
-        onChanged();
       } else {
         relationTypeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -860,17 +862,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRelationType(com.aserto.directory.importer.v2.ImportCounter value) {
       if (relationTypeBuilder_ == null) {
-        if (relationType_ != null) {
-          relationType_ =
-            com.aserto.directory.importer.v2.ImportCounter.newBuilder(relationType_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          relationType_ != null &&
+          relationType_ != com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance()) {
+          getRelationTypeBuilder().mergeFrom(value);
         } else {
           relationType_ = value;
         }
-        onChanged();
       } else {
         relationTypeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -881,14 +884,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter relation_type = 3 [json_name = "relationType"];</code>
      */
     public Builder clearRelationType() {
-      if (relationTypeBuilder_ == null) {
-        relationType_ = null;
-        onChanged();
-      } else {
-        relationType_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      relationType_ = null;
+      if (relationTypeBuilder_ != null) {
+        relationTypeBuilder_.dispose();
         relationTypeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -899,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter relation_type = 3 [json_name = "relationType"];</code>
      */
     public com.aserto.directory.importer.v2.ImportCounter.Builder getRelationTypeBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getRelationTypeFieldBuilder().getBuilder();
     }
@@ -951,7 +953,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the object field is set.
      */
     public boolean hasObject() {
-      return objectBuilder_ != null || object_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -981,11 +983,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         object_ = value;
-        onChanged();
       } else {
         objectBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -999,11 +1001,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.importer.v2.ImportCounter.Builder builderForValue) {
       if (objectBuilder_ == null) {
         object_ = builderForValue.build();
-        onChanged();
       } else {
         objectBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1015,17 +1017,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeObject(com.aserto.directory.importer.v2.ImportCounter value) {
       if (objectBuilder_ == null) {
-        if (object_ != null) {
-          object_ =
-            com.aserto.directory.importer.v2.ImportCounter.newBuilder(object_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          object_ != null &&
+          object_ != com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance()) {
+          getObjectBuilder().mergeFrom(value);
         } else {
           object_ = value;
         }
-        onChanged();
       } else {
         objectBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1036,14 +1039,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter object = 4 [json_name = "object"];</code>
      */
     public Builder clearObject() {
-      if (objectBuilder_ == null) {
-        object_ = null;
-        onChanged();
-      } else {
-        object_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      object_ = null;
+      if (objectBuilder_ != null) {
+        objectBuilder_.dispose();
         objectBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1054,7 +1056,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter object = 4 [json_name = "object"];</code>
      */
     public com.aserto.directory.importer.v2.ImportCounter.Builder getObjectBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getObjectFieldBuilder().getBuilder();
     }
@@ -1106,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the relation field is set.
      */
     public boolean hasRelation() {
-      return relationBuilder_ != null || relation_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1136,11 +1138,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         relation_ = value;
-        onChanged();
       } else {
         relationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1154,11 +1156,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.importer.v2.ImportCounter.Builder builderForValue) {
       if (relationBuilder_ == null) {
         relation_ = builderForValue.build();
-        onChanged();
       } else {
         relationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1170,17 +1172,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRelation(com.aserto.directory.importer.v2.ImportCounter value) {
       if (relationBuilder_ == null) {
-        if (relation_ != null) {
-          relation_ =
-            com.aserto.directory.importer.v2.ImportCounter.newBuilder(relation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          relation_ != null &&
+          relation_ != com.aserto.directory.importer.v2.ImportCounter.getDefaultInstance()) {
+          getRelationBuilder().mergeFrom(value);
         } else {
           relation_ = value;
         }
-        onChanged();
       } else {
         relationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1191,14 +1194,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter relation = 5 [json_name = "relation"];</code>
      */
     public Builder clearRelation() {
-      if (relationBuilder_ == null) {
-        relation_ = null;
-        onChanged();
-      } else {
-        relation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      relation_ = null;
+      if (relationBuilder_ != null) {
+        relationBuilder_.dispose();
         relationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1209,7 +1211,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.importer.v2.ImportCounter relation = 5 [json_name = "relation"];</code>
      */
     public com.aserto.directory.importer.v2.ImportCounter.Builder getRelationBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getRelationFieldBuilder().getBuilder();
     }

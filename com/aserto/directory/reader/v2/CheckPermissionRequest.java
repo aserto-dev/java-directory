@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.ObjectIdentifierOrBuilder getSubjectOrBuilder() {
-    return getSubject();
+    return subject_ == null ? com.aserto.directory.common.v2.ObjectIdentifier.getDefaultInstance() : subject_;
   }
 
   public static final int PERMISSION_FIELD_NUMBER = 2;
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.PermissionIdentifierOrBuilder getPermissionOrBuilder() {
-    return getPermission();
+    return permission_ == null ? com.aserto.directory.common.v2.PermissionIdentifier.getDefaultInstance() : permission_;
   }
 
   public static final int OBJECT_FIELD_NUMBER = 3;
@@ -154,11 +154,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.ObjectIdentifierOrBuilder getObjectOrBuilder() {
-    return getObject();
+    return object_ == null ? com.aserto.directory.common.v2.ObjectIdentifier.getDefaultInstance() : object_;
   }
 
   public static final int TRACE_FIELD_NUMBER = 7;
-  private boolean trace_;
+  private boolean trace_ = false;
   /**
    * <pre>
    * collect trace information
@@ -295,26 +295,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (subjectBuilder_ == null) {
-        subject_ = null;
-      } else {
-        subject_ = null;
+      bitField0_ = 0;
+      subject_ = null;
+      if (subjectBuilder_ != null) {
+        subjectBuilder_.dispose();
         subjectBuilder_ = null;
       }
-      if (permissionBuilder_ == null) {
-        permission_ = null;
-      } else {
-        permission_ = null;
+      permission_ = null;
+      if (permissionBuilder_ != null) {
+        permissionBuilder_.dispose();
         permissionBuilder_ = null;
       }
-      if (objectBuilder_ == null) {
-        object_ = null;
-      } else {
-        object_ = null;
+      object_ = null;
+      if (objectBuilder_ != null) {
+        objectBuilder_.dispose();
         objectBuilder_ = null;
       }
       trace_ = false;
-
       return this;
     }
 
@@ -341,24 +338,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.reader.v2.CheckPermissionRequest buildPartial() {
       com.aserto.directory.reader.v2.CheckPermissionRequest result = new com.aserto.directory.reader.v2.CheckPermissionRequest(this);
-      if (subjectBuilder_ == null) {
-        result.subject_ = subject_;
-      } else {
-        result.subject_ = subjectBuilder_.build();
-      }
-      if (permissionBuilder_ == null) {
-        result.permission_ = permission_;
-      } else {
-        result.permission_ = permissionBuilder_.build();
-      }
-      if (objectBuilder_ == null) {
-        result.object_ = object_;
-      } else {
-        result.object_ = objectBuilder_.build();
-      }
-      result.trace_ = trace_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.reader.v2.CheckPermissionRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.subject_ = subjectBuilder_ == null
+            ? subject_
+            : subjectBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.permission_ = permissionBuilder_ == null
+            ? permission_
+            : permissionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.object_ = objectBuilder_ == null
+            ? object_
+            : objectBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.trace_ = trace_;
+      }
     }
 
     @java.lang.Override
@@ -393,6 +397,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private com.aserto.directory.common.v2.ObjectIdentifier subject_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -406,7 +411,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the subject field is set.
      */
     public boolean hasSubject() {
-      return subjectBuilder_ != null || subject_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -436,11 +441,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         subject_ = value;
-        onChanged();
       } else {
         subjectBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -454,11 +459,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.ObjectIdentifier.Builder builderForValue) {
       if (subjectBuilder_ == null) {
         subject_ = builderForValue.build();
-        onChanged();
       } else {
         subjectBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -470,17 +475,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSubject(com.aserto.directory.common.v2.ObjectIdentifier value) {
       if (subjectBuilder_ == null) {
-        if (subject_ != null) {
-          subject_ =
-            com.aserto.directory.common.v2.ObjectIdentifier.newBuilder(subject_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          subject_ != null &&
+          subject_ != com.aserto.directory.common.v2.ObjectIdentifier.getDefaultInstance()) {
+          getSubjectBuilder().mergeFrom(value);
         } else {
           subject_ = value;
         }
-        onChanged();
       } else {
         subjectBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -491,14 +497,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.ObjectIdentifier subject = 1 [json_name = "subject"];</code>
      */
     public Builder clearSubject() {
-      if (subjectBuilder_ == null) {
-        subject_ = null;
-        onChanged();
-      } else {
-        subject_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      subject_ = null;
+      if (subjectBuilder_ != null) {
+        subjectBuilder_.dispose();
         subjectBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -509,7 +514,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.ObjectIdentifier subject = 1 [json_name = "subject"];</code>
      */
     public com.aserto.directory.common.v2.ObjectIdentifier.Builder getSubjectBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getSubjectFieldBuilder().getBuilder();
     }
@@ -561,7 +566,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the permission field is set.
      */
     public boolean hasPermission() {
-      return permissionBuilder_ != null || permission_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -591,11 +596,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         permission_ = value;
-        onChanged();
       } else {
         permissionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -609,11 +614,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.PermissionIdentifier.Builder builderForValue) {
       if (permissionBuilder_ == null) {
         permission_ = builderForValue.build();
-        onChanged();
       } else {
         permissionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -625,17 +630,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePermission(com.aserto.directory.common.v2.PermissionIdentifier value) {
       if (permissionBuilder_ == null) {
-        if (permission_ != null) {
-          permission_ =
-            com.aserto.directory.common.v2.PermissionIdentifier.newBuilder(permission_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          permission_ != null &&
+          permission_ != com.aserto.directory.common.v2.PermissionIdentifier.getDefaultInstance()) {
+          getPermissionBuilder().mergeFrom(value);
         } else {
           permission_ = value;
         }
-        onChanged();
       } else {
         permissionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -646,14 +652,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.PermissionIdentifier permission = 2 [json_name = "permission"];</code>
      */
     public Builder clearPermission() {
-      if (permissionBuilder_ == null) {
-        permission_ = null;
-        onChanged();
-      } else {
-        permission_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      permission_ = null;
+      if (permissionBuilder_ != null) {
+        permissionBuilder_.dispose();
         permissionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -664,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.PermissionIdentifier permission = 2 [json_name = "permission"];</code>
      */
     public com.aserto.directory.common.v2.PermissionIdentifier.Builder getPermissionBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getPermissionFieldBuilder().getBuilder();
     }
@@ -716,7 +721,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the object field is set.
      */
     public boolean hasObject() {
-      return objectBuilder_ != null || object_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -746,11 +751,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         object_ = value;
-        onChanged();
       } else {
         objectBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -764,11 +769,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.ObjectIdentifier.Builder builderForValue) {
       if (objectBuilder_ == null) {
         object_ = builderForValue.build();
-        onChanged();
       } else {
         objectBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -780,17 +785,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeObject(com.aserto.directory.common.v2.ObjectIdentifier value) {
       if (objectBuilder_ == null) {
-        if (object_ != null) {
-          object_ =
-            com.aserto.directory.common.v2.ObjectIdentifier.newBuilder(object_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          object_ != null &&
+          object_ != com.aserto.directory.common.v2.ObjectIdentifier.getDefaultInstance()) {
+          getObjectBuilder().mergeFrom(value);
         } else {
           object_ = value;
         }
-        onChanged();
       } else {
         objectBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -801,14 +807,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.ObjectIdentifier object = 3 [json_name = "object"];</code>
      */
     public Builder clearObject() {
-      if (objectBuilder_ == null) {
-        object_ = null;
-        onChanged();
-      } else {
-        object_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      object_ = null;
+      if (objectBuilder_ != null) {
+        objectBuilder_.dispose();
         objectBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -819,7 +824,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.ObjectIdentifier object = 3 [json_name = "object"];</code>
      */
     public com.aserto.directory.common.v2.ObjectIdentifier.Builder getObjectBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getObjectFieldBuilder().getBuilder();
     }
@@ -884,6 +889,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTrace(boolean value) {
       
       trace_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -896,7 +902,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrace() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       trace_ = false;
       onChanged();
       return this;

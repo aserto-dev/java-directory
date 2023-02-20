@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.aserto.directory.common.v2.ObjectTypeOrBuilder getObjectTypeOrBuilder() {
-    return getObjectType();
+    return objectType_ == null ? com.aserto.directory.common.v2.ObjectType.getDefaultInstance() : objectType_;
   }
 
   public static com.aserto.directory.writer.v2.SetObjectTypeRequest parseFrom(
@@ -204,10 +204,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (objectTypeBuilder_ == null) {
-        objectType_ = null;
-      } else {
-        objectType_ = null;
+      bitField0_ = 0;
+      objectType_ = null;
+      if (objectTypeBuilder_ != null) {
+        objectTypeBuilder_.dispose();
         objectTypeBuilder_ = null;
       }
       return this;
@@ -236,13 +236,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.writer.v2.SetObjectTypeRequest buildPartial() {
       com.aserto.directory.writer.v2.SetObjectTypeRequest result = new com.aserto.directory.writer.v2.SetObjectTypeRequest(this);
-      if (objectTypeBuilder_ == null) {
-        result.objectType_ = objectType_;
-      } else {
-        result.objectType_ = objectTypeBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.aserto.directory.writer.v2.SetObjectTypeRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.objectType_ = objectTypeBuilder_ == null
+            ? objectType_
+            : objectTypeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -277,6 +282,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+    private int bitField0_;
 
     private com.aserto.directory.common.v2.ObjectType objectType_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -290,7 +296,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the objectType field is set.
      */
     public boolean hasObjectType() {
-      return objectTypeBuilder_ != null || objectType_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -320,11 +326,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         objectType_ = value;
-        onChanged();
       } else {
         objectTypeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -338,11 +344,11 @@ private static final long serialVersionUID = 0L;
         com.aserto.directory.common.v2.ObjectType.Builder builderForValue) {
       if (objectTypeBuilder_ == null) {
         objectType_ = builderForValue.build();
-        onChanged();
       } else {
         objectTypeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -354,17 +360,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeObjectType(com.aserto.directory.common.v2.ObjectType value) {
       if (objectTypeBuilder_ == null) {
-        if (objectType_ != null) {
-          objectType_ =
-            com.aserto.directory.common.v2.ObjectType.newBuilder(objectType_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          objectType_ != null &&
+          objectType_ != com.aserto.directory.common.v2.ObjectType.getDefaultInstance()) {
+          getObjectTypeBuilder().mergeFrom(value);
         } else {
           objectType_ = value;
         }
-        onChanged();
       } else {
         objectTypeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -375,14 +382,13 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.ObjectType object_type = 1 [json_name = "objectType"];</code>
      */
     public Builder clearObjectType() {
-      if (objectTypeBuilder_ == null) {
-        objectType_ = null;
-        onChanged();
-      } else {
-        objectType_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      objectType_ = null;
+      if (objectTypeBuilder_ != null) {
+        objectTypeBuilder_.dispose();
         objectTypeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -393,7 +399,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aserto.directory.common.v2.ObjectType object_type = 1 [json_name = "objectType"];</code>
      */
     public com.aserto.directory.common.v2.ObjectType.Builder getObjectTypeBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getObjectTypeFieldBuilder().getBuilder();
     }
