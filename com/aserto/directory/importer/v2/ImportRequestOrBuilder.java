@@ -161,5 +161,5 @@ public interface ImportRequestOrBuilder extends
    */
   com.aserto.directory.common.v2.RelationOrBuilder getRelationOrBuilder();
 
-  public com.aserto.directory.importer.v2.ImportRequest.MsgCase getMsgCase();
+  com.aserto.directory.importer.v2.ImportRequest.MsgCase getMsgCase();
 }

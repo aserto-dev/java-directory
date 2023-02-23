@@ -19,8 +19,10 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     objectType_ = "";
     displayName_ = "";
-    unions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    unions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    permissions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     hash_ = "";
   }
 
@@ -31,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new RelationType();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.aserto.directory.common.v2.CommonProto.internal_static_aserto_directory_common_v2_RelationType_descriptor;
@@ -237,7 +234,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int UNIONS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList unions_;
+  private com.google.protobuf.LazyStringArrayList unions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * relations union-ed with relation type instance
@@ -289,7 +287,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int PERMISSIONS_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList permissions_;
+  private com.google.protobuf.LazyStringArrayList permissions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * permissions associated to relation type instance
@@ -630,10 +629,10 @@ private static final long serialVersionUID = 0L;
       displayName_ = "";
       ordinal_ = 0;
       status_ = 0;
-      unions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
-      permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000080);
+      unions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       createdAt_ = null;
       if (createdAtBuilder_ != null) {
         createdAtBuilder_.dispose();
@@ -676,23 +675,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.common.v2.RelationType buildPartial() {
       com.aserto.directory.common.v2.RelationType result = new com.aserto.directory.common.v2.RelationType(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.aserto.directory.common.v2.RelationType result) {
-      if (((bitField0_ & 0x00000040) != 0)) {
-        unions_ = unions_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.unions_ = unions_;
-      if (((bitField0_ & 0x00000080) != 0)) {
-        permissions_ = permissions_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000080);
-      }
-      result.permissions_ = permissions_;
     }
 
     private void buildPartial0(com.aserto.directory.common.v2.RelationType result) {
@@ -715,6 +700,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.status_ = status_;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        unions_.makeImmutable();
+        result.unions_ = unions_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        permissions_.makeImmutable();
+        result.permissions_ = permissions_;
+      }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
@@ -735,38 +728,6 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
     private int bitField0_;
 
     private int id_ ;
@@ -792,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(int value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -1112,7 +1073,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrdinal(int value) {
-      
+
       ordinal_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1156,7 +1117,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatus(int value) {
-      
+
       status_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1177,12 +1138,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList unions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList unions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureUnionsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!unions_.isModifiable()) {
         unions_ = new com.google.protobuf.LazyStringArrayList(unions_);
-        bitField0_ |= 0x00000040;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
@@ -1194,7 +1156,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getUnionsList() {
-      return unions_.getUnmodifiableView();
+      unions_.makeImmutable();
+      return unions_;
     }
     /**
      * <pre>
@@ -1247,6 +1210,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureUnionsIsMutable();
       unions_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1264,6 +1228,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureUnionsIsMutable();
       unions_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1281,6 +1246,7 @@ private static final long serialVersionUID = 0L;
       ensureUnionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, unions_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1293,8 +1259,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUnions() {
-      unions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      unions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -1313,16 +1280,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureUnionsIsMutable();
       unions_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList permissions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensurePermissionsIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!permissions_.isModifiable()) {
         permissions_ = new com.google.protobuf.LazyStringArrayList(permissions_);
-        bitField0_ |= 0x00000080;
-       }
+      }
+      bitField0_ |= 0x00000080;
     }
     /**
      * <pre>
@@ -1334,7 +1303,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getPermissionsList() {
-      return permissions_.getUnmodifiableView();
+      permissions_.makeImmutable();
+      return permissions_;
     }
     /**
      * <pre>
@@ -1387,6 +1357,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePermissionsIsMutable();
       permissions_.set(index, value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1404,6 +1375,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePermissionsIsMutable();
       permissions_.add(value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1421,6 +1393,7 @@ private static final long serialVersionUID = 0L;
       ensurePermissionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, permissions_);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1433,8 +1406,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPermissions() {
-      permissions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000080);
+      permissions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);;
       onChanged();
       return this;
     }
@@ -1453,6 +1427,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensurePermissionsIsMutable();
       permissions_.add(value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

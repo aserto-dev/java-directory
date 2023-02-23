@@ -142,5 +142,5 @@ public interface ExportResponseOrBuilder extends
    */
   com.aserto.directory.common.v2.PermissionOrBuilder getPermissionOrBuilder();
 
-  public com.aserto.directory.exporter.v2.ExportResponse.MsgCase getMsgCase();
+  com.aserto.directory.exporter.v2.ExportResponse.MsgCase getMsgCase();
 }

@@ -16,7 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CheckPermissionResponse() {
-    trace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    trace_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -26,11 +27,6 @@ private static final long serialVersionUID = 0L;
     return new CheckPermissionResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.aserto.directory.reader.v2.ReaderProto.internal_static_aserto_directory_reader_v2_CheckPermissionResponse_descriptor;
@@ -61,7 +57,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int TRACE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList trace_;
+  private com.google.protobuf.LazyStringArrayList trace_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * trace information
@@ -236,8 +233,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       check_ = false;
-      trace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      trace_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -264,18 +261,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.reader.v2.CheckPermissionResponse buildPartial() {
       com.aserto.directory.reader.v2.CheckPermissionResponse result = new com.aserto.directory.reader.v2.CheckPermissionResponse(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.aserto.directory.reader.v2.CheckPermissionResponse result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        trace_ = trace_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.trace_ = trace_;
     }
 
     private void buildPartial0(com.aserto.directory.reader.v2.CheckPermissionResponse result) {
@@ -283,40 +271,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.check_ = check_;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        trace_.makeImmutable();
+        result.trace_ = trace_;
+      }
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
     private int bitField0_;
 
     private boolean check_ ;
@@ -342,7 +302,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCheck(boolean value) {
-      
+
       check_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -363,12 +323,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList trace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList trace_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureTraceIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!trace_.isModifiable()) {
         trace_ = new com.google.protobuf.LazyStringArrayList(trace_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -380,7 +341,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getTraceList() {
-      return trace_.getUnmodifiableView();
+      trace_.makeImmutable();
+      return trace_;
     }
     /**
      * <pre>
@@ -433,6 +395,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTraceIsMutable();
       trace_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -450,6 +413,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTraceIsMutable();
       trace_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -467,6 +431,7 @@ private static final long serialVersionUID = 0L;
       ensureTraceIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, trace_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -479,8 +444,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrace() {
-      trace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      trace_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -499,6 +465,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureTraceIsMutable();
       trace_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

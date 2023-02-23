@@ -23,7 +23,8 @@ private static final long serialVersionUID = 0L;
     subjectType_ = "";
     subjectId_ = "";
     subjectKey_ = "";
-    path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    path_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -33,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new ObjectDependency();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.aserto.directory.common.v2.CommonProto.internal_static_aserto_directory_common_v2_ObjectDependency_descriptor;
@@ -412,7 +408,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int PATH_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList path_;
+  private com.google.protobuf.LazyStringArrayList path_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * dependency path
@@ -595,8 +592,8 @@ private static final long serialVersionUID = 0L;
       subjectKey_ = "";
       depth_ = 0;
       isCycle_ = false;
-      path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      path_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -623,18 +620,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.aserto.directory.common.v2.ObjectDependency buildPartial() {
       com.aserto.directory.common.v2.ObjectDependency result = new com.aserto.directory.common.v2.ObjectDependency(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.aserto.directory.common.v2.ObjectDependency result) {
-      if (((bitField0_ & 0x00000200) != 0)) {
-        path_ = path_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000200);
-      }
-      result.path_ = path_;
     }
 
     private void buildPartial0(com.aserto.directory.common.v2.ObjectDependency result) {
@@ -666,40 +654,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.isCycle_ = isCycle_;
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        path_.makeImmutable();
+        result.path_ = path_;
+      }
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
     private int bitField0_;
 
     private java.lang.Object objectType_ = "";
@@ -1369,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDepth(int value) {
-      
+
       depth_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -1413,7 +1373,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsCycle(boolean value) {
-      
+
       isCycle_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -1434,12 +1394,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList path_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensurePathIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!path_.isModifiable()) {
         path_ = new com.google.protobuf.LazyStringArrayList(path_);
-        bitField0_ |= 0x00000200;
-       }
+      }
+      bitField0_ |= 0x00000200;
     }
     /**
      * <pre>
@@ -1451,7 +1412,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getPathList() {
-      return path_.getUnmodifiableView();
+      path_.makeImmutable();
+      return path_;
     }
     /**
      * <pre>
@@ -1504,6 +1466,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePathIsMutable();
       path_.set(index, value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1521,6 +1484,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePathIsMutable();
       path_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1538,6 +1502,7 @@ private static final long serialVersionUID = 0L;
       ensurePathIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, path_);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1550,8 +1515,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPath() {
-      path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      path_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000200);;
       onChanged();
       return this;
     }
@@ -1570,6 +1536,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensurePathIsMutable();
       path_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
