@@ -11,7 +11,7 @@ COMMIT     ?= $(shell giet rev-parse --short HEAD 2>/dev/null)
 DATE       ?= $(shell date "+%FT%T%z")
 LATEST 	   := $(shell buf beta registry tag list buf.build/aserto-dev/directory --format json --reverse | jq -r '.results | .[0].name')
 
-GEN_DIR    := $(PWD)/com
+GEN_DIR    := $(PWD)/src/main/java/com
 
 ${GEN_DIR}:
 	@echo -e "${ATTN_COLOR}==> create GEN_DIR ${GEN_DIR} ${NO_COLOR}"
@@ -24,7 +24,7 @@ all: deps generate
 deps:
 	@echo -e "${ATTN_COLOR}==> $@ ${NO_COLOR}"
 	@go install github.com/caarlos0/svu@v1.9.0
-	@go install github.com/bufbuild/buf/cmd/buf@v1.3.0
+	@go install github.com/bufbuild/buf/cmd/buf@v1.14.0
 
 .PHONY: generate
 generate: $(GEN_DIR) deps

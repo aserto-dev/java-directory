@@ -9,7 +9,7 @@ managed:
 
 plugins:
   - plugin: buf.build/grpc/java
-    out: .
+    out: src/main/java
   # dependencies
   - plugin: buf.build/protocolbuffers/java
-    out: .
+    out: src/main/java
