@@ -48,7 +48,6 @@ ASERTO_DIRECTORY_PORT=9292
 #
 # ASERTO_DIRECTORY_KEY=""
 # ASERTO_TENANT_ID=""
-
 ```
 
 When connecting to a **remote** topaz directory instance, you must update the `host` and `port` information in the `.env` file.
@@ -91,7 +90,6 @@ ASERTO_DIRECTORY_KEY=""
 
 # NOTE: tenant id can be retrieved from the "Manage Organization" section in the Aserto console, see https://console.aserto.com/ui/manage-tenant?selected=SETTINGS.
 ASERTO_TENANT_ID=""
-
 ```
 
 The require information can be located in the [aserto console](https://console.aserto.com/): 
