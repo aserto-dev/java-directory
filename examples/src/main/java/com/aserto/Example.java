@@ -17,8 +17,7 @@ import javax.net.ssl.SSLException;
 
 public class Example {
     public static void main(String[] args) throws SSLException {
-        Config config = new Config(args);
-        
+        Config config = new Config();
         System.out.format("Connecting to directory: %s:%d...\n", config.Host(), config.Port());
 
         DirectoryClient directoryClient = new DirectoryClient(config);
