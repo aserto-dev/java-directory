@@ -4,7 +4,7 @@
 
 ## 1. building the examples
 
-Ensure you are in the `example` directory, and execute:
+Ensure you are in the `examples` directory and execute:
 
 ```
 mvn clean && mvn package
@@ -14,11 +14,11 @@ mvn clean && mvn package
 
 ### Using [topaz](https://topaz.sh)
 
-There is **no** configuration is required when connecting to a **local** topaz directory instance. 
+No configuration is required when connecting to a **local** topaz directory instance. 
 
-By default the examples use `localhost:9292` as the host and port to connect to.
+By default, the examples use `localhost:9292` as the host and port.
 
-When connecting to a remote topaz directory instance, you need to provide the host address and port, by setting the respective environment variables.
+When connecting to a remote topaz directory instance, you must provide the host address and port by setting the respective environment variables.
 
 ```
 export ASERTO_DIRECTORY_HOST=<host name>
@@ -26,9 +26,9 @@ export ASERTO_DIRECTORY_PORT=<port number>
 
 ```
 
-### Using the hosted aserto directory 
+### Using the hosted [aserto](https://console.aserto.com) directory 
 
-To connect to the hosted aserto directory, please provide the following four configuration values using the respective environment variables.
+To connect to the hosted directory, you must provide the following four configuration values using the respective environment variables.
 
 
 ```
@@ -39,14 +39,14 @@ export ASERTO_DIRECTORY_KEY=<your read-only or read-write API key>
 
 ```
 
-You can find: 
+You can find the following: 
 
-* the tenant ID in the [Manage Organization](https://console.aserto.com/ui/manage-tenant?selected=SETTINGS) section of the aserto console.
-* the directory API key in the [Connections](https://console.aserto.com/ui/connections) section by expanding the `Aserto Directory` panel.
+* Tenant ID in the [Manage Organization](https://console.aserto.com/ui/manage-tenant?selected=SETTINGS) section of the aserto console.
+* Directory API key in the [Connections](https://console.aserto.com/ui/connections) section by expanding the `Aserto Directory` panel.
 
 ![](./directory-connection.png)
 
-This provides access to a read-only and read-write API key.
+This allows you to copy your read-only or read-write API key, depending on your needs.
 
 
 ### 3. Running the example
@@ -57,7 +57,7 @@ To run the examples:
 java -jar target/examples-1.0.0-SNAPSHOT-shaded.jar
 ```
 
-The output contains the instance information are connecting to.
+The output contains the instance information the example is connected to.
 
 ```
 ❯ java -jar examples/target/examples-1.0.0-SNAPSHOT-shaded.jar
