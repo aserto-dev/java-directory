@@ -17,10 +17,10 @@ import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
 import javax.net.ssl.SSLException;
 
 public class DirectoryClient {
-    ReaderGrpc.ReaderBlockingStub readerClient;
-    WriterGrpc.WriterBlockingStub writerClient;
-    ImporterGrpc.ImporterBlockingStub importerClient;
-    ExporterGrpc.ExporterBlockingStub exporterClient;
+    private ReaderGrpc.ReaderBlockingStub readerClient;
+    private WriterGrpc.WriterBlockingStub writerClient;
+    private ImporterGrpc.ImporterBlockingStub importerClient;
+    private ExporterGrpc.ExporterBlockingStub exporterClient;
 
     public DirectoryClient(Config config) throws SSLException {
         Metadata metadata = new Metadata();

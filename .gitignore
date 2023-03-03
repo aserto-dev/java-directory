@@ -29,3 +29,6 @@ target/
 # IDE specific
 .idea
 .vscode
+
+# demo assets
+/examples/.env

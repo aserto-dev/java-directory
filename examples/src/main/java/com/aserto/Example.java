@@ -13,16 +13,24 @@ import io.grpc.netty.NettyChannelBuilder;
 import io.grpc.stub.MetadataUtils;
 import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
 
+import io.github.cdimascio.dotenv.DotenvException;
 import javax.net.ssl.SSLException;
 
 public class Example {
-    public static void main(String[] args) throws SSLException {
-        Config config = new Config();
-        System.out.format("Connecting to directory: %s:%d...\n", config.Host(), config.Port());
+    public static void main(String[] args) throws SSLException, DotenvException {
+        try {
+            Config config = new Config();
 
-        DirectoryClient directoryClient = new DirectoryClient(config);
+            System.out.format("Connecting to directory: %s:%d...\n", config.Host(), config.Port());
 
-        listObjectTypes(directoryClient);
+            DirectoryClient directoryClient = new DirectoryClient(config);
+    
+            listObjectTypes(directoryClient);
+    
+        } catch (DotenvException | SSLException ex) {
+            System.out.printf("error: %s\n", ex.getMessage());
+            System.exit(1);
+        }
     }
 
     public static void listObjectTypes(DirectoryClient directoryClient) {
