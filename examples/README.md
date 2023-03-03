@@ -57,7 +57,6 @@ When connecting to a **remote** topaz directory instance, you must update the `h
 ```
 ASERTO_DIRECTORY_HOST=<my.remote.topaz-directory>
 ASERTO_DIRECTORY_PORT=<port>
-
 ```
 
 ### Using the hosted [aserto](https://console.aserto.com) directory 
