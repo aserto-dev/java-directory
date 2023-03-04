@@ -67,7 +67,7 @@ ASERTO_DIRECTORY_PORT=<port>
 cp assets/.env.hosted-directory.example .env
 ```
 
-### 2.2 update settings in the `examples/.env` file
+### 2.4 update settings in the `examples/.env` file
 
 
 When connecting to the **hosted** directory, you must update the `.env` file with the following configuration values.
@@ -101,7 +101,7 @@ The require information can be located in the [aserto console](https://console.a
 This allows you to copy your read-only or read-write API key, depending on your needs.
 
 
-### 3. Running the example
+## 3. Running the example
 
 To run the examples:
 
