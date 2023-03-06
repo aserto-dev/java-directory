@@ -6,18 +6,11 @@ import com.aserto.directory.importer.v2.*;
 import com.aserto.directory.exporter.v2.*;
 import com.aserto.directory.common.v2.*;
 
-import io.grpc.ManagedChannel;
-import io.grpc.Metadata;
-import io.grpc.netty.GrpcSslContexts;
-import io.grpc.netty.NettyChannelBuilder;
-import io.grpc.stub.MetadataUtils;
-import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
-
 import io.github.cdimascio.dotenv.DotenvException;
 import javax.net.ssl.SSLException;
 
 public class Example {
-    public static void main(String[] args) throws SSLException, DotenvException {
+    public static void main(String[] args) {
         try {
             Config config = new Config();
 

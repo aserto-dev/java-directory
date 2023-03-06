@@ -20,15 +20,15 @@ mvn clean && mvn package
 
 ## 2. setup environment
 
-### Using [topaz](https://topaz.sh)
+## 2.1 using [topaz](https://topaz.sh)
 
-### 2.1 copy the `examples/assets/.env.topaz-directory.example` to the examples directory
+### 2.1.1 copy the `examples/assets/.env.topaz-directory.example` to the examples directory
 
 ```bash
 cp assets/.env.topaz-directory.example .env
 ```
 
-### 2.2 update settings in the `examples/.env` file
+### 2.1.2 update settings in the `examples/.env` file
 
 
 When connecting to a **local** topaz directory instance, **no** additional configuration is required, the copied configuration file contains the all correct (default) values required to connect!
@@ -59,15 +59,15 @@ ASERTO_DIRECTORY_HOST=<my.remote.topaz-directory>
 ASERTO_DIRECTORY_PORT=<port>
 ```
 
-### Using the hosted [aserto](https://console.aserto.com) directory 
+## 2.2 Using the hosted [aserto](https://console.aserto.com) directory 
 
-### 2.3 copy the `examples/assets/.env.hosted-directory.example` to the examples directory
+### 2.2.1 copy the `examples/assets/.env.hosted-directory.example` to the examples directory
 
 ```bash
 cp assets/.env.hosted-directory.example .env
 ```
 
-### 2.4 update settings in the `examples/.env` file
+### 2.2.2 update settings in the `examples/.env` file
 
 
 When connecting to the **hosted** directory, you must update the `.env` file with the following configuration values.
