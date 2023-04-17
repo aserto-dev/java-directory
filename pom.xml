@@ -13,7 +13,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <grpc.version>1.53.0</grpc.version>
+        <grpc.version>1.54.0</grpc.version>
         <protobuf.version>3.22.0</protobuf.version>
         <tomcat.annotation.api.version>6.0.53</tomcat.annotation.api.version>
         <aserto.directory.version>v0.20.6</aserto.directory.version>
