@@ -32,3 +32,6 @@ target/
 
 # demo assets
 /examples/.env
+
+# external dependencies
+/.ext
