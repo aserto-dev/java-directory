@@ -8,6 +8,25 @@
     <artifactId>java-directory</artifactId>
     <version>0.0.1</version>
 
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>A lowe level client generated from the GRPC bindings</description>
+    <url>https://github.com/aserto-dev/java-directory</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>GertDrapers</id>
+            <name>Gert Drapers</name>
+            <email>gert.drapers@aserto.com</email>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>

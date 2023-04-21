@@ -3,6 +3,9 @@ name: ci
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      proto_ref:
+      proto_sha:
   push:
     branches:
       - main
@@ -20,19 +23,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Info
+        run: echo "Using proto ${{ github.event.inputs.proto_ref }} with sha ${{ github.event.inputs.proto_sha }}"
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Set up Java for publishing to Maven Central Repository
-        uses: actions/setup-java@v3
+      - name: Setup Go
+        uses: actions/setup-go@v4
         with:
-          java-version: 8
-          distribution: temurin
+          go-version: ${{ env.GO_VERSION }}
 
-      - name: Run tests
-        run: mvn clean test
+      - name: Install dependencies, update proto and build
+        run: |
+          go run mage.go all
+
+      - name: Commit changes
+        if: github.event_name == 'workflow_dispatch'
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          add: 'pom.xml src'
+          push: origin HEAD:main
   release:
     runs-on: ubuntu-latest
     needs: build
@@ -44,12 +58,17 @@ jobs:
         id: vault
         with:
           url: ${{ env.VAULT_ADDR }}
-          token: ${{ secrets.VAULT_TOKEN }}
+          token: ${{ secrets.VAULT_REPO_TOKEN }}
           secrets: |
             kv/data/MavenCentral  "USERNAME" | MAVEN_USERNAME;
             kv/data/MavenCentral  "PASSWORD" | MAVEN_PASSWORD;
             kv/data/MavenCentral  "GPG_PASSPHRASE" | MAVEN_GPG_PASSPHRASE;
             kv/data/MavenCentral  "PRIVATE_GPG_KEY" | GPG_PRIVATE_KEY;
+
+      - name: Setup Go
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Set up Java for publishing to Maven Central Repository
         uses: actions/setup-java@v3
@@ -61,11 +80,6 @@ jobs:
           server-password: MAVEN_PASSWORD
           gpg-private-key: ${{ env.GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
-
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: build artifact
         run: mvn clean package
@@ -84,3 +98,14 @@ jobs:
             --batch-mode \
             -Pci-cd \
             deploy
+
+      - name: Bump to the next version
+        run: go run mage.go bump patch
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: 'Bump to next version'
+          add: 'pom.xml'
+          push: origin HEAD:main
