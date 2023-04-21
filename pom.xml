@@ -27,6 +27,12 @@
         </developer>
     </developers>
 
+    <scm>
+        <connection>scm:git:git@github.com:aserto-dev/java-directory.git</connection>
+        <developerConnection>scm:git:ssh://github.com:aserto-dev/java-directory.git</developerConnection>
+        <url>https://github.com/aserto-dev/java-directory/tree/main</url>
+    </scm>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
