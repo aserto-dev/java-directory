@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
+    value = "by gRPC proto compiler (version 1.59.0)",
     comments = "Source: aserto/directory/importer/v2/importer.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ImporterGrpc {
 
   private ImporterGrpc() {}
 
-  public static final String SERVICE_NAME = "aserto.directory.importer.v2.Importer";
+  public static final java.lang.String SERVICE_NAME = "aserto.directory.importer.v2.Importer";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.aserto.directory.importer.v2.ImportRequest,
@@ -92,31 +92,32 @@ public final class ImporterGrpc {
 
   /**
    */
-  public static abstract class ImporterImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.aserto.directory.importer.v2.ImportRequest> import_(
+    default io.grpc.stub.StreamObserver<com.aserto.directory.importer.v2.ImportRequest> import_(
         io.grpc.stub.StreamObserver<com.aserto.directory.importer.v2.ImportResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getImportMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getImportMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                com.aserto.directory.importer.v2.ImportRequest,
-                com.aserto.directory.importer.v2.ImportResponse>(
-                  this, METHODID_IMPORT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Importer.
    */
-  public static final class ImporterStub extends io.grpc.stub.AbstractAsyncStub<ImporterStub> {
+  public static abstract class ImporterImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ImporterGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Importer.
+   */
+  public static final class ImporterStub
+      extends io.grpc.stub.AbstractAsyncStub<ImporterStub> {
     private ImporterStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -138,8 +139,10 @@ public final class ImporterGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Importer.
    */
-  public static final class ImporterBlockingStub extends io.grpc.stub.AbstractBlockingStub<ImporterBlockingStub> {
+  public static final class ImporterBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ImporterBlockingStub> {
     private ImporterBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -153,8 +156,10 @@ public final class ImporterGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Importer.
    */
-  public static final class ImporterFutureStub extends io.grpc.stub.AbstractFutureStub<ImporterFutureStub> {
+  public static final class ImporterFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ImporterFutureStub> {
     private ImporterFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -174,10 +179,10 @@ public final class ImporterGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ImporterImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ImporterImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -205,6 +210,18 @@ public final class ImporterGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getImportMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.aserto.directory.importer.v2.ImportRequest,
+              com.aserto.directory.importer.v2.ImportResponse>(
+                service, METHODID_IMPORT)))
+        .build();
+  }
+
   private static abstract class ImporterBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     ImporterBaseDescriptorSupplier() {}
@@ -228,9 +245,9 @@ public final class ImporterGrpc {
   private static final class ImporterMethodDescriptorSupplier
       extends ImporterBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ImporterMethodDescriptorSupplier(String methodName) {
+    ImporterMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

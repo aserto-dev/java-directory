@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
+    value = "by gRPC proto compiler (version 1.59.0)",
     comments = "Source: aserto/directory/writer/v2/writer.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class WriterGrpc {
 
   private WriterGrpc() {}
 
-  public static final String SERVICE_NAME = "aserto.directory.writer.v2.Writer";
+  public static final java.lang.String SERVICE_NAME = "aserto.directory.writer.v2.Writer";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.aserto.directory.writer.v2.SetObjectTypeRequest,
@@ -371,21 +371,21 @@ public final class WriterGrpc {
 
   /**
    */
-  public static abstract class WriterImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * object type metadata methods
      * </pre>
      */
-    public void setObjectType(com.aserto.directory.writer.v2.SetObjectTypeRequest request,
+    default void setObjectType(com.aserto.directory.writer.v2.SetObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetObjectTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetObjectTypeMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteObjectType(com.aserto.directory.writer.v2.DeleteObjectTypeRequest request,
+    default void deleteObjectType(com.aserto.directory.writer.v2.DeleteObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteObjectTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteObjectTypeMethod(), responseObserver);
     }
@@ -395,14 +395,14 @@ public final class WriterGrpc {
      * relation type metadata methods
      * </pre>
      */
-    public void setRelationType(com.aserto.directory.writer.v2.SetRelationTypeRequest request,
+    default void setRelationType(com.aserto.directory.writer.v2.SetRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetRelationTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetRelationTypeMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteRelationType(com.aserto.directory.writer.v2.DeleteRelationTypeRequest request,
+    default void deleteRelationType(com.aserto.directory.writer.v2.DeleteRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteRelationTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRelationTypeMethod(), responseObserver);
     }
@@ -412,14 +412,14 @@ public final class WriterGrpc {
      * permission metadata methods
      * </pre>
      */
-    public void setPermission(com.aserto.directory.writer.v2.SetPermissionRequest request,
+    default void setPermission(com.aserto.directory.writer.v2.SetPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetPermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPermissionMethod(), responseObserver);
     }
 
     /**
      */
-    public void deletePermission(com.aserto.directory.writer.v2.DeletePermissionRequest request,
+    default void deletePermission(com.aserto.directory.writer.v2.DeletePermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeletePermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePermissionMethod(), responseObserver);
     }
@@ -429,14 +429,14 @@ public final class WriterGrpc {
      * object methods
      * </pre>
      */
-    public void setObject(com.aserto.directory.writer.v2.SetObjectRequest request,
+    default void setObject(com.aserto.directory.writer.v2.SetObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetObjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetObjectMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteObject(com.aserto.directory.writer.v2.DeleteObjectRequest request,
+    default void deleteObject(com.aserto.directory.writer.v2.DeleteObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteObjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteObjectMethod(), responseObserver);
     }
@@ -446,97 +446,35 @@ public final class WriterGrpc {
      * relation methods
      * </pre>
      */
-    public void setRelation(com.aserto.directory.writer.v2.SetRelationRequest request,
+    default void setRelation(com.aserto.directory.writer.v2.SetRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetRelationMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteRelation(com.aserto.directory.writer.v2.DeleteRelationRequest request,
+    default void deleteRelation(com.aserto.directory.writer.v2.DeleteRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRelationMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSetObjectTypeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.SetObjectTypeRequest,
-                com.aserto.directory.writer.v2.SetObjectTypeResponse>(
-                  this, METHODID_SET_OBJECT_TYPE)))
-          .addMethod(
-            getDeleteObjectTypeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.DeleteObjectTypeRequest,
-                com.aserto.directory.writer.v2.DeleteObjectTypeResponse>(
-                  this, METHODID_DELETE_OBJECT_TYPE)))
-          .addMethod(
-            getSetRelationTypeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.SetRelationTypeRequest,
-                com.aserto.directory.writer.v2.SetRelationTypeResponse>(
-                  this, METHODID_SET_RELATION_TYPE)))
-          .addMethod(
-            getDeleteRelationTypeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.DeleteRelationTypeRequest,
-                com.aserto.directory.writer.v2.DeleteRelationTypeResponse>(
-                  this, METHODID_DELETE_RELATION_TYPE)))
-          .addMethod(
-            getSetPermissionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.SetPermissionRequest,
-                com.aserto.directory.writer.v2.SetPermissionResponse>(
-                  this, METHODID_SET_PERMISSION)))
-          .addMethod(
-            getDeletePermissionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.DeletePermissionRequest,
-                com.aserto.directory.writer.v2.DeletePermissionResponse>(
-                  this, METHODID_DELETE_PERMISSION)))
-          .addMethod(
-            getSetObjectMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.SetObjectRequest,
-                com.aserto.directory.writer.v2.SetObjectResponse>(
-                  this, METHODID_SET_OBJECT)))
-          .addMethod(
-            getDeleteObjectMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.DeleteObjectRequest,
-                com.aserto.directory.writer.v2.DeleteObjectResponse>(
-                  this, METHODID_DELETE_OBJECT)))
-          .addMethod(
-            getSetRelationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.SetRelationRequest,
-                com.aserto.directory.writer.v2.SetRelationResponse>(
-                  this, METHODID_SET_RELATION)))
-          .addMethod(
-            getDeleteRelationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.writer.v2.DeleteRelationRequest,
-                com.aserto.directory.writer.v2.DeleteRelationResponse>(
-                  this, METHODID_DELETE_RELATION)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Writer.
    */
-  public static final class WriterStub extends io.grpc.stub.AbstractAsyncStub<WriterStub> {
+  public static abstract class WriterImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return WriterGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Writer.
+   */
+  public static final class WriterStub
+      extends io.grpc.stub.AbstractAsyncStub<WriterStub> {
     private WriterStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -645,8 +583,10 @@ public final class WriterGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Writer.
    */
-  public static final class WriterBlockingStub extends io.grpc.stub.AbstractBlockingStub<WriterBlockingStub> {
+  public static final class WriterBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<WriterBlockingStub> {
     private WriterBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -745,8 +685,10 @@ public final class WriterGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Writer.
    */
-  public static final class WriterFutureStub extends io.grpc.stub.AbstractFutureStub<WriterFutureStub> {
+  public static final class WriterFutureStub
+      extends io.grpc.stub.AbstractFutureStub<WriterFutureStub> {
     private WriterFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -870,10 +812,10 @@ public final class WriterGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final WriterImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(WriterImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -938,6 +880,81 @@ public final class WriterGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSetObjectTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.SetObjectTypeRequest,
+              com.aserto.directory.writer.v2.SetObjectTypeResponse>(
+                service, METHODID_SET_OBJECT_TYPE)))
+        .addMethod(
+          getDeleteObjectTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.DeleteObjectTypeRequest,
+              com.aserto.directory.writer.v2.DeleteObjectTypeResponse>(
+                service, METHODID_DELETE_OBJECT_TYPE)))
+        .addMethod(
+          getSetRelationTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.SetRelationTypeRequest,
+              com.aserto.directory.writer.v2.SetRelationTypeResponse>(
+                service, METHODID_SET_RELATION_TYPE)))
+        .addMethod(
+          getDeleteRelationTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.DeleteRelationTypeRequest,
+              com.aserto.directory.writer.v2.DeleteRelationTypeResponse>(
+                service, METHODID_DELETE_RELATION_TYPE)))
+        .addMethod(
+          getSetPermissionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.SetPermissionRequest,
+              com.aserto.directory.writer.v2.SetPermissionResponse>(
+                service, METHODID_SET_PERMISSION)))
+        .addMethod(
+          getDeletePermissionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.DeletePermissionRequest,
+              com.aserto.directory.writer.v2.DeletePermissionResponse>(
+                service, METHODID_DELETE_PERMISSION)))
+        .addMethod(
+          getSetObjectMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.SetObjectRequest,
+              com.aserto.directory.writer.v2.SetObjectResponse>(
+                service, METHODID_SET_OBJECT)))
+        .addMethod(
+          getDeleteObjectMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.DeleteObjectRequest,
+              com.aserto.directory.writer.v2.DeleteObjectResponse>(
+                service, METHODID_DELETE_OBJECT)))
+        .addMethod(
+          getSetRelationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.SetRelationRequest,
+              com.aserto.directory.writer.v2.SetRelationResponse>(
+                service, METHODID_SET_RELATION)))
+        .addMethod(
+          getDeleteRelationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.writer.v2.DeleteRelationRequest,
+              com.aserto.directory.writer.v2.DeleteRelationResponse>(
+                service, METHODID_DELETE_RELATION)))
+        .build();
+  }
+
   private static abstract class WriterBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     WriterBaseDescriptorSupplier() {}
@@ -961,9 +978,9 @@ public final class WriterGrpc {
   private static final class WriterMethodDescriptorSupplier
       extends WriterBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    WriterMethodDescriptorSupplier(String methodName) {
+    WriterMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
