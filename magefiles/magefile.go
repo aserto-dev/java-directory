@@ -44,7 +44,9 @@ func Deps() {
 }
 
 func Generate() error {
-	bufImages := []string{"buf.build/aserto-dev/directory"}
+	bufImages := []string{"buf.build/aserto-dev/directory",
+		"buf.build/grpc-ecosystem/grpc-gateway",
+		"buf.build/bufbuild/protovalidate"}
 
 	for _, bufImage := range bufImages {
 		buffImgWithTag, err := addLatestTag(bufImage)
