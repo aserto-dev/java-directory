@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
+    value = "by gRPC proto compiler (version 1.59.0)",
     comments = "Source: aserto/directory/exporter/v2/exporter.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ExporterGrpc {
 
   private ExporterGrpc() {}
 
-  public static final String SERVICE_NAME = "aserto.directory.exporter.v2.Exporter";
+  public static final java.lang.String SERVICE_NAME = "aserto.directory.exporter.v2.Exporter";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.aserto.directory.exporter.v2.ExportRequest,
@@ -92,31 +92,32 @@ public final class ExporterGrpc {
 
   /**
    */
-  public static abstract class ExporterImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void export(com.aserto.directory.exporter.v2.ExportRequest request,
+    default void export(com.aserto.directory.exporter.v2.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v2.ExportResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getExportMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.aserto.directory.exporter.v2.ExportRequest,
-                com.aserto.directory.exporter.v2.ExportResponse>(
-                  this, METHODID_EXPORT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Exporter.
    */
-  public static final class ExporterStub extends io.grpc.stub.AbstractAsyncStub<ExporterStub> {
+  public static abstract class ExporterImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ExporterGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Exporter.
+   */
+  public static final class ExporterStub
+      extends io.grpc.stub.AbstractAsyncStub<ExporterStub> {
     private ExporterStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -138,8 +139,10 @@ public final class ExporterGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Exporter.
    */
-  public static final class ExporterBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExporterBlockingStub> {
+  public static final class ExporterBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ExporterBlockingStub> {
     private ExporterBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -161,8 +164,10 @@ public final class ExporterGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Exporter.
    */
-  public static final class ExporterFutureStub extends io.grpc.stub.AbstractFutureStub<ExporterFutureStub> {
+  public static final class ExporterFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ExporterFutureStub> {
     private ExporterFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -182,10 +187,10 @@ public final class ExporterGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ExporterImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ExporterImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -214,6 +219,18 @@ public final class ExporterGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getExportMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.aserto.directory.exporter.v2.ExportRequest,
+              com.aserto.directory.exporter.v2.ExportResponse>(
+                service, METHODID_EXPORT)))
+        .build();
+  }
+
   private static abstract class ExporterBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     ExporterBaseDescriptorSupplier() {}
@@ -237,9 +254,9 @@ public final class ExporterGrpc {
   private static final class ExporterMethodDescriptorSupplier
       extends ExporterBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ExporterMethodDescriptorSupplier(String methodName) {
+    ExporterMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

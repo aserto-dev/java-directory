@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
+    value = "by gRPC proto compiler (version 1.59.0)",
     comments = "Source: aserto/directory/reader/v2/reader.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ReaderGrpc {
 
   private ReaderGrpc() {}
 
-  public static final String SERVICE_NAME = "aserto.directory.reader.v2.Reader";
+  public static final java.lang.String SERVICE_NAME = "aserto.directory.reader.v2.Reader";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.aserto.directory.reader.v2.GetObjectTypeRequest,
@@ -495,21 +495,21 @@ public final class ReaderGrpc {
 
   /**
    */
-  public static abstract class ReaderImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * object type metadata methods
      * </pre>
      */
-    public void getObjectType(com.aserto.directory.reader.v2.GetObjectTypeRequest request,
+    default void getObjectType(com.aserto.directory.reader.v2.GetObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectTypeMethod(), responseObserver);
     }
 
     /**
      */
-    public void getObjectTypes(com.aserto.directory.reader.v2.GetObjectTypesRequest request,
+    default void getObjectTypes(com.aserto.directory.reader.v2.GetObjectTypesRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectTypesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectTypesMethod(), responseObserver);
     }
@@ -519,14 +519,14 @@ public final class ReaderGrpc {
      * relation type metadata methods
      * </pre>
      */
-    public void getRelationType(com.aserto.directory.reader.v2.GetRelationTypeRequest request,
+    default void getRelationType(com.aserto.directory.reader.v2.GetRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationTypeMethod(), responseObserver);
     }
 
     /**
      */
-    public void getRelationTypes(com.aserto.directory.reader.v2.GetRelationTypesRequest request,
+    default void getRelationTypes(com.aserto.directory.reader.v2.GetRelationTypesRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationTypesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationTypesMethod(), responseObserver);
     }
@@ -536,14 +536,14 @@ public final class ReaderGrpc {
      * permission metadata methods
      * </pre>
      */
-    public void getPermission(com.aserto.directory.reader.v2.GetPermissionRequest request,
+    default void getPermission(com.aserto.directory.reader.v2.GetPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetPermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPermissionMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPermissions(com.aserto.directory.reader.v2.GetPermissionsRequest request,
+    default void getPermissions(com.aserto.directory.reader.v2.GetPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetPermissionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPermissionsMethod(), responseObserver);
     }
@@ -553,21 +553,21 @@ public final class ReaderGrpc {
      * object methods
      * </pre>
      */
-    public void getObject(com.aserto.directory.reader.v2.GetObjectRequest request,
+    default void getObject(com.aserto.directory.reader.v2.GetObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
     }
 
     /**
      */
-    public void getObjectMany(com.aserto.directory.reader.v2.GetObjectManyRequest request,
+    default void getObjectMany(com.aserto.directory.reader.v2.GetObjectManyRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectManyResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectManyMethod(), responseObserver);
     }
 
     /**
      */
-    public void getObjects(com.aserto.directory.reader.v2.GetObjectsRequest request,
+    default void getObjects(com.aserto.directory.reader.v2.GetObjectsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectsMethod(), responseObserver);
     }
@@ -577,31 +577,34 @@ public final class ReaderGrpc {
      * relation methods
      * </pre>
      */
-    public void getRelation(com.aserto.directory.reader.v2.GetRelationRequest request,
+    default void getRelation(com.aserto.directory.reader.v2.GetRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationMethod(), responseObserver);
     }
 
     /**
      */
-    public void getRelations(com.aserto.directory.reader.v2.GetRelationsRequest request,
+    default void getRelations(com.aserto.directory.reader.v2.GetRelationsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationsMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * check methods
+     * check permission method
      * </pre>
      */
-    public void checkPermission(com.aserto.directory.reader.v2.CheckPermissionRequest request,
+    default void checkPermission(com.aserto.directory.reader.v2.CheckPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.CheckPermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckPermissionMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * check relation method
+     * </pre>
      */
-    public void checkRelation(com.aserto.directory.reader.v2.CheckRelationRequest request,
+    default void checkRelation(com.aserto.directory.reader.v2.CheckRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.CheckRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckRelationMethod(), responseObserver);
     }
@@ -611,118 +614,28 @@ public final class ReaderGrpc {
      * graph methods
      * </pre>
      */
-    public void getGraph(com.aserto.directory.reader.v2.GetGraphRequest request,
+    default void getGraph(com.aserto.directory.reader.v2.GetGraphRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetGraphResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGraphMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetObjectTypeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetObjectTypeRequest,
-                com.aserto.directory.reader.v2.GetObjectTypeResponse>(
-                  this, METHODID_GET_OBJECT_TYPE)))
-          .addMethod(
-            getGetObjectTypesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetObjectTypesRequest,
-                com.aserto.directory.reader.v2.GetObjectTypesResponse>(
-                  this, METHODID_GET_OBJECT_TYPES)))
-          .addMethod(
-            getGetRelationTypeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetRelationTypeRequest,
-                com.aserto.directory.reader.v2.GetRelationTypeResponse>(
-                  this, METHODID_GET_RELATION_TYPE)))
-          .addMethod(
-            getGetRelationTypesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetRelationTypesRequest,
-                com.aserto.directory.reader.v2.GetRelationTypesResponse>(
-                  this, METHODID_GET_RELATION_TYPES)))
-          .addMethod(
-            getGetPermissionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetPermissionRequest,
-                com.aserto.directory.reader.v2.GetPermissionResponse>(
-                  this, METHODID_GET_PERMISSION)))
-          .addMethod(
-            getGetPermissionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetPermissionsRequest,
-                com.aserto.directory.reader.v2.GetPermissionsResponse>(
-                  this, METHODID_GET_PERMISSIONS)))
-          .addMethod(
-            getGetObjectMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetObjectRequest,
-                com.aserto.directory.reader.v2.GetObjectResponse>(
-                  this, METHODID_GET_OBJECT)))
-          .addMethod(
-            getGetObjectManyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetObjectManyRequest,
-                com.aserto.directory.reader.v2.GetObjectManyResponse>(
-                  this, METHODID_GET_OBJECT_MANY)))
-          .addMethod(
-            getGetObjectsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetObjectsRequest,
-                com.aserto.directory.reader.v2.GetObjectsResponse>(
-                  this, METHODID_GET_OBJECTS)))
-          .addMethod(
-            getGetRelationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetRelationRequest,
-                com.aserto.directory.reader.v2.GetRelationResponse>(
-                  this, METHODID_GET_RELATION)))
-          .addMethod(
-            getGetRelationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetRelationsRequest,
-                com.aserto.directory.reader.v2.GetRelationsResponse>(
-                  this, METHODID_GET_RELATIONS)))
-          .addMethod(
-            getCheckPermissionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.CheckPermissionRequest,
-                com.aserto.directory.reader.v2.CheckPermissionResponse>(
-                  this, METHODID_CHECK_PERMISSION)))
-          .addMethod(
-            getCheckRelationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.CheckRelationRequest,
-                com.aserto.directory.reader.v2.CheckRelationResponse>(
-                  this, METHODID_CHECK_RELATION)))
-          .addMethod(
-            getGetGraphMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.aserto.directory.reader.v2.GetGraphRequest,
-                com.aserto.directory.reader.v2.GetGraphResponse>(
-                  this, METHODID_GET_GRAPH)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Reader.
    */
-  public static final class ReaderStub extends io.grpc.stub.AbstractAsyncStub<ReaderStub> {
+  public static abstract class ReaderImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ReaderGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Reader.
+   */
+  public static final class ReaderStub
+      extends io.grpc.stub.AbstractAsyncStub<ReaderStub> {
     private ReaderStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -839,7 +752,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check methods
+     * check permission method
      * </pre>
      */
     public void checkPermission(com.aserto.directory.reader.v2.CheckPermissionRequest request,
@@ -849,6 +762,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * check relation method
+     * </pre>
      */
     public void checkRelation(com.aserto.directory.reader.v2.CheckRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.CheckRelationResponse> responseObserver) {
@@ -869,8 +785,10 @@ public final class ReaderGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Reader.
    */
-  public static final class ReaderBlockingStub extends io.grpc.stub.AbstractBlockingStub<ReaderBlockingStub> {
+  public static final class ReaderBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ReaderBlockingStub> {
     private ReaderBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -976,7 +894,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check methods
+     * check permission method
      * </pre>
      */
     public com.aserto.directory.reader.v2.CheckPermissionResponse checkPermission(com.aserto.directory.reader.v2.CheckPermissionRequest request) {
@@ -985,6 +903,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * check relation method
+     * </pre>
      */
     public com.aserto.directory.reader.v2.CheckRelationResponse checkRelation(com.aserto.directory.reader.v2.CheckRelationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1003,8 +924,10 @@ public final class ReaderGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Reader.
    */
-  public static final class ReaderFutureStub extends io.grpc.stub.AbstractFutureStub<ReaderFutureStub> {
+  public static final class ReaderFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ReaderFutureStub> {
     private ReaderFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1121,7 +1044,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check methods
+     * check permission method
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.CheckPermissionResponse> checkPermission(
@@ -1131,6 +1054,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * check relation method
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.CheckRelationResponse> checkRelation(
         com.aserto.directory.reader.v2.CheckRelationRequest request) {
@@ -1170,10 +1096,10 @@ public final class ReaderGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ReaderImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ReaderImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1254,6 +1180,109 @@ public final class ReaderGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetObjectTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetObjectTypeRequest,
+              com.aserto.directory.reader.v2.GetObjectTypeResponse>(
+                service, METHODID_GET_OBJECT_TYPE)))
+        .addMethod(
+          getGetObjectTypesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetObjectTypesRequest,
+              com.aserto.directory.reader.v2.GetObjectTypesResponse>(
+                service, METHODID_GET_OBJECT_TYPES)))
+        .addMethod(
+          getGetRelationTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetRelationTypeRequest,
+              com.aserto.directory.reader.v2.GetRelationTypeResponse>(
+                service, METHODID_GET_RELATION_TYPE)))
+        .addMethod(
+          getGetRelationTypesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetRelationTypesRequest,
+              com.aserto.directory.reader.v2.GetRelationTypesResponse>(
+                service, METHODID_GET_RELATION_TYPES)))
+        .addMethod(
+          getGetPermissionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetPermissionRequest,
+              com.aserto.directory.reader.v2.GetPermissionResponse>(
+                service, METHODID_GET_PERMISSION)))
+        .addMethod(
+          getGetPermissionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetPermissionsRequest,
+              com.aserto.directory.reader.v2.GetPermissionsResponse>(
+                service, METHODID_GET_PERMISSIONS)))
+        .addMethod(
+          getGetObjectMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetObjectRequest,
+              com.aserto.directory.reader.v2.GetObjectResponse>(
+                service, METHODID_GET_OBJECT)))
+        .addMethod(
+          getGetObjectManyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetObjectManyRequest,
+              com.aserto.directory.reader.v2.GetObjectManyResponse>(
+                service, METHODID_GET_OBJECT_MANY)))
+        .addMethod(
+          getGetObjectsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetObjectsRequest,
+              com.aserto.directory.reader.v2.GetObjectsResponse>(
+                service, METHODID_GET_OBJECTS)))
+        .addMethod(
+          getGetRelationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetRelationRequest,
+              com.aserto.directory.reader.v2.GetRelationResponse>(
+                service, METHODID_GET_RELATION)))
+        .addMethod(
+          getGetRelationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetRelationsRequest,
+              com.aserto.directory.reader.v2.GetRelationsResponse>(
+                service, METHODID_GET_RELATIONS)))
+        .addMethod(
+          getCheckPermissionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.CheckPermissionRequest,
+              com.aserto.directory.reader.v2.CheckPermissionResponse>(
+                service, METHODID_CHECK_PERMISSION)))
+        .addMethod(
+          getCheckRelationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.CheckRelationRequest,
+              com.aserto.directory.reader.v2.CheckRelationResponse>(
+                service, METHODID_CHECK_RELATION)))
+        .addMethod(
+          getGetGraphMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aserto.directory.reader.v2.GetGraphRequest,
+              com.aserto.directory.reader.v2.GetGraphResponse>(
+                service, METHODID_GET_GRAPH)))
+        .build();
+  }
+
   private static abstract class ReaderBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     ReaderBaseDescriptorSupplier() {}
@@ -1277,9 +1306,9 @@ public final class ReaderGrpc {
   private static final class ReaderMethodDescriptorSupplier
       extends ReaderBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ReaderMethodDescriptorSupplier(String methodName) {
+    ReaderMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
