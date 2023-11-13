@@ -6,7 +6,7 @@
 
     <groupId>com.aserto</groupId>
     <artifactId>java-directory</artifactId>
-    <version>0.0.1</version>
+    <version>0.30.1</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A lowe level client generated from the GRPC bindings</description>
@@ -38,12 +38,9 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <grpc.version>1.53.0</grpc.version>
-        <protobuf.version>3.22.0</protobuf.version>
+        <grpc.version>1.59.0</grpc.version>
+        <protobuf.version>3.25.0</protobuf.version>
         <tomcat.annotation.api.version>6.0.53</tomcat.annotation.api.version>
-        <aserto.directory.version>v0.20.6</aserto.directory.version>
-
-        <directory-proto-defintions>buf.build/aserto-dev/directory:${aserto.directory.version}</directory-proto-defintions>
     </properties>
 
     <dependencies>
@@ -90,7 +87,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.0.1</version>
+                        <version>3.1.0</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -121,7 +118,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>3.3.0</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -134,7 +131,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.5.0</version>
+                <version>3.6.2</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
