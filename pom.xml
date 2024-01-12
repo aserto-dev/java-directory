@@ -9,7 +9,7 @@
     <version>0.30.3</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>A lowe level client generated from the GRPC bindings</description>
+    <description>A low level client generated from the GRPC bindings. For a better development experience we encourage you to use aserto-java or aserto-spring if you are using Spring in your project</description>
     <url>https://github.com/aserto-dev/java-directory</url>
 
     <licenses>
