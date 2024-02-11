@@ -85,30 +85,30 @@ public final class ModelProto {
       "ult\"E\n\025DeleteManifestRequest\022,\n\005empty\030\001 " +
       "\001(\0132\026.google.protobuf.EmptyR\005empty\"H\n\026De" +
       "leteManifestResponse\022.\n\006result\030\001 \001(\0132\026.g" +
-      "oogle.protobuf.EmptyR\006result\"e\n\010Metadata" +
-      "\022?\n\nupdated_at\030\025 \001(\0132\032.google.protobuf.T" +
-      "imestampB\004\342A\001\003R\tupdatedAt\022\030\n\004etag\030\027 \001(\tB" +
-      "\004\342A\001\001R\004etag\"%\n\004Body\022\035\n\004data\030\002 \001(\014B\t\272H\006z\004" +
-      "\030\200\200\004R\004data2\210\004\n\005Model\022v\n\013GetManifest\022-.as" +
-      "erto.directory.model.v3.GetManifestReque" +
-      "st\032..aserto.directory.model.v3.GetManife" +
-      "stResponse\"\006\202\323\344\223\002\0000\001\022v\n\013SetManifest\022-.as" +
-      "erto.directory.model.v3.SetManifestReque" +
-      "st\032..aserto.directory.model.v3.SetManife" +
-      "stResponse\"\006\202\323\344\223\002\000(\001\022\216\002\n\016DeleteManifest\022" +
-      "0.aserto.directory.model.v3.DeleteManife" +
-      "stRequest\0321.aserto.directory.model.v3.De" +
-      "leteManifestResponse\"\226\001\222Aq\n\tdirectory\022\017D" +
-      "elete manifest\032\020Delete manifest.*\034direct" +
-      "ory.v3.manifest.deleteb#\n\023\n\017DirectoryAPI" +
-      "Key\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\034*\032/api/v3/direc" +
-      "tory/manifestB\375\001\n\035com.aserto.directory.m" +
-      "odel.v3B\nModelProtoH\002P\001ZBgithub.com/aser" +
-      "to-dev/go-directory/aserto/directory/mod" +
-      "el/v3;model\370\001\000\242\002\003ADM\252\002\031Aserto.Directory." +
-      "Model.V3\312\002\032Aserto\\Directory_\\Model\\V3\342\002&" +
-      "Aserto\\Directory_\\Model\\V3\\GPBMetadata\352\002" +
-      "\034Aserto::Directory::Model::V3b\006proto3"
+      "oogle.protobuf.EmptyR\006result\"c\n\010Metadata" +
+      "\022>\n\nupdated_at\030\025 \001(\0132\032.google.protobuf.T" +
+      "imestampB\003\340A\003R\tupdatedAt\022\027\n\004etag\030\027 \001(\tB\003" +
+      "\340A\001R\004etag\"%\n\004Body\022\035\n\004data\030\002 \001(\014B\t\272H\006z\004\030\200" +
+      "\200\004R\004data2\210\004\n\005Model\022v\n\013GetManifest\022-.aser" +
+      "to.directory.model.v3.GetManifestRequest" +
+      "\032..aserto.directory.model.v3.GetManifest" +
+      "Response\"\006\202\323\344\223\002\0000\001\022v\n\013SetManifest\022-.aser" +
+      "to.directory.model.v3.SetManifestRequest" +
+      "\032..aserto.directory.model.v3.SetManifest" +
+      "Response\"\006\202\323\344\223\002\000(\001\022\216\002\n\016DeleteManifest\0220." +
+      "aserto.directory.model.v3.DeleteManifest" +
+      "Request\0321.aserto.directory.model.v3.Dele" +
+      "teManifestResponse\"\226\001\222Aq\n\tdirectory\022\017Del" +
+      "ete manifest\032\020Delete manifest.*\034director" +
+      "y.v3.manifest.deleteb#\n\023\n\017DirectoryAPIKe" +
+      "y\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\034*\032/api/v3/directo" +
+      "ry/manifestB\375\001\n\035com.aserto.directory.mod" +
+      "el.v3B\nModelProtoH\002P\001ZBgithub.com/aserto" +
+      "-dev/go-directory/aserto/directory/model" +
+      "/v3;model\370\001\000\242\002\003ADM\252\002\031Aserto.Directory.Mo" +
+      "del.V3\312\002\032Aserto\\Directory_\\Model\\V3\342\002&As" +
+      "erto\\Directory_\\Model\\V3\\GPBMetadata\352\002\034A" +
+      "serto::Directory::Model::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
