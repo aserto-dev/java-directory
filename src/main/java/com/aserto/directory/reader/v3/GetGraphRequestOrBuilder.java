@@ -10,50 +10,10 @@ public interface GetGraphRequestOrBuilder extends
 
   /**
    * <pre>
-   * anchor type
-   * </pre>
-   *
-   * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The anchorType.
-   */
-  java.lang.String getAnchorType();
-  /**
-   * <pre>
-   * anchor type
-   * </pre>
-   *
-   * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The bytes for anchorType.
-   */
-  com.google.protobuf.ByteString
-      getAnchorTypeBytes();
-
-  /**
-   * <pre>
-   * anchor identifier
-   * </pre>
-   *
-   * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The anchorId.
-   */
-  java.lang.String getAnchorId();
-  /**
-   * <pre>
-   * anchor identifier
-   * </pre>
-   *
-   * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The bytes for anchorId.
-   */
-  com.google.protobuf.ByteString
-      getAnchorIdBytes();
-
-  /**
-   * <pre>
    * object type
    * </pre>
    *
-   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The objectType.
    */
   java.lang.String getObjectType();
@@ -62,7 +22,7 @@ public interface GetGraphRequestOrBuilder extends
    * object type
    * </pre>
    *
-   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The bytes for objectType.
    */
   com.google.protobuf.ByteString
@@ -93,7 +53,7 @@ public interface GetGraphRequestOrBuilder extends
    * relation name
    * </pre>
    *
-   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The relation.
    */
   java.lang.String getRelation();
@@ -102,7 +62,7 @@ public interface GetGraphRequestOrBuilder extends
    * relation name
    * </pre>
    *
-   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The bytes for relation.
    */
   com.google.protobuf.ByteString
@@ -113,7 +73,7 @@ public interface GetGraphRequestOrBuilder extends
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The subjectType.
    */
   java.lang.String getSubjectType();
@@ -122,7 +82,7 @@ public interface GetGraphRequestOrBuilder extends
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The bytes for subjectType.
    */
   com.google.protobuf.ByteString
@@ -167,4 +127,24 @@ public interface GetGraphRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSubjectRelationBytes();
+
+  /**
+   * <pre>
+   * return graph paths for each result
+   * </pre>
+   *
+   * <code>bool explain = 9 [json_name = "explain", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The explain.
+   */
+  boolean getExplain();
+
+  /**
+   * <pre>
+   * collect trace information
+   * </pre>
+   *
+   * <code>bool trace = 10 [json_name = "trace", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The trace.
+   */
+  boolean getTrace();
 }

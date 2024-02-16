@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   }
   private GetGraphResponse() {
     results_ = java.util.Collections.emptyList();
+    trace_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -40,38 +42,39 @@ private static final long serialVersionUID = 0L;
             com.aserto.directory.reader.v3.GetGraphResponse.class, com.aserto.directory.reader.v3.GetGraphResponse.Builder.class);
   }
 
-  public static final int RESULTS_FIELD_NUMBER = 1;
+  private int bitField0_;
+  public static final int RESULTS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.aserto.directory.common.v3.ObjectDependency> results_;
+  private java.util.List<com.aserto.directory.common.v3.ObjectIdentifier> results_;
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.aserto.directory.common.v3.ObjectDependency> getResultsList() {
+  public java.util.List<com.aserto.directory.common.v3.ObjectIdentifier> getResultsList() {
     return results_;
   }
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.aserto.directory.common.v3.ObjectDependencyOrBuilder> 
+  public java.util.List<? extends com.aserto.directory.common.v3.ObjectIdentifierOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
   }
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
   public int getResultsCount() {
@@ -79,26 +82,117 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public com.aserto.directory.common.v3.ObjectDependency getResults(int index) {
+  public com.aserto.directory.common.v3.ObjectIdentifier getResults(int index) {
     return results_.get(index);
   }
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public com.aserto.directory.common.v3.ObjectDependencyOrBuilder getResultsOrBuilder(
+  public com.aserto.directory.common.v3.ObjectIdentifierOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
+  }
+
+  public static final int EXPLANATION_FIELD_NUMBER = 3;
+  private com.google.protobuf.Struct explanation_;
+  /**
+   * <pre>
+   * explanation of results
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+   * @return Whether the explanation field is set.
+   */
+  @java.lang.Override
+  public boolean hasExplanation() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * explanation of results
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+   * @return The explanation.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Struct getExplanation() {
+    return explanation_ == null ? com.google.protobuf.Struct.getDefaultInstance() : explanation_;
+  }
+  /**
+   * <pre>
+   * explanation of results
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StructOrBuilder getExplanationOrBuilder() {
+    return explanation_ == null ? com.google.protobuf.Struct.getDefaultInstance() : explanation_;
+  }
+
+  public static final int TRACE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList trace_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @return A list containing the trace.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getTraceList() {
+    return trace_;
+  }
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @return The count of trace.
+   */
+  public int getTraceCount() {
+    return trace_.size();
+  }
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @param index The index of the element to return.
+   * @return The trace at the given index.
+   */
+  public java.lang.String getTrace(int index) {
+    return trace_.get(index);
+  }
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the trace at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getTraceBytes(int index) {
+    return trace_.getByteString(index);
   }
 
   public static com.aserto.directory.reader.v3.GetGraphResponse parseFrom(
@@ -215,13 +309,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.aserto.directory.reader.v3.GetGraphResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getResultsFieldBuilder();
+        getExplanationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -234,6 +335,13 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      explanation_ = null;
+      if (explanationBuilder_ != null) {
+        explanationBuilder_.dispose();
+        explanationBuilder_ = null;
+      }
+      trace_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -280,6 +388,18 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.aserto.directory.reader.v3.GetGraphResponse result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.explanation_ = explanationBuilder_ == null
+            ? explanation_
+            : explanationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        trace_.makeImmutable();
+        result.trace_ = trace_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -316,26 +436,26 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.aserto.directory.common.v3.ObjectDependency> results_ =
+    private java.util.List<com.aserto.directory.common.v3.ObjectIdentifier> results_ =
       java.util.Collections.emptyList();
     private void ensureResultsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        results_ = new java.util.ArrayList<com.aserto.directory.common.v3.ObjectDependency>(results_);
+        results_ = new java.util.ArrayList<com.aserto.directory.common.v3.ObjectIdentifier>(results_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.aserto.directory.common.v3.ObjectDependency, com.aserto.directory.common.v3.ObjectDependency.Builder, com.aserto.directory.common.v3.ObjectDependencyOrBuilder> resultsBuilder_;
+        com.aserto.directory.common.v3.ObjectIdentifier, com.aserto.directory.common.v3.ObjectIdentifier.Builder, com.aserto.directory.common.v3.ObjectIdentifierOrBuilder> resultsBuilder_;
 
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public java.util.List<com.aserto.directory.common.v3.ObjectDependency> getResultsList() {
+    public java.util.List<com.aserto.directory.common.v3.ObjectIdentifier> getResultsList() {
       if (resultsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(results_);
       } else {
@@ -344,10 +464,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public int getResultsCount() {
       if (resultsBuilder_ == null) {
@@ -358,12 +478,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public com.aserto.directory.common.v3.ObjectDependency getResults(int index) {
+    public com.aserto.directory.common.v3.ObjectIdentifier getResults(int index) {
       if (resultsBuilder_ == null) {
         return results_.get(index);
       } else {
@@ -372,13 +492,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder setResults(
-        int index, com.aserto.directory.common.v3.ObjectDependency value) {
+        int index, com.aserto.directory.common.v3.ObjectIdentifier value) {
       if (resultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -393,13 +513,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder setResults(
-        int index, com.aserto.directory.common.v3.ObjectDependency.Builder builderForValue) {
+        int index, com.aserto.directory.common.v3.ObjectIdentifier.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         results_.set(index, builderForValue.build());
@@ -411,12 +531,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public Builder addResults(com.aserto.directory.common.v3.ObjectDependency value) {
+    public Builder addResults(com.aserto.directory.common.v3.ObjectIdentifier value) {
       if (resultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -431,13 +551,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder addResults(
-        int index, com.aserto.directory.common.v3.ObjectDependency value) {
+        int index, com.aserto.directory.common.v3.ObjectIdentifier value) {
       if (resultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -452,13 +572,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder addResults(
-        com.aserto.directory.common.v3.ObjectDependency.Builder builderForValue) {
+        com.aserto.directory.common.v3.ObjectIdentifier.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         results_.add(builderForValue.build());
@@ -470,13 +590,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder addResults(
-        int index, com.aserto.directory.common.v3.ObjectDependency.Builder builderForValue) {
+        int index, com.aserto.directory.common.v3.ObjectIdentifier.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         results_.add(index, builderForValue.build());
@@ -488,13 +608,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder addAllResults(
-        java.lang.Iterable<? extends com.aserto.directory.common.v3.ObjectDependency> values) {
+        java.lang.Iterable<? extends com.aserto.directory.common.v3.ObjectIdentifier> values) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -507,10 +627,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder clearResults() {
       if (resultsBuilder_ == null) {
@@ -524,10 +644,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
     public Builder removeResults(int index) {
       if (resultsBuilder_ == null) {
@@ -541,23 +661,23 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public com.aserto.directory.common.v3.ObjectDependency.Builder getResultsBuilder(
+    public com.aserto.directory.common.v3.ObjectIdentifier.Builder getResultsBuilder(
         int index) {
       return getResultsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public com.aserto.directory.common.v3.ObjectDependencyOrBuilder getResultsOrBuilder(
+    public com.aserto.directory.common.v3.ObjectIdentifierOrBuilder getResultsOrBuilder(
         int index) {
       if (resultsBuilder_ == null) {
         return results_.get(index);  } else {
@@ -566,12 +686,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public java.util.List<? extends com.aserto.directory.common.v3.ObjectDependencyOrBuilder> 
+    public java.util.List<? extends com.aserto.directory.common.v3.ObjectIdentifierOrBuilder> 
          getResultsOrBuilderList() {
       if (resultsBuilder_ != null) {
         return resultsBuilder_.getMessageOrBuilderList();
@@ -581,44 +701,44 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public com.aserto.directory.common.v3.ObjectDependency.Builder addResultsBuilder() {
+    public com.aserto.directory.common.v3.ObjectIdentifier.Builder addResultsBuilder() {
       return getResultsFieldBuilder().addBuilder(
-          com.aserto.directory.common.v3.ObjectDependency.getDefaultInstance());
+          com.aserto.directory.common.v3.ObjectIdentifier.getDefaultInstance());
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public com.aserto.directory.common.v3.ObjectDependency.Builder addResultsBuilder(
+    public com.aserto.directory.common.v3.ObjectIdentifier.Builder addResultsBuilder(
         int index) {
       return getResultsFieldBuilder().addBuilder(
-          index, com.aserto.directory.common.v3.ObjectDependency.getDefaultInstance());
+          index, com.aserto.directory.common.v3.ObjectIdentifier.getDefaultInstance());
     }
     /**
      * <pre>
-     * dependency graph
+     * matching object identifiers
      * </pre>
      *
-     * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+     * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
      */
-    public java.util.List<com.aserto.directory.common.v3.ObjectDependency.Builder> 
+    public java.util.List<com.aserto.directory.common.v3.ObjectIdentifier.Builder> 
          getResultsBuilderList() {
       return getResultsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.aserto.directory.common.v3.ObjectDependency, com.aserto.directory.common.v3.ObjectDependency.Builder, com.aserto.directory.common.v3.ObjectDependencyOrBuilder> 
+        com.aserto.directory.common.v3.ObjectIdentifier, com.aserto.directory.common.v3.ObjectIdentifier.Builder, com.aserto.directory.common.v3.ObjectIdentifierOrBuilder> 
         getResultsFieldBuilder() {
       if (resultsBuilder_ == null) {
         resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.aserto.directory.common.v3.ObjectDependency, com.aserto.directory.common.v3.ObjectDependency.Builder, com.aserto.directory.common.v3.ObjectDependencyOrBuilder>(
+            com.aserto.directory.common.v3.ObjectIdentifier, com.aserto.directory.common.v3.ObjectIdentifier.Builder, com.aserto.directory.common.v3.ObjectIdentifierOrBuilder>(
                 results_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -626,6 +746,310 @@ private static final long serialVersionUID = 0L;
         results_ = null;
       }
       return resultsBuilder_;
+    }
+
+    private com.google.protobuf.Struct explanation_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> explanationBuilder_;
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     * @return Whether the explanation field is set.
+     */
+    public boolean hasExplanation() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     * @return The explanation.
+     */
+    public com.google.protobuf.Struct getExplanation() {
+      if (explanationBuilder_ == null) {
+        return explanation_ == null ? com.google.protobuf.Struct.getDefaultInstance() : explanation_;
+      } else {
+        return explanationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     */
+    public Builder setExplanation(com.google.protobuf.Struct value) {
+      if (explanationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        explanation_ = value;
+      } else {
+        explanationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     */
+    public Builder setExplanation(
+        com.google.protobuf.Struct.Builder builderForValue) {
+      if (explanationBuilder_ == null) {
+        explanation_ = builderForValue.build();
+      } else {
+        explanationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     */
+    public Builder mergeExplanation(com.google.protobuf.Struct value) {
+      if (explanationBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          explanation_ != null &&
+          explanation_ != com.google.protobuf.Struct.getDefaultInstance()) {
+          getExplanationBuilder().mergeFrom(value);
+        } else {
+          explanation_ = value;
+        }
+      } else {
+        explanationBuilder_.mergeFrom(value);
+      }
+      if (explanation_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     */
+    public Builder clearExplanation() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      explanation_ = null;
+      if (explanationBuilder_ != null) {
+        explanationBuilder_.dispose();
+        explanationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     */
+    public com.google.protobuf.Struct.Builder getExplanationBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getExplanationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     */
+    public com.google.protobuf.StructOrBuilder getExplanationOrBuilder() {
+      if (explanationBuilder_ != null) {
+        return explanationBuilder_.getMessageOrBuilder();
+      } else {
+        return explanation_ == null ?
+            com.google.protobuf.Struct.getDefaultInstance() : explanation_;
+      }
+    }
+    /**
+     * <pre>
+     * explanation of results
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+        getExplanationFieldBuilder() {
+      if (explanationBuilder_ == null) {
+        explanationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                getExplanation(),
+                getParentForChildren(),
+                isClean());
+        explanation_ = null;
+      }
+      return explanationBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringArrayList trace_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureTraceIsMutable() {
+      if (!trace_.isModifiable()) {
+        trace_ = new com.google.protobuf.LazyStringArrayList(trace_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @return A list containing the trace.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTraceList() {
+      trace_.makeImmutable();
+      return trace_;
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @return The count of trace.
+     */
+    public int getTraceCount() {
+      return trace_.size();
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @param index The index of the element to return.
+     * @return The trace at the given index.
+     */
+    public java.lang.String getTrace(int index) {
+      return trace_.get(index);
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trace at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTraceBytes(int index) {
+      return trace_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @param index The index to set the value at.
+     * @param value The trace to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTrace(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTraceIsMutable();
+      trace_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @param value The trace to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTrace(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTraceIsMutable();
+      trace_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @param values The trace to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllTrace(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTraceIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, trace_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTrace() {
+      trace_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * trace information
+     * </pre>
+     *
+     * <code>repeated string trace = 4 [json_name = "trace"];</code>
+     * @param value The bytes of the trace to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTraceBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureTraceIsMutable();
+      trace_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

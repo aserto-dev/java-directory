@@ -17,8 +17,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetGraphRequest() {
-    anchorType_ = "";
-    anchorId_ = "";
     objectType_ = "";
     objectId_ = "";
     relation_ = "";
@@ -47,100 +45,6 @@ private static final long serialVersionUID = 0L;
             com.aserto.directory.reader.v3.GetGraphRequest.class, com.aserto.directory.reader.v3.GetGraphRequest.Builder.class);
   }
 
-  public static final int ANCHOR_TYPE_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object anchorType_ = "";
-  /**
-   * <pre>
-   * anchor type
-   * </pre>
-   *
-   * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The anchorType.
-   */
-  @java.lang.Override
-  public java.lang.String getAnchorType() {
-    java.lang.Object ref = anchorType_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      anchorType_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * anchor type
-   * </pre>
-   *
-   * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The bytes for anchorType.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAnchorTypeBytes() {
-    java.lang.Object ref = anchorType_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      anchorType_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ANCHOR_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object anchorId_ = "";
-  /**
-   * <pre>
-   * anchor identifier
-   * </pre>
-   *
-   * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The anchorId.
-   */
-  @java.lang.Override
-  public java.lang.String getAnchorId() {
-    java.lang.Object ref = anchorId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      anchorId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * anchor identifier
-   * </pre>
-   *
-   * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-   * @return The bytes for anchorId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAnchorIdBytes() {
-    java.lang.Object ref = anchorId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      anchorId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int OBJECT_TYPE_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object objectType_ = "";
@@ -149,7 +53,7 @@ private static final long serialVersionUID = 0L;
    * object type
    * </pre>
    *
-   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The objectType.
    */
   @java.lang.Override
@@ -170,7 +74,7 @@ private static final long serialVersionUID = 0L;
    * object type
    * </pre>
    *
-   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The bytes for objectType.
    */
   @java.lang.Override
@@ -243,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * relation name
    * </pre>
    *
-   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The relation.
    */
   @java.lang.Override
@@ -264,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * relation name
    * </pre>
    *
-   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The bytes for relation.
    */
   @java.lang.Override
@@ -290,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The subjectType.
    */
   @java.lang.Override
@@ -311,7 +215,7 @@ private static final long serialVersionUID = 0L;
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
    * @return The bytes for subjectType.
    */
   @java.lang.Override
@@ -421,6 +325,36 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int EXPLAIN_FIELD_NUMBER = 9;
+  private boolean explain_ = false;
+  /**
+   * <pre>
+   * return graph paths for each result
+   * </pre>
+   *
+   * <code>bool explain = 9 [json_name = "explain", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The explain.
+   */
+  @java.lang.Override
+  public boolean getExplain() {
+    return explain_;
+  }
+
+  public static final int TRACE_FIELD_NUMBER = 10;
+  private boolean trace_ = false;
+  /**
+   * <pre>
+   * collect trace information
+   * </pre>
+   *
+   * <code>bool trace = 10 [json_name = "trace", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The trace.
+   */
+  @java.lang.Override
+  public boolean getTrace() {
+    return trace_;
   }
 
   public static com.aserto.directory.reader.v3.GetGraphRequest parseFrom(
@@ -549,14 +483,14 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      anchorType_ = "";
-      anchorId_ = "";
       objectType_ = "";
       objectId_ = "";
       relation_ = "";
       subjectType_ = "";
       subjectId_ = "";
       subjectRelation_ = "";
+      explain_ = false;
+      trace_ = false;
       return this;
     }
 
@@ -591,28 +525,28 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.aserto.directory.reader.v3.GetGraphRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.anchorType_ = anchorType_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.anchorId_ = anchorId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.objectType_ = objectType_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.objectId_ = objectId_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.relation_ = relation_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.subjectType_ = subjectType_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.subjectId_ = subjectId_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.subjectRelation_ = subjectRelation_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.explain_ = explain_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.trace_ = trace_;
       }
     }
 
@@ -650,197 +584,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object anchorType_ = "";
-    /**
-     * <pre>
-     * anchor type
-     * </pre>
-     *
-     * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @return The anchorType.
-     */
-    public java.lang.String getAnchorType() {
-      java.lang.Object ref = anchorType_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        anchorType_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * anchor type
-     * </pre>
-     *
-     * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @return The bytes for anchorType.
-     */
-    public com.google.protobuf.ByteString
-        getAnchorTypeBytes() {
-      java.lang.Object ref = anchorType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        anchorType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * anchor type
-     * </pre>
-     *
-     * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @param value The anchorType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAnchorType(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      anchorType_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * anchor type
-     * </pre>
-     *
-     * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAnchorType() {
-      anchorType_ = getDefaultInstance().getAnchorType();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * anchor type
-     * </pre>
-     *
-     * <code>string anchor_type = 1 [json_name = "anchorType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @param value The bytes for anchorType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAnchorTypeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      anchorType_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object anchorId_ = "";
-    /**
-     * <pre>
-     * anchor identifier
-     * </pre>
-     *
-     * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @return The anchorId.
-     */
-    public java.lang.String getAnchorId() {
-      java.lang.Object ref = anchorId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        anchorId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * anchor identifier
-     * </pre>
-     *
-     * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @return The bytes for anchorId.
-     */
-    public com.google.protobuf.ByteString
-        getAnchorIdBytes() {
-      java.lang.Object ref = anchorId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        anchorId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * anchor identifier
-     * </pre>
-     *
-     * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @param value The anchorId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAnchorId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      anchorId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * anchor identifier
-     * </pre>
-     *
-     * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAnchorId() {
-      anchorId_ = getDefaultInstance().getAnchorId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * anchor identifier
-     * </pre>
-     *
-     * <code>string anchor_id = 2 [json_name = "anchorId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
-     * @param value The bytes for anchorId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAnchorIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      anchorId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object objectType_ = "";
     /**
      * <pre>
      * object type
      * </pre>
      *
-     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return The objectType.
      */
     public java.lang.String getObjectType() {
@@ -860,7 +610,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return The bytes for objectType.
      */
     public com.google.protobuf.ByteString
@@ -881,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @param value The objectType to set.
      * @return This builder for chaining.
      */
@@ -889,7 +639,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       objectType_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -898,12 +648,12 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearObjectType() {
       objectType_ = getDefaultInstance().getObjectType();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -912,7 +662,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 3 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @param value The bytes for objectType to set.
      * @return This builder for chaining.
      */
@@ -921,7 +671,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       objectType_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -981,7 +731,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       objectId_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -995,7 +745,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearObjectId() {
       objectId_ = getDefaultInstance().getObjectId();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1013,7 +763,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       objectId_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1024,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return The relation.
      */
     public java.lang.String getRelation() {
@@ -1044,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return The bytes for relation.
      */
     public com.google.protobuf.ByteString
@@ -1065,7 +815,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @param value The relation to set.
      * @return This builder for chaining.
      */
@@ -1073,7 +823,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       relation_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1082,12 +832,12 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearRelation() {
       relation_ = getDefaultInstance().getRelation();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1096,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 5 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @param value The bytes for relation to set.
      * @return This builder for chaining.
      */
@@ -1105,7 +855,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       relation_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1116,7 +866,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return The subjectType.
      */
     public java.lang.String getSubjectType() {
@@ -1136,7 +886,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return The bytes for subjectType.
      */
     public com.google.protobuf.ByteString
@@ -1157,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @param value The subjectType to set.
      * @return This builder for chaining.
      */
@@ -1165,7 +915,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       subjectType_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1174,12 +924,12 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearSubjectType() {
       subjectType_ = getDefaultInstance().getSubjectType();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1188,7 +938,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 6 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
      * @param value The bytes for subjectType to set.
      * @return This builder for chaining.
      */
@@ -1197,7 +947,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       subjectType_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1257,7 +1007,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       subjectId_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1271,7 +1021,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSubjectId() {
       subjectId_ = getDefaultInstance().getSubjectId();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1289,7 +1039,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       subjectId_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1349,7 +1099,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       subjectRelation_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1363,7 +1113,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSubjectRelation() {
       subjectRelation_ = getDefaultInstance().getSubjectRelation();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1381,7 +1131,95 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       subjectRelation_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private boolean explain_ ;
+    /**
+     * <pre>
+     * return graph paths for each result
+     * </pre>
+     *
+     * <code>bool explain = 9 [json_name = "explain", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The explain.
+     */
+    @java.lang.Override
+    public boolean getExplain() {
+      return explain_;
+    }
+    /**
+     * <pre>
+     * return graph paths for each result
+     * </pre>
+     *
+     * <code>bool explain = 9 [json_name = "explain", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The explain to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExplain(boolean value) {
+
+      explain_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * return graph paths for each result
+     * </pre>
+     *
+     * <code>bool explain = 9 [json_name = "explain", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExplain() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      explain_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean trace_ ;
+    /**
+     * <pre>
+     * collect trace information
+     * </pre>
+     *
+     * <code>bool trace = 10 [json_name = "trace", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The trace.
+     */
+    @java.lang.Override
+    public boolean getTrace() {
+      return trace_;
+    }
+    /**
+     * <pre>
+     * collect trace information
+     * </pre>
+     *
+     * <code>bool trace = 10 [json_name = "trace", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The trace to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTrace(boolean value) {
+
+      trace_ = value;
       bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * collect trace information
+     * </pre>
+     *
+     * <code>bool trace = 10 [json_name = "trace", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTrace() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      trace_ = false;
       onChanged();
       return this;
     }

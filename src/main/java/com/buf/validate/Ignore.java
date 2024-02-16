@@ -6,56 +6,67 @@ package com.buf.validate;
 
 /**
  * <pre>
- * WellKnownRegex contain some well-known patterns.
+ * Specifies how FieldConstraints.ignore behaves. See the documentation for
+ * FieldConstraints.required for definitions of "populated" and "nullable".
  * </pre>
  *
- * Protobuf enum {@code buf.validate.KnownRegex}
+ * Protobuf enum {@code buf.validate.Ignore}
  */
-public enum KnownRegex
+public enum Ignore
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>KNOWN_REGEX_UNSPECIFIED = 0;</code>
-   */
-  KNOWN_REGEX_UNSPECIFIED(0),
-  /**
    * <pre>
-   * HTTP header name as defined by [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2).
+   * Validation is only skipped if it's an unpopulated nullable fields.
    * </pre>
    *
-   * <code>KNOWN_REGEX_HTTP_HEADER_NAME = 1;</code>
+   * <code>IGNORE_UNSPECIFIED = 0;</code>
    */
-  KNOWN_REGEX_HTTP_HEADER_NAME(1),
+  IGNORE_UNSPECIFIED(0),
   /**
    * <pre>
-   * HTTP header value as defined by [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2.4).
+   * Validation is skipped if the field is unpopulated.
    * </pre>
    *
-   * <code>KNOWN_REGEX_HTTP_HEADER_VALUE = 2;</code>
+   * <code>IGNORE_EMPTY = 1;</code>
    */
-  KNOWN_REGEX_HTTP_HEADER_VALUE(2),
+  IGNORE_EMPTY(1),
+  /**
+   * <pre>
+   * Validation is skipped if the field is unpopulated or if it is a nullable
+   * field populated with its default value.
+   * </pre>
+   *
+   * <code>IGNORE_DEFAULT = 2;</code>
+   */
+  IGNORE_DEFAULT(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>KNOWN_REGEX_UNSPECIFIED = 0;</code>
-   */
-  public static final int KNOWN_REGEX_UNSPECIFIED_VALUE = 0;
-  /**
    * <pre>
-   * HTTP header name as defined by [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2).
+   * Validation is only skipped if it's an unpopulated nullable fields.
    * </pre>
    *
-   * <code>KNOWN_REGEX_HTTP_HEADER_NAME = 1;</code>
+   * <code>IGNORE_UNSPECIFIED = 0;</code>
    */
-  public static final int KNOWN_REGEX_HTTP_HEADER_NAME_VALUE = 1;
+  public static final int IGNORE_UNSPECIFIED_VALUE = 0;
   /**
    * <pre>
-   * HTTP header value as defined by [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2.4).
+   * Validation is skipped if the field is unpopulated.
    * </pre>
    *
-   * <code>KNOWN_REGEX_HTTP_HEADER_VALUE = 2;</code>
+   * <code>IGNORE_EMPTY = 1;</code>
    */
-  public static final int KNOWN_REGEX_HTTP_HEADER_VALUE_VALUE = 2;
+  public static final int IGNORE_EMPTY_VALUE = 1;
+  /**
+   * <pre>
+   * Validation is skipped if the field is unpopulated or if it is a nullable
+   * field populated with its default value.
+   * </pre>
+   *
+   * <code>IGNORE_DEFAULT = 2;</code>
+   */
+  public static final int IGNORE_DEFAULT_VALUE = 2;
 
 
   public final int getNumber() {
@@ -72,7 +83,7 @@ public enum KnownRegex
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static KnownRegex valueOf(int value) {
+  public static Ignore valueOf(int value) {
     return forNumber(value);
   }
 
@@ -80,24 +91,24 @@ public enum KnownRegex
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static KnownRegex forNumber(int value) {
+  public static Ignore forNumber(int value) {
     switch (value) {
-      case 0: return KNOWN_REGEX_UNSPECIFIED;
-      case 1: return KNOWN_REGEX_HTTP_HEADER_NAME;
-      case 2: return KNOWN_REGEX_HTTP_HEADER_VALUE;
+      case 0: return IGNORE_UNSPECIFIED;
+      case 1: return IGNORE_EMPTY;
+      case 2: return IGNORE_DEFAULT;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<KnownRegex>
+  public static com.google.protobuf.Internal.EnumLiteMap<Ignore>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      KnownRegex> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<KnownRegex>() {
-          public KnownRegex findValueByNumber(int number) {
-            return KnownRegex.forNumber(number);
+      Ignore> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<Ignore>() {
+          public Ignore findValueByNumber(int number) {
+            return Ignore.forNumber(number);
           }
         };
 
@@ -115,12 +126,12 @@ public enum KnownRegex
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.buf.validate.ValidateProto.getDescriptor().getEnumTypes().get(1);
+    return com.buf.validate.ValidateProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final KnownRegex[] VALUES = values();
+  private static final Ignore[] VALUES = values();
 
-  public static KnownRegex valueOf(
+  public static Ignore valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -134,10 +145,10 @@ public enum KnownRegex
 
   private final int value;
 
-  private KnownRegex(int value) {
+  private Ignore(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:buf.validate.KnownRegex)
+  // @@protoc_insertion_point(enum_scope:buf.validate.Ignore)
 }
 

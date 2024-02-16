@@ -26,11 +26,6 @@ public final class CommonProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aserto_directory_common_v3_Relation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aserto_directory_common_v3_ObjectDependency_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aserto_directory_common_v3_ObjectDependency_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aserto_directory_common_v3_ObjectIdentifier_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -119,74 +114,66 @@ public final class CommonProto {
       "oogle.protobuf.TimestampB\003\340A\003R\tcreatedAt" +
       "\022>\n\nupdated_at\030\025 \001(\0132\032.google.protobuf.T" +
       "imestampB\003\340A\003R\tupdatedAt\022\027\n\004etag\030\027 \001(\tB\003" +
-      "\340A\001R\004etag\"\313\002\n\020ObjectDependency\022$\n\013object" +
-      "_type\030\001 \001(\tB\003\340A\003R\nobjectType\022 \n\tobject_i" +
-      "d\030\002 \001(\tB\003\340A\003R\010objectId\022\037\n\010relation\030\003 \001(\t" +
-      "B\003\340A\003R\010relation\022&\n\014subject_type\030\004 \001(\tB\003\340" +
-      "A\003R\013subjectType\022\"\n\nsubject_id\030\005 \001(\tB\003\340A\003" +
-      "R\tsubjectId\022.\n\020subject_relation\030\006 \001(\tB\003\340" +
-      "A\003R\017subjectRelation\022\031\n\005depth\030\007 \001(\005B\003\340A\003R" +
-      "\005depth\022\036\n\010is_cycle\030\010 \001(\010B\003\340A\003R\007isCycle\022\027" +
-      "\n\004path\030\t \003(\tB\003\340A\003R\004path\"\315\003\n\020ObjectIdenti" +
-      "fier\022\225\002\n\013object_type\030\001 \001(\tB\363\001\340A\002\272H\354\001r\002\030@" +
-      "\272\001\341\001\n\035object_identifier.object_type\022\213\001mu" +
-      "st be all lowercase, start with a letter" +
-      ", can contain letters, digits, dots, und" +
-      "erscores, and dashes, and must end with " +
-      "a letter or digit\0322this.matches(\'^[a-z][" +
-      "a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\310\001\001R\nobject" +
-      "Type\022\240\001\n\tobject_id\030\002 \001(\tB\202\001\340A\002\272H|r\003\030\200\002\272\001" +
-      "q\n\033object_identifier.object_id\0228cannot c" +
-      "ontain any spaces or other whitespace ch" +
-      "aracters\032\030this.matches(\'^[\\\\S]+$\')\310\001\001R\010o" +
-      "bjectId\"\323\013\n\022RelationIdentifier\022\227\002\n\013objec" +
-      "t_type\030\001 \001(\tB\365\001\340A\002\272H\356\001r\002\030@\272\001\343\001\n\037relation" +
-      "_identifier.object_type\022\213\001must be all lo" +
-      "wercase, start with a letter, can contai" +
-      "n letters, digits, dots, underscores, an" +
-      "d dashes, and must end with a letter or " +
-      "digit\0322this.matches(\'^[a-z][a-z0-9\\\\._-]" +
-      "{1,62}[a-z0-9]$\')\320\001\001R\nobjectType\022\242\001\n\tobj" +
-      "ect_id\030\002 \001(\tB\204\001\340A\002\272H~r\003\030\200\002\272\001s\n\035relation_" +
-      "identifier.object_id\0228cannot contain any" +
-      " spaces or other whitespace characters\032\030" +
-      "this.matches(\'^[\\\\S]+$\')\320\001\001R\010objectId\022\217\002" +
-      "\n\010relation\030\003 \001(\tB\362\001\340A\002\272H\353\001r\002\030@\272\001\340\001\n\034rela" +
-      "tion_identifier.relation\022\213\001must be all l" +
-      "owercase, start with a letter, can conta" +
-      "in letters, digits, dots, underscores, a" +
-      "nd dashes, and must end with a letter or" +
-      " digit\0322this.matches(\'^[a-z][a-z0-9\\\\._-" +
-      "]{1,62}[a-z0-9]$\')\320\001\001R\010relation\022\232\002\n\014subj" +
-      "ect_type\030\004 \001(\tB\366\001\340A\002\272H\357\001r\002\030@\272\001\344\001\n relati" +
-      "on_identifier.subject_type\022\213\001must be all" +
-      " lowercase, start with a letter, can con" +
-      "tain letters, digits, dots, underscores," +
-      " and dashes, and must end with a letter " +
-      "or digit\0322this.matches(\'^[a-z][a-z0-9\\\\." +
-      "_-]{1,62}[a-z0-9]$\')\320\001\001R\013subjectType\022\245\001\n" +
-      "\nsubject_id\030\005 \001(\tB\205\001\340A\002\272H\177r\003\030\200\002\272\001t\n\036rela" +
-      "tion_identifier.subject_id\0228cannot conta" +
-      "in any spaces or other whitespace charac" +
-      "ters\032\030this.matches(\'^[\\\\S]+$\')\320\001\001R\tsubje" +
-      "ctId\022\246\002\n\020subject_relation\030\006 \001(\tB\372\001\340A\001\272H\363" +
-      "\001r\002\030@\272\001\350\001\n$relation_identifier.subject_r" +
-      "elation\022\213\001must be all lowercase, start w" +
-      "ith a letter, can contain letters, digit" +
-      "s, dots, underscores, and dashes, and mu" +
-      "st end with a letter or digit\0322this.matc" +
-      "hes(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-z0-9]$\'" +
-      ")\320\001\001R\017subjectRelation\"P\n\021PaginationReque" +
-      "st\022 \n\004size\030\001 \001(\005B\014\340A\001\272H\006\032\004\030d(\001R\004size\022\031\n\005" +
-      "token\030\002 \001(\tB\003\340A\001R\005token\"8\n\022PaginationRes" +
-      "ponse\022\"\n\nnext_token\030\001 \001(\tB\003\340A\003R\tnextToke" +
-      "nB\205\002\n\036com.aserto.directory.common.v3B\013Co" +
-      "mmonProtoH\002P\001ZDgithub.com/aserto-dev/go-" +
-      "directory/aserto/directory/common/v3;com" +
-      "mon\370\001\000\242\002\003ADC\252\002\032Aserto.Directory.Common.V" +
-      "3\312\002\033Aserto\\Directory_\\Common\\V3\342\002\'Aserto" +
-      "\\Directory_\\Common\\V3\\GPBMetadata\352\002\035Aser" +
-      "to::Directory::Common::V3b\006proto3"
+      "\340A\001R\004etag\"\315\003\n\020ObjectIdentifier\022\225\002\n\013objec" +
+      "t_type\030\001 \001(\tB\363\001\340A\002\272H\354\001r\002\030@\272\001\341\001\n\035object_i" +
+      "dentifier.object_type\022\213\001must be all lowe" +
+      "rcase, start with a letter, can contain " +
+      "letters, digits, dots, underscores, and " +
+      "dashes, and must end with a letter or di" +
+      "git\0322this.matches(\'^[a-z][a-z0-9\\\\._-]{1" +
+      ",62}[a-z0-9]$\')\310\001\001R\nobjectType\022\240\001\n\tobjec" +
+      "t_id\030\002 \001(\tB\202\001\340A\002\272H|r\003\030\200\002\272\001q\n\033object_iden" +
+      "tifier.object_id\0228cannot contain any spa" +
+      "ces or other whitespace characters\032\030this" +
+      ".matches(\'^[\\\\S]+$\')\310\001\001R\010objectId\"\323\013\n\022Re" +
+      "lationIdentifier\022\227\002\n\013object_type\030\001 \001(\tB\365" +
+      "\001\340A\002\272H\356\001r\002\030@\272\001\343\001\n\037relation_identifier.ob" +
+      "ject_type\022\213\001must be all lowercase, start" +
+      " with a letter, can contain letters, dig" +
+      "its, dots, underscores, and dashes, and " +
+      "must end with a letter or digit\0322this.ma" +
+      "tches(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-z0-9]" +
+      "$\')\320\001\001R\nobjectType\022\242\001\n\tobject_id\030\002 \001(\tB\204" +
+      "\001\340A\002\272H~r\003\030\200\002\272\001s\n\035relation_identifier.obj" +
+      "ect_id\0228cannot contain any spaces or oth" +
+      "er whitespace characters\032\030this.matches(\'" +
+      "^[\\\\S]+$\')\320\001\001R\010objectId\022\217\002\n\010relation\030\003 \001" +
+      "(\tB\362\001\340A\002\272H\353\001r\002\030@\272\001\340\001\n\034relation_identifie" +
+      "r.relation\022\213\001must be all lowercase, star" +
+      "t with a letter, can contain letters, di" +
+      "gits, dots, underscores, and dashes, and" +
+      " must end with a letter or digit\0322this.m" +
+      "atches(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-z0-9" +
+      "]$\')\320\001\001R\010relation\022\232\002\n\014subject_type\030\004 \001(\t" +
+      "B\366\001\340A\002\272H\357\001r\002\030@\272\001\344\001\n relation_identifier." +
+      "subject_type\022\213\001must be all lowercase, st" +
+      "art with a letter, can contain letters, " +
+      "digits, dots, underscores, and dashes, a" +
+      "nd must end with a letter or digit\0322this" +
+      ".matches(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-z0" +
+      "-9]$\')\320\001\001R\013subjectType\022\245\001\n\nsubject_id\030\005 " +
+      "\001(\tB\205\001\340A\002\272H\177r\003\030\200\002\272\001t\n\036relation_identifie" +
+      "r.subject_id\0228cannot contain any spaces " +
+      "or other whitespace characters\032\030this.mat" +
+      "ches(\'^[\\\\S]+$\')\320\001\001R\tsubjectId\022\246\002\n\020subje" +
+      "ct_relation\030\006 \001(\tB\372\001\340A\001\272H\363\001r\002\030@\272\001\350\001\n$rel" +
+      "ation_identifier.subject_relation\022\213\001must" +
+      " be all lowercase, start with a letter, " +
+      "can contain letters, digits, dots, under" +
+      "scores, and dashes, and must end with a " +
+      "letter or digit\0322this.matches(\'^[a-z][a-" +
+      "z0-9\\\\._-]{1,62}[a-z0-9]$\')\320\001\001R\017subjectR" +
+      "elation\"P\n\021PaginationRequest\022 \n\004size\030\001 \001" +
+      "(\005B\014\340A\001\272H\006\032\004\030d(\001R\004size\022\031\n\005token\030\002 \001(\tB\003\340" +
+      "A\001R\005token\"8\n\022PaginationResponse\022\"\n\nnext_" +
+      "token\030\001 \001(\tB\003\340A\003R\tnextTokenB\205\002\n\036com.aser" +
+      "to.directory.common.v3B\013CommonProtoH\002P\001Z" +
+      "Dgithub.com/aserto-dev/go-directory/aser" +
+      "to/directory/common/v3;common\370\001\000\242\002\003ADC\252\002" +
+      "\032Aserto.Directory.Common.V3\312\002\033Aserto\\Dir" +
+      "ectory_\\Common\\V3\342\002\'Aserto\\Directory_\\Co" +
+      "mmon\\V3\\GPBMetadata\352\002\035Aserto::Directory:" +
+      ":Common::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -208,32 +195,26 @@ public final class CommonProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_common_v3_Relation_descriptor,
         new java.lang.String[] { "ObjectType", "ObjectId", "Relation", "SubjectType", "SubjectId", "SubjectRelation", "CreatedAt", "UpdatedAt", "Etag", });
-    internal_static_aserto_directory_common_v3_ObjectDependency_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_aserto_directory_common_v3_ObjectDependency_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aserto_directory_common_v3_ObjectDependency_descriptor,
-        new java.lang.String[] { "ObjectType", "ObjectId", "Relation", "SubjectType", "SubjectId", "SubjectRelation", "Depth", "IsCycle", "Path", });
     internal_static_aserto_directory_common_v3_ObjectIdentifier_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_aserto_directory_common_v3_ObjectIdentifier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_common_v3_ObjectIdentifier_descriptor,
         new java.lang.String[] { "ObjectType", "ObjectId", });
     internal_static_aserto_directory_common_v3_RelationIdentifier_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_aserto_directory_common_v3_RelationIdentifier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_common_v3_RelationIdentifier_descriptor,
         new java.lang.String[] { "ObjectType", "ObjectId", "Relation", "SubjectType", "SubjectId", "SubjectRelation", });
     internal_static_aserto_directory_common_v3_PaginationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_aserto_directory_common_v3_PaginationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_common_v3_PaginationRequest_descriptor,
         new java.lang.String[] { "Size", "Token", });
     internal_static_aserto_directory_common_v3_PaginationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_aserto_directory_common_v3_PaginationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_common_v3_PaginationResponse_descriptor,

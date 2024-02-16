@@ -10,45 +10,113 @@ public interface GetGraphResponseOrBuilder extends
 
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
-  java.util.List<com.aserto.directory.common.v3.ObjectDependency> 
+  java.util.List<com.aserto.directory.common.v3.ObjectIdentifier> 
       getResultsList();
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
-  com.aserto.directory.common.v3.ObjectDependency getResults(int index);
+  com.aserto.directory.common.v3.ObjectIdentifier getResults(int index);
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
   int getResultsCount();
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
-  java.util.List<? extends com.aserto.directory.common.v3.ObjectDependencyOrBuilder> 
+  java.util.List<? extends com.aserto.directory.common.v3.ObjectIdentifierOrBuilder> 
       getResultsOrBuilderList();
   /**
    * <pre>
-   * dependency graph
+   * matching object identifiers
    * </pre>
    *
-   * <code>repeated .aserto.directory.common.v3.ObjectDependency results = 1 [json_name = "results"];</code>
+   * <code>repeated .aserto.directory.common.v3.ObjectIdentifier results = 2 [json_name = "results"];</code>
    */
-  com.aserto.directory.common.v3.ObjectDependencyOrBuilder getResultsOrBuilder(
+  com.aserto.directory.common.v3.ObjectIdentifierOrBuilder getResultsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * explanation of results
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+   * @return Whether the explanation field is set.
+   */
+  boolean hasExplanation();
+  /**
+   * <pre>
+   * explanation of results
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+   * @return The explanation.
+   */
+  com.google.protobuf.Struct getExplanation();
+  /**
+   * <pre>
+   * explanation of results
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct explanation = 3 [json_name = "explanation"];</code>
+   */
+  com.google.protobuf.StructOrBuilder getExplanationOrBuilder();
+
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @return A list containing the trace.
+   */
+  java.util.List<java.lang.String>
+      getTraceList();
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @return The count of trace.
+   */
+  int getTraceCount();
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @param index The index of the element to return.
+   * @return The trace at the given index.
+   */
+  java.lang.String getTrace(int index);
+  /**
+   * <pre>
+   * trace information
+   * </pre>
+   *
+   * <code>repeated string trace = 4 [json_name = "trace"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the trace at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTraceBytes(int index);
 }

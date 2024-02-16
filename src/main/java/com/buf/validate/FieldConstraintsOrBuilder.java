@@ -142,7 +142,7 @@ public interface FieldConstraintsOrBuilder extends
    * described as "serialized in the wire format," which follows the following rules:
    *
    * - the following "nullable" fields must be explicitly set to be considered present:
-   *   - singular message fields (may be their empty value)
+   *   - singular message fields (whose fields may be unpopulated/default values)
    *   - member fields of a oneof (may be their default value)
    *   - proto3 optional fields (may be their default value)
    *   - proto2 scalar fields
@@ -164,27 +164,56 @@ public interface FieldConstraintsOrBuilder extends
 
   /**
    * <pre>
-   * If `ignore_empty` is true and applied to a non-nullable field (see
-   * `required` for more details), validation is skipped on the field if it is
-   * the default or empty value. Adding `ignore_empty` to a "nullable" field is
-   * a noop as these unset fields already skip validation (with the exception
-   * of `required`).
+   * DEPRECATED: use ignore=IGNORE_EMPTY instead.
+   * </pre>
+   *
+   * <code>bool ignore_empty = 26 [json_name = "ignoreEmpty", deprecated = true];</code>
+   * @deprecated buf.validate.FieldConstraints.ignore_empty is deprecated.
+   *     See buf/validate/validate.proto;l=163
+   * @return The ignoreEmpty.
+   */
+  @java.lang.Deprecated boolean getIgnoreEmpty();
+
+  /**
+   * <pre>
+   * Skip validation on the field if its value matches the specified rule.
    *
    * ```proto
-   * message MyRepeated {
-   *   // The field `value` min_len rule is only applied if the field isn't empty.
-   *   repeated string value = 1 [
-   *     (buf.validate.field).ignore_empty = true,
-   *     (buf.validate.field).min_len = 5
+   * message UpdateRequest {
+   *   // The uri rule only applies if the field is populated and not an empty
+   *   // string.
+   *   optional string url = 1 [
+   *     (buf.validate.field).ignore = IGNORE_DEFAULT,
+   *     (buf.validate.field).string.uri = true,
    *   ];
    * }
    * ```
    * </pre>
    *
-   * <code>bool ignore_empty = 26 [json_name = "ignoreEmpty"];</code>
-   * @return The ignoreEmpty.
+   * <code>.buf.validate.Ignore ignore = 27 [json_name = "ignore"];</code>
+   * @return The enum numeric value on the wire for ignore.
    */
-  boolean getIgnoreEmpty();
+  int getIgnoreValue();
+  /**
+   * <pre>
+   * Skip validation on the field if its value matches the specified rule.
+   *
+   * ```proto
+   * message UpdateRequest {
+   *   // The uri rule only applies if the field is populated and not an empty
+   *   // string.
+   *   optional string url = 1 [
+   *     (buf.validate.field).ignore = IGNORE_DEFAULT,
+   *     (buf.validate.field).string.uri = true,
+   *   ];
+   * }
+   * ```
+   * </pre>
+   *
+   * <code>.buf.validate.Ignore ignore = 27 [json_name = "ignore"];</code>
+   * @return The ignore.
+   */
+  com.buf.validate.Ignore getIgnore();
 
   /**
    * <pre>
