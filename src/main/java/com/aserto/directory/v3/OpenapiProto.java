@@ -37,7 +37,7 @@ public final class OpenapiProto {
       "aserto-dev/pb-directory\032\022support@aserto." +
       "com*R\n\022Apache 2.0 License\022<https://githu" +
       "b.com/aserto-dev/pb-directory/blob/main/" +
-      "LICENSE2\0033.0*\003\001\002\0042\020application/json:\020app" +
+      "LICENSE2\0033.1*\003\001\002\0042\020application/json:\020app" +
       "lication/jsonZL\n&\n\017DirectoryAPIKey\022\023\010\002\032\r" +
       "authorization \002\n\"\n\010TenantID\022\026\010\002\032\020aserto-" +
       "tenant-id \002b#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010Te" +

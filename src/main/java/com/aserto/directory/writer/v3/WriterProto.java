@@ -65,11 +65,11 @@ public final class WriterProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'aserto/directory/writer/v3/writer.prot" +
-      "o\022\032aserto.directory.writer.v3\032\033google/pr" +
-      "otobuf/empty.proto\032\034google/api/annotatio" +
-      "ns.proto\032\037google/api/field_behavior.prot" +
-      "o\032.protoc-gen-openapiv2/options/annotati" +
-      "ons.proto\032\033buf/validate/validate.proto\032\'" +
+      "o\022\032aserto.directory.writer.v3\032.protoc-ge" +
+      "n-openapiv2/options/annotations.proto\032\033g" +
+      "oogle/protobuf/empty.proto\032\034google/api/a" +
+      "nnotations.proto\032\037google/api/field_behav" +
+      "ior.proto\032\033buf/validate/validate.proto\032\'" +
       "aserto/directory/common/v3/common.proto\"" +
       "Y\n\020SetObjectRequest\022E\n\006object\030\001 \001(\0132\".as" +
       "erto.directory.common.v3.ObjectB\t\340A\002\272H\003\310" +
@@ -171,10 +171,10 @@ public final class WriterProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
-          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           com.buf.validate.ValidateProto.getDescriptor(),
           com.aserto.directory.common.v3.CommonProto.getDescriptor(),
         });
@@ -234,10 +234,10 @@ public final class WriterProto {
     registry.add(com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
-    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     com.buf.validate.ValidateProto.getDescriptor();
     com.aserto.directory.common.v3.CommonProto.getDescriptor();
   }
