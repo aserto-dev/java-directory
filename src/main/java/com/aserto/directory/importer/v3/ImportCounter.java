@@ -99,6 +99,108 @@ private static final long serialVersionUID = 0L;
     return error_;
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (recv_ != 0L) {
+      output.writeUInt64(1, recv_);
+    }
+    if (set_ != 0L) {
+      output.writeUInt64(2, set_);
+    }
+    if (delete_ != 0L) {
+      output.writeUInt64(3, delete_);
+    }
+    if (error_ != 0L) {
+      output.writeUInt64(4, error_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (recv_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, recv_);
+    }
+    if (set_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, set_);
+    }
+    if (delete_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(3, delete_);
+    }
+    if (error_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(4, error_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.importer.v3.ImportCounter)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.importer.v3.ImportCounter other = (com.aserto.directory.importer.v3.ImportCounter) obj;
+
+    if (getRecv()
+        != other.getRecv()) return false;
+    if (getSet()
+        != other.getSet()) return false;
+    if (getDelete()
+        != other.getDelete()) return false;
+    if (getError()
+        != other.getError()) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + RECV_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getRecv());
+    hash = (37 * hash) + SET_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getSet());
+    hash = (37 * hash) + DELETE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getDelete());
+    hash = (37 * hash) + ERROR_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getError());
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.importer.v3.ImportCounter parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -307,6 +409,91 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.importer.v3.ImportCounter) {
+        return mergeFrom((com.aserto.directory.importer.v3.ImportCounter)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.importer.v3.ImportCounter other) {
+      if (other == com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance()) return this;
+      if (other.getRecv() != 0L) {
+        setRecv(other.getRecv());
+      }
+      if (other.getSet() != 0L) {
+        setSet(other.getSet());
+      }
+      if (other.getDelete() != 0L) {
+        setDelete(other.getDelete());
+      }
+      if (other.getError() != 0L) {
+        setError(other.getError());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              recv_ = input.readUInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              set_ = input.readUInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              delete_ = input.readUInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              error_ = input.readUInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

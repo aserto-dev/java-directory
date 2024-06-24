@@ -26,23 +26,23 @@ public final class OpenapiProto {
     java.lang.String[] descriptorData = {
       "\n)aserto/directory/openapi/v3/openapi.pr" +
       "oto\022\023aserto.directory.v3\032.protoc-gen-ope" +
-      "napiv2/options/annotations.protoB\357\004\n\027com" +
-      ".aserto.directory.v3B\014OpenapiProtoH\002P\001Z@" +
-      "github.com/aserto-dev/go-directory/asert" +
-      "o/directory/v3;directory\370\001\000\242\002\003ADX\252\002\023Aser" +
-      "to.Directory.V3\312\002\024Aserto\\Directory_\\V3\342\002" +
-      " Aserto\\Directory_\\V3\\GPBMetadata\352\002\025Aser" +
-      "to::Directory::V3\222A\215\003\022\274\001\n\021Directory Serv" +
-      "ice\"N\n\014Aserto, Inc.\022*https://github.com/" +
-      "aserto-dev/pb-directory\032\022support@aserto." +
-      "com*R\n\022Apache 2.0 License\022<https://githu" +
-      "b.com/aserto-dev/pb-directory/blob/main/" +
-      "LICENSE2\0033.1*\003\001\002\0042\020application/json:\020app" +
-      "lication/jsonZL\n&\n\017DirectoryAPIKey\022\023\010\002\032\r" +
-      "authorization \002\n\"\n\010TenantID\022\026\010\002\032\020aserto-" +
-      "tenant-id \002b#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010Te" +
-      "nantID\022\000r0\n\025Aserto API Reference.\022\027https" +
-      "://docs.aserto.comb\006proto3"
+      "napiv2/options/annotations.protoB\352\004\n\027com" +
+      ".aserto.directory.v3B\014OpenapiProtoP\001Z@gi" +
+      "thub.com/aserto-dev/go-directory/aserto/" +
+      "directory/v3;directory\242\002\003ADX\252\002\023Aserto.Di" +
+      "rectory.V3\312\002\024Aserto\\Directory_\\V3\342\002 Aser" +
+      "to\\Directory_\\V3\\GPBMetadata\352\002\025Aserto::D" +
+      "irectory::V3\222A\215\003\022\274\001\n\021Directory Service\"N" +
+      "\n\014Aserto, Inc.\022*https://github.com/asert" +
+      "o-dev/pb-directory\032\022support@aserto.com*R" +
+      "\n\022Apache 2.0 License\022<https://github.com" +
+      "/aserto-dev/pb-directory/blob/main/LICEN" +
+      "SE2\0033.1*\003\001\002\0042\020application/json:\020applicat" +
+      "ion/jsonZL\n&\n\017DirectoryAPIKey\022\023\010\002\032\rautho" +
+      "rization \002\n\"\n\010TenantID\022\026\010\002\032\020aserto-tenan" +
+      "t-id \002b#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantI" +
+      "D\022\000r0\n\025Aserto API Reference.\022\027https://do" +
+      "cs.aserto.comb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

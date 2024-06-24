@@ -548,6 +548,233 @@ private static final long serialVersionUID = 0L;
     return finite_;
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    getSerializedSize();
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeDouble(1, const_);
+    }
+    if (lessThanCase_ == 2) {
+      output.writeDouble(
+          2, (double)((java.lang.Double) lessThan_));
+    }
+    if (lessThanCase_ == 3) {
+      output.writeDouble(
+          3, (double)((java.lang.Double) lessThan_));
+    }
+    if (greaterThanCase_ == 4) {
+      output.writeDouble(
+          4, (double)((java.lang.Double) greaterThan_));
+    }
+    if (greaterThanCase_ == 5) {
+      output.writeDouble(
+          5, (double)((java.lang.Double) greaterThan_));
+    }
+    if (getInList().size() > 0) {
+      output.writeUInt32NoTag(50);
+      output.writeUInt32NoTag(inMemoizedSerializedSize);
+    }
+    for (int i = 0; i < in_.size(); i++) {
+      output.writeDoubleNoTag(in_.getDouble(i));
+    }
+    if (getNotInList().size() > 0) {
+      output.writeUInt32NoTag(58);
+      output.writeUInt32NoTag(notInMemoizedSerializedSize);
+    }
+    for (int i = 0; i < notIn_.size(); i++) {
+      output.writeDoubleNoTag(notIn_.getDouble(i));
+    }
+    if (finite_ != false) {
+      output.writeBool(8, finite_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(1, const_);
+    }
+    if (lessThanCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(
+            2, (double)((java.lang.Double) lessThan_));
+    }
+    if (lessThanCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(
+            3, (double)((java.lang.Double) lessThan_));
+    }
+    if (greaterThanCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(
+            4, (double)((java.lang.Double) greaterThan_));
+    }
+    if (greaterThanCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(
+            5, (double)((java.lang.Double) greaterThan_));
+    }
+    {
+      int dataSize = 0;
+      dataSize = 8 * getInList().size();
+      size += dataSize;
+      if (!getInList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      inMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      dataSize = 8 * getNotInList().size();
+      size += dataSize;
+      if (!getNotInList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      notInMemoizedSerializedSize = dataSize;
+    }
+    if (finite_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, finite_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.buf.validate.DoubleRules)) {
+      return super.equals(obj);
+    }
+    com.buf.validate.DoubleRules other = (com.buf.validate.DoubleRules) obj;
+
+    if (hasConst() != other.hasConst()) return false;
+    if (hasConst()) {
+      if (java.lang.Double.doubleToLongBits(getConst())
+          != java.lang.Double.doubleToLongBits(
+              other.getConst())) return false;
+    }
+    if (!getInList()
+        .equals(other.getInList())) return false;
+    if (!getNotInList()
+        .equals(other.getNotInList())) return false;
+    if (getFinite()
+        != other.getFinite()) return false;
+    if (!getLessThanCase().equals(other.getLessThanCase())) return false;
+    switch (lessThanCase_) {
+      case 2:
+        if (java.lang.Double.doubleToLongBits(getLt())
+            != java.lang.Double.doubleToLongBits(
+                other.getLt())) return false;
+        break;
+      case 3:
+        if (java.lang.Double.doubleToLongBits(getLte())
+            != java.lang.Double.doubleToLongBits(
+                other.getLte())) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getGreaterThanCase().equals(other.getGreaterThanCase())) return false;
+    switch (greaterThanCase_) {
+      case 4:
+        if (java.lang.Double.doubleToLongBits(getGt())
+            != java.lang.Double.doubleToLongBits(
+                other.getGt())) return false;
+        break;
+      case 5:
+        if (java.lang.Double.doubleToLongBits(getGte())
+            != java.lang.Double.doubleToLongBits(
+                other.getGte())) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasConst()) {
+      hash = (37 * hash) + CONST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConst()));
+    }
+    if (getInCount() > 0) {
+      hash = (37 * hash) + IN_FIELD_NUMBER;
+      hash = (53 * hash) + getInList().hashCode();
+    }
+    if (getNotInCount() > 0) {
+      hash = (37 * hash) + NOT_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getNotInList().hashCode();
+    }
+    hash = (37 * hash) + FINITE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getFinite());
+    switch (lessThanCase_) {
+      case 2:
+        hash = (37 * hash) + LT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getLt()));
+        break;
+      case 3:
+        hash = (37 * hash) + LTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getLte()));
+        break;
+      case 0:
+      default:
+    }
+    switch (greaterThanCase_) {
+      case 4:
+        hash = (37 * hash) + GT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getGt()));
+        break;
+      case 5:
+        hash = (37 * hash) + GTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getGte()));
+        break;
+      case 0:
+      default:
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.buf.validate.DoubleRules parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -778,6 +1005,177 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.buf.validate.DoubleRules) {
+        return mergeFrom((com.buf.validate.DoubleRules)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.buf.validate.DoubleRules other) {
+      if (other == com.buf.validate.DoubleRules.getDefaultInstance()) return this;
+      if (other.hasConst()) {
+        setConst(other.getConst());
+      }
+      if (!other.in_.isEmpty()) {
+        if (in_.isEmpty()) {
+          in_ = other.in_;
+          in_.makeImmutable();
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureInIsMutable();
+          in_.addAll(other.in_);
+        }
+        onChanged();
+      }
+      if (!other.notIn_.isEmpty()) {
+        if (notIn_.isEmpty()) {
+          notIn_ = other.notIn_;
+          notIn_.makeImmutable();
+          bitField0_ |= 0x00000040;
+        } else {
+          ensureNotInIsMutable();
+          notIn_.addAll(other.notIn_);
+        }
+        onChanged();
+      }
+      if (other.getFinite() != false) {
+        setFinite(other.getFinite());
+      }
+      switch (other.getLessThanCase()) {
+        case LT: {
+          setLt(other.getLt());
+          break;
+        }
+        case LTE: {
+          setLte(other.getLte());
+          break;
+        }
+        case LESSTHAN_NOT_SET: {
+          break;
+        }
+      }
+      switch (other.getGreaterThanCase()) {
+        case GT: {
+          setGt(other.getGt());
+          break;
+        }
+        case GTE: {
+          setGte(other.getGte());
+          break;
+        }
+        case GREATERTHAN_NOT_SET: {
+          break;
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              const_ = input.readDouble();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 9
+            case 17: {
+              lessThan_ = input.readDouble();
+              lessThanCase_ = 2;
+              break;
+            } // case 17
+            case 25: {
+              lessThan_ = input.readDouble();
+              lessThanCase_ = 3;
+              break;
+            } // case 25
+            case 33: {
+              greaterThan_ = input.readDouble();
+              greaterThanCase_ = 4;
+              break;
+            } // case 33
+            case 41: {
+              greaterThan_ = input.readDouble();
+              greaterThanCase_ = 5;
+              break;
+            } // case 41
+            case 49: {
+              double v = input.readDouble();
+              ensureInIsMutable();
+              in_.addDouble(v);
+              break;
+            } // case 49
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              int alloc = length > 4096 ? 4096 : length;
+              ensureInIsMutable(alloc / 8);
+              while (input.getBytesUntilLimit() > 0) {
+                in_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 50
+            case 57: {
+              double v = input.readDouble();
+              ensureNotInIsMutable();
+              notIn_.addDouble(v);
+              break;
+            } // case 57
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              int alloc = length > 4096 ? 4096 : length;
+              ensureNotInIsMutable(alloc / 8);
+              while (input.getBytesUntilLimit() > 0) {
+                notIn_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 58
+            case 64: {
+              finite_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int lessThanCase_ = 0;
     private java.lang.Object lessThan_;

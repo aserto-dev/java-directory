@@ -740,6 +740,180 @@ private static final long serialVersionUID = 0L;
     return notIn_.get(index);
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(2, getConst());
+    }
+    if (lessThanCase_ == 3) {
+      output.writeMessage(3, (com.google.protobuf.Duration) lessThan_);
+    }
+    if (lessThanCase_ == 4) {
+      output.writeMessage(4, (com.google.protobuf.Duration) lessThan_);
+    }
+    if (greaterThanCase_ == 5) {
+      output.writeMessage(5, (com.google.protobuf.Duration) greaterThan_);
+    }
+    if (greaterThanCase_ == 6) {
+      output.writeMessage(6, (com.google.protobuf.Duration) greaterThan_);
+    }
+    for (int i = 0; i < in_.size(); i++) {
+      output.writeMessage(7, in_.get(i));
+    }
+    for (int i = 0; i < notIn_.size(); i++) {
+      output.writeMessage(8, notIn_.get(i));
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getConst());
+    }
+    if (lessThanCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.protobuf.Duration) lessThan_);
+    }
+    if (lessThanCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.protobuf.Duration) lessThan_);
+    }
+    if (greaterThanCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.google.protobuf.Duration) greaterThan_);
+    }
+    if (greaterThanCase_ == 6) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, (com.google.protobuf.Duration) greaterThan_);
+    }
+    for (int i = 0; i < in_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, in_.get(i));
+    }
+    for (int i = 0; i < notIn_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, notIn_.get(i));
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.buf.validate.DurationRules)) {
+      return super.equals(obj);
+    }
+    com.buf.validate.DurationRules other = (com.buf.validate.DurationRules) obj;
+
+    if (hasConst() != other.hasConst()) return false;
+    if (hasConst()) {
+      if (!getConst()
+          .equals(other.getConst())) return false;
+    }
+    if (!getInList()
+        .equals(other.getInList())) return false;
+    if (!getNotInList()
+        .equals(other.getNotInList())) return false;
+    if (!getLessThanCase().equals(other.getLessThanCase())) return false;
+    switch (lessThanCase_) {
+      case 3:
+        if (!getLt()
+            .equals(other.getLt())) return false;
+        break;
+      case 4:
+        if (!getLte()
+            .equals(other.getLte())) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getGreaterThanCase().equals(other.getGreaterThanCase())) return false;
+    switch (greaterThanCase_) {
+      case 5:
+        if (!getGt()
+            .equals(other.getGt())) return false;
+        break;
+      case 6:
+        if (!getGte()
+            .equals(other.getGte())) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasConst()) {
+      hash = (37 * hash) + CONST_FIELD_NUMBER;
+      hash = (53 * hash) + getConst().hashCode();
+    }
+    if (getInCount() > 0) {
+      hash = (37 * hash) + IN_FIELD_NUMBER;
+      hash = (53 * hash) + getInList().hashCode();
+    }
+    if (getNotInCount() > 0) {
+      hash = (37 * hash) + NOT_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getNotInList().hashCode();
+    }
+    switch (lessThanCase_) {
+      case 3:
+        hash = (37 * hash) + LT_FIELD_NUMBER;
+        hash = (53 * hash) + getLt().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + LTE_FIELD_NUMBER;
+        hash = (53 * hash) + getLte().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    switch (greaterThanCase_) {
+      case 5:
+        hash = (37 * hash) + GT_FIELD_NUMBER;
+        hash = (53 * hash) + getGt().hashCode();
+        break;
+      case 6:
+        hash = (37 * hash) + GTE_FIELD_NUMBER;
+        hash = (53 * hash) + getGte().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.buf.validate.DurationRules parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1033,6 +1207,201 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.buf.validate.DurationRules) {
+        return mergeFrom((com.buf.validate.DurationRules)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.buf.validate.DurationRules other) {
+      if (other == com.buf.validate.DurationRules.getDefaultInstance()) return this;
+      if (other.hasConst()) {
+        mergeConst(other.getConst());
+      }
+      if (inBuilder_ == null) {
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.in_.isEmpty()) {
+          if (inBuilder_.isEmpty()) {
+            inBuilder_.dispose();
+            inBuilder_ = null;
+            in_ = other.in_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            inBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getInFieldBuilder() : null;
+          } else {
+            inBuilder_.addAllMessages(other.in_);
+          }
+        }
+      }
+      if (notInBuilder_ == null) {
+        if (!other.notIn_.isEmpty()) {
+          if (notIn_.isEmpty()) {
+            notIn_ = other.notIn_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureNotInIsMutable();
+            notIn_.addAll(other.notIn_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.notIn_.isEmpty()) {
+          if (notInBuilder_.isEmpty()) {
+            notInBuilder_.dispose();
+            notInBuilder_ = null;
+            notIn_ = other.notIn_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            notInBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getNotInFieldBuilder() : null;
+          } else {
+            notInBuilder_.addAllMessages(other.notIn_);
+          }
+        }
+      }
+      switch (other.getLessThanCase()) {
+        case LT: {
+          mergeLt(other.getLt());
+          break;
+        }
+        case LTE: {
+          mergeLte(other.getLte());
+          break;
+        }
+        case LESSTHAN_NOT_SET: {
+          break;
+        }
+      }
+      switch (other.getGreaterThanCase()) {
+        case GT: {
+          mergeGt(other.getGt());
+          break;
+        }
+        case GTE: {
+          mergeGte(other.getGte());
+          break;
+        }
+        case GREATERTHAN_NOT_SET: {
+          break;
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              input.readMessage(
+                  getConstFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getLtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              lessThanCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getLteFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              lessThanCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getGtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              greaterThanCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getGteFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              greaterThanCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              com.google.protobuf.Duration m =
+                  input.readMessage(
+                      com.google.protobuf.Duration.parser(),
+                      extensionRegistry);
+              if (inBuilder_ == null) {
+                ensureInIsMutable();
+                in_.add(m);
+              } else {
+                inBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 66: {
+              com.google.protobuf.Duration m =
+                  input.readMessage(
+                      com.google.protobuf.Duration.parser(),
+                      extensionRegistry);
+              if (notInBuilder_ == null) {
+                ensureNotInIsMutable();
+                notIn_.add(m);
+              } else {
+                notInBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int lessThanCase_ = 0;
     private java.lang.Object lessThan_;

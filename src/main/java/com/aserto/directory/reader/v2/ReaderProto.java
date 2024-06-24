@@ -324,14 +324,14 @@ public final class ReaderProto {
       "erto.directory.reader.v2.CheckRelationRe" +
       "sponse\"\000\022g\n\010GetGraph\022+.aserto.directory." +
       "reader.v2.GetGraphRequest\032,.aserto.direc" +
-      "tory.reader.v2.GetGraphResponse\"\000B\205\002\n\036co" +
+      "tory.reader.v2.GetGraphResponse\"\000B\200\002\n\036co" +
       "m.aserto.directory.reader.v2B\013ReaderProt" +
-      "oH\002P\001ZDgithub.com/aserto-dev/go-director" +
-      "y/aserto/directory/reader/v2;reader\370\001\000\242\002" +
-      "\003ADR\252\002\032Aserto.Directory.Reader.V2\312\002\033Aser" +
-      "to\\Directory_\\Reader\\V2\342\002\'Aserto\\Directo" +
-      "ry_\\Reader\\V2\\GPBMetadata\352\002\035Aserto::Dire" +
-      "ctory::Reader::V2b\006proto3"
+      "oP\001ZDgithub.com/aserto-dev/go-directory/" +
+      "aserto/directory/reader/v2;reader\242\002\003ADR\252" +
+      "\002\032Aserto.Directory.Reader.V2\312\002\033Aserto\\Di" +
+      "rectory_\\Reader\\V2\342\002\'Aserto\\Directory_\\R" +
+      "eader\\V2\\GPBMetadata\352\002\035Aserto::Directory" +
+      "::Reader::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

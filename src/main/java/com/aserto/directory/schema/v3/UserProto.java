@@ -42,13 +42,13 @@ public final class UserProto {
       "RY\020\004\022 \n\034USER_STATUS_PASSWORD_EXPIRED\020\005\022\032" +
       "\n\026USER_STATUS_LOCKED_OUT\020\006\022\031\n\025USER_STATU" +
       "S_SUSPENDED\020\007\022\035\n\031USER_STATUS_DEPROVISION" +
-      "ED\020\010B\203\002\n\036com.aserto.directory.schema.v3B" +
-      "\tUserProtoH\002P\001ZDgithub.com/aserto-dev/go" +
-      "-directory/aserto/directory/schema/v3;sc" +
-      "hema\370\001\000\242\002\003ADS\252\002\032Aserto.Directory.Schema." +
-      "V3\312\002\033Aserto\\Directory_\\Schema\\V3\342\002\'Asert" +
-      "o\\Directory_\\Schema\\V3\\GPBMetadata\352\002\035Ase" +
-      "rto::Directory::Schema::V3b\006proto3"
+      "ED\020\010B\376\001\n\036com.aserto.directory.schema.v3B" +
+      "\tUserProtoP\001ZDgithub.com/aserto-dev/go-d" +
+      "irectory/aserto/directory/schema/v3;sche" +
+      "ma\242\002\003ADS\252\002\032Aserto.Directory.Schema.V3\312\002\033" +
+      "Aserto\\Directory_\\Schema\\V3\342\002\'Aserto\\Dir" +
+      "ectory_\\Schema\\V3\\GPBMetadata\352\002\035Aserto::" +
+      "Directory::Schema::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

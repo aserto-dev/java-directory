@@ -139,15 +139,15 @@ public final class AnnotationsProto {
       "Tag:~\n\017openapiv2_field\022\035.google.protobuf" +
       ".FieldOptions\030\222\010 \001(\01325.grpc.gateway.prot" +
       "oc_gen_openapiv2.options.JSONSchemaR\016ope" +
-      "napiv2FieldB\316\002\n-com.grpc.gateway.protoc_" +
-      "gen_openapiv2.optionsB\020AnnotationsProtoH" +
-      "\002P\001ZFgithub.com/grpc-ecosystem/grpc-gate" +
-      "way/v2/protoc-gen-openapiv2/options\370\001\000\242\002" +
-      "\004GGPO\252\002\'Grpc.Gateway.ProtocGenOpenapiv2." +
-      "Options\312\002\'Grpc\\Gateway\\ProtocGenOpenapiv" +
-      "2\\Options\342\0023Grpc\\Gateway\\ProtocGenOpenap" +
-      "iv2\\Options\\GPBMetadata\352\002*Grpc::Gateway:" +
-      ":ProtocGenOpenapiv2::Optionsb\006proto3"
+      "napiv2FieldB\311\002\n-com.grpc.gateway.protoc_" +
+      "gen_openapiv2.optionsB\020AnnotationsProtoP" +
+      "\001ZFgithub.com/grpc-ecosystem/grpc-gatewa" +
+      "y/v2/protoc-gen-openapiv2/options\242\002\004GGPO" +
+      "\252\002\'Grpc.Gateway.ProtocGenOpenapiv2.Optio" +
+      "ns\312\002\'Grpc\\Gateway\\ProtocGenOpenapiv2\\Opt" +
+      "ions\342\0023Grpc\\Gateway\\ProtocGenOpenapiv2\\O" +
+      "ptions\\GPBMetadata\352\002*Grpc::Gateway::Prot" +
+      "ocGenOpenapiv2::Optionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

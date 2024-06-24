@@ -452,6 +452,162 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectType_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, objectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, objectId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relation_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, relation_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectType_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subjectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, subjectId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectRelation_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, subjectRelation_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(20, getCreatedAt());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(21, getUpdatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 23, etag_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectType_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, objectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, objectId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relation_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, relation_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectType_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, subjectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, subjectId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectRelation_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, subjectRelation_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getCreatedAt());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getUpdatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, etag_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.common.v3.Relation)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.common.v3.Relation other = (com.aserto.directory.common.v3.Relation) obj;
+
+    if (!getObjectType()
+        .equals(other.getObjectType())) return false;
+    if (!getObjectId()
+        .equals(other.getObjectId())) return false;
+    if (!getRelation()
+        .equals(other.getRelation())) return false;
+    if (!getSubjectType()
+        .equals(other.getSubjectType())) return false;
+    if (!getSubjectId()
+        .equals(other.getSubjectId())) return false;
+    if (!getSubjectRelation()
+        .equals(other.getSubjectRelation())) return false;
+    if (hasCreatedAt() != other.hasCreatedAt()) return false;
+    if (hasCreatedAt()) {
+      if (!getCreatedAt()
+          .equals(other.getCreatedAt())) return false;
+    }
+    if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+    if (hasUpdatedAt()) {
+      if (!getUpdatedAt()
+          .equals(other.getUpdatedAt())) return false;
+    }
+    if (!getEtag()
+        .equals(other.getEtag())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + OBJECT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getObjectType().hashCode();
+    hash = (37 * hash) + OBJECT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getObjectId().hashCode();
+    hash = (37 * hash) + RELATION_FIELD_NUMBER;
+    hash = (53 * hash) + getRelation().hashCode();
+    hash = (37 * hash) + SUBJECT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getSubjectType().hashCode();
+    hash = (37 * hash) + SUBJECT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getSubjectId().hashCode();
+    hash = (37 * hash) + SUBJECT_RELATION_FIELD_NUMBER;
+    hash = (53 * hash) + getSubjectRelation().hashCode();
+    if (hasCreatedAt()) {
+      hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedAt().hashCode();
+    }
+    if (hasUpdatedAt()) {
+      hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedAt().hashCode();
+    }
+    hash = (37 * hash) + ETAG_FIELD_NUMBER;
+    hash = (53 * hash) + getEtag().hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.common.v3.Relation parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -703,6 +859,149 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.common.v3.Relation) {
+        return mergeFrom((com.aserto.directory.common.v3.Relation)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.common.v3.Relation other) {
+      if (other == com.aserto.directory.common.v3.Relation.getDefaultInstance()) return this;
+      if (!other.getObjectType().isEmpty()) {
+        objectType_ = other.objectType_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getObjectId().isEmpty()) {
+        objectId_ = other.objectId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.getRelation().isEmpty()) {
+        relation_ = other.relation_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getSubjectType().isEmpty()) {
+        subjectType_ = other.subjectType_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.getSubjectId().isEmpty()) {
+        subjectId_ = other.subjectId_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getSubjectRelation().isEmpty()) {
+        subjectRelation_ = other.subjectRelation_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (other.hasCreatedAt()) {
+        mergeCreatedAt(other.getCreatedAt());
+      }
+      if (other.hasUpdatedAt()) {
+        mergeUpdatedAt(other.getUpdatedAt());
+      }
+      if (!other.getEtag().isEmpty()) {
+        etag_ = other.etag_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              objectType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              objectId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              relation_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              subjectType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              subjectId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              subjectRelation_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 162: {
+              input.readMessage(
+                  getCreatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getUpdatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 170
+            case 186: {
+              etag_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 186
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

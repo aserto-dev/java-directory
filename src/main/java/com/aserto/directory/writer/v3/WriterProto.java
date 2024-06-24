@@ -159,14 +159,14 @@ public final class WriterProto {
       "\226\001\222Aq\n\tdirectory\022\017Delete relation\032\020Delet" +
       "e relation.*\034directory.v3.relation.delet" +
       "eb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323" +
-      "\344\223\002\034*\032/api/v3/directory/relationB\205\002\n\036com" +
+      "\344\223\002\034*\032/api/v3/directory/relationB\200\002\n\036com" +
       ".aserto.directory.writer.v3B\013WriterProto" +
-      "H\002P\001ZDgithub.com/aserto-dev/go-directory" +
-      "/aserto/directory/writer/v3;writer\370\001\000\242\002\003" +
-      "ADW\252\002\032Aserto.Directory.Writer.V3\312\002\033Asert" +
-      "o\\Directory_\\Writer\\V3\342\002\'Aserto\\Director" +
-      "y_\\Writer\\V3\\GPBMetadata\352\002\035Aserto::Direc" +
-      "tory::Writer::V3b\006proto3"
+      "P\001ZDgithub.com/aserto-dev/go-directory/a" +
+      "serto/directory/writer/v3;writer\242\002\003ADW\252\002" +
+      "\032Aserto.Directory.Writer.V3\312\002\033Aserto\\Dir" +
+      "ectory_\\Writer\\V3\342\002\'Aserto\\Directory_\\Wr" +
+      "iter\\V3\\GPBMetadata\352\002\035Aserto::Directory:" +
+      ":Writer::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

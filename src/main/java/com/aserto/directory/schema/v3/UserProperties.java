@@ -229,6 +229,112 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(picture_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, picture_);
+    }
+    if (status_ != com.aserto.directory.schema.v3.UserStatus.USER_STATUS_UNKNOWN.getNumber()) {
+      output.writeEnum(3, status_);
+    }
+    if (enabled_ != false) {
+      output.writeBool(4, enabled_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, connectionId_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(picture_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, picture_);
+    }
+    if (status_ != com.aserto.directory.schema.v3.UserStatus.USER_STATUS_UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, status_);
+    }
+    if (enabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, enabled_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, connectionId_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.schema.v3.UserProperties)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.schema.v3.UserProperties other = (com.aserto.directory.schema.v3.UserProperties) obj;
+
+    if (!getEmail()
+        .equals(other.getEmail())) return false;
+    if (!getPicture()
+        .equals(other.getPicture())) return false;
+    if (status_ != other.status_) return false;
+    if (getEnabled()
+        != other.getEnabled()) return false;
+    if (!getConnectionId()
+        .equals(other.getConnectionId())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+    hash = (53 * hash) + getEmail().hashCode();
+    hash = (37 * hash) + PICTURE_FIELD_NUMBER;
+    hash = (53 * hash) + getPicture().hashCode();
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
+    hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnabled());
+    hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getConnectionId().hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.schema.v3.UserProperties parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -445,6 +551,105 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.schema.v3.UserProperties) {
+        return mergeFrom((com.aserto.directory.schema.v3.UserProperties)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.schema.v3.UserProperties other) {
+      if (other == com.aserto.directory.schema.v3.UserProperties.getDefaultInstance()) return this;
+      if (!other.getEmail().isEmpty()) {
+        email_ = other.email_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getPicture().isEmpty()) {
+        picture_ = other.picture_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
+      if (other.getEnabled() != false) {
+        setEnabled(other.getEnabled());
+      }
+      if (!other.getConnectionId().isEmpty()) {
+        connectionId_ = other.connectionId_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              email_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              picture_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              enabled_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              connectionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

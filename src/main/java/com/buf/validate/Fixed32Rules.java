@@ -531,6 +531,211 @@ private static final long serialVersionUID = 0L;
   }
   private int notInMemoizedSerializedSize = -1;
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    getSerializedSize();
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeFixed32(1, const_);
+    }
+    if (lessThanCase_ == 2) {
+      output.writeFixed32(
+          2, (int)((java.lang.Integer) lessThan_));
+    }
+    if (lessThanCase_ == 3) {
+      output.writeFixed32(
+          3, (int)((java.lang.Integer) lessThan_));
+    }
+    if (greaterThanCase_ == 4) {
+      output.writeFixed32(
+          4, (int)((java.lang.Integer) greaterThan_));
+    }
+    if (greaterThanCase_ == 5) {
+      output.writeFixed32(
+          5, (int)((java.lang.Integer) greaterThan_));
+    }
+    if (getInList().size() > 0) {
+      output.writeUInt32NoTag(50);
+      output.writeUInt32NoTag(inMemoizedSerializedSize);
+    }
+    for (int i = 0; i < in_.size(); i++) {
+      output.writeFixed32NoTag(in_.getInt(i));
+    }
+    if (getNotInList().size() > 0) {
+      output.writeUInt32NoTag(58);
+      output.writeUInt32NoTag(notInMemoizedSerializedSize);
+    }
+    for (int i = 0; i < notIn_.size(); i++) {
+      output.writeFixed32NoTag(notIn_.getInt(i));
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFixed32Size(1, const_);
+    }
+    if (lessThanCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFixed32Size(
+            2, (int)((java.lang.Integer) lessThan_));
+    }
+    if (lessThanCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFixed32Size(
+            3, (int)((java.lang.Integer) lessThan_));
+    }
+    if (greaterThanCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFixed32Size(
+            4, (int)((java.lang.Integer) greaterThan_));
+    }
+    if (greaterThanCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFixed32Size(
+            5, (int)((java.lang.Integer) greaterThan_));
+    }
+    {
+      int dataSize = 0;
+      dataSize = 4 * getInList().size();
+      size += dataSize;
+      if (!getInList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      inMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      dataSize = 4 * getNotInList().size();
+      size += dataSize;
+      if (!getNotInList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      notInMemoizedSerializedSize = dataSize;
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.buf.validate.Fixed32Rules)) {
+      return super.equals(obj);
+    }
+    com.buf.validate.Fixed32Rules other = (com.buf.validate.Fixed32Rules) obj;
+
+    if (hasConst() != other.hasConst()) return false;
+    if (hasConst()) {
+      if (getConst()
+          != other.getConst()) return false;
+    }
+    if (!getInList()
+        .equals(other.getInList())) return false;
+    if (!getNotInList()
+        .equals(other.getNotInList())) return false;
+    if (!getLessThanCase().equals(other.getLessThanCase())) return false;
+    switch (lessThanCase_) {
+      case 2:
+        if (getLt()
+            != other.getLt()) return false;
+        break;
+      case 3:
+        if (getLte()
+            != other.getLte()) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getGreaterThanCase().equals(other.getGreaterThanCase())) return false;
+    switch (greaterThanCase_) {
+      case 4:
+        if (getGt()
+            != other.getGt()) return false;
+        break;
+      case 5:
+        if (getGte()
+            != other.getGte()) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasConst()) {
+      hash = (37 * hash) + CONST_FIELD_NUMBER;
+      hash = (53 * hash) + getConst();
+    }
+    if (getInCount() > 0) {
+      hash = (37 * hash) + IN_FIELD_NUMBER;
+      hash = (53 * hash) + getInList().hashCode();
+    }
+    if (getNotInCount() > 0) {
+      hash = (37 * hash) + NOT_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getNotInList().hashCode();
+    }
+    switch (lessThanCase_) {
+      case 2:
+        hash = (37 * hash) + LT_FIELD_NUMBER;
+        hash = (53 * hash) + getLt();
+        break;
+      case 3:
+        hash = (37 * hash) + LTE_FIELD_NUMBER;
+        hash = (53 * hash) + getLte();
+        break;
+      case 0:
+      default:
+    }
+    switch (greaterThanCase_) {
+      case 4:
+        hash = (37 * hash) + GT_FIELD_NUMBER;
+        hash = (53 * hash) + getGt();
+        break;
+      case 5:
+        hash = (37 * hash) + GTE_FIELD_NUMBER;
+        hash = (53 * hash) + getGte();
+        break;
+      case 0:
+      default:
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.buf.validate.Fixed32Rules parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -756,6 +961,169 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.buf.validate.Fixed32Rules) {
+        return mergeFrom((com.buf.validate.Fixed32Rules)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.buf.validate.Fixed32Rules other) {
+      if (other == com.buf.validate.Fixed32Rules.getDefaultInstance()) return this;
+      if (other.hasConst()) {
+        setConst(other.getConst());
+      }
+      if (!other.in_.isEmpty()) {
+        if (in_.isEmpty()) {
+          in_ = other.in_;
+          in_.makeImmutable();
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureInIsMutable();
+          in_.addAll(other.in_);
+        }
+        onChanged();
+      }
+      if (!other.notIn_.isEmpty()) {
+        if (notIn_.isEmpty()) {
+          notIn_ = other.notIn_;
+          notIn_.makeImmutable();
+          bitField0_ |= 0x00000040;
+        } else {
+          ensureNotInIsMutable();
+          notIn_.addAll(other.notIn_);
+        }
+        onChanged();
+      }
+      switch (other.getLessThanCase()) {
+        case LT: {
+          setLt(other.getLt());
+          break;
+        }
+        case LTE: {
+          setLte(other.getLte());
+          break;
+        }
+        case LESSTHAN_NOT_SET: {
+          break;
+        }
+      }
+      switch (other.getGreaterThanCase()) {
+        case GT: {
+          setGt(other.getGt());
+          break;
+        }
+        case GTE: {
+          setGte(other.getGte());
+          break;
+        }
+        case GREATERTHAN_NOT_SET: {
+          break;
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 13: {
+              const_ = input.readFixed32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 13
+            case 21: {
+              lessThan_ = input.readFixed32();
+              lessThanCase_ = 2;
+              break;
+            } // case 21
+            case 29: {
+              lessThan_ = input.readFixed32();
+              lessThanCase_ = 3;
+              break;
+            } // case 29
+            case 37: {
+              greaterThan_ = input.readFixed32();
+              greaterThanCase_ = 4;
+              break;
+            } // case 37
+            case 45: {
+              greaterThan_ = input.readFixed32();
+              greaterThanCase_ = 5;
+              break;
+            } // case 45
+            case 53: {
+              int v = input.readFixed32();
+              ensureInIsMutable();
+              in_.addInt(v);
+              break;
+            } // case 53
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              int alloc = length > 4096 ? 4096 : length;
+              ensureInIsMutable(alloc / 4);
+              while (input.getBytesUntilLimit() > 0) {
+                in_.addInt(input.readFixed32());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 50
+            case 61: {
+              int v = input.readFixed32();
+              ensureNotInIsMutable();
+              notIn_.addInt(v);
+              break;
+            } // case 61
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              int alloc = length > 4096 ? 4096 : length;
+              ensureNotInIsMutable(alloc / 4);
+              while (input.getBytesUntilLimit() > 0) {
+                notIn_.addInt(input.readFixed32());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int lessThanCase_ = 0;
     private java.lang.Object lessThan_;

@@ -208,6 +208,95 @@ com.aserto.directory.common.v2.Object defaultValue) {
     return map.get(key);
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    for (int i = 0; i < results_.size(); i++) {
+      output.writeMessage(1, results_.get(i));
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetObjects(),
+        ObjectsDefaultEntryHolder.defaultEntry,
+        2);
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    for (int i = 0; i < results_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, results_.get(i));
+    }
+    for (java.util.Map.Entry<java.lang.String, com.aserto.directory.common.v2.Object> entry
+         : internalGetObjects().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, com.aserto.directory.common.v2.Object>
+      objects__ = ObjectsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, objects__);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.reader.v2.GetRelationResponse)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.reader.v2.GetRelationResponse other = (com.aserto.directory.reader.v2.GetRelationResponse) obj;
+
+    if (!getResultsList()
+        .equals(other.getResultsList())) return false;
+    if (!internalGetObjects().equals(
+        other.internalGetObjects())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (getResultsCount() > 0) {
+      hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+      hash = (53 * hash) + getResultsList().hashCode();
+    }
+    if (!internalGetObjects().getMap().isEmpty()) {
+      hash = (37 * hash) + OBJECTS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetObjects().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.reader.v2.GetRelationResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -446,6 +535,110 @@ com.aserto.directory.common.v2.Object defaultValue) {
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.reader.v2.GetRelationResponse) {
+        return mergeFrom((com.aserto.directory.reader.v2.GetRelationResponse)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.reader.v2.GetRelationResponse other) {
+      if (other == com.aserto.directory.reader.v2.GetRelationResponse.getDefaultInstance()) return this;
+      if (resultsBuilder_ == null) {
+        if (!other.results_.isEmpty()) {
+          if (results_.isEmpty()) {
+            results_ = other.results_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureResultsIsMutable();
+            results_.addAll(other.results_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.results_.isEmpty()) {
+          if (resultsBuilder_.isEmpty()) {
+            resultsBuilder_.dispose();
+            resultsBuilder_ = null;
+            results_ = other.results_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            resultsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getResultsFieldBuilder() : null;
+          } else {
+            resultsBuilder_.addAllMessages(other.results_);
+          }
+        }
+      }
+      internalGetMutableObjects().mergeFrom(
+          other.internalGetObjects());
+      bitField0_ |= 0x00000002;
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.aserto.directory.common.v2.Relation m =
+                  input.readMessage(
+                      com.aserto.directory.common.v2.Relation.parser(),
+                      extensionRegistry);
+              if (resultsBuilder_ == null) {
+                ensureResultsIsMutable();
+                results_.add(m);
+              } else {
+                resultsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              com.google.protobuf.MapEntry<java.lang.String, com.aserto.directory.common.v2.Object>
+              objects__ = input.readMessage(
+                  ObjectsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableObjects().ensureBuilderMap().put(
+                  objects__.getKey(), objects__.getValue());
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

@@ -364,6 +364,150 @@ private static final long serialVersionUID = 0L;
     return path_.getByteString(index);
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectType_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, objectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectKey_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, objectKey_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relation_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, relation_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectType_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, subjectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectKey_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, subjectKey_);
+    }
+    if (depth_ != 0) {
+      output.writeInt32(11, depth_);
+    }
+    if (isCycle_ != false) {
+      output.writeBool(12, isCycle_);
+    }
+    for (int i = 0; i < path_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, path_.getRaw(i));
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectType_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, objectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectKey_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, objectKey_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relation_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, relation_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectType_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, subjectType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectKey_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, subjectKey_);
+    }
+    if (depth_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(11, depth_);
+    }
+    if (isCycle_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(12, isCycle_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < path_.size(); i++) {
+        dataSize += computeStringSizeNoTag(path_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getPathList().size();
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.common.v2.ObjectDependency)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.common.v2.ObjectDependency other = (com.aserto.directory.common.v2.ObjectDependency) obj;
+
+    if (!getObjectType()
+        .equals(other.getObjectType())) return false;
+    if (!getObjectKey()
+        .equals(other.getObjectKey())) return false;
+    if (!getRelation()
+        .equals(other.getRelation())) return false;
+    if (!getSubjectType()
+        .equals(other.getSubjectType())) return false;
+    if (!getSubjectKey()
+        .equals(other.getSubjectKey())) return false;
+    if (getDepth()
+        != other.getDepth()) return false;
+    if (getIsCycle()
+        != other.getIsCycle()) return false;
+    if (!getPathList()
+        .equals(other.getPathList())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + OBJECT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getObjectType().hashCode();
+    hash = (37 * hash) + OBJECT_KEY_FIELD_NUMBER;
+    hash = (53 * hash) + getObjectKey().hashCode();
+    hash = (37 * hash) + RELATION_FIELD_NUMBER;
+    hash = (53 * hash) + getRelation().hashCode();
+    hash = (37 * hash) + SUBJECT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getSubjectType().hashCode();
+    hash = (37 * hash) + SUBJECT_KEY_FIELD_NUMBER;
+    hash = (53 * hash) + getSubjectKey().hashCode();
+    hash = (37 * hash) + DEPTH_FIELD_NUMBER;
+    hash = (53 * hash) + getDepth();
+    hash = (37 * hash) + IS_CYCLE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsCycle());
+    if (getPathCount() > 0) {
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPathList().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.common.v2.ObjectDependency parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -590,6 +734,141 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.common.v2.ObjectDependency) {
+        return mergeFrom((com.aserto.directory.common.v2.ObjectDependency)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.common.v2.ObjectDependency other) {
+      if (other == com.aserto.directory.common.v2.ObjectDependency.getDefaultInstance()) return this;
+      if (!other.getObjectType().isEmpty()) {
+        objectType_ = other.objectType_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getObjectKey().isEmpty()) {
+        objectKey_ = other.objectKey_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.getRelation().isEmpty()) {
+        relation_ = other.relation_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getSubjectType().isEmpty()) {
+        subjectType_ = other.subjectType_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.getSubjectKey().isEmpty()) {
+        subjectKey_ = other.subjectKey_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (other.getDepth() != 0) {
+        setDepth(other.getDepth());
+      }
+      if (other.getIsCycle() != false) {
+        setIsCycle(other.getIsCycle());
+      }
+      if (!other.path_.isEmpty()) {
+        if (path_.isEmpty()) {
+          path_ = other.path_;
+          bitField0_ |= 0x00000080;
+        } else {
+          ensurePathIsMutable();
+          path_.addAll(other.path_);
+        }
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              objectType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 34: {
+              objectKey_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 34
+            case 42: {
+              relation_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 42
+            case 58: {
+              subjectType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 58
+            case 82: {
+              subjectKey_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 82
+            case 88: {
+              depth_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 88
+            case 96: {
+              isCycle_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 96
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensurePathIsMutable();
+              path_.add(s);
+              break;
+            } // case 106
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

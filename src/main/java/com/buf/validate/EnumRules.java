@@ -330,6 +330,148 @@ private static final long serialVersionUID = 0L;
   }
   private int notInMemoizedSerializedSize = -1;
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    getSerializedSize();
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeInt32(1, const_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeBool(2, definedOnly_);
+    }
+    if (getInList().size() > 0) {
+      output.writeUInt32NoTag(26);
+      output.writeUInt32NoTag(inMemoizedSerializedSize);
+    }
+    for (int i = 0; i < in_.size(); i++) {
+      output.writeInt32NoTag(in_.getInt(i));
+    }
+    if (getNotInList().size() > 0) {
+      output.writeUInt32NoTag(34);
+      output.writeUInt32NoTag(notInMemoizedSerializedSize);
+    }
+    for (int i = 0; i < notIn_.size(); i++) {
+      output.writeInt32NoTag(notIn_.getInt(i));
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(1, const_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, definedOnly_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < in_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt32SizeNoTag(in_.getInt(i));
+      }
+      size += dataSize;
+      if (!getInList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      inMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < notIn_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt32SizeNoTag(notIn_.getInt(i));
+      }
+      size += dataSize;
+      if (!getNotInList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      notInMemoizedSerializedSize = dataSize;
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.buf.validate.EnumRules)) {
+      return super.equals(obj);
+    }
+    com.buf.validate.EnumRules other = (com.buf.validate.EnumRules) obj;
+
+    if (hasConst() != other.hasConst()) return false;
+    if (hasConst()) {
+      if (getConst()
+          != other.getConst()) return false;
+    }
+    if (hasDefinedOnly() != other.hasDefinedOnly()) return false;
+    if (hasDefinedOnly()) {
+      if (getDefinedOnly()
+          != other.getDefinedOnly()) return false;
+    }
+    if (!getInList()
+        .equals(other.getInList())) return false;
+    if (!getNotInList()
+        .equals(other.getNotInList())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasConst()) {
+      hash = (37 * hash) + CONST_FIELD_NUMBER;
+      hash = (53 * hash) + getConst();
+    }
+    if (hasDefinedOnly()) {
+      hash = (37 * hash) + DEFINED_ONLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDefinedOnly());
+    }
+    if (getInCount() > 0) {
+      hash = (37 * hash) + IN_FIELD_NUMBER;
+      hash = (53 * hash) + getInList().hashCode();
+    }
+    if (getNotInCount() > 0) {
+      hash = (37 * hash) + NOT_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getNotInList().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.buf.validate.EnumRules parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -548,6 +690,129 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.buf.validate.EnumRules) {
+        return mergeFrom((com.buf.validate.EnumRules)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.buf.validate.EnumRules other) {
+      if (other == com.buf.validate.EnumRules.getDefaultInstance()) return this;
+      if (other.hasConst()) {
+        setConst(other.getConst());
+      }
+      if (other.hasDefinedOnly()) {
+        setDefinedOnly(other.getDefinedOnly());
+      }
+      if (!other.in_.isEmpty()) {
+        if (in_.isEmpty()) {
+          in_ = other.in_;
+          in_.makeImmutable();
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureInIsMutable();
+          in_.addAll(other.in_);
+        }
+        onChanged();
+      }
+      if (!other.notIn_.isEmpty()) {
+        if (notIn_.isEmpty()) {
+          notIn_ = other.notIn_;
+          notIn_.makeImmutable();
+          bitField0_ |= 0x00000008;
+        } else {
+          ensureNotInIsMutable();
+          notIn_.addAll(other.notIn_);
+        }
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              const_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              definedOnly_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              int v = input.readInt32();
+              ensureInIsMutable();
+              in_.addInt(v);
+              break;
+            } // case 24
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureInIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                in_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 26
+            case 32: {
+              int v = input.readInt32();
+              ensureNotInIsMutable();
+              notIn_.addInt(v);
+              break;
+            } // case 32
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureNotInIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                notIn_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

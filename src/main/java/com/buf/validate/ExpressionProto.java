@@ -47,12 +47,12 @@ public final class ExpressionProto {
       "ions\"\202\001\n\tViolation\022\035\n\nfield_path\030\001 \001(\tR\t" +
       "fieldPath\022#\n\rconstraint_id\030\002 \001(\tR\014constr" +
       "aintId\022\030\n\007message\030\003 \001(\tR\007message\022\027\n\007for_" +
-      "key\030\004 \001(\010R\006forKeyB\302\001\n\020com.buf.validateB\017" +
-      "ExpressionProtoH\002P\001ZGbuf.build/gen/go/bu" +
-      "fbuild/protovalidate/protocolbuffers/go/" +
-      "buf/validate\370\001\000\242\002\003BVX\252\002\014Buf.Validate\312\002\014B" +
-      "uf\\Validate\342\002\030Buf\\Validate\\GPBMetadata\352\002" +
-      "\rBuf::Validateb\006proto3"
+      "key\030\004 \001(\010R\006forKeyB\275\001\n\020com.buf.validateB\017" +
+      "ExpressionProtoP\001ZGbuf.build/gen/go/bufb" +
+      "uild/protovalidate/protocolbuffers/go/bu" +
+      "f/validate\242\002\003BVX\252\002\014Buf.Validate\312\002\014Buf\\Va" +
+      "lidate\342\002\030Buf\\Validate\\GPBMetadata\352\002\rBuf:" +
+      ":Validateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
