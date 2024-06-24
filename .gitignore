@@ -25,14 +25,11 @@
 hs_err_pid*
 
 target/
+.env
 
 # IDE specific
 .idea
 .vscode
-*.iml
 
-# demo assets
-/examples/.env
-
-# external dependencies
-/.ext
+# External dependencies
+.ext

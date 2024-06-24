@@ -1,10 +1,11 @@
 package com.aserto;
 
-import com.aserto.directory.reader.v2.*;
-import com.aserto.directory.writer.v2.*;
-import com.aserto.directory.importer.v2.*;
-import com.aserto.directory.exporter.v2.*;
-import com.aserto.directory.common.v2.*;
+import com.aserto.directory.model.v3.*;
+import com.aserto.directory.reader.v3.*;
+import com.aserto.directory.writer.v3.*;
+import com.aserto.directory.importer.v3.*;
+import com.aserto.directory.exporter.v3.*;
+import com.aserto.directory.common.v3.*;
 
 import io.grpc.ManagedChannel;
 import io.grpc.Metadata;
@@ -16,7 +17,11 @@ import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
 
 import javax.net.ssl.SSLException;
 
+import com.google.protobuf.*;
+
+
 public class DirectoryClient {
+    private ModelGrpc.ModelBlockingStub modelClient;
     private ReaderGrpc.ReaderBlockingStub readerClient;
     private WriterGrpc.WriterBlockingStub writerClient;
     private ImporterGrpc.ImporterBlockingStub importerClient;
@@ -41,10 +46,15 @@ public class DirectoryClient {
                 .sslContext(GrpcSslContexts.forClient().trustManager(InsecureTrustManagerFactory.INSTANCE).build())
                 .build();
         
+        this.modelClient = ModelGrpc.newBlockingStub(channel);
         this.readerClient = ReaderGrpc.newBlockingStub(channel);
         this.writerClient = WriterGrpc.newBlockingStub(channel);
         this.importerClient = ImporterGrpc.newBlockingStub(channel);
         this.exporterClient = ExporterGrpc.newBlockingStub(channel);
+    }
+
+    public ModelGrpc.ModelBlockingStub Model() {
+        return modelClient;
     }
 
     public ReaderGrpc.ReaderBlockingStub Reader() {

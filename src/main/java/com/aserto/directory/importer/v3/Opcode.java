@@ -21,6 +21,10 @@ public enum Opcode
    * <code>OPCODE_DELETE = 2;</code>
    */
   OPCODE_DELETE(2),
+  /**
+   * <code>OPCODE_DELETE_WITH_RELATIONS = 3;</code>
+   */
+  OPCODE_DELETE_WITH_RELATIONS(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -36,6 +40,10 @@ public enum Opcode
    * <code>OPCODE_DELETE = 2;</code>
    */
   public static final int OPCODE_DELETE_VALUE = 2;
+  /**
+   * <code>OPCODE_DELETE_WITH_RELATIONS = 3;</code>
+   */
+  public static final int OPCODE_DELETE_WITH_RELATIONS_VALUE = 3;
 
 
   public final int getNumber() {
@@ -65,6 +73,7 @@ public enum Opcode
       case 0: return OPCODE_UNKNOWN;
       case 1: return OPCODE_SET;
       case 2: return OPCODE_DELETE;
+      case 3: return OPCODE_DELETE_WITH_RELATIONS;
       default: return null;
     }
   }

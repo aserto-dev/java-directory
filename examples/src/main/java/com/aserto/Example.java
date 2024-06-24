@@ -1,13 +1,16 @@
 package com.aserto;
 
-import com.aserto.directory.reader.v2.*;
-import com.aserto.directory.writer.v2.*;
-import com.aserto.directory.importer.v2.*;
-import com.aserto.directory.exporter.v2.*;
-import com.aserto.directory.common.v2.*;
+import com.aserto.directory.model.v3.*;
+import com.aserto.directory.reader.v3.*;
+import com.aserto.directory.writer.v3.*;
+import com.aserto.directory.importer.v3.*;
+import com.aserto.directory.exporter.v3.*;
+import com.aserto.directory.common.v3.*;
 
 import io.github.cdimascio.dotenv.DotenvException;
 import javax.net.ssl.SSLException;
+
+import com.google.protobuf.*;
 
 public class Example {
     public static void main(String[] args) {
@@ -18,7 +21,7 @@ public class Example {
 
             DirectoryClient directoryClient = new DirectoryClient(config);
     
-            listObjectTypes(directoryClient);
+            listObjects(directoryClient);
     
         } catch (DotenvException | SSLException ex) {
             System.out.printf("error: %s\n", ex.getMessage());
@@ -26,15 +29,15 @@ public class Example {
         }
     }
 
-    public static void listObjectTypes(DirectoryClient directoryClient) {
-        System.out.println("<--------------- list object types call --------------->");
+    public static void listObjects(DirectoryClient directoryClient) {
+        System.out.println("<--------------- list objects call --------------->");
 
-        GetObjectTypesRequest.Builder builder = GetObjectTypesRequest.newBuilder();
-        GetObjectTypesRequest request = builder.build();
-        GetObjectTypesResponse response = directoryClient.Reader().getObjectTypes(request);
+        GetObjectsRequest.Builder builder = GetObjectsRequest.newBuilder();
+        GetObjectsRequest request = builder.build();
+        GetObjectsResponse response = directoryClient.Reader().getObjects(request);
         
-        response.getResultsList().forEach(objectType -> {
-            System.out.println(objectType);
+        response.getResultsList().forEach(object -> {
+            System.out.println(object);
         });
     }
 }
