@@ -204,13 +204,13 @@ public final class WriterProto {
       "y\n\016DeleteRelation\0221.aserto.directory.wri" +
       "ter.v2.DeleteRelationRequest\0322.aserto.di" +
       "rectory.writer.v2.DeleteRelationResponse" +
-      "\"\000B\205\002\n\036com.aserto.directory.writer.v2B\013W" +
-      "riterProtoH\002P\001ZDgithub.com/aserto-dev/go" +
-      "-directory/aserto/directory/writer/v2;wr" +
-      "iter\370\001\000\242\002\003ADW\252\002\032Aserto.Directory.Writer." +
-      "V2\312\002\033Aserto\\Directory_\\Writer\\V2\342\002\'Asert" +
-      "o\\Directory_\\Writer\\V2\\GPBMetadata\352\002\035Ase" +
-      "rto::Directory::Writer::V2b\006proto3"
+      "\"\000B\200\002\n\036com.aserto.directory.writer.v2B\013W" +
+      "riterProtoP\001ZDgithub.com/aserto-dev/go-d" +
+      "irectory/aserto/directory/writer/v2;writ" +
+      "er\242\002\003ADW\252\002\032Aserto.Directory.Writer.V2\312\002\033" +
+      "Aserto\\Directory_\\Writer\\V2\342\002\'Aserto\\Dir" +
+      "ectory_\\Writer\\V2\\GPBMetadata\352\002\035Aserto::" +
+      "Directory::Writer::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

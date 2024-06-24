@@ -206,6 +206,137 @@ private static final long serialVersionUID = 0L;
     return com.aserto.directory.reader.v3.CheckPermissionRequest.getDefaultInstance();
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (id_ != 0) {
+      output.writeUInt32(1, id_);
+    }
+    if (expected_ != false) {
+      output.writeBool(2, expected_);
+    }
+    if (msgCase_ == 3) {
+      output.writeMessage(3, (com.aserto.directory.reader.v3.CheckRequest) msg_);
+    }
+    if (msgCase_ == 4) {
+      output.writeMessage(4, (com.aserto.directory.reader.v3.CheckRelationRequest) msg_);
+    }
+    if (msgCase_ == 5) {
+      output.writeMessage(5, (com.aserto.directory.reader.v3.CheckPermissionRequest) msg_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (id_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(1, id_);
+    }
+    if (expected_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, expected_);
+    }
+    if (msgCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.aserto.directory.reader.v3.CheckRequest) msg_);
+    }
+    if (msgCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.aserto.directory.reader.v3.CheckRelationRequest) msg_);
+    }
+    if (msgCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.aserto.directory.reader.v3.CheckPermissionRequest) msg_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.assertion.v3.Assert)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.assertion.v3.Assert other = (com.aserto.directory.assertion.v3.Assert) obj;
+
+    if (getId()
+        != other.getId()) return false;
+    if (getExpected()
+        != other.getExpected()) return false;
+    if (!getMsgCase().equals(other.getMsgCase())) return false;
+    switch (msgCase_) {
+      case 3:
+        if (!getCheck()
+            .equals(other.getCheck())) return false;
+        break;
+      case 4:
+        if (!getCheckRelation()
+            .equals(other.getCheckRelation())) return false;
+        break;
+      case 5:
+        if (!getCheckPermission()
+            .equals(other.getCheckPermission())) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + getId();
+    hash = (37 * hash) + EXPECTED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getExpected());
+    switch (msgCase_) {
+      case 3:
+        hash = (37 * hash) + CHECK_FIELD_NUMBER;
+        hash = (53 * hash) + getCheck().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + CHECK_RELATION_FIELD_NUMBER;
+        hash = (53 * hash) + getCheckRelation().hashCode();
+        break;
+      case 5:
+        hash = (37 * hash) + CHECK_PERMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + getCheckPermission().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.assertion.v3.Assert parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -435,6 +566,113 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.assertion.v3.Assert) {
+        return mergeFrom((com.aserto.directory.assertion.v3.Assert)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.assertion.v3.Assert other) {
+      if (other == com.aserto.directory.assertion.v3.Assert.getDefaultInstance()) return this;
+      if (other.getId() != 0) {
+        setId(other.getId());
+      }
+      if (other.getExpected() != false) {
+        setExpected(other.getExpected());
+      }
+      switch (other.getMsgCase()) {
+        case CHECK: {
+          mergeCheck(other.getCheck());
+          break;
+        }
+        case CHECK_RELATION: {
+          mergeCheckRelation(other.getCheckRelation());
+          break;
+        }
+        case CHECK_PERMISSION: {
+          mergeCheckPermission(other.getCheckPermission());
+          break;
+        }
+        case MSG_NOT_SET: {
+          break;
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              id_ = input.readUInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              expected_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              input.readMessage(
+                  getCheckFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              msgCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getCheckRelationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              msgCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getCheckPermissionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              msgCase_ = 5;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int msgCase_ = 0;
     private java.lang.Object msg_;

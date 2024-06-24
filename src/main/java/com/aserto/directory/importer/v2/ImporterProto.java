@@ -70,14 +70,14 @@ public final class ImporterProto {
       "DELETE\020\0022u\n\010Importer\022i\n\006Import\022+.aserto." +
       "directory.importer.v2.ImportRequest\032,.as" +
       "erto.directory.importer.v2.ImportRespons" +
-      "e\"\000(\0010\001B\225\002\n com.aserto.directory.importe" +
-      "r.v2B\rImporterProtoH\002P\001ZHgithub.com/aser" +
-      "to-dev/go-directory/aserto/directory/imp" +
-      "orter/v2;importer\370\001\000\242\002\003ADI\252\002\034Aserto.Dire" +
-      "ctory.Importer.V2\312\002\035Aserto\\Directory_\\Im" +
-      "porter\\V2\342\002)Aserto\\Directory_\\Importer\\V" +
-      "2\\GPBMetadata\352\002\037Aserto::Directory::Impor" +
-      "ter::V2b\006proto3"
+      "e\"\000(\0010\001B\220\002\n com.aserto.directory.importe" +
+      "r.v2B\rImporterProtoP\001ZHgithub.com/aserto" +
+      "-dev/go-directory/aserto/directory/impor" +
+      "ter/v2;importer\242\002\003ADI\252\002\034Aserto.Directory" +
+      ".Importer.V2\312\002\035Aserto\\Directory_\\Importe" +
+      "r\\V2\342\002)Aserto\\Directory_\\Importer\\V2\\GPB" +
+      "Metadata\352\002\037Aserto::Directory::Importer::" +
+      "V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

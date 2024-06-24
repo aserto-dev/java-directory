@@ -288,6 +288,144 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(1, getSubject());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relation_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, relation_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(3, getObject());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(20, getCreatedAt());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(21, getUpdatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 23, hash_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getSubject());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relation_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, relation_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getObject());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getCreatedAt());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getUpdatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, hash_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.common.v2.Relation)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.common.v2.Relation other = (com.aserto.directory.common.v2.Relation) obj;
+
+    if (hasSubject() != other.hasSubject()) return false;
+    if (hasSubject()) {
+      if (!getSubject()
+          .equals(other.getSubject())) return false;
+    }
+    if (!getRelation()
+        .equals(other.getRelation())) return false;
+    if (hasObject() != other.hasObject()) return false;
+    if (hasObject()) {
+      if (!getObject()
+          .equals(other.getObject())) return false;
+    }
+    if (hasCreatedAt() != other.hasCreatedAt()) return false;
+    if (hasCreatedAt()) {
+      if (!getCreatedAt()
+          .equals(other.getCreatedAt())) return false;
+    }
+    if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+    if (hasUpdatedAt()) {
+      if (!getUpdatedAt()
+          .equals(other.getUpdatedAt())) return false;
+    }
+    if (!getHash()
+        .equals(other.getHash())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasSubject()) {
+      hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getSubject().hashCode();
+    }
+    hash = (37 * hash) + RELATION_FIELD_NUMBER;
+    hash = (53 * hash) + getRelation().hashCode();
+    if (hasObject()) {
+      hash = (37 * hash) + OBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getObject().hashCode();
+    }
+    if (hasCreatedAt()) {
+      hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedAt().hashCode();
+    }
+    if (hasUpdatedAt()) {
+      hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedAt().hashCode();
+    }
+    hash = (37 * hash) + HASH_FIELD_NUMBER;
+    hash = (53 * hash) + getHash().hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.common.v2.Relation parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -543,6 +681,119 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.common.v2.Relation) {
+        return mergeFrom((com.aserto.directory.common.v2.Relation)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.common.v2.Relation other) {
+      if (other == com.aserto.directory.common.v2.Relation.getDefaultInstance()) return this;
+      if (other.hasSubject()) {
+        mergeSubject(other.getSubject());
+      }
+      if (!other.getRelation().isEmpty()) {
+        relation_ = other.relation_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.hasObject()) {
+        mergeObject(other.getObject());
+      }
+      if (other.hasCreatedAt()) {
+        mergeCreatedAt(other.getCreatedAt());
+      }
+      if (other.hasUpdatedAt()) {
+        mergeUpdatedAt(other.getUpdatedAt());
+      }
+      if (!other.getHash().isEmpty()) {
+        hash_ = other.hash_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getSubjectFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              relation_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getObjectFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 162: {
+              input.readMessage(
+                  getCreatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getUpdatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 170
+            case 186: {
+              hash_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 186
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

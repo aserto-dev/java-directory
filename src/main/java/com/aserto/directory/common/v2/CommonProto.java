@@ -161,14 +161,13 @@ public final class CommonProto {
       "\022\037\n\013result_size\030\002 \001(\005R\nresultSize*^\n\004Fla" +
       "g\022\020\n\014FLAG_UNKNOWN\020\000\022\017\n\013FLAG_HIDDEN\020\001\022\021\n\r" +
       "FLAG_READONLY\020\002\022\017\n\013FLAG_SYSTEM\020\004\022\017\n\013FLAG" +
-      "_SHADOW\020\010B\205\002\n\036com.aserto.directory.commo" +
-      "n.v2B\013CommonProtoH\002P\001ZDgithub.com/aserto" +
-      "-dev/go-directory/aserto/directory/commo" +
-      "n/v2;common\370\001\000\242\002\003ADC\252\002\032Aserto.Directory." +
-      "Common.V2\312\002\033Aserto\\Directory_\\Common\\V2\342" +
-      "\002\'Aserto\\Directory_\\Common\\V2\\GPBMetadat" +
-      "a\352\002\035Aserto::Directory::Common::V2b\006proto" +
-      "3"
+      "_SHADOW\020\010B\200\002\n\036com.aserto.directory.commo" +
+      "n.v2B\013CommonProtoP\001ZDgithub.com/aserto-d" +
+      "ev/go-directory/aserto/directory/common/" +
+      "v2;common\242\002\003ADC\252\002\032Aserto.Directory.Commo" +
+      "n.V2\312\002\033Aserto\\Directory_\\Common\\V2\342\002\'Ase" +
+      "rto\\Directory_\\Common\\V2\\GPBMetadata\352\002\035A" +
+      "serto::Directory::Common::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

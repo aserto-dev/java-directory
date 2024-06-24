@@ -102,13 +102,13 @@ public final class ModelProto {
       "ete manifest\032\020Delete manifest.*\034director" +
       "y.v3.manifest.deleteb#\n\023\n\017DirectoryAPIKe" +
       "y\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\034*\032/api/v3/directo" +
-      "ry/manifestB\375\001\n\035com.aserto.directory.mod" +
-      "el.v3B\nModelProtoH\002P\001ZBgithub.com/aserto" +
-      "-dev/go-directory/aserto/directory/model" +
-      "/v3;model\370\001\000\242\002\003ADM\252\002\031Aserto.Directory.Mo" +
-      "del.V3\312\002\032Aserto\\Directory_\\Model\\V3\342\002&As" +
-      "erto\\Directory_\\Model\\V3\\GPBMetadata\352\002\034A" +
-      "serto::Directory::Model::V3b\006proto3"
+      "ry/manifestB\370\001\n\035com.aserto.directory.mod" +
+      "el.v3B\nModelProtoP\001ZBgithub.com/aserto-d" +
+      "ev/go-directory/aserto/directory/model/v" +
+      "3;model\242\002\003ADM\252\002\031Aserto.Directory.Model.V" +
+      "3\312\002\032Aserto\\Directory_\\Model\\V3\342\002&Aserto\\" +
+      "Directory_\\Model\\V3\\GPBMetadata\352\002\034Aserto" +
+      "::Directory::Model::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

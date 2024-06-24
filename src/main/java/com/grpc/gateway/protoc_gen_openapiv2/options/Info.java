@@ -453,6 +453,154 @@ com.google.protobuf.Value defaultValue) {
     return map.get(key);
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(termsOfService_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, termsOfService_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(4, getContact());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(5, getLicense());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, version_);
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetExtensions(),
+        ExtensionsDefaultEntryHolder.defaultEntry,
+        7);
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(termsOfService_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, termsOfService_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getContact());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getLicense());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, version_);
+    }
+    for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
+         : internalGetExtensions().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+      extensions__ = ExtensionsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, extensions__);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.grpc.gateway.protoc_gen_openapiv2.options.Info)) {
+      return super.equals(obj);
+    }
+    com.grpc.gateway.protoc_gen_openapiv2.options.Info other = (com.grpc.gateway.protoc_gen_openapiv2.options.Info) obj;
+
+    if (!getTitle()
+        .equals(other.getTitle())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
+    if (!getTermsOfService()
+        .equals(other.getTermsOfService())) return false;
+    if (hasContact() != other.hasContact()) return false;
+    if (hasContact()) {
+      if (!getContact()
+          .equals(other.getContact())) return false;
+    }
+    if (hasLicense() != other.hasLicense()) return false;
+    if (hasLicense()) {
+      if (!getLicense()
+          .equals(other.getLicense())) return false;
+    }
+    if (!getVersion()
+        .equals(other.getVersion())) return false;
+    if (!internalGetExtensions().equals(
+        other.internalGetExtensions())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getTitle().hashCode();
+    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getDescription().hashCode();
+    hash = (37 * hash) + TERMS_OF_SERVICE_FIELD_NUMBER;
+    hash = (53 * hash) + getTermsOfService().hashCode();
+    if (hasContact()) {
+      hash = (37 * hash) + CONTACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContact().hashCode();
+    }
+    if (hasLicense()) {
+      hash = (37 * hash) + LICENSE_FIELD_NUMBER;
+      hash = (53 * hash) + getLicense().hashCode();
+    }
+    hash = (37 * hash) + VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + getVersion().hashCode();
+    if (!internalGetExtensions().getMap().isEmpty()) {
+      hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetExtensions().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.grpc.gateway.protoc_gen_openapiv2.options.Info parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -744,6 +892,131 @@ com.google.protobuf.Value defaultValue) {
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.grpc.gateway.protoc_gen_openapiv2.options.Info) {
+        return mergeFrom((com.grpc.gateway.protoc_gen_openapiv2.options.Info)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.grpc.gateway.protoc_gen_openapiv2.options.Info other) {
+      if (other == com.grpc.gateway.protoc_gen_openapiv2.options.Info.getDefaultInstance()) return this;
+      if (!other.getTitle().isEmpty()) {
+        title_ = other.title_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.getTermsOfService().isEmpty()) {
+        termsOfService_ = other.termsOfService_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.hasContact()) {
+        mergeContact(other.getContact());
+      }
+      if (other.hasLicense()) {
+        mergeLicense(other.getLicense());
+      }
+      if (!other.getVersion().isEmpty()) {
+        version_ = other.version_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      internalGetMutableExtensions().mergeFrom(
+          other.internalGetExtensions());
+      bitField0_ |= 0x00000040;
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              title_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              termsOfService_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getContactFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getLicenseFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              version_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+              extensions__ = input.readMessage(
+                  ExtensionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableExtensions().ensureBuilderMap().put(
+                  extensions__.getKey(), extensions__.getValue());
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

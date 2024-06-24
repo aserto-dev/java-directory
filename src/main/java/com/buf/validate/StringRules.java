@@ -2058,6 +2058,633 @@ private static final long serialVersionUID = 0L;
     return strict_;
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (((bitField0_ & 0x00000001) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, const_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeUInt64(2, minLen_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeUInt64(3, maxLen_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeUInt64(4, minBytes_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeUInt64(5, maxBytes_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pattern_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, prefix_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, suffix_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, contains_);
+    }
+    for (int i = 0; i < in_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, in_.getRaw(i));
+    }
+    for (int i = 0; i < notIn_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, notIn_.getRaw(i));
+    }
+    if (wellKnownCase_ == 12) {
+      output.writeBool(
+          12, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 13) {
+      output.writeBool(
+          13, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 14) {
+      output.writeBool(
+          14, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 15) {
+      output.writeBool(
+          15, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 16) {
+      output.writeBool(
+          16, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 17) {
+      output.writeBool(
+          17, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 18) {
+      output.writeBool(
+          18, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeUInt64(19, len_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeUInt64(20, lenBytes_);
+    }
+    if (wellKnownCase_ == 21) {
+      output.writeBool(
+          21, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 22) {
+      output.writeBool(
+          22, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 23, notContains_);
+    }
+    if (wellKnownCase_ == 24) {
+      output.writeEnum(24, ((java.lang.Integer) wellKnown_));
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      output.writeBool(25, strict_);
+    }
+    if (wellKnownCase_ == 26) {
+      output.writeBool(
+          26, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 27) {
+      output.writeBool(
+          27, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 28) {
+      output.writeBool(
+          28, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 29) {
+      output.writeBool(
+          29, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 30) {
+      output.writeBool(
+          30, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 31) {
+      output.writeBool(
+          31, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 32) {
+      output.writeBool(
+          32, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 33) {
+      output.writeBool(
+          33, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, const_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, minLen_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(3, maxLen_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(4, minBytes_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(5, maxBytes_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pattern_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, prefix_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, suffix_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, contains_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < in_.size(); i++) {
+        dataSize += computeStringSizeNoTag(in_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getInList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < notIn_.size(); i++) {
+        dataSize += computeStringSizeNoTag(notIn_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getNotInList().size();
+    }
+    if (wellKnownCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            12, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            13, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            14, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 15) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            15, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 16) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            16, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 17) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            17, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            18, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(19, len_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(20, lenBytes_);
+    }
+    if (wellKnownCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            21, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 22) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            22, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, notContains_);
+    }
+    if (wellKnownCase_ == 24) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(24, ((java.lang.Integer) wellKnown_));
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(25, strict_);
+    }
+    if (wellKnownCase_ == 26) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            26, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 27) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            27, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 28) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            28, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 29) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            29, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 30) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            30, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 31) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            31, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 32) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            32, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    if (wellKnownCase_ == 33) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            33, (boolean)((java.lang.Boolean) wellKnown_));
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.buf.validate.StringRules)) {
+      return super.equals(obj);
+    }
+    com.buf.validate.StringRules other = (com.buf.validate.StringRules) obj;
+
+    if (hasConst() != other.hasConst()) return false;
+    if (hasConst()) {
+      if (!getConst()
+          .equals(other.getConst())) return false;
+    }
+    if (hasLen() != other.hasLen()) return false;
+    if (hasLen()) {
+      if (getLen()
+          != other.getLen()) return false;
+    }
+    if (hasMinLen() != other.hasMinLen()) return false;
+    if (hasMinLen()) {
+      if (getMinLen()
+          != other.getMinLen()) return false;
+    }
+    if (hasMaxLen() != other.hasMaxLen()) return false;
+    if (hasMaxLen()) {
+      if (getMaxLen()
+          != other.getMaxLen()) return false;
+    }
+    if (hasLenBytes() != other.hasLenBytes()) return false;
+    if (hasLenBytes()) {
+      if (getLenBytes()
+          != other.getLenBytes()) return false;
+    }
+    if (hasMinBytes() != other.hasMinBytes()) return false;
+    if (hasMinBytes()) {
+      if (getMinBytes()
+          != other.getMinBytes()) return false;
+    }
+    if (hasMaxBytes() != other.hasMaxBytes()) return false;
+    if (hasMaxBytes()) {
+      if (getMaxBytes()
+          != other.getMaxBytes()) return false;
+    }
+    if (hasPattern() != other.hasPattern()) return false;
+    if (hasPattern()) {
+      if (!getPattern()
+          .equals(other.getPattern())) return false;
+    }
+    if (hasPrefix() != other.hasPrefix()) return false;
+    if (hasPrefix()) {
+      if (!getPrefix()
+          .equals(other.getPrefix())) return false;
+    }
+    if (hasSuffix() != other.hasSuffix()) return false;
+    if (hasSuffix()) {
+      if (!getSuffix()
+          .equals(other.getSuffix())) return false;
+    }
+    if (hasContains() != other.hasContains()) return false;
+    if (hasContains()) {
+      if (!getContains()
+          .equals(other.getContains())) return false;
+    }
+    if (hasNotContains() != other.hasNotContains()) return false;
+    if (hasNotContains()) {
+      if (!getNotContains()
+          .equals(other.getNotContains())) return false;
+    }
+    if (!getInList()
+        .equals(other.getInList())) return false;
+    if (!getNotInList()
+        .equals(other.getNotInList())) return false;
+    if (hasStrict() != other.hasStrict()) return false;
+    if (hasStrict()) {
+      if (getStrict()
+          != other.getStrict()) return false;
+    }
+    if (!getWellKnownCase().equals(other.getWellKnownCase())) return false;
+    switch (wellKnownCase_) {
+      case 12:
+        if (getEmail()
+            != other.getEmail()) return false;
+        break;
+      case 13:
+        if (getHostname()
+            != other.getHostname()) return false;
+        break;
+      case 14:
+        if (getIp()
+            != other.getIp()) return false;
+        break;
+      case 15:
+        if (getIpv4()
+            != other.getIpv4()) return false;
+        break;
+      case 16:
+        if (getIpv6()
+            != other.getIpv6()) return false;
+        break;
+      case 17:
+        if (getUri()
+            != other.getUri()) return false;
+        break;
+      case 18:
+        if (getUriRef()
+            != other.getUriRef()) return false;
+        break;
+      case 21:
+        if (getAddress()
+            != other.getAddress()) return false;
+        break;
+      case 22:
+        if (getUuid()
+            != other.getUuid()) return false;
+        break;
+      case 33:
+        if (getTuuid()
+            != other.getTuuid()) return false;
+        break;
+      case 26:
+        if (getIpWithPrefixlen()
+            != other.getIpWithPrefixlen()) return false;
+        break;
+      case 27:
+        if (getIpv4WithPrefixlen()
+            != other.getIpv4WithPrefixlen()) return false;
+        break;
+      case 28:
+        if (getIpv6WithPrefixlen()
+            != other.getIpv6WithPrefixlen()) return false;
+        break;
+      case 29:
+        if (getIpPrefix()
+            != other.getIpPrefix()) return false;
+        break;
+      case 30:
+        if (getIpv4Prefix()
+            != other.getIpv4Prefix()) return false;
+        break;
+      case 31:
+        if (getIpv6Prefix()
+            != other.getIpv6Prefix()) return false;
+        break;
+      case 32:
+        if (getHostAndPort()
+            != other.getHostAndPort()) return false;
+        break;
+      case 24:
+        if (getWellKnownRegexValue()
+            != other.getWellKnownRegexValue()) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasConst()) {
+      hash = (37 * hash) + CONST_FIELD_NUMBER;
+      hash = (53 * hash) + getConst().hashCode();
+    }
+    if (hasLen()) {
+      hash = (37 * hash) + LEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLen());
+    }
+    if (hasMinLen()) {
+      hash = (37 * hash) + MIN_LEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinLen());
+    }
+    if (hasMaxLen()) {
+      hash = (37 * hash) + MAX_LEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxLen());
+    }
+    if (hasLenBytes()) {
+      hash = (37 * hash) + LEN_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLenBytes());
+    }
+    if (hasMinBytes()) {
+      hash = (37 * hash) + MIN_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinBytes());
+    }
+    if (hasMaxBytes()) {
+      hash = (37 * hash) + MAX_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxBytes());
+    }
+    if (hasPattern()) {
+      hash = (37 * hash) + PATTERN_FIELD_NUMBER;
+      hash = (53 * hash) + getPattern().hashCode();
+    }
+    if (hasPrefix()) {
+      hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getPrefix().hashCode();
+    }
+    if (hasSuffix()) {
+      hash = (37 * hash) + SUFFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getSuffix().hashCode();
+    }
+    if (hasContains()) {
+      hash = (37 * hash) + CONTAINS_FIELD_NUMBER;
+      hash = (53 * hash) + getContains().hashCode();
+    }
+    if (hasNotContains()) {
+      hash = (37 * hash) + NOT_CONTAINS_FIELD_NUMBER;
+      hash = (53 * hash) + getNotContains().hashCode();
+    }
+    if (getInCount() > 0) {
+      hash = (37 * hash) + IN_FIELD_NUMBER;
+      hash = (53 * hash) + getInList().hashCode();
+    }
+    if (getNotInCount() > 0) {
+      hash = (37 * hash) + NOT_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getNotInList().hashCode();
+    }
+    if (hasStrict()) {
+      hash = (37 * hash) + STRICT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStrict());
+    }
+    switch (wellKnownCase_) {
+      case 12:
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEmail());
+        break;
+      case 13:
+        hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHostname());
+        break;
+      case 14:
+        hash = (37 * hash) + IP_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIp());
+        break;
+      case 15:
+        hash = (37 * hash) + IPV4_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpv4());
+        break;
+      case 16:
+        hash = (37 * hash) + IPV6_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpv6());
+        break;
+      case 17:
+        hash = (37 * hash) + URI_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUri());
+        break;
+      case 18:
+        hash = (37 * hash) + URI_REF_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUriRef());
+        break;
+      case 21:
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAddress());
+        break;
+      case 22:
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUuid());
+        break;
+      case 33:
+        hash = (37 * hash) + TUUID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getTuuid());
+        break;
+      case 26:
+        hash = (37 * hash) + IP_WITH_PREFIXLEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpWithPrefixlen());
+        break;
+      case 27:
+        hash = (37 * hash) + IPV4_WITH_PREFIXLEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpv4WithPrefixlen());
+        break;
+      case 28:
+        hash = (37 * hash) + IPV6_WITH_PREFIXLEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpv6WithPrefixlen());
+        break;
+      case 29:
+        hash = (37 * hash) + IP_PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpPrefix());
+        break;
+      case 30:
+        hash = (37 * hash) + IPV4_PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpv4Prefix());
+        break;
+      case 31:
+        hash = (37 * hash) + IPV6_PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpv6Prefix());
+        break;
+      case 32:
+        hash = (37 * hash) + HOST_AND_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHostAndPort());
+        break;
+      case 24:
+        hash = (37 * hash) + WELL_KNOWN_REGEX_FIELD_NUMBER;
+        hash = (53 * hash) + getWellKnownRegexValue();
+        break;
+      case 0:
+      default:
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.buf.validate.StringRules parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2350,6 +2977,375 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.buf.validate.StringRules) {
+        return mergeFrom((com.buf.validate.StringRules)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.buf.validate.StringRules other) {
+      if (other == com.buf.validate.StringRules.getDefaultInstance()) return this;
+      if (other.hasConst()) {
+        const_ = other.const_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.hasLen()) {
+        setLen(other.getLen());
+      }
+      if (other.hasMinLen()) {
+        setMinLen(other.getMinLen());
+      }
+      if (other.hasMaxLen()) {
+        setMaxLen(other.getMaxLen());
+      }
+      if (other.hasLenBytes()) {
+        setLenBytes(other.getLenBytes());
+      }
+      if (other.hasMinBytes()) {
+        setMinBytes(other.getMinBytes());
+      }
+      if (other.hasMaxBytes()) {
+        setMaxBytes(other.getMaxBytes());
+      }
+      if (other.hasPattern()) {
+        pattern_ = other.pattern_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (other.hasPrefix()) {
+        prefix_ = other.prefix_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      if (other.hasSuffix()) {
+        suffix_ = other.suffix_;
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
+      if (other.hasContains()) {
+        contains_ = other.contains_;
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
+      if (other.hasNotContains()) {
+        notContains_ = other.notContains_;
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      if (!other.in_.isEmpty()) {
+        if (in_.isEmpty()) {
+          in_ = other.in_;
+          bitField0_ |= 0x00001000;
+        } else {
+          ensureInIsMutable();
+          in_.addAll(other.in_);
+        }
+        onChanged();
+      }
+      if (!other.notIn_.isEmpty()) {
+        if (notIn_.isEmpty()) {
+          notIn_ = other.notIn_;
+          bitField0_ |= 0x00002000;
+        } else {
+          ensureNotInIsMutable();
+          notIn_.addAll(other.notIn_);
+        }
+        onChanged();
+      }
+      if (other.hasStrict()) {
+        setStrict(other.getStrict());
+      }
+      switch (other.getWellKnownCase()) {
+        case EMAIL: {
+          setEmail(other.getEmail());
+          break;
+        }
+        case HOSTNAME: {
+          setHostname(other.getHostname());
+          break;
+        }
+        case IP: {
+          setIp(other.getIp());
+          break;
+        }
+        case IPV4: {
+          setIpv4(other.getIpv4());
+          break;
+        }
+        case IPV6: {
+          setIpv6(other.getIpv6());
+          break;
+        }
+        case URI: {
+          setUri(other.getUri());
+          break;
+        }
+        case URI_REF: {
+          setUriRef(other.getUriRef());
+          break;
+        }
+        case ADDRESS: {
+          setAddress(other.getAddress());
+          break;
+        }
+        case UUID: {
+          setUuid(other.getUuid());
+          break;
+        }
+        case TUUID: {
+          setTuuid(other.getTuuid());
+          break;
+        }
+        case IP_WITH_PREFIXLEN: {
+          setIpWithPrefixlen(other.getIpWithPrefixlen());
+          break;
+        }
+        case IPV4_WITH_PREFIXLEN: {
+          setIpv4WithPrefixlen(other.getIpv4WithPrefixlen());
+          break;
+        }
+        case IPV6_WITH_PREFIXLEN: {
+          setIpv6WithPrefixlen(other.getIpv6WithPrefixlen());
+          break;
+        }
+        case IP_PREFIX: {
+          setIpPrefix(other.getIpPrefix());
+          break;
+        }
+        case IPV4_PREFIX: {
+          setIpv4Prefix(other.getIpv4Prefix());
+          break;
+        }
+        case IPV6_PREFIX: {
+          setIpv6Prefix(other.getIpv6Prefix());
+          break;
+        }
+        case HOST_AND_PORT: {
+          setHostAndPort(other.getHostAndPort());
+          break;
+        }
+        case WELL_KNOWN_REGEX: {
+          setWellKnownRegexValue(other.getWellKnownRegexValue());
+          break;
+        }
+        case WELLKNOWN_NOT_SET: {
+          break;
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              const_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              minLen_ = input.readUInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 16
+            case 24: {
+              maxLen_ = input.readUInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 24
+            case 32: {
+              minBytes_ = input.readUInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 32
+            case 40: {
+              maxBytes_ = input.readUInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 40
+            case 50: {
+              pattern_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 50
+            case 58: {
+              prefix_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 58
+            case 66: {
+              suffix_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 66
+            case 74: {
+              contains_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 74
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureInIsMutable();
+              in_.add(s);
+              break;
+            } // case 82
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureNotInIsMutable();
+              notIn_.add(s);
+              break;
+            } // case 90
+            case 96: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 12;
+              break;
+            } // case 96
+            case 104: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 13;
+              break;
+            } // case 104
+            case 112: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 14;
+              break;
+            } // case 112
+            case 120: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 15;
+              break;
+            } // case 120
+            case 128: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 16;
+              break;
+            } // case 128
+            case 136: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 17;
+              break;
+            } // case 136
+            case 144: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 18;
+              break;
+            } // case 144
+            case 152: {
+              len_ = input.readUInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 152
+            case 160: {
+              lenBytes_ = input.readUInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 160
+            case 168: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 21;
+              break;
+            } // case 168
+            case 176: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 22;
+              break;
+            } // case 176
+            case 186: {
+              notContains_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 186
+            case 192: {
+              int rawValue = input.readEnum();
+              wellKnownCase_ = 24;
+              wellKnown_ = rawValue;
+              break;
+            } // case 192
+            case 200: {
+              strict_ = input.readBool();
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 200
+            case 208: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 26;
+              break;
+            } // case 208
+            case 216: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 27;
+              break;
+            } // case 216
+            case 224: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 28;
+              break;
+            } // case 224
+            case 232: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 29;
+              break;
+            } // case 232
+            case 240: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 30;
+              break;
+            } // case 240
+            case 248: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 31;
+              break;
+            } // case 248
+            case 256: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 32;
+              break;
+            } // case 256
+            case 264: {
+              wellKnown_ = input.readBool();
+              wellKnownCase_ = 33;
+              break;
+            } // case 264
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int wellKnownCase_ = 0;
     private java.lang.Object wellKnown_;

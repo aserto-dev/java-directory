@@ -166,14 +166,14 @@ public final class CommonProto {
       "elation\"P\n\021PaginationRequest\022 \n\004size\030\001 \001" +
       "(\005B\014\340A\001\272H\006\032\004\030d(\001R\004size\022\031\n\005token\030\002 \001(\tB\003\340" +
       "A\001R\005token\"8\n\022PaginationResponse\022\"\n\nnext_" +
-      "token\030\001 \001(\tB\003\340A\003R\tnextTokenB\205\002\n\036com.aser" +
-      "to.directory.common.v3B\013CommonProtoH\002P\001Z" +
-      "Dgithub.com/aserto-dev/go-directory/aser" +
-      "to/directory/common/v3;common\370\001\000\242\002\003ADC\252\002" +
-      "\032Aserto.Directory.Common.V3\312\002\033Aserto\\Dir" +
-      "ectory_\\Common\\V3\342\002\'Aserto\\Directory_\\Co" +
-      "mmon\\V3\\GPBMetadata\352\002\035Aserto::Directory:" +
-      ":Common::V3b\006proto3"
+      "token\030\001 \001(\tB\003\340A\003R\tnextTokenB\200\002\n\036com.aser" +
+      "to.directory.common.v3B\013CommonProtoP\001ZDg" +
+      "ithub.com/aserto-dev/go-directory/aserto" +
+      "/directory/common/v3;common\242\002\003ADC\252\002\032Aser" +
+      "to.Directory.Common.V3\312\002\033Aserto\\Director" +
+      "y_\\Common\\V3\342\002\'Aserto\\Directory_\\Common\\" +
+      "V3\\GPBMetadata\352\002\035Aserto::Directory::Comm" +
+      "on::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

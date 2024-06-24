@@ -195,6 +195,106 @@ private static final long serialVersionUID = 0L;
     return trace_.getByteString(index);
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    for (int i = 0; i < results_.size(); i++) {
+      output.writeMessage(2, results_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(3, getExplanation());
+    }
+    for (int i = 0; i < trace_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, trace_.getRaw(i));
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    for (int i = 0; i < results_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, results_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getExplanation());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < trace_.size(); i++) {
+        dataSize += computeStringSizeNoTag(trace_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getTraceList().size();
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.reader.v3.GetGraphResponse)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.reader.v3.GetGraphResponse other = (com.aserto.directory.reader.v3.GetGraphResponse) obj;
+
+    if (!getResultsList()
+        .equals(other.getResultsList())) return false;
+    if (hasExplanation() != other.hasExplanation()) return false;
+    if (hasExplanation()) {
+      if (!getExplanation()
+          .equals(other.getExplanation())) return false;
+    }
+    if (!getTraceList()
+        .equals(other.getTraceList())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (getResultsCount() > 0) {
+      hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+      hash = (53 * hash) + getResultsList().hashCode();
+    }
+    if (hasExplanation()) {
+      hash = (37 * hash) + EXPLANATION_FIELD_NUMBER;
+      hash = (53 * hash) + getExplanation().hashCode();
+    }
+    if (getTraceCount() > 0) {
+      hash = (37 * hash) + TRACE_FIELD_NUMBER;
+      hash = (53 * hash) + getTraceList().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.reader.v3.GetGraphResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -433,6 +533,124 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.reader.v3.GetGraphResponse) {
+        return mergeFrom((com.aserto.directory.reader.v3.GetGraphResponse)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.reader.v3.GetGraphResponse other) {
+      if (other == com.aserto.directory.reader.v3.GetGraphResponse.getDefaultInstance()) return this;
+      if (resultsBuilder_ == null) {
+        if (!other.results_.isEmpty()) {
+          if (results_.isEmpty()) {
+            results_ = other.results_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureResultsIsMutable();
+            results_.addAll(other.results_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.results_.isEmpty()) {
+          if (resultsBuilder_.isEmpty()) {
+            resultsBuilder_.dispose();
+            resultsBuilder_ = null;
+            results_ = other.results_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            resultsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getResultsFieldBuilder() : null;
+          } else {
+            resultsBuilder_.addAllMessages(other.results_);
+          }
+        }
+      }
+      if (other.hasExplanation()) {
+        mergeExplanation(other.getExplanation());
+      }
+      if (!other.trace_.isEmpty()) {
+        if (trace_.isEmpty()) {
+          trace_ = other.trace_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureTraceIsMutable();
+          trace_.addAll(other.trace_);
+        }
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              com.aserto.directory.common.v3.ObjectIdentifier m =
+                  input.readMessage(
+                      com.aserto.directory.common.v3.ObjectIdentifier.parser(),
+                      extensionRegistry);
+              if (resultsBuilder_ == null) {
+                ensureResultsIsMutable();
+                results_.add(m);
+              } else {
+                resultsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getExplanationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 26
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTraceIsMutable();
+              trace_.add(s);
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

@@ -58,13 +58,13 @@ public final class PrivateProto {
       "(\tR\007message\022\036\n\nexpression\030\003 \001(\tR\nexpress" +
       "ion:\\\n\005field\022\035.google.protobuf.FieldOpti" +
       "ons\030\210\t \001(\0132#.buf.validate.priv.FieldCons" +
-      "traintsR\005field\210\001\001B\336\001\n\025com.buf.validate.p" +
-      "rivB\014PrivateProtoH\002P\001ZLbuf.build/gen/go/" +
-      "bufbuild/protovalidate/protocolbuffers/g" +
-      "o/buf/validate/priv\370\001\000\242\002\003BVP\252\002\021Buf.Valid" +
-      "ate.Priv\312\002\021Buf\\Validate\\Priv\342\002\035Buf\\Valid" +
-      "ate\\Priv\\GPBMetadata\352\002\023Buf::Validate::Pr" +
-      "ivb\006proto3"
+      "traintsR\005field\210\001\001B\331\001\n\025com.buf.validate.p" +
+      "rivB\014PrivateProtoP\001ZLbuf.build/gen/go/bu" +
+      "fbuild/protovalidate/protocolbuffers/go/" +
+      "buf/validate/priv\242\002\003BVP\252\002\021Buf.Validate.P" +
+      "riv\312\002\021Buf\\Validate\\Priv\342\002\035Buf\\Validate\\P" +
+      "riv\\GPBMetadata\352\002\023Buf::Validate::Privb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

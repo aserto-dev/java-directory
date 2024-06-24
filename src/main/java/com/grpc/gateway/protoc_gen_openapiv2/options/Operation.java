@@ -892,6 +892,267 @@ com.google.protobuf.Value defaultValue) {
     return parameters_ == null ? com.grpc.gateway.protoc_gen_openapiv2.options.Parameters.getDefaultInstance() : parameters_;
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    getSerializedSize();
+    for (int i = 0; i < tags_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tags_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(summary_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, summary_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(4, getExternalDocs());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, operationId_);
+    }
+    for (int i = 0; i < consumes_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, consumes_.getRaw(i));
+    }
+    for (int i = 0; i < produces_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, produces_.getRaw(i));
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetResponses(),
+        ResponsesDefaultEntryHolder.defaultEntry,
+        9);
+    if (getSchemesList().size() > 0) {
+      output.writeUInt32NoTag(82);
+      output.writeUInt32NoTag(schemesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < schemes_.size(); i++) {
+      output.writeEnumNoTag(schemes_.get(i));
+    }
+    if (deprecated_ != false) {
+      output.writeBool(11, deprecated_);
+    }
+    for (int i = 0; i < security_.size(); i++) {
+      output.writeMessage(12, security_.get(i));
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetExtensions(),
+        ExtensionsDefaultEntryHolder.defaultEntry,
+        13);
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(14, getParameters());
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    {
+      int dataSize = 0;
+      for (int i = 0; i < tags_.size(); i++) {
+        dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getTagsList().size();
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(summary_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, summary_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getExternalDocs());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, operationId_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < consumes_.size(); i++) {
+        dataSize += computeStringSizeNoTag(consumes_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getConsumesList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < produces_.size(); i++) {
+        dataSize += computeStringSizeNoTag(produces_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getProducesList().size();
+    }
+    for (java.util.Map.Entry<java.lang.String, com.grpc.gateway.protoc_gen_openapiv2.options.Response> entry
+         : internalGetResponses().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, com.grpc.gateway.protoc_gen_openapiv2.options.Response>
+      responses__ = ResponsesDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, responses__);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < schemes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(schemes_.get(i));
+      }
+      size += dataSize;
+      if (!getSchemesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }schemesMemoizedSerializedSize = dataSize;
+    }
+    if (deprecated_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(11, deprecated_);
+    }
+    for (int i = 0; i < security_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, security_.get(i));
+    }
+    for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
+         : internalGetExtensions().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+      extensions__ = ExtensionsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, extensions__);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getParameters());
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.grpc.gateway.protoc_gen_openapiv2.options.Operation)) {
+      return super.equals(obj);
+    }
+    com.grpc.gateway.protoc_gen_openapiv2.options.Operation other = (com.grpc.gateway.protoc_gen_openapiv2.options.Operation) obj;
+
+    if (!getTagsList()
+        .equals(other.getTagsList())) return false;
+    if (!getSummary()
+        .equals(other.getSummary())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
+    if (hasExternalDocs() != other.hasExternalDocs()) return false;
+    if (hasExternalDocs()) {
+      if (!getExternalDocs()
+          .equals(other.getExternalDocs())) return false;
+    }
+    if (!getOperationId()
+        .equals(other.getOperationId())) return false;
+    if (!getConsumesList()
+        .equals(other.getConsumesList())) return false;
+    if (!getProducesList()
+        .equals(other.getProducesList())) return false;
+    if (!internalGetResponses().equals(
+        other.internalGetResponses())) return false;
+    if (!schemes_.equals(other.schemes_)) return false;
+    if (getDeprecated()
+        != other.getDeprecated()) return false;
+    if (!getSecurityList()
+        .equals(other.getSecurityList())) return false;
+    if (!internalGetExtensions().equals(
+        other.internalGetExtensions())) return false;
+    if (hasParameters() != other.hasParameters()) return false;
+    if (hasParameters()) {
+      if (!getParameters()
+          .equals(other.getParameters())) return false;
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (getTagsCount() > 0) {
+      hash = (37 * hash) + TAGS_FIELD_NUMBER;
+      hash = (53 * hash) + getTagsList().hashCode();
+    }
+    hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+    hash = (53 * hash) + getSummary().hashCode();
+    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getDescription().hashCode();
+    if (hasExternalDocs()) {
+      hash = (37 * hash) + EXTERNAL_DOCS_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalDocs().hashCode();
+    }
+    hash = (37 * hash) + OPERATION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOperationId().hashCode();
+    if (getConsumesCount() > 0) {
+      hash = (37 * hash) + CONSUMES_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumesList().hashCode();
+    }
+    if (getProducesCount() > 0) {
+      hash = (37 * hash) + PRODUCES_FIELD_NUMBER;
+      hash = (53 * hash) + getProducesList().hashCode();
+    }
+    if (!internalGetResponses().getMap().isEmpty()) {
+      hash = (37 * hash) + RESPONSES_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetResponses().hashCode();
+    }
+    if (getSchemesCount() > 0) {
+      hash = (37 * hash) + SCHEMES_FIELD_NUMBER;
+      hash = (53 * hash) + schemes_.hashCode();
+    }
+    hash = (37 * hash) + DEPRECATED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDeprecated());
+    if (getSecurityCount() > 0) {
+      hash = (37 * hash) + SECURITY_FIELD_NUMBER;
+      hash = (53 * hash) + getSecurityList().hashCode();
+    }
+    if (!internalGetExtensions().getMap().isEmpty()) {
+      hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetExtensions().hashCode();
+    }
+    if (hasParameters()) {
+      hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+      hash = (53 * hash) + getParameters().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.grpc.gateway.protoc_gen_openapiv2.options.Operation parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1239,6 +1500,255 @@ com.google.protobuf.Value defaultValue) {
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.grpc.gateway.protoc_gen_openapiv2.options.Operation) {
+        return mergeFrom((com.grpc.gateway.protoc_gen_openapiv2.options.Operation)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.grpc.gateway.protoc_gen_openapiv2.options.Operation other) {
+      if (other == com.grpc.gateway.protoc_gen_openapiv2.options.Operation.getDefaultInstance()) return this;
+      if (!other.tags_.isEmpty()) {
+        if (tags_.isEmpty()) {
+          tags_ = other.tags_;
+          bitField0_ |= 0x00000001;
+        } else {
+          ensureTagsIsMutable();
+          tags_.addAll(other.tags_);
+        }
+        onChanged();
+      }
+      if (!other.getSummary().isEmpty()) {
+        summary_ = other.summary_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.hasExternalDocs()) {
+        mergeExternalDocs(other.getExternalDocs());
+      }
+      if (!other.getOperationId().isEmpty()) {
+        operationId_ = other.operationId_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.consumes_.isEmpty()) {
+        if (consumes_.isEmpty()) {
+          consumes_ = other.consumes_;
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureConsumesIsMutable();
+          consumes_.addAll(other.consumes_);
+        }
+        onChanged();
+      }
+      if (!other.produces_.isEmpty()) {
+        if (produces_.isEmpty()) {
+          produces_ = other.produces_;
+          bitField0_ |= 0x00000040;
+        } else {
+          ensureProducesIsMutable();
+          produces_.addAll(other.produces_);
+        }
+        onChanged();
+      }
+      internalGetMutableResponses().mergeFrom(
+          other.internalGetResponses());
+      bitField0_ |= 0x00000080;
+      if (!other.schemes_.isEmpty()) {
+        if (schemes_.isEmpty()) {
+          schemes_ = other.schemes_;
+          bitField0_ = (bitField0_ & ~0x00000100);
+        } else {
+          ensureSchemesIsMutable();
+          schemes_.addAll(other.schemes_);
+        }
+        onChanged();
+      }
+      if (other.getDeprecated() != false) {
+        setDeprecated(other.getDeprecated());
+      }
+      if (securityBuilder_ == null) {
+        if (!other.security_.isEmpty()) {
+          if (security_.isEmpty()) {
+            security_ = other.security_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureSecurityIsMutable();
+            security_.addAll(other.security_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.security_.isEmpty()) {
+          if (securityBuilder_.isEmpty()) {
+            securityBuilder_.dispose();
+            securityBuilder_ = null;
+            security_ = other.security_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            securityBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getSecurityFieldBuilder() : null;
+          } else {
+            securityBuilder_.addAllMessages(other.security_);
+          }
+        }
+      }
+      internalGetMutableExtensions().mergeFrom(
+          other.internalGetExtensions());
+      bitField0_ |= 0x00000800;
+      if (other.hasParameters()) {
+        mergeParameters(other.getParameters());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTagsIsMutable();
+              tags_.add(s);
+              break;
+            } // case 10
+            case 18: {
+              summary_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getExternalDocsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              operationId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureConsumesIsMutable();
+              consumes_.add(s);
+              break;
+            } // case 50
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureProducesIsMutable();
+              produces_.add(s);
+              break;
+            } // case 58
+            case 74: {
+              com.google.protobuf.MapEntry<java.lang.String, com.grpc.gateway.protoc_gen_openapiv2.options.Response>
+              responses__ = input.readMessage(
+                  ResponsesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableResponses().ensureBuilderMap().put(
+                  responses__.getKey(), responses__.getValue());
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 74
+            case 80: {
+              int tmpRaw = input.readEnum();
+              ensureSchemesIsMutable();
+              schemes_.add(tmpRaw);
+              break;
+            } // case 80
+            case 82: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureSchemesIsMutable();
+                schemes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 82
+            case 88: {
+              deprecated_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 88
+            case 98: {
+              com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement m =
+                  input.readMessage(
+                      com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.parser(),
+                      extensionRegistry);
+              if (securityBuilder_ == null) {
+                ensureSecurityIsMutable();
+                security_.add(m);
+              } else {
+                securityBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
+            case 106: {
+              com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+              extensions__ = input.readMessage(
+                  ExtensionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableExtensions().ensureBuilderMap().put(
+                  extensions__.getKey(), extensions__.getValue());
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getParametersFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 114
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

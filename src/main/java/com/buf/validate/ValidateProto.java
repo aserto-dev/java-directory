@@ -1488,12 +1488,12 @@ public final class ValidateProto {
       "f.OneofOptions\030\207\t \001(\0132\036.buf.validate.One" +
       "ofConstraintsR\005oneof\210\001\001:W\n\005field\022\035.googl" +
       "e.protobuf.FieldOptions\030\207\t \001(\0132\036.buf.val" +
-      "idate.FieldConstraintsR\005field\210\001\001B\300\001\n\020com" +
-      ".buf.validateB\rValidateProtoH\002P\001ZGbuf.bu" +
-      "ild/gen/go/bufbuild/protovalidate/protoc" +
-      "olbuffers/go/buf/validate\370\001\000\242\002\003BVX\252\002\014Buf" +
-      ".Validate\312\002\014Buf\\Validate\342\002\030Buf\\Validate\\" +
-      "GPBMetadata\352\002\rBuf::Validateb\006proto3"
+      "idate.FieldConstraintsR\005field\210\001\001B\273\001\n\020com" +
+      ".buf.validateB\rValidateProtoP\001ZGbuf.buil" +
+      "d/gen/go/bufbuild/protovalidate/protocol" +
+      "buffers/go/buf/validate\242\002\003BVX\252\002\014Buf.Vali" +
+      "date\312\002\014Buf\\Validate\342\002\030Buf\\Validate\\GPBMe" +
+      "tadata\352\002\rBuf::Validateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

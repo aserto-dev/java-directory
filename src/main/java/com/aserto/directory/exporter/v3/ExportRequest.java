@@ -93,6 +93,87 @@ private static final long serialVersionUID = 0L;
     return startFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startFrom_;
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (options_ != 0) {
+      output.writeUInt32(1, options_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(20, getStartFrom());
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (options_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(1, options_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getStartFrom());
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.exporter.v3.ExportRequest)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.exporter.v3.ExportRequest other = (com.aserto.directory.exporter.v3.ExportRequest) obj;
+
+    if (getOptions()
+        != other.getOptions()) return false;
+    if (hasStartFrom() != other.hasStartFrom()) return false;
+    if (hasStartFrom()) {
+      if (!getStartFrom()
+          .equals(other.getStartFrom())) return false;
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+    hash = (53 * hash) + getOptions();
+    if (hasStartFrom()) {
+      hash = (37 * hash) + START_FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getStartFrom().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.exporter.v3.ExportRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -308,6 +389,77 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.exporter.v3.ExportRequest) {
+        return mergeFrom((com.aserto.directory.exporter.v3.ExportRequest)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.exporter.v3.ExportRequest other) {
+      if (other == com.aserto.directory.exporter.v3.ExportRequest.getDefaultInstance()) return this;
+      if (other.getOptions() != 0) {
+        setOptions(other.getOptions());
+      }
+      if (other.hasStartFrom()) {
+        mergeStartFrom(other.getStartFrom());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              options_ = input.readUInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 162: {
+              input.readMessage(
+                  getStartFromFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 162
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

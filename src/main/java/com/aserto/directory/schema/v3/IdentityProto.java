@@ -40,14 +40,14 @@ public final class IdentityProto {
       "IDENTITY_KIND_PID\020\001\022\027\n\023IDENTITY_KIND_EMA" +
       "IL\020\002\022\032\n\026IDENTITY_KIND_USERNAME\020\003\022\024\n\020IDEN" +
       "TITY_KIND_DN\020\004\022\027\n\023IDENTITY_KIND_PHONE\020\005\022" +
-      "\027\n\023IDENTITY_KIND_EMPID\020\006B\207\002\n\036com.aserto." +
-      "directory.schema.v3B\rIdentityProtoH\002P\001ZD" +
-      "github.com/aserto-dev/go-directory/asert" +
-      "o/directory/schema/v3;schema\370\001\000\242\002\003ADS\252\002\032" +
-      "Aserto.Directory.Schema.V3\312\002\033Aserto\\Dire" +
-      "ctory_\\Schema\\V3\342\002\'Aserto\\Directory_\\Sch" +
-      "ema\\V3\\GPBMetadata\352\002\035Aserto::Directory::" +
-      "Schema::V3b\006proto3"
+      "\027\n\023IDENTITY_KIND_EMPID\020\006B\202\002\n\036com.aserto." +
+      "directory.schema.v3B\rIdentityProtoP\001ZDgi" +
+      "thub.com/aserto-dev/go-directory/aserto/" +
+      "directory/schema/v3;schema\242\002\003ADS\252\002\032Asert" +
+      "o.Directory.Schema.V3\312\002\033Aserto\\Directory" +
+      "_\\Schema\\V3\342\002\'Aserto\\Directory_\\Schema\\V" +
+      "3\\GPBMetadata\352\002\035Aserto::Directory::Schem" +
+      "a::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

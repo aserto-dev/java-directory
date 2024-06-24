@@ -263,6 +263,127 @@ private static final long serialVersionUID = 0L;
     return items_ == null ? com.buf.validate.FieldConstraints.getDefaultInstance() : items_;
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeUInt64(1, minItems_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeUInt64(2, maxItems_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeBool(3, unique_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(4, getItems());
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, minItems_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, maxItems_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, unique_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getItems());
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.buf.validate.RepeatedRules)) {
+      return super.equals(obj);
+    }
+    com.buf.validate.RepeatedRules other = (com.buf.validate.RepeatedRules) obj;
+
+    if (hasMinItems() != other.hasMinItems()) return false;
+    if (hasMinItems()) {
+      if (getMinItems()
+          != other.getMinItems()) return false;
+    }
+    if (hasMaxItems() != other.hasMaxItems()) return false;
+    if (hasMaxItems()) {
+      if (getMaxItems()
+          != other.getMaxItems()) return false;
+    }
+    if (hasUnique() != other.hasUnique()) return false;
+    if (hasUnique()) {
+      if (getUnique()
+          != other.getUnique()) return false;
+    }
+    if (hasItems() != other.hasItems()) return false;
+    if (hasItems()) {
+      if (!getItems()
+          .equals(other.getItems())) return false;
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasMinItems()) {
+      hash = (37 * hash) + MIN_ITEMS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinItems());
+    }
+    if (hasMaxItems()) {
+      hash = (37 * hash) + MAX_ITEMS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxItems());
+    }
+    if (hasUnique()) {
+      hash = (37 * hash) + UNIQUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnique());
+    }
+    if (hasItems()) {
+      hash = (37 * hash) + ITEMS_FIELD_NUMBER;
+      hash = (53 * hash) + getItems().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.buf.validate.RepeatedRules parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -493,6 +614,93 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.buf.validate.RepeatedRules) {
+        return mergeFrom((com.buf.validate.RepeatedRules)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.buf.validate.RepeatedRules other) {
+      if (other == com.buf.validate.RepeatedRules.getDefaultInstance()) return this;
+      if (other.hasMinItems()) {
+        setMinItems(other.getMinItems());
+      }
+      if (other.hasMaxItems()) {
+        setMaxItems(other.getMaxItems());
+      }
+      if (other.hasUnique()) {
+        setUnique(other.getUnique());
+      }
+      if (other.hasItems()) {
+        mergeItems(other.getItems());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              minItems_ = input.readUInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              maxItems_ = input.readUInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              unique_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              input.readMessage(
+                  getItemsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

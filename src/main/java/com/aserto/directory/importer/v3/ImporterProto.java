@@ -59,14 +59,14 @@ public final class ImporterProto {
       "ITH_RELATIONS\020\0032u\n\010Importer\022i\n\006Import\022+." +
       "aserto.directory.importer.v3.ImportReque" +
       "st\032,.aserto.directory.importer.v3.Import" +
-      "Response\"\000(\0010\001B\225\002\n com.aserto.directory." +
-      "importer.v3B\rImporterProtoH\002P\001ZHgithub.c" +
-      "om/aserto-dev/go-directory/aserto/direct" +
-      "ory/importer/v3;importer\370\001\000\242\002\003ADI\252\002\034Aser" +
-      "to.Directory.Importer.V3\312\002\035Aserto\\Direct" +
-      "ory_\\Importer\\V3\342\002)Aserto\\Directory_\\Imp" +
-      "orter\\V3\\GPBMetadata\352\002\037Aserto::Directory" +
-      "::Importer::V3b\006proto3"
+      "Response\"\000(\0010\001B\220\002\n com.aserto.directory." +
+      "importer.v3B\rImporterProtoP\001ZHgithub.com" +
+      "/aserto-dev/go-directory/aserto/director" +
+      "y/importer/v3;importer\242\002\003ADI\252\002\034Aserto.Di" +
+      "rectory.Importer.V3\312\002\035Aserto\\Directory_\\" +
+      "Importer\\V3\342\002)Aserto\\Directory_\\Importer" +
+      "\\V3\\GPBMetadata\352\002\037Aserto::Directory::Imp" +
+      "orter::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

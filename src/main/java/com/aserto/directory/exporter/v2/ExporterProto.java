@@ -61,14 +61,14 @@ public final class ExporterProto {
       "_KEYS\020/2s\n\010Exporter\022g\n\006Export\022+.aserto.d" +
       "irectory.exporter.v2.ExportRequest\032,.ase" +
       "rto.directory.exporter.v2.ExportResponse" +
-      "\"\0000\001B\225\002\n com.aserto.directory.exporter.v" +
-      "2B\rExporterProtoH\002P\001ZHgithub.com/aserto-" +
-      "dev/go-directory/aserto/directory/export" +
-      "er/v2;exporter\370\001\000\242\002\003ADE\252\002\034Aserto.Directo" +
-      "ry.Exporter.V2\312\002\035Aserto\\Directory_\\Expor" +
-      "ter\\V2\342\002)Aserto\\Directory_\\Exporter\\V2\\G" +
-      "PBMetadata\352\002\037Aserto::Directory::Exporter" +
-      "::V2b\006proto3"
+      "\"\0000\001B\220\002\n com.aserto.directory.exporter.v" +
+      "2B\rExporterProtoP\001ZHgithub.com/aserto-de" +
+      "v/go-directory/aserto/directory/exporter" +
+      "/v2;exporter\242\002\003ADE\252\002\034Aserto.Directory.Ex" +
+      "porter.V2\312\002\035Aserto\\Directory_\\Exporter\\V" +
+      "2\342\002)Aserto\\Directory_\\Exporter\\V2\\GPBMet" +
+      "adata\352\002\037Aserto::Directory::Exporter::V2b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

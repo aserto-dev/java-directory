@@ -212,6 +212,114 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.Struct.getDefaultInstance();
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (msgCase_ == 2) {
+      output.writeMessage(2, (com.aserto.directory.common.v3.Object) msg_);
+    }
+    if (msgCase_ == 4) {
+      output.writeMessage(4, (com.aserto.directory.common.v3.Relation) msg_);
+    }
+    if (msgCase_ == 8) {
+      output.writeMessage(8, (com.google.protobuf.Struct) msg_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (msgCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.aserto.directory.common.v3.Object) msg_);
+    }
+    if (msgCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.aserto.directory.common.v3.Relation) msg_);
+    }
+    if (msgCase_ == 8) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.protobuf.Struct) msg_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.aserto.directory.exporter.v3.ExportResponse)) {
+      return super.equals(obj);
+    }
+    com.aserto.directory.exporter.v3.ExportResponse other = (com.aserto.directory.exporter.v3.ExportResponse) obj;
+
+    if (!getMsgCase().equals(other.getMsgCase())) return false;
+    switch (msgCase_) {
+      case 2:
+        if (!getObject()
+            .equals(other.getObject())) return false;
+        break;
+      case 4:
+        if (!getRelation()
+            .equals(other.getRelation())) return false;
+        break;
+      case 8:
+        if (!getStats()
+            .equals(other.getStats())) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    switch (msgCase_) {
+      case 2:
+        hash = (37 * hash) + OBJECT_FIELD_NUMBER;
+        hash = (53 * hash) + getObject().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + RELATION_FIELD_NUMBER;
+        hash = (53 * hash) + getRelation().hashCode();
+        break;
+      case 8:
+        hash = (37 * hash) + STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getStats().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.aserto.directory.exporter.v3.ExportResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -433,6 +541,97 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.aserto.directory.exporter.v3.ExportResponse) {
+        return mergeFrom((com.aserto.directory.exporter.v3.ExportResponse)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.aserto.directory.exporter.v3.ExportResponse other) {
+      if (other == com.aserto.directory.exporter.v3.ExportResponse.getDefaultInstance()) return this;
+      switch (other.getMsgCase()) {
+        case OBJECT: {
+          mergeObject(other.getObject());
+          break;
+        }
+        case RELATION: {
+          mergeRelation(other.getRelation());
+          break;
+        }
+        case STATS: {
+          mergeStats(other.getStats());
+          break;
+        }
+        case MSG_NOT_SET: {
+          break;
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              input.readMessage(
+                  getObjectFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              msgCase_ = 2;
+              break;
+            } // case 18
+            case 34: {
+              input.readMessage(
+                  getRelationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              msgCase_ = 4;
+              break;
+            } // case 34
+            case 66: {
+              input.readMessage(
+                  getStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              msgCase_ = 8;
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int msgCase_ = 0;
     private java.lang.Object msg_;

@@ -85,6 +85,73 @@ private static final long serialVersionUID = 0L;
     return cel_.get(index);
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    for (int i = 0; i < cel_.size(); i++) {
+      output.writeMessage(1, cel_.get(i));
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    for (int i = 0; i < cel_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, cel_.get(i));
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.buf.validate.priv.FieldConstraints)) {
+      return super.equals(obj);
+    }
+    com.buf.validate.priv.FieldConstraints other = (com.buf.validate.priv.FieldConstraints) obj;
+
+    if (!getCelList()
+        .equals(other.getCelList())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (getCelCount() > 0) {
+      hash = (37 * hash) + CEL_FIELD_NUMBER;
+      hash = (53 * hash) + getCelList().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.buf.validate.priv.FieldConstraints parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -301,6 +368,98 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.buf.validate.priv.FieldConstraints) {
+        return mergeFrom((com.buf.validate.priv.FieldConstraints)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.buf.validate.priv.FieldConstraints other) {
+      if (other == com.buf.validate.priv.FieldConstraints.getDefaultInstance()) return this;
+      if (celBuilder_ == null) {
+        if (!other.cel_.isEmpty()) {
+          if (cel_.isEmpty()) {
+            cel_ = other.cel_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCelIsMutable();
+            cel_.addAll(other.cel_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.cel_.isEmpty()) {
+          if (celBuilder_.isEmpty()) {
+            celBuilder_.dispose();
+            celBuilder_ = null;
+            cel_ = other.cel_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            celBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCelFieldBuilder() : null;
+          } else {
+            celBuilder_.addAllMessages(other.cel_);
+          }
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.buf.validate.priv.Constraint m =
+                  input.readMessage(
+                      com.buf.validate.priv.Constraint.parser(),
+                      extensionRegistry);
+              if (celBuilder_ == null) {
+                ensureCelIsMutable();
+                cel_.add(m);
+              } else {
+                celBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

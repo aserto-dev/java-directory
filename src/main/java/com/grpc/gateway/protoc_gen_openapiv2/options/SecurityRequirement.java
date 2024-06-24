@@ -174,6 +174,77 @@ private static final long serialVersionUID = 0L;
       return scope_.getByteString(index);
     }
 
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < scope_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < scope_.size(); i++) {
+          dataSize += computeStringSizeNoTag(scope_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getScopeList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue)) {
+        return super.equals(obj);
+      }
+      com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue other = (com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue) obj;
+
+      if (!getScopeList()
+          .equals(other.getScopeList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getScopeCount() > 0) {
+        hash = (37 * hash) + SCOPE_FIELD_NUMBER;
+        hash = (53 * hash) + getScopeList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -378,6 +449,75 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue) {
+          return mergeFrom((com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue other) {
+        if (other == com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue.getDefaultInstance()) return this;
+        if (!other.scope_.isEmpty()) {
+          if (scope_.isEmpty()) {
+            scope_ = other.scope_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureScopeIsMutable();
+            scope_.addAll(other.scope_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureScopeIsMutable();
+                scope_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
       }
       private int bitField0_;
 
@@ -662,6 +802,82 @@ com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequir
     return map.get(key);
   }
 
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetSecurityRequirement(),
+        SecurityRequirementDefaultEntryHolder.defaultEntry,
+        1);
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    for (java.util.Map.Entry<java.lang.String, com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue> entry
+         : internalGetSecurityRequirement().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue>
+      securityRequirement__ = SecurityRequirementDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, securityRequirement__);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement)) {
+      return super.equals(obj);
+    }
+    com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement other = (com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement) obj;
+
+    if (!internalGetSecurityRequirement().equals(
+        other.internalGetSecurityRequirement())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    if (!internalGetSecurityRequirement().getMap().isEmpty()) {
+      hash = (37 * hash) + SECURITY_REQUIREMENT_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetSecurityRequirement().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
   public static com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -894,6 +1110,71 @@ com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequir
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement) {
+        return mergeFrom((com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement other) {
+      if (other == com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.getDefaultInstance()) return this;
+      internalGetMutableSecurityRequirement().mergeFrom(
+          other.internalGetSecurityRequirement());
+      bitField0_ |= 0x00000001;
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.MapEntry<java.lang.String, com.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue>
+              securityRequirement__ = input.readMessage(
+                  SecurityRequirementDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableSecurityRequirement().ensureBuilderMap().put(
+                  securityRequirement__.getKey(), securityRequirement__.getValue());
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
     }
     private int bitField0_;
 

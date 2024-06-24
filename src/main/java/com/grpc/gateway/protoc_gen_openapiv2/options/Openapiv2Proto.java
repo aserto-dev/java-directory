@@ -386,15 +386,15 @@ public final class Openapiv2Proto {
       "eEntryR\005scope\0328\n\nScopeEntry\022\020\n\003key\030\001 \001(\t" +
       "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001*;\n\006Schem" +
       "e\022\013\n\007UNKNOWN\020\000\022\010\n\004HTTP\020\001\022\t\n\005HTTPS\020\002\022\006\n\002W" +
-      "S\020\003\022\007\n\003WSS\020\004B\314\002\n-com.grpc.gateway.protoc" +
-      "_gen_openapiv2.optionsB\016Openapiv2ProtoH\002" +
-      "P\001ZFgithub.com/grpc-ecosystem/grpc-gatew" +
-      "ay/v2/protoc-gen-openapiv2/options\370\001\000\242\002\004" +
-      "GGPO\252\002\'Grpc.Gateway.ProtocGenOpenapiv2.O" +
-      "ptions\312\002\'Grpc\\Gateway\\ProtocGenOpenapiv2" +
-      "\\Options\342\0023Grpc\\Gateway\\ProtocGenOpenapi" +
-      "v2\\Options\\GPBMetadata\352\002*Grpc::Gateway::" +
-      "ProtocGenOpenapiv2::Optionsb\006proto3"
+      "S\020\003\022\007\n\003WSS\020\004B\307\002\n-com.grpc.gateway.protoc" +
+      "_gen_openapiv2.optionsB\016Openapiv2ProtoP\001" +
+      "ZFgithub.com/grpc-ecosystem/grpc-gateway" +
+      "/v2/protoc-gen-openapiv2/options\242\002\004GGPO\252" +
+      "\002\'Grpc.Gateway.ProtocGenOpenapiv2.Option" +
+      "s\312\002\'Grpc\\Gateway\\ProtocGenOpenapiv2\\Opti" +
+      "ons\342\0023Grpc\\Gateway\\ProtocGenOpenapiv2\\Op" +
+      "tions\\GPBMetadata\352\002*Grpc::Gateway::Proto" +
+      "cGenOpenapiv2::Optionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

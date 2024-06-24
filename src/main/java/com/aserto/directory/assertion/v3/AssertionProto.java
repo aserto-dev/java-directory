@@ -131,14 +131,14 @@ public final class AssertionProto {
       "e assertion\032\021Delete assertion.*\035director" +
       "y.v3.assertion.deleteb#\n\023\n\017DirectoryAPIK" +
       "ey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\"* /api/v3/direct" +
-      "ory/assertion/{id}B\235\002\n!com.aserto.direct" +
-      "ory.assertion.v3B\016AssertionProtoH\002P\001ZJgi" +
-      "thub.com/aserto-dev/go-directory/aserto/" +
-      "directory/assertion/v3;assertion\370\001\000\242\002\003AD" +
-      "A\252\002\035Aserto.Directory.Assertion.V3\312\002\036Aser" +
-      "to\\Directory_\\Assertion\\V3\342\002*Aserto\\Dire" +
-      "ctory_\\Assertion\\V3\\GPBMetadata\352\002 Aserto" +
-      "::Directory::Assertion::V3b\006proto3"
+      "ory/assertion/{id}B\230\002\n!com.aserto.direct" +
+      "ory.assertion.v3B\016AssertionProtoP\001ZJgith" +
+      "ub.com/aserto-dev/go-directory/aserto/di" +
+      "rectory/assertion/v3;assertion\242\002\003ADA\252\002\035A" +
+      "serto.Directory.Assertion.V3\312\002\036Aserto\\Di" +
+      "rectory_\\Assertion\\V3\342\002*Aserto\\Directory" +
+      "_\\Assertion\\V3\\GPBMetadata\352\002 Aserto::Dir" +
+      "ectory::Assertion::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
