@@ -95,12 +95,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to the Maven Central Repository
-        run: |
-          mvn \
-            --no-transfer-progress \
-            --batch-mode \
-            -Pci-cd \
-            deploy
+        run: mvn --no-transfer-progress --batch-mode deploy
 
       - name: Bump to the next version
         run: go run mage.go bump patch
