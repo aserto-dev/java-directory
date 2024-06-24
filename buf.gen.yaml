@@ -9,7 +9,7 @@ managed:
   optimize_for: CODE_SIZE
 
 plugins:
-  - plugin: buf.build/grpc/java:v1.60.0
+  - plugin: buf.build/grpc/java:v1.64.0
     out: src/main/java
 
   - plugin: buf.build/protocolbuffers/java:v25.3
