@@ -18,6 +18,7 @@ on:
 
 env:
   VAULT_ADDR: https://vault.eng.aserto.com/
+  GO_VERSION: "1.22"
 
 jobs:
   build:
@@ -27,12 +28,12 @@ jobs:
         run: echo "Using proto ${{ github.event.inputs.proto_ref }} with sha ${{ github.event.inputs.proto_sha }}"
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version: ${{ env.GO_VERSION }}
 
@@ -54,31 +55,33 @@ jobs:
     name: Release to maven central
     steps:
       - name: Read Configuration
-        uses: hashicorp/vault-action@v2.5.0
+        uses: hashicorp/vault-action@v3
         id: vault
         with:
           url: ${{ env.VAULT_ADDR }}
           token: ${{ secrets.VAULT_TOKEN }}
           secrets: |
             kv/data/MavenCentral  "USERNAME" | MAVEN_USERNAME;
-            kv/data/MavenCentral  "PASSWORD" | MAVEN_PASSWORD;
+            kv/data/MavenCentral  "PASSWORD" | MAVEN_CENTRAL_TOKEN;
             kv/data/MavenCentral  "GPG_PASSPHRASE" | MAVEN_GPG_PASSPHRASE;
-            kv/data/MavenCentral  "PRIVATE_GPG_KEY" | GPG_PRIVATE_KEY;
+            kv/data/MavenCentral  "PRIVATE_GPG_KEY" | MAVEN_GPG_PRIVATE_KEY;
+            kv/data/MavenCentral  "TOKEN_USERNAME" | TOKEN_USERNAME;
+            kv/data/MavenCentral  "TOKEN_PASSWORD" | TOKEN_PASSWORD;
 
-      - name: Setup Go
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set up Java for publishing to Maven Central Repository
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 8
           distribution: temurin
           server-id: ossrh
-          server-username: MAVEN_USERNAME
-          server-password: MAVEN_PASSWORD
-          gpg-private-key: ${{ env.GPG_PRIVATE_KEY }}
+          server-username: TOKEN_USERNAME
+          server-password: TOKEN_PASSWORD
+          gpg-private-key: ${{ env.MAVEN_GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
 
       - name: build artifact

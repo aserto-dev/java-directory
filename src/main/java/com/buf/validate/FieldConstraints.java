@@ -6,8 +6,8 @@ package com.buf.validate;
 
 /**
  * <pre>
- * FieldRules encapsulates the rules for each type of field. Depending on the
- * field, the correct set should be used to ensure proper validations.
+ * FieldConstraints encapsulates the rules for each type of field. Depending on
+ * the field, the correct set should be used to ensure proper validations.
  * </pre>
  *
  * Protobuf type {@code buf.validate.FieldConstraints}
@@ -1148,8 +1148,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * FieldRules encapsulates the rules for each type of field. Depending on the
-   * field, the correct set should be used to ensure proper validations.
+   * FieldConstraints encapsulates the rules for each type of field. Depending on
+   * the field, the correct set should be used to ensure proper validations.
    * </pre>
    *
    * Protobuf type {@code buf.validate.FieldConstraints}

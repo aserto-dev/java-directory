@@ -9,7 +9,7 @@
     <version>0.31.2</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>A low level client generated from the GRPC bindings. For a better development experience we encourage you to use aserto-java or aserto-spring if you are using Spring in your project</description>
+    <description>Generated Java gRPC bindings for the Topaz and Aserto Directory Service; these are low-level bindings. For a more idiomatic development experience, we advise using the aserto-java and/or aserto-spring packages.</description>
     <url>https://github.com/aserto-dev/java-directory</url>
 
     <licenses>
@@ -34,11 +34,12 @@
     </scm>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.release>8</maven.compiler.release>
+        <!-- <maven.compiler.source>8</maven.compiler.source> -->
+        <!-- <maven.compiler.target>8</maven.compiler.target> -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <grpc.version>1.60.0</grpc.version>
+        <grpc.version>1.64.0</grpc.version>
         <protobuf.version>3.25.1</protobuf.version>
         <tomcat.annotation.api.version>6.0.53</tomcat.annotation.api.version>
     </properties>
@@ -70,6 +71,11 @@
             <artifactId>protobuf-java</artifactId>
             <version>${protobuf.version}</version>
         </dependency>
+        <dependency>
+            <groupId>build.buf</groupId>
+            <artifactId>protovalidate</artifactId>
+            <version>0.2.1</version>
+        </dependency>        
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>annotations-api</artifactId>

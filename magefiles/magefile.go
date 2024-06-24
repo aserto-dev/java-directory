@@ -16,12 +16,10 @@ import (
 	"github.com/magefile/mage/sh"
 )
 
-var (
-	ui = clui.NewUI()
-)
+var ui = clui.NewUI()
 
 func init() {
-	os.Setenv("GO_VERSION", "1.19")
+	os.Setenv("GO_VERSION", "1.22")
 	os.Setenv("GOPRIVATE", "github.com/aserto-dev")
 }
 
@@ -44,9 +42,11 @@ func Deps() {
 }
 
 func Generate() error {
-	bufImages := []string{"buf.build/aserto-dev/directory",
+	bufImages := []string{
+		"buf.build/aserto-dev/directory",
 		"buf.build/grpc-ecosystem/grpc-gateway",
-		"buf.build/bufbuild/protovalidate"}
+		"buf.build/bufbuild/protovalidate",
+	}
 
 	for _, bufImage := range bufImages {
 		buffImgWithTag, err := addLatestTag(bufImage)
