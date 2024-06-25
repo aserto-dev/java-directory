@@ -61,9 +61,6 @@ jobs:
       -
         name: Build
         run: make build
-      -
-        name: Install
-        run: make install
       - 
         name: Commit changes
         if: github.event_name == 'workflow_dispatch'
