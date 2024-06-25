@@ -103,11 +103,6 @@ jobs:
         with:
           java-version: 8
           distribution: temurin
-          server-id: ossrh
-          server-username: TOKEN_USERNAME
-          server-password: TOKEN_PASSWORD
-          gpg-private-key: ${{ env.MAVEN_GPG_PRIVATE_KEY }}
-          gpg-passphrase: MAVEN_GPG_PASSPHRASE
       -
         name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
