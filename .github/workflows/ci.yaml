@@ -133,7 +133,9 @@ jobs:
       -
         name: Run examples
         working-directory: examples
-        run:  java -jar target/examples-1.0.0-SNAPSHOT-shaded.jar
+        run: |
+          cp assets/.env.topaz-directory.example .env
+          java -jar target/examples-1.0.0-SNAPSHOT-shaded.jar
         
   release:
     runs-on: ubuntu-latest
