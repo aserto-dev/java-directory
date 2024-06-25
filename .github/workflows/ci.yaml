@@ -125,7 +125,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
       - 
         name: Install topaz
-        run: brew tap aserto-dev/tap && brew install aserto-dev/tap/topaz && topaz install && topaz install templates todo --no-console --force
+        run: brew tap aserto-dev/tap && brew install aserto-dev/tap/topaz && topaz install && topaz templates install todo --no-console --force
       -
         name: Build examples
         working-directory: examples
