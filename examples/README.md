@@ -15,7 +15,7 @@ cd examples
 To build the example package, execute:
 
 ```
-mvn clean && mvn package
+mvn clean package
 ```
 
 ## 2. setup environment
