@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Read Configuration
+        name: Read configuration
         uses: hashicorp/vault-action@v3
         id: vault
         with:
@@ -50,7 +50,7 @@ jobs:
         with:
           fetch-depth: 0
       -
-        name: Install Deps
+        name: Install deps
         run: make deps
       -
         name: Clean Generated Code
@@ -75,7 +75,7 @@ jobs:
     needs: build
     steps:
       -
-        name: Read Configuration
+        name: Read configuration
         uses: hashicorp/vault-action@v3
         id: vault
         with:
@@ -110,7 +110,7 @@ jobs:
           gpg_private_key: ${{ env.MAVEN_GPG_PRIVATE_KEY }}
           passphrase: MAVEN_GPG_PASSPHRASE
       -
-        name: Install Deps
+        name: Install deps
         run: make deps
       -
         name: Install package
@@ -139,7 +139,7 @@ jobs:
     name: Release to maven central
     steps:
       - 
-        name: Read Configuration
+        name: Read configuration
         uses: hashicorp/vault-action@v3
         id: vault
         with:

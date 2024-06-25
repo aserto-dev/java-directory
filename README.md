@@ -12,9 +12,9 @@ Java GRPC bindings for aserto directory. Those are raw bindings, for a better de
 
 ### Building the project
 ```bash
-mvn clean && mvn package
+mvn clean package
 ```
  If you want to install the package to your local maven repository in order to include it in other projects
 ```bash
-mvn clean && mvn install
+mvn clean install
 ```
