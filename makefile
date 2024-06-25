@@ -33,12 +33,12 @@ deps: info install-vault install-buf install-svu
 
 build:
 	@echo -e "$(ATTN_COLOR)==> $@ $(NO_COLOR)"
-	@mvn clean
+	@mvn --no-transfer-progress clean
 	@mvn --no-transfer-progress package
 
 install:
 	@echo -e "$(ATTN_COLOR)==> $@ $(NO_COLOR)"
-	@mvn clean
+	@mvn --no-transfer-progress clean
 	@mvn --no-transfer-progress install
 
 test:
