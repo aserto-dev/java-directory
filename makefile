@@ -17,6 +17,8 @@ EXT_TMP_DIR   := ${EXT_DIR}/tmp
 VAULT_VERSION := 1.8.12
 SVU_VERSION   := 1.12.0
 BUF_VERSION   := 1.30.0
+GRPC_GATEWAY  := 2.20.0
+PROTO_VALIDATE:= 0.6.2
 
 BUF_REPO      := "buf.build/aserto-dev/directory"
 BUF_DEV_IMAGE := "../pb-directory/bin/directory.bin"
@@ -66,8 +68,8 @@ buf-login:
 buf-generate:
 	@echo -e "$(ATTN_COLOR)==> $@ ${BUF_REPO}:${BUF_LATEST}$(NO_COLOR)"
 	@${EXT_BIN_DIR}/buf generate ${BUF_REPO}:${BUF_LATEST}
-	@${EXT_BIN_DIR}/buf generate buf.build/grpc-ecosystem/grpc-gateway:v2.20.0
-	@${EXT_BIN_DIR}/buf generate buf.build/bufbuild/protovalidate:v0.6.2
+	@${EXT_BIN_DIR}/buf generate buf.build/grpc-ecosystem/grpc-gateway:v${GRPC_GATEWAY}
+	@${EXT_BIN_DIR}/buf generate buf.build/bufbuild/protovalidate:v${PROTO_VALIDATE}
 
 .PHONY: buf-generate-dev
 buf-generate-dev:
@@ -130,6 +132,7 @@ clean: clean-gen
 .PHONY: clean-gen
 clean-gen:
 	@echo -e "$(ATTN_COLOR)==> $@ $(NO_COLOR)"
+	@mvn clean
 	@rm -rf ./src/main/java/com
 	@rm -rf ./target
 
