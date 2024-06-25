@@ -33,6 +33,8 @@ jobs:
           secrets: |
             kv/data/github        "USERNAME" | GH_USERNAME;
             kv/data/github        "READ_WRITE_TOKEN" | GH_TOKEN;
+            kv/data/buf.build     "ASERTO_BUF_USER" | BUF_USER;
+            kv/data/buf.build     "ASERTO_BUF_TOKEN" | BUF_TOKEN;
             kv/data/MavenCentral  "USERNAME" | MAVEN_USERNAME;
             kv/data/MavenCentral  "PASSWORD" | MAVEN_CENTRAL_TOKEN;
             kv/data/MavenCentral  "GPG_PASSPHRASE" | MAVEN_GPG_PASSPHRASE;
@@ -85,6 +87,8 @@ jobs:
           secrets: |
             kv/data/github        "USERNAME" | GH_USERNAME;
             kv/data/github        "READ_WRITE_TOKEN" | GH_TOKEN;
+            kv/data/buf.build     "ASERTO_BUF_USER" | BUF_USER;
+            kv/data/buf.build     "ASERTO_BUF_TOKEN" | BUF_TOKEN;
             kv/data/MavenCentral  "USERNAME" | MAVEN_USERNAME;
             kv/data/MavenCentral  "PASSWORD" | MAVEN_CENTRAL_TOKEN;
             kv/data/MavenCentral  "GPG_PASSPHRASE" | MAVEN_GPG_PASSPHRASE;
@@ -107,6 +111,12 @@ jobs:
           server-password: TOKEN_PASSWORD
           gpg-private-key: ${{ env.MAVEN_GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
+      -
+        name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ env.MAVEN_GPG_PRIVATE_KEY }}
+          passphrase: MAVEN_GPG_PASSPHRASE
       -
         name: Install Deps
         run: make deps
@@ -144,6 +154,8 @@ jobs:
           secrets: |
             kv/data/github        "USERNAME" | GH_USERNAME;
             kv/data/github        "READ_WRITE_TOKEN" | GH_TOKEN;
+            kv/data/buf.build     "ASERTO_BUF_USER" | BUF_USER;
+            kv/data/buf.build     "ASERTO_BUF_TOKEN" | BUF_TOKEN;
             kv/data/MavenCentral  "USERNAME" | MAVEN_USERNAME;
             kv/data/MavenCentral  "PASSWORD" | MAVEN_CENTRAL_TOKEN;
             kv/data/MavenCentral  "GPG_PASSPHRASE" | MAVEN_GPG_PASSPHRASE;

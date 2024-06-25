@@ -20,8 +20,8 @@ BUF_VERSION   := 1.30.0
 
 BUF_REPO      := "buf.build/aserto-dev/directory"
 BUF_DEV_IMAGE := "../pb-directory/bin/directory.bin"
-BUF_USER      := $(shell vault kv get -field ASERTO_BUF_USER kv/buf.build)
-BUF_TOKEN     := $(shell vault kv get -field ASERTO_BUF_TOKEN kv/buf.build)
+BUF_USER      ?= $(shell vault kv get -field ASERTO_BUF_USER kv/buf.build)
+BUF_TOKEN     ?= $(shell vault kv get -field ASERTO_BUF_TOKEN kv/buf.build)
 BUF_LATEST		:= $(shell BUF_BETA_SUPPRESS_WARNINGS=1 ${EXT_BIN_DIR}/buf beta registry tag list buf.build/aserto-dev/directory --format json --reverse | jq -r '.results[0].name')
 
 RELEASE_TAG   := $$(svu)
