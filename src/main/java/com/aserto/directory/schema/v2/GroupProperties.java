@@ -11,7 +11,7 @@ package com.aserto.directory.schema.v2;
  *
  * Protobuf type {@code aserto.directory.schema.v2.GroupProperties}
  */
-public final class GroupProperties extends
+@java.lang.Deprecated public final class GroupProperties extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.schema.v2.GroupProperties)
     GroupPropertiesOrBuilder {

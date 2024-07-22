@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.writer.v2;
 
-public interface DeletePermissionResponseOrBuilder extends
+@java.lang.Deprecated public interface DeletePermissionResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.writer.v2.DeletePermissionResponse)
     com.google.protobuf.MessageOrBuilder {
 

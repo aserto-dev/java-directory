@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.schema.v2;
 
-public interface TenantPropertiesOrBuilder extends
+@java.lang.Deprecated public interface TenantPropertiesOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.schema.v2.TenantProperties)
     com.google.protobuf.MessageOrBuilder {
 

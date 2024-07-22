@@ -7,7 +7,7 @@ package com.aserto.directory.schema.v2;
 /**
  * Protobuf type {@code aserto.directory.schema.v2.AccountProperties}
  */
-public final class AccountProperties extends
+@java.lang.Deprecated public final class AccountProperties extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.schema.v2.AccountProperties)
     AccountPropertiesOrBuilder {

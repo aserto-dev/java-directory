@@ -127,90 +127,93 @@ public final class WriterProto {
       "\n\'aserto/directory/writer/v2/writer.prot" +
       "o\022\032aserto.directory.writer.v2\032\033google/pr" +
       "otobuf/empty.proto\032\'aserto/directory/com" +
-      "mon/v2/common.proto\"_\n\024SetObjectTypeRequ" +
+      "mon/v2/common.proto\"c\n\024SetObjectTypeRequ" +
       "est\022G\n\013object_type\030\001 \001(\0132&.aserto.direct" +
-      "ory.common.v2.ObjectTypeR\nobjectType\"W\n\025" +
-      "SetObjectTypeResponse\022>\n\006result\030\001 \001(\0132&." +
-      "aserto.directory.common.v2.ObjectTypeR\006r" +
-      "esult\"a\n\027DeleteObjectTypeRequest\022F\n\005para" +
-      "m\030\001 \001(\01320.aserto.directory.common.v2.Obj" +
-      "ectTypeIdentifierR\005param\"J\n\030DeleteObject" +
-      "TypeResponse\022.\n\006result\030\001 \001(\0132\026.google.pr" +
-      "otobuf.EmptyR\006result\"g\n\026SetRelationTypeR" +
-      "equest\022M\n\rrelation_type\030\001 \001(\0132(.aserto.d" +
-      "irectory.common.v2.RelationTypeR\014relatio" +
-      "nType\"[\n\027SetRelationTypeResponse\022@\n\006resu" +
-      "lt\030\001 \001(\0132(.aserto.directory.common.v2.Re" +
-      "lationTypeR\006result\"e\n\031DeleteRelationType" +
-      "Request\022H\n\005param\030\001 \001(\01322.aserto.director" +
-      "y.common.v2.RelationTypeIdentifierR\005para" +
-      "m\"L\n\032DeleteRelationTypeResponse\022.\n\006resul" +
-      "t\030\001 \001(\0132\026.google.protobuf.EmptyR\006result\"" +
-      "^\n\024SetPermissionRequest\022F\n\npermission\030\001 " +
-      "\001(\0132&.aserto.directory.common.v2.Permiss" +
-      "ionR\npermission\"W\n\025SetPermissionResponse" +
-      "\022>\n\006result\030\001 \001(\0132&.aserto.directory.comm" +
-      "on.v2.PermissionR\006result\"a\n\027DeletePermis" +
+      "ory.common.v2.ObjectTypeR\nobjectType:\002\030\001" +
+      "\"[\n\025SetObjectTypeResponse\022>\n\006result\030\001 \001(" +
+      "\0132&.aserto.directory.common.v2.ObjectTyp" +
+      "eR\006result:\002\030\001\"e\n\027DeleteObjectTypeRequest" +
+      "\022F\n\005param\030\001 \001(\01320.aserto.directory.commo" +
+      "n.v2.ObjectTypeIdentifierR\005param:\002\030\001\"N\n\030" +
+      "DeleteObjectTypeResponse\022.\n\006result\030\001 \001(\013" +
+      "2\026.google.protobuf.EmptyR\006result:\002\030\001\"k\n\026" +
+      "SetRelationTypeRequest\022M\n\rrelation_type\030" +
+      "\001 \001(\0132(.aserto.directory.common.v2.Relat" +
+      "ionTypeR\014relationType:\002\030\001\"_\n\027SetRelation" +
+      "TypeResponse\022@\n\006result\030\001 \001(\0132(.aserto.di" +
+      "rectory.common.v2.RelationTypeR\006result:\002" +
+      "\030\001\"i\n\031DeleteRelationTypeRequest\022H\n\005param" +
+      "\030\001 \001(\01322.aserto.directory.common.v2.Rela" +
+      "tionTypeIdentifierR\005param:\002\030\001\"P\n\032DeleteR" +
+      "elationTypeResponse\022.\n\006result\030\001 \001(\0132\026.go" +
+      "ogle.protobuf.EmptyR\006result:\002\030\001\"b\n\024SetPe" +
+      "rmissionRequest\022F\n\npermission\030\001 \001(\0132&.as" +
+      "erto.directory.common.v2.PermissionR\nper" +
+      "mission:\002\030\001\"[\n\025SetPermissionResponse\022>\n\006" +
+      "result\030\001 \001(\0132&.aserto.directory.common.v" +
+      "2.PermissionR\006result:\002\030\001\"e\n\027DeletePermis" +
       "sionRequest\022F\n\005param\030\001 \001(\01320.aserto.dire" +
       "ctory.common.v2.PermissionIdentifierR\005pa" +
-      "ram\"J\n\030DeletePermissionResponse\022.\n\006resul" +
-      "t\030\001 \001(\0132\026.google.protobuf.EmptyR\006result\"" +
-      "N\n\020SetObjectRequest\022:\n\006object\030\001 \001(\0132\".as" +
-      "erto.directory.common.v2.ObjectR\006object\"" +
-      "O\n\021SetObjectResponse\022:\n\006result\030\001 \001(\0132\".a" +
-      "serto.directory.common.v2.ObjectR\006result" +
-      "\"\230\001\n\023DeleteObjectRequest\022B\n\005param\030\001 \001(\0132" +
-      ",.aserto.directory.common.v2.ObjectIdent" +
-      "ifierR\005param\022*\n\016with_relations\030\002 \001(\010H\000R\r" +
-      "withRelations\210\001\001B\021\n\017_with_relations\"F\n\024D" +
-      "eleteObjectResponse\022.\n\006result\030\001 \001(\0132\026.go" +
-      "ogle.protobuf.EmptyR\006result\"V\n\022SetRelati" +
-      "onRequest\022@\n\010relation\030\001 \001(\0132$.aserto.dir" +
-      "ectory.common.v2.RelationR\010relation\"S\n\023S" +
-      "etRelationResponse\022<\n\006result\030\001 \001(\0132$.ase" +
-      "rto.directory.common.v2.RelationR\006result" +
-      "\"]\n\025DeleteRelationRequest\022D\n\005param\030\001 \001(\013" +
-      "2..aserto.directory.common.v2.RelationId" +
-      "entifierR\005param\"H\n\026DeleteRelationRespons" +
-      "e\022.\n\006result\030\001 \001(\0132\026.google.protobuf.Empt" +
-      "yR\006result2\316\t\n\006Writer\022v\n\rSetObjectType\0220." +
+      "ram:\002\030\001\"N\n\030DeletePermissionResponse\022.\n\006r" +
+      "esult\030\001 \001(\0132\026.google.protobuf.EmptyR\006res" +
+      "ult:\002\030\001\"R\n\020SetObjectRequest\022:\n\006object\030\001 " +
+      "\001(\0132\".aserto.directory.common.v2.ObjectR" +
+      "\006object:\002\030\001\"S\n\021SetObjectResponse\022:\n\006resu" +
+      "lt\030\001 \001(\0132\".aserto.directory.common.v2.Ob" +
+      "jectR\006result:\002\030\001\"\234\001\n\023DeleteObjectRequest" +
+      "\022B\n\005param\030\001 \001(\0132,.aserto.directory.commo" +
+      "n.v2.ObjectIdentifierR\005param\022*\n\016with_rel" +
+      "ations\030\002 \001(\010H\000R\rwithRelations\210\001\001:\002\030\001B\021\n\017" +
+      "_with_relations\"J\n\024DeleteObjectResponse\022" +
+      ".\n\006result\030\001 \001(\0132\026.google.protobuf.EmptyR" +
+      "\006result:\002\030\001\"Z\n\022SetRelationRequest\022@\n\010rel" +
+      "ation\030\001 \001(\0132$.aserto.directory.common.v2" +
+      ".RelationR\010relation:\002\030\001\"W\n\023SetRelationRe" +
+      "sponse\022<\n\006result\030\001 \001(\0132$.aserto.director" +
+      "y.common.v2.RelationR\006result:\002\030\001\"a\n\025Dele" +
+      "teRelationRequest\022D\n\005param\030\001 \001(\0132..asert" +
+      "o.directory.common.v2.RelationIdentifier" +
+      "R\005param:\002\030\001\"L\n\026DeleteRelationResponse\022.\n" +
+      "\006result\030\001 \001(\0132\026.google.protobuf.EmptyR\006r" +
+      "esult:\002\030\0012\356\t\n\006Writer\022y\n\rSetObjectType\0220." +
       "aserto.directory.writer.v2.SetObjectType" +
       "Request\0321.aserto.directory.writer.v2.Set" +
-      "ObjectTypeResponse\"\000\022\177\n\020DeleteObjectType" +
-      "\0223.aserto.directory.writer.v2.DeleteObje" +
-      "ctTypeRequest\0324.aserto.directory.writer." +
-      "v2.DeleteObjectTypeResponse\"\000\022|\n\017SetRela" +
-      "tionType\0222.aserto.directory.writer.v2.Se" +
-      "tRelationTypeRequest\0323.aserto.directory." +
-      "writer.v2.SetRelationTypeResponse\"\000\022\205\001\n\022" +
-      "DeleteRelationType\0225.aserto.directory.wr" +
-      "iter.v2.DeleteRelationTypeRequest\0326.aser" +
-      "to.directory.writer.v2.DeleteRelationTyp" +
-      "eResponse\"\000\022v\n\rSetPermission\0220.aserto.di" +
-      "rectory.writer.v2.SetPermissionRequest\0321" +
-      ".aserto.directory.writer.v2.SetPermissio" +
-      "nResponse\"\000\022\177\n\020DeletePermission\0223.aserto" +
-      ".directory.writer.v2.DeletePermissionReq" +
-      "uest\0324.aserto.directory.writer.v2.Delete" +
-      "PermissionResponse\"\000\022j\n\tSetObject\022,.aser" +
-      "to.directory.writer.v2.SetObjectRequest\032" +
-      "-.aserto.directory.writer.v2.SetObjectRe" +
-      "sponse\"\000\022s\n\014DeleteObject\022/.aserto.direct" +
-      "ory.writer.v2.DeleteObjectRequest\0320.aser" +
-      "to.directory.writer.v2.DeleteObjectRespo" +
-      "nse\"\000\022p\n\013SetRelation\022..aserto.directory." +
-      "writer.v2.SetRelationRequest\032/.aserto.di" +
-      "rectory.writer.v2.SetRelationResponse\"\000\022" +
-      "y\n\016DeleteRelation\0221.aserto.directory.wri" +
-      "ter.v2.DeleteRelationRequest\0322.aserto.di" +
-      "rectory.writer.v2.DeleteRelationResponse" +
-      "\"\000B\200\002\n\036com.aserto.directory.writer.v2B\013W" +
-      "riterProtoP\001ZDgithub.com/aserto-dev/go-d" +
-      "irectory/aserto/directory/writer/v2;writ" +
-      "er\242\002\003ADW\252\002\032Aserto.Directory.Writer.V2\312\002\033" +
-      "Aserto\\Directory_\\Writer\\V2\342\002\'Aserto\\Dir" +
-      "ectory_\\Writer\\V2\\GPBMetadata\352\002\035Aserto::" +
-      "Directory::Writer::V2b\006proto3"
+      "ObjectTypeResponse\"\003\210\002\001\022\202\001\n\020DeleteObject" +
+      "Type\0223.aserto.directory.writer.v2.Delete" +
+      "ObjectTypeRequest\0324.aserto.directory.wri" +
+      "ter.v2.DeleteObjectTypeResponse\"\003\210\002\001\022\177\n\017" +
+      "SetRelationType\0222.aserto.directory.write" +
+      "r.v2.SetRelationTypeRequest\0323.aserto.dir" +
+      "ectory.writer.v2.SetRelationTypeResponse" +
+      "\"\003\210\002\001\022\210\001\n\022DeleteRelationType\0225.aserto.di" +
+      "rectory.writer.v2.DeleteRelationTypeRequ" +
+      "est\0326.aserto.directory.writer.v2.DeleteR" +
+      "elationTypeResponse\"\003\210\002\001\022y\n\rSetPermissio" +
+      "n\0220.aserto.directory.writer.v2.SetPermis" +
+      "sionRequest\0321.aserto.directory.writer.v2" +
+      ".SetPermissionResponse\"\003\210\002\001\022\202\001\n\020DeletePe" +
+      "rmission\0223.aserto.directory.writer.v2.De" +
+      "letePermissionRequest\0324.aserto.directory" +
+      ".writer.v2.DeletePermissionResponse\"\003\210\002\001" +
+      "\022m\n\tSetObject\022,.aserto.directory.writer." +
+      "v2.SetObjectRequest\032-.aserto.directory.w" +
+      "riter.v2.SetObjectResponse\"\003\210\002\001\022v\n\014Delet" +
+      "eObject\022/.aserto.directory.writer.v2.Del" +
+      "eteObjectRequest\0320.aserto.directory.writ" +
+      "er.v2.DeleteObjectResponse\"\003\210\002\001\022s\n\013SetRe" +
+      "lation\022..aserto.directory.writer.v2.SetR" +
+      "elationRequest\032/.aserto.directory.writer" +
+      ".v2.SetRelationResponse\"\003\210\002\001\022|\n\016DeleteRe" +
+      "lation\0221.aserto.directory.writer.v2.Dele" +
+      "teRelationRequest\0322.aserto.directory.wri" +
+      "ter.v2.DeleteRelationResponse\"\003\210\002\001B\200\002\n\036c" +
+      "om.aserto.directory.writer.v2B\013WriterPro" +
+      "toP\001ZDgithub.com/aserto-dev/go-directory" +
+      "/aserto/directory/writer/v2;writer\242\002\003ADW" +
+      "\252\002\032Aserto.Directory.Writer.V2\312\002\033Aserto\\D" +
+      "irectory_\\Writer\\V2\342\002\'Aserto\\Directory_\\" +
+      "Writer\\V2\\GPBMetadata\352\002\035Aserto::Director" +
+      "y::Writer::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

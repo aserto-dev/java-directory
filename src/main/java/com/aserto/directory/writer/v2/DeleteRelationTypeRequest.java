@@ -7,7 +7,7 @@ package com.aserto.directory.writer.v2;
 /**
  * Protobuf type {@code aserto.directory.writer.v2.DeleteRelationTypeRequest}
  */
-public final class DeleteRelationTypeRequest extends
+@java.lang.Deprecated public final class DeleteRelationTypeRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.writer.v2.DeleteRelationTypeRequest)
     DeleteRelationTypeRequestOrBuilder {

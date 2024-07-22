@@ -7,7 +7,7 @@ package com.aserto.directory.importer.v2;
 /**
  * Protobuf enum {@code aserto.directory.importer.v2.Opcode}
  */
-public enum Opcode
+@java.lang.Deprecated public enum Opcode
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>OPCODE_UNKNOWN = 0;</code>

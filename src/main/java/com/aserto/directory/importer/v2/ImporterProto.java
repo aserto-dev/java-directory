@@ -41,7 +41,7 @@ public final class ImporterProto {
     java.lang.String[] descriptorData = {
       "\n+aserto/directory/importer/v2/importer." +
       "proto\022\034aserto.directory.importer.v2\032\'ase" +
-      "rto/directory/common/v2/common.proto\"\275\003\n" +
+      "rto/directory/common/v2/common.proto\"\301\003\n" +
       "\rImportRequest\022=\n\007op_code\030\001 \001(\0162$.aserto" +
       ".directory.importer.v2.OpcodeR\006opCode\022I\n" +
       "\013object_type\030\002 \001(\0132&.aserto.directory.co" +
@@ -52,32 +52,32 @@ public final class ImporterProto {
       "elationTypeH\000R\014relationType\022<\n\006object\030\005 " +
       "\001(\0132\".aserto.directory.common.v2.ObjectH" +
       "\000R\006object\022B\n\010relation\030\006 \001(\0132$.aserto.dir" +
-      "ectory.common.v2.RelationH\000R\010relationB\005\n" +
-      "\003msg\"\213\003\n\016ImportResponse\022L\n\013object_type\030\001" +
-      " \001(\0132+.aserto.directory.importer.v2.Impo" +
-      "rtCounterR\nobjectType\022K\n\npermission\030\002 \001(" +
-      "\0132+.aserto.directory.importer.v2.ImportC" +
-      "ounterR\npermission\022P\n\rrelation_type\030\003 \001(" +
-      "\0132+.aserto.directory.importer.v2.ImportC" +
-      "ounterR\014relationType\022C\n\006object\030\004 \001(\0132+.a" +
-      "serto.directory.importer.v2.ImportCounte" +
-      "rR\006object\022G\n\010relation\030\005 \001(\0132+.aserto.dir" +
-      "ectory.importer.v2.ImportCounterR\010relati" +
-      "on\"c\n\rImportCounter\022\022\n\004recv\030\001 \001(\004R\004recv\022" +
-      "\020\n\003set\030\002 \001(\004R\003set\022\026\n\006delete\030\003 \001(\004R\006delet" +
-      "e\022\024\n\005error\030\004 \001(\004R\005error*?\n\006Opcode\022\022\n\016OPC" +
-      "ODE_UNKNOWN\020\000\022\016\n\nOPCODE_SET\020\001\022\021\n\rOPCODE_" +
-      "DELETE\020\0022u\n\010Importer\022i\n\006Import\022+.aserto." +
-      "directory.importer.v2.ImportRequest\032,.as" +
-      "erto.directory.importer.v2.ImportRespons" +
-      "e\"\000(\0010\001B\220\002\n com.aserto.directory.importe" +
-      "r.v2B\rImporterProtoP\001ZHgithub.com/aserto" +
-      "-dev/go-directory/aserto/directory/impor" +
-      "ter/v2;importer\242\002\003ADI\252\002\034Aserto.Directory" +
-      ".Importer.V2\312\002\035Aserto\\Directory_\\Importe" +
-      "r\\V2\342\002)Aserto\\Directory_\\Importer\\V2\\GPB" +
-      "Metadata\352\002\037Aserto::Directory::Importer::" +
-      "V2b\006proto3"
+      "ectory.common.v2.RelationH\000R\010relation:\002\030" +
+      "\001B\005\n\003msg\"\217\003\n\016ImportResponse\022L\n\013object_ty" +
+      "pe\030\001 \001(\0132+.aserto.directory.importer.v2." +
+      "ImportCounterR\nobjectType\022K\n\npermission\030" +
+      "\002 \001(\0132+.aserto.directory.importer.v2.Imp" +
+      "ortCounterR\npermission\022P\n\rrelation_type\030" +
+      "\003 \001(\0132+.aserto.directory.importer.v2.Imp" +
+      "ortCounterR\014relationType\022C\n\006object\030\004 \001(\013" +
+      "2+.aserto.directory.importer.v2.ImportCo" +
+      "unterR\006object\022G\n\010relation\030\005 \001(\0132+.aserto" +
+      ".directory.importer.v2.ImportCounterR\010re" +
+      "lation:\002\030\001\"g\n\rImportCounter\022\022\n\004recv\030\001 \001(" +
+      "\004R\004recv\022\020\n\003set\030\002 \001(\004R\003set\022\026\n\006delete\030\003 \001(" +
+      "\004R\006delete\022\024\n\005error\030\004 \001(\004R\005error:\002\030\001*C\n\006O" +
+      "pcode\022\022\n\016OPCODE_UNKNOWN\020\000\022\016\n\nOPCODE_SET\020" +
+      "\001\022\021\n\rOPCODE_DELETE\020\002\032\002\030\0012x\n\010Importer\022l\n\006" +
+      "Import\022+.aserto.directory.importer.v2.Im" +
+      "portRequest\032,.aserto.directory.importer." +
+      "v2.ImportResponse\"\003\210\002\001(\0010\001B\220\002\n com.asert" +
+      "o.directory.importer.v2B\rImporterProtoP\001" +
+      "ZHgithub.com/aserto-dev/go-directory/ase" +
+      "rto/directory/importer/v2;importer\242\002\003ADI" +
+      "\252\002\034Aserto.Directory.Importer.V2\312\002\035Aserto" +
+      "\\Directory_\\Importer\\V2\342\002)Aserto\\Directo" +
+      "ry_\\Importer\\V2\\GPBMetadata\352\002\037Aserto::Di" +
+      "rectory::Importer::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

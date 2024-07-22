@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.importer.v2;
 
-public interface ImportResponseOrBuilder extends
+@java.lang.Deprecated public interface ImportResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.importer.v2.ImportResponse)
     com.google.protobuf.MessageOrBuilder {
 

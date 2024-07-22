@@ -420,7 +420,7 @@ public final class ReaderProto {
       "\030\002 \003(\0132,.aserto.directory.common.v3.Obje" +
       "ctIdentifierR\007results\0229\n\013explanation\030\003 \001" +
       "(\0132\027.google.protobuf.StructR\013explanation" +
-      "\022\024\n\005trace\030\004 \003(\tR\005traceJ\004\010\001\020\0022\205\024\n\006Reader\022" +
+      "\022\024\n\005trace\030\004 \003(\tR\005traceJ\004\010\001\020\0022\213\024\n\006Reader\022" +
       "\342\002\n\tGetObject\022,.aserto.directory.reader." +
       "v3.GetObjectRequest\032-.aserto.directory.r" +
       "eader.v3.GetObjectResponse\"\367\001\222A\271\001\n\tdirec" +
@@ -461,37 +461,37 @@ public final class ReaderProto {
       ".v3.CheckResponse\"\210\001\222Ac\n\tdirectory\022\005Chec" +
       "k\032\026Returns check outcome.*\022directory.v3." +
       "checkb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID" +
-      "\022\000\202\323\344\223\002\034\"\027/api/v3/directory/check:\001*\022\262\002\n" +
+      "\022\000\202\323\344\223\002\034\"\027/api/v3/directory/check:\001*\022\265\002\n" +
       "\017CheckPermission\0222.aserto.directory.read" +
       "er.v3.CheckPermissionRequest\0323.aserto.di" +
       "rectory.reader.v3.CheckPermissionRespons" +
-      "e\"\265\001\222A\204\001\n\tdirectory\022\020Check permission\032!R" +
-      "eturns check permission outcome.*\035direct" +
-      "ory.v3.check.permissionb#\n\023\n\017DirectoryAP" +
-      "IKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\'\"\"/api/v3/dire" +
-      "ctory/check/permission:\001*\022\243\002\n\rCheckRelat" +
-      "ion\0220.aserto.directory.reader.v3.CheckRe" +
-      "lationRequest\0321.aserto.directory.reader." +
-      "v3.CheckRelationResponse\"\254\001\222A~\n\tdirector" +
-      "y\022\016Check relation\032\037Returns check relatio" +
-      "n outcome.*\033directory.v3.check.relationb" +
-      "#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223" +
-      "\002%\" /api/v3/directory/check/relation:\001*\022" +
-      "\272\002\n\010GetGraph\022+.aserto.directory.reader.v" +
-      "3.GetGraphRequest\032,.aserto.directory.rea" +
-      "der.v3.GetGraphResponse\"\322\001\222A\207\001\n\tdirector" +
-      "y\022\tGet graph\0326Returns object graph from " +
-      "anchor to subject or object.*\022directory." +
-      "v3.graphb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010Tenan" +
-      "tID\022\000\202\323\344\223\002A\022?/api/v3/directory/graph/{ob" +
-      "ject_type}/{relation}/{subject_type}B\200\002\n" +
-      "\036com.aserto.directory.reader.v3B\013ReaderP" +
-      "rotoP\001ZDgithub.com/aserto-dev/go-directo" +
-      "ry/aserto/directory/reader/v3;reader\242\002\003A" +
-      "DR\252\002\032Aserto.Directory.Reader.V3\312\002\033Aserto" +
-      "\\Directory_\\Reader\\V3\342\002\'Aserto\\Directory" +
-      "_\\Reader\\V3\\GPBMetadata\352\002\035Aserto::Direct" +
-      "ory::Reader::V3b\006proto3"
+      "e\"\270\001\210\002\001\222A\204\001\n\tdirectory\022\020Check permission" +
+      "\032!Returns check permission outcome.*\035dir" +
+      "ectory.v3.check.permissionb#\n\023\n\017Director" +
+      "yAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\'\"\"/api/v3/d" +
+      "irectory/check/permission:\001*\022\246\002\n\rCheckRe" +
+      "lation\0220.aserto.directory.reader.v3.Chec" +
+      "kRelationRequest\0321.aserto.directory.read" +
+      "er.v3.CheckRelationResponse\"\257\001\210\002\001\222A~\n\tdi" +
+      "rectory\022\016Check relation\032\037Returns check r" +
+      "elation outcome.*\033directory.v3.check.rel" +
+      "ationb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID" +
+      "\022\000\202\323\344\223\002%\" /api/v3/directory/check/relati" +
+      "on:\001*\022\272\002\n\010GetGraph\022+.aserto.directory.re" +
+      "ader.v3.GetGraphRequest\032,.aserto.directo" +
+      "ry.reader.v3.GetGraphResponse\"\322\001\222A\207\001\n\tdi" +
+      "rectory\022\tGet graph\0326Returns object graph" +
+      " from anchor to subject or object.*\022dire" +
+      "ctory.v3.graphb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n" +
+      "\010TenantID\022\000\202\323\344\223\002A\022?/api/v3/directory/gra" +
+      "ph/{object_type}/{relation}/{subject_typ" +
+      "e}B\200\002\n\036com.aserto.directory.reader.v3B\013R" +
+      "eaderProtoP\001ZDgithub.com/aserto-dev/go-d" +
+      "irectory/aserto/directory/reader/v3;read" +
+      "er\242\002\003ADR\252\002\032Aserto.Directory.Reader.V3\312\002\033" +
+      "Aserto\\Directory_\\Reader\\V3\342\002\'Aserto\\Dir" +
+      "ectory_\\Reader\\V3\\GPBMetadata\352\002\035Aserto::" +
+      "Directory::Reader::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

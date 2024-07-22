@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.writer.v2;
 
-public interface SetObjectRequestOrBuilder extends
+@java.lang.Deprecated public interface SetObjectRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.writer.v2.SetObjectRequest)
     com.google.protobuf.MessageOrBuilder {
 

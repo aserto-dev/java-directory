@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.writer.v2;
 
-public interface DeleteObjectTypeResponseOrBuilder extends
+@java.lang.Deprecated public interface DeleteObjectTypeResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.writer.v2.DeleteObjectTypeResponse)
     com.google.protobuf.MessageOrBuilder {
 

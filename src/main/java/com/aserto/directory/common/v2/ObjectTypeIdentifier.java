@@ -11,7 +11,7 @@ package com.aserto.directory.common.v2;
  *
  * Protobuf type {@code aserto.directory.common.v2.ObjectTypeIdentifier}
  */
-public final class ObjectTypeIdentifier extends
+@java.lang.Deprecated public final class ObjectTypeIdentifier extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.common.v2.ObjectTypeIdentifier)
     ObjectTypeIdentifierOrBuilder {

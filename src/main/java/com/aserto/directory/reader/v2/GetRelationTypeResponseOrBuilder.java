@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.reader.v2;
 
-public interface GetRelationTypeResponseOrBuilder extends
+@java.lang.Deprecated public interface GetRelationTypeResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.reader.v2.GetRelationTypeResponse)
     com.google.protobuf.MessageOrBuilder {
 

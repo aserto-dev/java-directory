@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.common.v2;
 
-public interface ObjectIdentifierOrBuilder extends
+@java.lang.Deprecated public interface ObjectIdentifierOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.common.v2.ObjectIdentifier)
     com.google.protobuf.MessageOrBuilder {
 

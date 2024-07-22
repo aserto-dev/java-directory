@@ -11,7 +11,7 @@ package com.aserto.directory.common.v2;
  *
  * Protobuf type {@code aserto.directory.common.v2.PaginationRequest}
  */
-public final class PaginationRequest extends
+@java.lang.Deprecated public final class PaginationRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.common.v2.PaginationRequest)
     PaginationRequestOrBuilder {

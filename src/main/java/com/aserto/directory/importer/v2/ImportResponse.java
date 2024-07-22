@@ -7,7 +7,7 @@ package com.aserto.directory.importer.v2;
 /**
  * Protobuf type {@code aserto.directory.importer.v2.ImportResponse}
  */
-public final class ImportResponse extends
+@java.lang.Deprecated public final class ImportResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.importer.v2.ImportResponse)
     ImportResponseOrBuilder {

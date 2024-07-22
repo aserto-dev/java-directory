@@ -7,7 +7,7 @@ package com.aserto.directory.common.v2;
 /**
  * Protobuf type {@code aserto.directory.common.v2.Object}
  */
-public final class Object extends
+@java.lang.Deprecated public final class Object extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.common.v2.Object)
     ObjectOrBuilder {

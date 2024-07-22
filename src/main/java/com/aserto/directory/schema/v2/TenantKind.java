@@ -7,7 +7,7 @@ package com.aserto.directory.schema.v2;
 /**
  * Protobuf enum {@code aserto.directory.schema.v2.TenantKind}
  */
-public enum TenantKind
+@java.lang.Deprecated public enum TenantKind
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>TENANT_KIND_UNKNOWN = 0;</code>

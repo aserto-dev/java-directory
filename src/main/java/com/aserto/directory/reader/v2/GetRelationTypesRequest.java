@@ -7,7 +7,7 @@ package com.aserto.directory.reader.v2;
 /**
  * Protobuf type {@code aserto.directory.reader.v2.GetRelationTypesRequest}
  */
-public final class GetRelationTypesRequest extends
+@java.lang.Deprecated public final class GetRelationTypesRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.reader.v2.GetRelationTypesRequest)
     GetRelationTypesRequestOrBuilder {

@@ -92,7 +92,7 @@ public final class CommonProto {
       "\n\'aserto/directory/common/v2/common.prot" +
       "o\022\032aserto.directory.common.v2\032\034google/pr" +
       "otobuf/struct.proto\032\037google/protobuf/tim" +
-      "estamp.proto\"\353\002\n\nObjectType\022\022\n\004name\030\002 \001(" +
+      "estamp.proto\"\357\002\n\nObjectType\022\022\n\004name\030\002 \001(" +
       "\tR\004name\022!\n\014display_name\030\003 \001(\tR\013displayNa" +
       "me\022\035\n\nis_subject\030\004 \001(\010R\tisSubject\022\030\n\007ord" +
       "inal\030\005 \001(\005R\007ordinal\022\026\n\006status\030\006 \001(\rR\006sta" +
@@ -100,74 +100,76 @@ public final class CommonProto {
       "ructR\006schema\0229\n\ncreated_at\030\024 \001(\0132\032.googl" +
       "e.protobuf.TimestampR\tcreatedAt\0229\n\nupdat" +
       "ed_at\030\025 \001(\0132\032.google.protobuf.TimestampR" +
-      "\tupdatedAt\022\022\n\004hash\030\027 \001(\tR\004hashJ\004\010\001\020\002J\004\010\026" +
-      "\020\027R\002idR\ndeleted_at\"\351\001\n\nPermission\022\022\n\004nam" +
-      "e\030\002 \001(\tR\004name\022!\n\014display_name\030\003 \001(\tR\013dis" +
-      "playName\0229\n\ncreated_at\030\024 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\tcreatedAt\0229\n\nupdated_a" +
-      "t\030\025 \001(\0132\032.google.protobuf.TimestampR\tupd" +
-      "atedAt\022\022\n\004hash\030\027 \001(\tR\004hashJ\004\010\001\020\002J\004\010\026\020\027R\002" +
-      "idR\ndeleted_at\"\370\002\n\014RelationType\022\022\n\004name\030" +
-      "\002 \001(\tR\004name\022\037\n\013object_type\030\003 \001(\tR\nobject" +
-      "Type\022!\n\014display_name\030\004 \001(\tR\013displayName\022" +
-      "\030\n\007ordinal\030\005 \001(\005R\007ordinal\022\026\n\006status\030\006 \001(" +
-      "\rR\006status\022\026\n\006unions\030\007 \003(\tR\006unions\022 \n\013per" +
-      "missions\030\010 \003(\tR\013permissions\0229\n\ncreated_a" +
-      "t\030\024 \001(\0132\032.google.protobuf.TimestampR\tcre" +
-      "atedAt\0229\n\nupdated_at\030\025 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\tupdatedAt\022\022\n\004hash\030\027 \001(\tR" +
-      "\004hashJ\004\010\001\020\002J\004\010\026\020\027R\002idR\ndeleted_at\"\260\002\n\006Ob" +
-      "ject\022\020\n\003key\030\002 \001(\tR\003key\022\022\n\004type\030\003 \001(\tR\004ty" +
-      "pe\022!\n\014display_name\030\004 \001(\tR\013displayName\0227\n" +
-      "\nproperties\030\005 \001(\0132\027.google.protobuf.Stru" +
-      "ctR\nproperties\0229\n\ncreated_at\030\024 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\tcreatedAt\0229\n\nupd" +
-      "ated_at\030\025 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\tupdatedAt\022\022\n\004hash\030\027 \001(\tR\004hashJ\004\010\001\020\002J\004" +
-      "\010\026\020\027R\002idR\ndeleted_at\"\320\002\n\010Relation\022F\n\007sub" +
-      "ject\030\001 \001(\0132,.aserto.directory.common.v2." +
-      "ObjectIdentifierR\007subject\022\032\n\010relation\030\002 " +
-      "\001(\tR\010relation\022D\n\006object\030\003 \001(\0132,.aserto.d" +
-      "irectory.common.v2.ObjectIdentifierR\006obj" +
-      "ect\0229\n\ncreated_at\030\024 \001(\0132\032.google.protobu" +
-      "f.TimestampR\tcreatedAt\0229\n\nupdated_at\030\025 \001" +
-      "(\0132\032.google.protobuf.TimestampR\tupdatedA" +
-      "t\022\022\n\004hash\030\027 \001(\tR\004hashJ\004\010\026\020\027R\ndeleted_at\"" +
-      "\232\002\n\020ObjectDependency\022\037\n\013object_type\030\001 \001(" +
-      "\tR\nobjectType\022\035\n\nobject_key\030\004 \001(\tR\tobjec" +
-      "tKey\022\032\n\010relation\030\005 \001(\tR\010relation\022!\n\014subj" +
-      "ect_type\030\007 \001(\tR\013subjectType\022\037\n\013subject_k" +
-      "ey\030\n \001(\tR\nsubjectKey\022\024\n\005depth\030\013 \001(\005R\005dep" +
-      "th\022\031\n\010is_cycle\030\014 \001(\010R\007isCycle\022\022\n\004path\030\r " +
-      "\003(\tR\004pathJ\004\010\003\020\004J\004\010\t\020\nR\tobject_idR\nsubjec" +
-      "t_id\"B\n\024ObjectTypeIdentifier\022\027\n\004name\030\002 \001" +
-      "(\tH\000R\004name\210\001\001B\007\n\005_nameJ\004\010\001\020\002R\002id\"B\n\024Perm" +
-      "issionIdentifier\022\027\n\004name\030\002 \001(\tH\000R\004name\210\001" +
-      "\001B\007\n\005_nameJ\004\010\001\020\002R\002id\"z\n\026RelationTypeIden" +
-      "tifier\022\027\n\004name\030\002 \001(\tH\000R\004name\210\001\001\022$\n\013objec" +
-      "t_type\030\003 \001(\tH\001R\nobjectType\210\001\001B\007\n\005_nameB\016" +
-      "\n\014_object_typeJ\004\010\001\020\002R\002id\"]\n\020ObjectIdenti" +
-      "fier\022\027\n\004type\030\001 \001(\tH\000R\004type\210\001\001\022\025\n\003key\030\003 \001" +
-      "(\tH\001R\003key\210\001\001B\007\n\005_typeB\006\n\004_keyJ\004\010\002\020\003R\002id\"" +
-      "\362\001\n\022RelationIdentifier\022F\n\007subject\030\001 \001(\0132" +
+      "\tupdatedAt\022\022\n\004hash\030\027 \001(\tR\004hash:\002\030\001J\004\010\001\020\002" +
+      "J\004\010\026\020\027R\002idR\ndeleted_at\"\355\001\n\nPermission\022\022\n" +
+      "\004name\030\002 \001(\tR\004name\022!\n\014display_name\030\003 \001(\tR" +
+      "\013displayName\0229\n\ncreated_at\030\024 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\tcreatedAt\0229\n\nupdat" +
+      "ed_at\030\025 \001(\0132\032.google.protobuf.TimestampR" +
+      "\tupdatedAt\022\022\n\004hash\030\027 \001(\tR\004hash:\002\030\001J\004\010\001\020\002" +
+      "J\004\010\026\020\027R\002idR\ndeleted_at\"\374\002\n\014RelationType\022" +
+      "\022\n\004name\030\002 \001(\tR\004name\022\037\n\013object_type\030\003 \001(\t" +
+      "R\nobjectType\022!\n\014display_name\030\004 \001(\tR\013disp" +
+      "layName\022\030\n\007ordinal\030\005 \001(\005R\007ordinal\022\026\n\006sta" +
+      "tus\030\006 \001(\rR\006status\022\026\n\006unions\030\007 \003(\tR\006union" +
+      "s\022 \n\013permissions\030\010 \003(\tR\013permissions\0229\n\nc" +
+      "reated_at\030\024 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tcreatedAt\0229\n\nupdated_at\030\025 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\tupdatedAt\022\022\n\004has" +
+      "h\030\027 \001(\tR\004hash:\002\030\001J\004\010\001\020\002J\004\010\026\020\027R\002idR\ndelet" +
+      "ed_at\"\264\002\n\006Object\022\020\n\003key\030\002 \001(\tR\003key\022\022\n\004ty" +
+      "pe\030\003 \001(\tR\004type\022!\n\014display_name\030\004 \001(\tR\013di" +
+      "splayName\0227\n\nproperties\030\005 \001(\0132\027.google.p" +
+      "rotobuf.StructR\nproperties\0229\n\ncreated_at" +
+      "\030\024 \001(\0132\032.google.protobuf.TimestampR\tcrea" +
+      "tedAt\0229\n\nupdated_at\030\025 \001(\0132\032.google.proto" +
+      "buf.TimestampR\tupdatedAt\022\022\n\004hash\030\027 \001(\tR\004" +
+      "hash:\002\030\001J\004\010\001\020\002J\004\010\026\020\027R\002idR\ndeleted_at\"\324\002\n" +
+      "\010Relation\022F\n\007subject\030\001 \001(\0132,.aserto.dire" +
+      "ctory.common.v2.ObjectIdentifierR\007subjec" +
+      "t\022\032\n\010relation\030\002 \001(\tR\010relation\022D\n\006object\030" +
+      "\003 \001(\0132,.aserto.directory.common.v2.Objec" +
+      "tIdentifierR\006object\0229\n\ncreated_at\030\024 \001(\0132" +
+      "\032.google.protobuf.TimestampR\tcreatedAt\0229" +
+      "\n\nupdated_at\030\025 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\tupdatedAt\022\022\n\004hash\030\027 \001(\tR\004hash:\002\030" +
+      "\001J\004\010\026\020\027R\ndeleted_at\"\236\002\n\020ObjectDependency" +
+      "\022\037\n\013object_type\030\001 \001(\tR\nobjectType\022\035\n\nobj" +
+      "ect_key\030\004 \001(\tR\tobjectKey\022\032\n\010relation\030\005 \001" +
+      "(\tR\010relation\022!\n\014subject_type\030\007 \001(\tR\013subj" +
+      "ectType\022\037\n\013subject_key\030\n \001(\tR\nsubjectKey" +
+      "\022\024\n\005depth\030\013 \001(\005R\005depth\022\031\n\010is_cycle\030\014 \001(\010" +
+      "R\007isCycle\022\022\n\004path\030\r \003(\tR\004path:\002\030\001J\004\010\003\020\004J" +
+      "\004\010\t\020\nR\tobject_idR\nsubject_id\"F\n\024ObjectTy" +
+      "peIdentifier\022\027\n\004name\030\002 \001(\tH\000R\004name\210\001\001:\002\030" +
+      "\001B\007\n\005_nameJ\004\010\001\020\002R\002id\"F\n\024PermissionIdenti" +
+      "fier\022\027\n\004name\030\002 \001(\tH\000R\004name\210\001\001:\002\030\001B\007\n\005_na" +
+      "meJ\004\010\001\020\002R\002id\"~\n\026RelationTypeIdentifier\022\027" +
+      "\n\004name\030\002 \001(\tH\000R\004name\210\001\001\022$\n\013object_type\030\003" +
+      " \001(\tH\001R\nobjectType\210\001\001:\002\030\001B\007\n\005_nameB\016\n\014_o" +
+      "bject_typeJ\004\010\001\020\002R\002id\"a\n\020ObjectIdentifier" +
+      "\022\027\n\004type\030\001 \001(\tH\000R\004type\210\001\001\022\025\n\003key\030\003 \001(\tH\001" +
+      "R\003key\210\001\001:\002\030\001B\007\n\005_typeB\006\n\004_keyJ\004\010\002\020\003R\002id\"" +
+      "\366\001\n\022RelationIdentifier\022F\n\007subject\030\001 \001(\0132" +
       ",.aserto.directory.common.v2.ObjectIdent" +
       "ifierR\007subject\022N\n\010relation\030\002 \001(\01322.asert" +
       "o.directory.common.v2.RelationTypeIdenti" +
       "fierR\010relation\022D\n\006object\030\003 \001(\0132,.aserto." +
       "directory.common.v2.ObjectIdentifierR\006ob" +
-      "ject\"=\n\021PaginationRequest\022\022\n\004size\030\001 \001(\005R" +
-      "\004size\022\024\n\005token\030\002 \001(\tR\005token\"T\n\022Paginatio" +
-      "nResponse\022\035\n\nnext_token\030\001 \001(\tR\tnextToken" +
-      "\022\037\n\013result_size\030\002 \001(\005R\nresultSize*^\n\004Fla" +
-      "g\022\020\n\014FLAG_UNKNOWN\020\000\022\017\n\013FLAG_HIDDEN\020\001\022\021\n\r" +
-      "FLAG_READONLY\020\002\022\017\n\013FLAG_SYSTEM\020\004\022\017\n\013FLAG" +
-      "_SHADOW\020\010B\200\002\n\036com.aserto.directory.commo" +
-      "n.v2B\013CommonProtoP\001ZDgithub.com/aserto-d" +
-      "ev/go-directory/aserto/directory/common/" +
-      "v2;common\242\002\003ADC\252\002\032Aserto.Directory.Commo" +
-      "n.V2\312\002\033Aserto\\Directory_\\Common\\V2\342\002\'Ase" +
-      "rto\\Directory_\\Common\\V2\\GPBMetadata\352\002\035A" +
-      "serto::Directory::Common::V2b\006proto3"
+      "ject:\002\030\001\"A\n\021PaginationRequest\022\022\n\004size\030\001 " +
+      "\001(\005R\004size\022\024\n\005token\030\002 \001(\tR\005token:\002\030\001\"X\n\022P" +
+      "aginationResponse\022\035\n\nnext_token\030\001 \001(\tR\tn" +
+      "extToken\022\037\n\013result_size\030\002 \001(\005R\nresultSiz" +
+      "e:\002\030\001*b\n\004Flag\022\020\n\014FLAG_UNKNOWN\020\000\022\017\n\013FLAG_" +
+      "HIDDEN\020\001\022\021\n\rFLAG_READONLY\020\002\022\017\n\013FLAG_SYST" +
+      "EM\020\004\022\017\n\013FLAG_SHADOW\020\010\032\002\030\001B\200\002\n\036com.aserto" +
+      ".directory.common.v2B\013CommonProtoP\001ZDgit" +
+      "hub.com/aserto-dev/go-directory/aserto/d" +
+      "irectory/common/v2;common\242\002\003ADC\252\002\032Aserto" +
+      ".Directory.Common.V2\312\002\033Aserto\\Directory_" +
+      "\\Common\\V2\342\002\'Aserto\\Directory_\\Common\\V2" +
+      "\\GPBMetadata\352\002\035Aserto::Directory::Common" +
+      "::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

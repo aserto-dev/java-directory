@@ -7,7 +7,7 @@ package com.aserto.directory.exporter.v2;
 /**
  * Protobuf type {@code aserto.directory.exporter.v2.ExportRequest}
  */
-public final class ExportRequest extends
+@java.lang.Deprecated public final class ExportRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.exporter.v2.ExportRequest)
     ExportRequestOrBuilder {

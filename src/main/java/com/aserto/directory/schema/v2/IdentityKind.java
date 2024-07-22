@@ -7,7 +7,7 @@ package com.aserto.directory.schema.v2;
 /**
  * Protobuf enum {@code aserto.directory.schema.v2.IdentityKind}
  */
-public enum IdentityKind
+@java.lang.Deprecated public enum IdentityKind
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.reader.v2;
 
-public interface GetPermissionsRequestOrBuilder extends
+@java.lang.Deprecated public interface GetPermissionsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.reader.v2.GetPermissionsRequest)
     com.google.protobuf.MessageOrBuilder {
 

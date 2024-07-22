@@ -7,7 +7,7 @@ package com.aserto.directory.schema.v2;
 /**
  * Protobuf enum {@code aserto.directory.schema.v2.UserStatus}
  */
-public enum UserStatus
+@java.lang.Deprecated public enum UserStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

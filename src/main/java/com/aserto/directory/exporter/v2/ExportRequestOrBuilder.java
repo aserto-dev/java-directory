@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.exporter.v2;
 
-public interface ExportRequestOrBuilder extends
+@java.lang.Deprecated public interface ExportRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.exporter.v2.ExportRequest)
     com.google.protobuf.MessageOrBuilder {
 

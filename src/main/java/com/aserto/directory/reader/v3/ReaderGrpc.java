@@ -344,7 +344,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object
      * </pre>
      */
     default void getObject(com.aserto.directory.reader.v3.GetObjectRequest request,
@@ -353,6 +353,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * </pre>
      */
     default void getObjectMany(com.aserto.directory.reader.v3.GetObjectManyRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.GetObjectManyResponse> responseObserver) {
@@ -360,6 +363,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list objects
+     * </pre>
      */
     default void getObjects(com.aserto.directory.reader.v3.GetObjectsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.GetObjectsResponse> responseObserver) {
@@ -368,7 +374,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
      * </pre>
      */
     default void getRelation(com.aserto.directory.reader.v3.GetRelationRequest request,
@@ -377,6 +383,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relations
+     * </pre>
      */
     default void getRelations(com.aserto.directory.reader.v3.GetRelationsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.GetRelationsResponse> responseObserver) {
@@ -385,7 +394,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check method
+     * check if subject has relation or permission with object
      * </pre>
      */
     default void check(com.aserto.directory.reader.v3.CheckRequest request,
@@ -395,9 +404,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     default void checkPermission(com.aserto.directory.reader.v3.CheckPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.CheckPermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckPermissionMethod(), responseObserver);
@@ -405,9 +416,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     default void checkRelation(com.aserto.directory.reader.v3.CheckRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.CheckRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckRelationMethod(), responseObserver);
@@ -415,7 +428,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
      * </pre>
      */
     default void getGraph(com.aserto.directory.reader.v3.GetGraphRequest request,
@@ -453,7 +466,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object
      * </pre>
      */
     public void getObject(com.aserto.directory.reader.v3.GetObjectRequest request,
@@ -463,6 +476,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * </pre>
      */
     public void getObjectMany(com.aserto.directory.reader.v3.GetObjectManyRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.GetObjectManyResponse> responseObserver) {
@@ -471,6 +487,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list objects
+     * </pre>
      */
     public void getObjects(com.aserto.directory.reader.v3.GetObjectsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.GetObjectsResponse> responseObserver) {
@@ -480,7 +499,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
      * </pre>
      */
     public void getRelation(com.aserto.directory.reader.v3.GetRelationRequest request,
@@ -490,6 +509,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relations
+     * </pre>
      */
     public void getRelations(com.aserto.directory.reader.v3.GetRelationsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.GetRelationsResponse> responseObserver) {
@@ -499,7 +521,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check method
+     * check if subject has relation or permission with object
      * </pre>
      */
     public void check(com.aserto.directory.reader.v3.CheckRequest request,
@@ -510,9 +532,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     public void checkPermission(com.aserto.directory.reader.v3.CheckPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.CheckPermissionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -521,9 +545,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     public void checkRelation(com.aserto.directory.reader.v3.CheckRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v3.CheckRelationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -532,7 +558,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
      * </pre>
      */
     public void getGraph(com.aserto.directory.reader.v3.GetGraphRequest request,
@@ -560,7 +586,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object
      * </pre>
      */
     public com.aserto.directory.reader.v3.GetObjectResponse getObject(com.aserto.directory.reader.v3.GetObjectRequest request) {
@@ -569,6 +595,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * </pre>
      */
     public com.aserto.directory.reader.v3.GetObjectManyResponse getObjectMany(com.aserto.directory.reader.v3.GetObjectManyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -576,6 +605,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list objects
+     * </pre>
      */
     public com.aserto.directory.reader.v3.GetObjectsResponse getObjects(com.aserto.directory.reader.v3.GetObjectsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -584,7 +616,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
      * </pre>
      */
     public com.aserto.directory.reader.v3.GetRelationResponse getRelation(com.aserto.directory.reader.v3.GetRelationRequest request) {
@@ -593,6 +625,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relations
+     * </pre>
      */
     public com.aserto.directory.reader.v3.GetRelationsResponse getRelations(com.aserto.directory.reader.v3.GetRelationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -601,7 +636,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check method
+     * check if subject has relation or permission with object
      * </pre>
      */
     public com.aserto.directory.reader.v3.CheckResponse check(com.aserto.directory.reader.v3.CheckRequest request) {
@@ -611,9 +646,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v3.CheckPermissionResponse checkPermission(com.aserto.directory.reader.v3.CheckPermissionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckPermissionMethod(), getCallOptions(), request);
@@ -621,9 +658,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v3.CheckRelationResponse checkRelation(com.aserto.directory.reader.v3.CheckRelationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckRelationMethod(), getCallOptions(), request);
@@ -631,7 +670,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
      * </pre>
      */
     public com.aserto.directory.reader.v3.GetGraphResponse getGraph(com.aserto.directory.reader.v3.GetGraphRequest request) {
@@ -658,7 +697,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.GetObjectResponse> getObject(
@@ -668,6 +707,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.GetObjectManyResponse> getObjectMany(
         com.aserto.directory.reader.v3.GetObjectManyRequest request) {
@@ -676,6 +718,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list objects
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.GetObjectsResponse> getObjects(
         com.aserto.directory.reader.v3.GetObjectsRequest request) {
@@ -685,7 +730,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.GetRelationResponse> getRelation(
@@ -695,6 +740,9 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relations
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.GetRelationsResponse> getRelations(
         com.aserto.directory.reader.v3.GetRelationsRequest request) {
@@ -704,7 +752,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check method
+     * check if subject has relation or permission with object
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.CheckResponse> check(
@@ -715,9 +763,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.CheckPermissionResponse> checkPermission(
         com.aserto.directory.reader.v3.CheckPermissionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -726,9 +776,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation (deprecated, use the check method)
+     * Deprecated: use directory.v3.Check()
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.CheckRelationResponse> checkRelation(
         com.aserto.directory.reader.v3.CheckRelationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -737,7 +789,7 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v3.GetGraphResponse> getGraph(

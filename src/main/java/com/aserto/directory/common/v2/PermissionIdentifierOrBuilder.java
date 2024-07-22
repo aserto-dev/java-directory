@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.common.v2;
 
-public interface PermissionIdentifierOrBuilder extends
+@java.lang.Deprecated public interface PermissionIdentifierOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.common.v2.PermissionIdentifier)
     com.google.protobuf.MessageOrBuilder {
 

@@ -7,7 +7,7 @@ package com.aserto.directory.exporter.v2;
 /**
  * Protobuf enum {@code aserto.directory.exporter.v2.Option}
  */
-public enum Option
+@java.lang.Deprecated public enum Option
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

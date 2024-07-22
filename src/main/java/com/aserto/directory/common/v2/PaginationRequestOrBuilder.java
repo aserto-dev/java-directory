@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.common.v2;
 
-public interface PaginationRequestOrBuilder extends
+@java.lang.Deprecated public interface PaginationRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.common.v2.PaginationRequest)
     com.google.protobuf.MessageOrBuilder {
 

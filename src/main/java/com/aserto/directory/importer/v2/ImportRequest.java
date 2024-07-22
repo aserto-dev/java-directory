@@ -7,7 +7,7 @@ package com.aserto.directory.importer.v2;
 /**
  * Protobuf type {@code aserto.directory.importer.v2.ImportRequest}
  */
-public final class ImportRequest extends
+@java.lang.Deprecated public final class ImportRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.importer.v2.ImportRequest)
     ImportRequestOrBuilder {

@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.reader.v2;
 
-public interface GetObjectRequestOrBuilder extends
+@java.lang.Deprecated public interface GetObjectRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.reader.v2.GetObjectRequest)
     com.google.protobuf.MessageOrBuilder {
 

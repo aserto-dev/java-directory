@@ -7,7 +7,7 @@ package com.aserto.directory.reader.v2;
 /**
  * Protobuf type {@code aserto.directory.reader.v2.CheckResponse}
  */
-public final class CheckResponse extends
+@java.lang.Deprecated public final class CheckResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.reader.v2.CheckResponse)
     CheckResponseOrBuilder {

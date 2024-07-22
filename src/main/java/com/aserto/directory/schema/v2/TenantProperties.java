@@ -11,7 +11,7 @@ package com.aserto.directory.schema.v2;
  *
  * Protobuf type {@code aserto.directory.schema.v2.TenantProperties}
  */
-public final class TenantProperties extends
+@java.lang.Deprecated public final class TenantProperties extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.schema.v2.TenantProperties)
     TenantPropertiesOrBuilder {

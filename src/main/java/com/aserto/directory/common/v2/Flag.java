@@ -7,7 +7,7 @@ package com.aserto.directory.common.v2;
 /**
  * Protobuf enum {@code aserto.directory.common.v2.Flag}
  */
-public enum Flag
+@java.lang.Deprecated public enum Flag
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

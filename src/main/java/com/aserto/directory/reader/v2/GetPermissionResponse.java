@@ -7,7 +7,7 @@ package com.aserto.directory.reader.v2;
 /**
  * Protobuf type {@code aserto.directory.reader.v2.GetPermissionResponse}
  */
-public final class GetPermissionResponse extends
+@java.lang.Deprecated public final class GetPermissionResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.reader.v2.GetPermissionResponse)
     GetPermissionResponseOrBuilder {

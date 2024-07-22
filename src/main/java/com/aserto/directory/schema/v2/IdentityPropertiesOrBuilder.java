@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.schema.v2;
 
-public interface IdentityPropertiesOrBuilder extends
+@java.lang.Deprecated public interface IdentityPropertiesOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.schema.v2.IdentityProperties)
     com.google.protobuf.MessageOrBuilder {
 

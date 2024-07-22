@@ -30,25 +30,25 @@ public final class UserProto {
   static {
     java.lang.String[] descriptorData = {
       "\n%aserto/directory/schema/v2/user.proto\022" +
-      "\032aserto.directory.schema.v2\"\277\001\n\016UserProp" +
+      "\032aserto.directory.schema.v2\"\303\001\n\016UserProp" +
       "erties\022\024\n\005email\030\001 \001(\tR\005email\022\030\n\007picture\030" +
       "\002 \001(\tR\007picture\022>\n\006status\030\003 \001(\0162&.aserto." +
       "directory.schema.v2.UserStatusR\006status\022\030" +
       "\n\007enabled\030\004 \001(\010R\007enabled\022#\n\rconnection_i" +
-      "d\030\005 \001(\tR\014connectionId*\204\002\n\nUserStatus\022\027\n\023" +
-      "USER_STATUS_UNKNOWN\020\000\022\026\n\022USER_STATUS_STA" +
-      "GED\020\001\022\033\n\027USER_STATUS_PROVISIONED\020\002\022\026\n\022US" +
-      "ER_STATUS_ACTIVE\020\003\022\030\n\024USER_STATUS_RECOVE" +
-      "RY\020\004\022 \n\034USER_STATUS_PASSWORD_EXPIRED\020\005\022\032" +
-      "\n\026USER_STATUS_LOCKED_OUT\020\006\022\031\n\025USER_STATU" +
-      "S_SUSPENDED\020\007\022\035\n\031USER_STATUS_DEPROVISION" +
-      "ED\020\010B\376\001\n\036com.aserto.directory.schema.v2B" +
-      "\tUserProtoP\001ZDgithub.com/aserto-dev/go-d" +
-      "irectory/aserto/directory/schema/v2;sche" +
-      "ma\242\002\003ADS\252\002\032Aserto.Directory.Schema.V2\312\002\033" +
-      "Aserto\\Directory_\\Schema\\V2\342\002\'Aserto\\Dir" +
-      "ectory_\\Schema\\V2\\GPBMetadata\352\002\035Aserto::" +
-      "Directory::Schema::V2b\006proto3"
+      "d\030\005 \001(\tR\014connectionId:\002\030\001*\210\002\n\nUserStatus" +
+      "\022\027\n\023USER_STATUS_UNKNOWN\020\000\022\026\n\022USER_STATUS" +
+      "_STAGED\020\001\022\033\n\027USER_STATUS_PROVISIONED\020\002\022\026" +
+      "\n\022USER_STATUS_ACTIVE\020\003\022\030\n\024USER_STATUS_RE" +
+      "COVERY\020\004\022 \n\034USER_STATUS_PASSWORD_EXPIRED" +
+      "\020\005\022\032\n\026USER_STATUS_LOCKED_OUT\020\006\022\031\n\025USER_S" +
+      "TATUS_SUSPENDED\020\007\022\035\n\031USER_STATUS_DEPROVI" +
+      "SIONED\020\010\032\002\030\001B\376\001\n\036com.aserto.directory.sc" +
+      "hema.v2B\tUserProtoP\001ZDgithub.com/aserto-" +
+      "dev/go-directory/aserto/directory/schema" +
+      "/v2;schema\242\002\003ADS\252\002\032Aserto.Directory.Sche" +
+      "ma.V2\312\002\033Aserto\\Directory_\\Schema\\V2\342\002\'As" +
+      "erto\\Directory_\\Schema\\V2\\GPBMetadata\352\002\035" +
+      "Aserto::Directory::Schema::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

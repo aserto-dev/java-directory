@@ -96,6 +96,7 @@ public final class ExporterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     default void export(com.aserto.directory.exporter.v2.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v2.ExportResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportMethod(), responseObserver);
@@ -131,6 +132,7 @@ public final class ExporterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public void export(com.aserto.directory.exporter.v2.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v2.ExportResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
@@ -156,6 +158,7 @@ public final class ExporterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public java.util.Iterator<com.aserto.directory.exporter.v2.ExportResponse> export(
         com.aserto.directory.exporter.v2.ExportRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(

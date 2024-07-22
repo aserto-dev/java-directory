@@ -7,7 +7,7 @@ package com.aserto.directory.writer.v2;
 /**
  * Protobuf type {@code aserto.directory.writer.v2.SetRelationResponse}
  */
-public final class SetRelationResponse extends
+@java.lang.Deprecated public final class SetRelationResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.writer.v2.SetRelationResponse)
     SetRelationResponseOrBuilder {

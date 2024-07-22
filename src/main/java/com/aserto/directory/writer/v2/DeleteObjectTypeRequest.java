@@ -7,7 +7,7 @@ package com.aserto.directory.writer.v2;
 /**
  * Protobuf type {@code aserto.directory.writer.v2.DeleteObjectTypeRequest}
  */
-public final class DeleteObjectTypeRequest extends
+@java.lang.Deprecated public final class DeleteObjectTypeRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:aserto.directory.writer.v2.DeleteObjectTypeRequest)
     DeleteObjectTypeRequestOrBuilder {

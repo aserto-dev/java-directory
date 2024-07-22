@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package com.aserto.directory.reader.v2;
 
-public interface GetGraphRequestOrBuilder extends
+@java.lang.Deprecated public interface GetGraphRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aserto.directory.reader.v2.GetGraphRequest)
     com.google.protobuf.MessageOrBuilder {
 
