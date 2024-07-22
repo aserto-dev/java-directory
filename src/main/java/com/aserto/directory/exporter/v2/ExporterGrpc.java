@@ -95,6 +95,9 @@ public final class ExporterGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     @java.lang.Deprecated
     default void export(com.aserto.directory.exporter.v2.ExportRequest request,
@@ -131,6 +134,9 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     @java.lang.Deprecated
     public void export(com.aserto.directory.exporter.v2.ExportRequest request,
@@ -157,6 +163,9 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     @java.lang.Deprecated
     public java.util.Iterator<com.aserto.directory.exporter.v2.ExportResponse> export(
