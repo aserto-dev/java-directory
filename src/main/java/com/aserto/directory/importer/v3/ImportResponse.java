@@ -116,6 +116,44 @@ private static final long serialVersionUID = 0L;
     return relation_ == null ? com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance() : relation_;
   }
 
+  public static final int STATUS_FIELD_NUMBER = 3;
+  private com.aserto.directory.importer.v3.ImportStatus status_;
+  /**
+   * <pre>
+   * import status
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   * @return Whether the status field is set.
+   */
+  @java.lang.Override
+  public boolean hasStatus() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * import status
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override
+  public com.aserto.directory.importer.v3.ImportStatus getStatus() {
+    return status_ == null ? com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+  }
+  /**
+   * <pre>
+   * import status
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   */
+  @java.lang.Override
+  public com.aserto.directory.importer.v3.ImportStatusOrBuilder getStatusOrBuilder() {
+    return status_ == null ? com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -136,6 +174,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getRelation());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(3, getStatus());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -152,6 +193,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getRelation());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getStatus());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -178,6 +223,11 @@ private static final long serialVersionUID = 0L;
       if (!getRelation()
           .equals(other.getRelation())) return false;
     }
+    if (hasStatus() != other.hasStatus()) return false;
+    if (hasStatus()) {
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -196,6 +246,10 @@ private static final long serialVersionUID = 0L;
     if (hasRelation()) {
       hash = (37 * hash) + RELATION_FIELD_NUMBER;
       hash = (53 * hash) + getRelation().hashCode();
+    }
+    if (hasStatus()) {
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -329,6 +383,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getObjectFieldBuilder();
         getRelationFieldBuilder();
+        getStatusFieldBuilder();
       }
     }
     @java.lang.Override
@@ -344,6 +399,11 @@ private static final long serialVersionUID = 0L;
       if (relationBuilder_ != null) {
         relationBuilder_.dispose();
         relationBuilder_ = null;
+      }
+      status_ = null;
+      if (statusBuilder_ != null) {
+        statusBuilder_.dispose();
+        statusBuilder_ = null;
       }
       return this;
     }
@@ -390,6 +450,12 @@ private static final long serialVersionUID = 0L;
             ? relation_
             : relationBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.status_ = statusBuilder_ == null
+            ? status_
+            : statusBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -444,6 +510,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasRelation()) {
         mergeRelation(other.getRelation());
       }
+      if (other.hasStatus()) {
+        mergeStatus(other.getStatus());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -484,6 +553,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -813,6 +889,163 @@ private static final long serialVersionUID = 0L;
         relation_ = null;
       }
       return relationBuilder_;
+    }
+
+    private com.aserto.directory.importer.v3.ImportStatus status_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aserto.directory.importer.v3.ImportStatus, com.aserto.directory.importer.v3.ImportStatus.Builder, com.aserto.directory.importer.v3.ImportStatusOrBuilder> statusBuilder_;
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * @return Whether the status field is set.
+     */
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    public com.aserto.directory.importer.v3.ImportStatus getStatus() {
+      if (statusBuilder_ == null) {
+        return status_ == null ? com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+      } else {
+        return statusBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     */
+    public Builder setStatus(com.aserto.directory.importer.v3.ImportStatus value) {
+      if (statusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        status_ = value;
+      } else {
+        statusBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     */
+    public Builder setStatus(
+        com.aserto.directory.importer.v3.ImportStatus.Builder builderForValue) {
+      if (statusBuilder_ == null) {
+        status_ = builderForValue.build();
+      } else {
+        statusBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     */
+    public Builder mergeStatus(com.aserto.directory.importer.v3.ImportStatus value) {
+      if (statusBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          status_ != null &&
+          status_ != com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance()) {
+          getStatusBuilder().mergeFrom(value);
+        } else {
+          status_ = value;
+        }
+      } else {
+        statusBuilder_.mergeFrom(value);
+      }
+      if (status_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      status_ = null;
+      if (statusBuilder_ != null) {
+        statusBuilder_.dispose();
+        statusBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     */
+    public com.aserto.directory.importer.v3.ImportStatus.Builder getStatusBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getStatusFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     */
+    public com.aserto.directory.importer.v3.ImportStatusOrBuilder getStatusOrBuilder() {
+      if (statusBuilder_ != null) {
+        return statusBuilder_.getMessageOrBuilder();
+      } else {
+        return status_ == null ?
+            com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+      }
+    }
+    /**
+     * <pre>
+     * import status
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aserto.directory.importer.v3.ImportStatus, com.aserto.directory.importer.v3.ImportStatus.Builder, com.aserto.directory.importer.v3.ImportStatusOrBuilder> 
+        getStatusFieldBuilder() {
+      if (statusBuilder_ == null) {
+        statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.aserto.directory.importer.v3.ImportStatus, com.aserto.directory.importer.v3.ImportStatus.Builder, com.aserto.directory.importer.v3.ImportStatusOrBuilder>(
+                getStatus(),
+                getParentForChildren(),
+                isClean());
+        status_ = null;
+      }
+      return statusBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

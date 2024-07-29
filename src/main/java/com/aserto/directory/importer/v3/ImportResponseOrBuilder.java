@@ -61,4 +61,31 @@ public interface ImportResponseOrBuilder extends
    * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
    */
   com.aserto.directory.importer.v3.ImportCounterOrBuilder getRelationOrBuilder();
+
+  /**
+   * <pre>
+   * import status
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   * @return Whether the status field is set.
+   */
+  boolean hasStatus();
+  /**
+   * <pre>
+   * import status
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.aserto.directory.importer.v3.ImportStatus getStatus();
+  /**
+   * <pre>
+   * import status
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   */
+  com.aserto.directory.importer.v3.ImportStatusOrBuilder getStatusOrBuilder();
 }

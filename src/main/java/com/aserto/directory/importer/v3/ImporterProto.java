@@ -30,6 +30,11 @@ public final class ImporterProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aserto_directory_importer_v3_ImportCounter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aserto_directory_importer_v3_ImportStatus_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aserto_directory_importer_v3_ImportStatus_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -47,26 +52,32 @@ public final class ImporterProto {
       "\006object\030\005 \001(\0132\".aserto.directory.common." +
       "v3.ObjectH\000R\006object\022B\n\010relation\030\006 \001(\0132$." +
       "aserto.directory.common.v3.RelationH\000R\010r" +
-      "elationB\005\n\003msg\"\236\001\n\016ImportResponse\022C\n\006obj" +
+      "elationB\005\n\003msg\"\342\001\n\016ImportResponse\022C\n\006obj" +
       "ect\030\001 \001(\0132+.aserto.directory.importer.v3" +
       ".ImportCounterR\006object\022G\n\010relation\030\002 \001(\013" +
       "2+.aserto.directory.importer.v3.ImportCo" +
-      "unterR\010relation\"c\n\rImportCounter\022\022\n\004recv" +
-      "\030\001 \001(\004R\004recv\022\020\n\003set\030\002 \001(\004R\003set\022\026\n\006delete" +
-      "\030\003 \001(\004R\006delete\022\024\n\005error\030\004 \001(\004R\005error*a\n\006" +
-      "Opcode\022\022\n\016OPCODE_UNKNOWN\020\000\022\016\n\nOPCODE_SET" +
-      "\020\001\022\021\n\rOPCODE_DELETE\020\002\022 \n\034OPCODE_DELETE_W" +
-      "ITH_RELATIONS\020\0032u\n\010Importer\022i\n\006Import\022+." +
-      "aserto.directory.importer.v3.ImportReque" +
-      "st\032,.aserto.directory.importer.v3.Import" +
-      "Response\"\000(\0010\001B\220\002\n com.aserto.directory." +
-      "importer.v3B\rImporterProtoP\001ZHgithub.com" +
-      "/aserto-dev/go-directory/aserto/director" +
-      "y/importer/v3;importer\242\002\003ADI\252\002\034Aserto.Di" +
-      "rectory.Importer.V3\312\002\035Aserto\\Directory_\\" +
-      "Importer\\V3\342\002)Aserto\\Directory_\\Importer" +
-      "\\V3\\GPBMetadata\352\002\037Aserto::Directory::Imp" +
-      "orter::V3b\006proto3"
+      "unterR\010relation\022B\n\006status\030\003 \001(\0132*.aserto" +
+      ".directory.importer.v3.ImportStatusR\006sta" +
+      "tus\"c\n\rImportCounter\022\022\n\004recv\030\001 \001(\004R\004recv" +
+      "\022\020\n\003set\030\002 \001(\004R\003set\022\026\n\006delete\030\003 \001(\004R\006dele" +
+      "te\022\024\n\005error\030\004 \001(\004R\005error\"\275\001\n\014ImportStatu" +
+      "s\022\022\n\004code\030\001 \001(\rR\004code\022\020\n\003msg\030\002 \001(\tR\003msg\022" +
+      "<\n\006object\030\005 \001(\0132\".aserto.directory.commo" +
+      "n.v3.ObjectH\000R\006object\022B\n\010relation\030\006 \001(\0132" +
+      "$.aserto.directory.common.v3.RelationH\000R" +
+      "\010relationB\005\n\003req*a\n\006Opcode\022\022\n\016OPCODE_UNK" +
+      "NOWN\020\000\022\016\n\nOPCODE_SET\020\001\022\021\n\rOPCODE_DELETE\020" +
+      "\002\022 \n\034OPCODE_DELETE_WITH_RELATIONS\020\0032u\n\010I" +
+      "mporter\022i\n\006Import\022+.aserto.directory.imp" +
+      "orter.v3.ImportRequest\032,.aserto.director" +
+      "y.importer.v3.ImportResponse\"\000(\0010\001B\220\002\n c" +
+      "om.aserto.directory.importer.v3B\rImporte" +
+      "rProtoP\001ZHgithub.com/aserto-dev/go-direc" +
+      "tory/aserto/directory/importer/v3;import" +
+      "er\242\002\003ADI\252\002\034Aserto.Directory.Importer.V3\312" +
+      "\002\035Aserto\\Directory_\\Importer\\V3\342\002)Aserto" +
+      "\\Directory_\\Importer\\V3\\GPBMetadata\352\002\037As" +
+      "erto::Directory::Importer::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -84,13 +95,19 @@ public final class ImporterProto {
     internal_static_aserto_directory_importer_v3_ImportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_importer_v3_ImportResponse_descriptor,
-        new java.lang.String[] { "Object", "Relation", });
+        new java.lang.String[] { "Object", "Relation", "Status", });
     internal_static_aserto_directory_importer_v3_ImportCounter_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_aserto_directory_importer_v3_ImportCounter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_importer_v3_ImportCounter_descriptor,
         new java.lang.String[] { "Recv", "Set", "Delete", "Error", });
+    internal_static_aserto_directory_importer_v3_ImportStatus_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_aserto_directory_importer_v3_ImportStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aserto_directory_importer_v3_ImportStatus_descriptor,
+        new java.lang.String[] { "Code", "Msg", "Object", "Relation", "Req", });
     com.aserto.directory.common.v3.CommonProto.getDescriptor();
   }
 
