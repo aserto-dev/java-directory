@@ -40,57 +40,28 @@ public interface ImportStatusOrBuilder extends
 
   /**
    * <pre>
-   * failed object import message
+   * req contains the original import request message
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
-   * @return Whether the object field is set.
+   * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
+   * @return Whether the req field is set.
    */
-  boolean hasObject();
+  boolean hasReq();
   /**
    * <pre>
-   * failed object import message
+   * req contains the original import request message
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
-   * @return The object.
+   * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
+   * @return The req.
    */
-  com.aserto.directory.common.v3.Object getObject();
+  com.aserto.directory.importer.v3.ImportRequest getReq();
   /**
    * <pre>
-   * failed object import message
+   * req contains the original import request message
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
    */
-  com.aserto.directory.common.v3.ObjectOrBuilder getObjectOrBuilder();
-
-  /**
-   * <pre>
-   * failed relation import message
-   * </pre>
-   *
-   * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-   * @return Whether the relation field is set.
-   */
-  boolean hasRelation();
-  /**
-   * <pre>
-   * failed relation import message
-   * </pre>
-   *
-   * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-   * @return The relation.
-   */
-  com.aserto.directory.common.v3.Relation getRelation();
-  /**
-   * <pre>
-   * failed relation import message
-   * </pre>
-   *
-   * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-   */
-  com.aserto.directory.common.v3.RelationOrBuilder getRelationOrBuilder();
-
-  com.aserto.directory.importer.v3.ImportStatus.ReqCase getReqCase();
+  com.aserto.directory.importer.v3.ImportRequestOrBuilder getReqOrBuilder();
 }

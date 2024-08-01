@@ -40,48 +40,7 @@ private static final long serialVersionUID = 0L;
             com.aserto.directory.importer.v3.ImportStatus.class, com.aserto.directory.importer.v3.ImportStatus.Builder.class);
   }
 
-  private int reqCase_ = 0;
-  @SuppressWarnings("serial")
-  private java.lang.Object req_;
-  public enum ReqCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    OBJECT(5),
-    RELATION(6),
-    REQ_NOT_SET(0);
-    private final int value;
-    private ReqCase(int value) {
-      this.value = value;
-    }
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static ReqCase valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static ReqCase forNumber(int value) {
-      switch (value) {
-        case 5: return OBJECT;
-        case 6: return RELATION;
-        case 0: return REQ_NOT_SET;
-        default: return null;
-      }
-    }
-    public int getNumber() {
-      return this.value;
-    }
-  };
-
-  public ReqCase
-  getReqCase() {
-    return ReqCase.forNumber(
-        reqCase_);
-  }
-
+  private int bitField0_;
   public static final int CODE_FIELD_NUMBER = 1;
   private int code_ = 0;
   /**
@@ -144,90 +103,42 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int OBJECT_FIELD_NUMBER = 5;
+  public static final int REQ_FIELD_NUMBER = 3;
+  private com.aserto.directory.importer.v3.ImportRequest req_;
   /**
    * <pre>
-   * failed object import message
+   * req contains the original import request message
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
-   * @return Whether the object field is set.
+   * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
+   * @return Whether the req field is set.
    */
   @java.lang.Override
-  public boolean hasObject() {
-    return reqCase_ == 5;
+  public boolean hasReq() {
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
-   * failed object import message
+   * req contains the original import request message
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
-   * @return The object.
+   * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
+   * @return The req.
    */
   @java.lang.Override
-  public com.aserto.directory.common.v3.Object getObject() {
-    if (reqCase_ == 5) {
-       return (com.aserto.directory.common.v3.Object) req_;
-    }
-    return com.aserto.directory.common.v3.Object.getDefaultInstance();
+  public com.aserto.directory.importer.v3.ImportRequest getReq() {
+    return req_ == null ? com.aserto.directory.importer.v3.ImportRequest.getDefaultInstance() : req_;
   }
   /**
    * <pre>
-   * failed object import message
+   * req contains the original import request message
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
    */
   @java.lang.Override
-  public com.aserto.directory.common.v3.ObjectOrBuilder getObjectOrBuilder() {
-    if (reqCase_ == 5) {
-       return (com.aserto.directory.common.v3.Object) req_;
-    }
-    return com.aserto.directory.common.v3.Object.getDefaultInstance();
-  }
-
-  public static final int RELATION_FIELD_NUMBER = 6;
-  /**
-   * <pre>
-   * failed relation import message
-   * </pre>
-   *
-   * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-   * @return Whether the relation field is set.
-   */
-  @java.lang.Override
-  public boolean hasRelation() {
-    return reqCase_ == 6;
-  }
-  /**
-   * <pre>
-   * failed relation import message
-   * </pre>
-   *
-   * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-   * @return The relation.
-   */
-  @java.lang.Override
-  public com.aserto.directory.common.v3.Relation getRelation() {
-    if (reqCase_ == 6) {
-       return (com.aserto.directory.common.v3.Relation) req_;
-    }
-    return com.aserto.directory.common.v3.Relation.getDefaultInstance();
-  }
-  /**
-   * <pre>
-   * failed relation import message
-   * </pre>
-   *
-   * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-   */
-  @java.lang.Override
-  public com.aserto.directory.common.v3.RelationOrBuilder getRelationOrBuilder() {
-    if (reqCase_ == 6) {
-       return (com.aserto.directory.common.v3.Relation) req_;
-    }
-    return com.aserto.directory.common.v3.Relation.getDefaultInstance();
+  public com.aserto.directory.importer.v3.ImportRequestOrBuilder getReqOrBuilder() {
+    return req_ == null ? com.aserto.directory.importer.v3.ImportRequest.getDefaultInstance() : req_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -250,11 +161,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, msg_);
     }
-    if (reqCase_ == 5) {
-      output.writeMessage(5, (com.aserto.directory.common.v3.Object) req_);
-    }
-    if (reqCase_ == 6) {
-      output.writeMessage(6, (com.aserto.directory.common.v3.Relation) req_);
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(3, getReq());
     }
     getUnknownFields().writeTo(output);
   }
@@ -272,13 +180,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, msg_);
     }
-    if (reqCase_ == 5) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, (com.aserto.directory.common.v3.Object) req_);
-    }
-    if (reqCase_ == 6) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, (com.aserto.directory.common.v3.Relation) req_);
+        .computeMessageSize(3, getReq());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -299,18 +203,10 @@ private static final long serialVersionUID = 0L;
         != other.getCode()) return false;
     if (!getMsg()
         .equals(other.getMsg())) return false;
-    if (!getReqCase().equals(other.getReqCase())) return false;
-    switch (reqCase_) {
-      case 5:
-        if (!getObject()
-            .equals(other.getObject())) return false;
-        break;
-      case 6:
-        if (!getRelation()
-            .equals(other.getRelation())) return false;
-        break;
-      case 0:
-      default:
+    if (hasReq() != other.hasReq()) return false;
+    if (hasReq()) {
+      if (!getReq()
+          .equals(other.getReq())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -327,17 +223,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCode();
     hash = (37 * hash) + MSG_FIELD_NUMBER;
     hash = (53 * hash) + getMsg().hashCode();
-    switch (reqCase_) {
-      case 5:
-        hash = (37 * hash) + OBJECT_FIELD_NUMBER;
-        hash = (53 * hash) + getObject().hashCode();
-        break;
-      case 6:
-        hash = (37 * hash) + RELATION_FIELD_NUMBER;
-        hash = (53 * hash) + getRelation().hashCode();
-        break;
-      case 0:
-      default:
+    if (hasReq()) {
+      hash = (37 * hash) + REQ_FIELD_NUMBER;
+      hash = (53 * hash) + getReq().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -458,13 +346,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.aserto.directory.importer.v3.ImportStatus.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getReqFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -472,14 +366,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       code_ = 0;
       msg_ = "";
-      if (objectBuilder_ != null) {
-        objectBuilder_.clear();
-      }
-      if (relationBuilder_ != null) {
-        relationBuilder_.clear();
-      }
-      reqCase_ = 0;
       req_ = null;
+      if (reqBuilder_ != null) {
+        reqBuilder_.dispose();
+        reqBuilder_ = null;
+      }
       return this;
     }
 
@@ -507,7 +398,6 @@ private static final long serialVersionUID = 0L;
     public com.aserto.directory.importer.v3.ImportStatus buildPartial() {
       com.aserto.directory.importer.v3.ImportStatus result = new com.aserto.directory.importer.v3.ImportStatus(this);
       if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -520,19 +410,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.msg_ = msg_;
       }
-    }
-
-    private void buildPartialOneofs(com.aserto.directory.importer.v3.ImportStatus result) {
-      result.reqCase_ = reqCase_;
-      result.req_ = this.req_;
-      if (reqCase_ == 5 &&
-          objectBuilder_ != null) {
-        result.req_ = objectBuilder_.build();
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.req_ = reqBuilder_ == null
+            ? req_
+            : reqBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
-      if (reqCase_ == 6 &&
-          relationBuilder_ != null) {
-        result.req_ = relationBuilder_.build();
-      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -587,18 +472,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      switch (other.getReqCase()) {
-        case OBJECT: {
-          mergeObject(other.getObject());
-          break;
-        }
-        case RELATION: {
-          mergeRelation(other.getRelation());
-          break;
-        }
-        case REQ_NOT_SET: {
-          break;
-        }
+      if (other.hasReq()) {
+        mergeReq(other.getReq());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -636,20 +511,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 42: {
+            case 26: {
               input.readMessage(
-                  getObjectFieldBuilder().getBuilder(),
+                  getReqFieldBuilder().getBuilder(),
                   extensionRegistry);
-              reqCase_ = 5;
+              bitField0_ |= 0x00000004;
               break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getRelationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              reqCase_ = 6;
-              break;
-            } // case 50
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -665,21 +533,6 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int reqCase_ = 0;
-    private java.lang.Object req_;
-    public ReqCase
-        getReqCase() {
-      return ReqCase.forNumber(
-          reqCase_);
-    }
-
-    public Builder clearReq() {
-      reqCase_ = 0;
-      req_ = null;
-      onChanged();
-      return this;
-    }
-
     private int bitField0_;
 
     private int code_ ;
@@ -818,360 +671,161 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.aserto.directory.importer.v3.ImportRequest req_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.aserto.directory.common.v3.Object, com.aserto.directory.common.v3.Object.Builder, com.aserto.directory.common.v3.ObjectOrBuilder> objectBuilder_;
+        com.aserto.directory.importer.v3.ImportRequest, com.aserto.directory.importer.v3.ImportRequest.Builder, com.aserto.directory.importer.v3.ImportRequestOrBuilder> reqBuilder_;
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
-     * @return Whether the object field is set.
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
+     * @return Whether the req field is set.
      */
-    @java.lang.Override
-    public boolean hasObject() {
-      return reqCase_ == 5;
+    public boolean hasReq() {
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
-     * @return The object.
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
+     * @return The req.
      */
-    @java.lang.Override
-    public com.aserto.directory.common.v3.Object getObject() {
-      if (objectBuilder_ == null) {
-        if (reqCase_ == 5) {
-          return (com.aserto.directory.common.v3.Object) req_;
-        }
-        return com.aserto.directory.common.v3.Object.getDefaultInstance();
+    public com.aserto.directory.importer.v3.ImportRequest getReq() {
+      if (reqBuilder_ == null) {
+        return req_ == null ? com.aserto.directory.importer.v3.ImportRequest.getDefaultInstance() : req_;
       } else {
-        if (reqCase_ == 5) {
-          return objectBuilder_.getMessage();
-        }
-        return com.aserto.directory.common.v3.Object.getDefaultInstance();
+        return reqBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
      */
-    public Builder setObject(com.aserto.directory.common.v3.Object value) {
-      if (objectBuilder_ == null) {
+    public Builder setReq(com.aserto.directory.importer.v3.ImportRequest value) {
+      if (reqBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         req_ = value;
-        onChanged();
       } else {
-        objectBuilder_.setMessage(value);
+        reqBuilder_.setMessage(value);
       }
-      reqCase_ = 5;
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
      */
-    public Builder setObject(
-        com.aserto.directory.common.v3.Object.Builder builderForValue) {
-      if (objectBuilder_ == null) {
+    public Builder setReq(
+        com.aserto.directory.importer.v3.ImportRequest.Builder builderForValue) {
+      if (reqBuilder_ == null) {
         req_ = builderForValue.build();
-        onChanged();
       } else {
-        objectBuilder_.setMessage(builderForValue.build());
+        reqBuilder_.setMessage(builderForValue.build());
       }
-      reqCase_ = 5;
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
      */
-    public Builder mergeObject(com.aserto.directory.common.v3.Object value) {
-      if (objectBuilder_ == null) {
-        if (reqCase_ == 5 &&
-            req_ != com.aserto.directory.common.v3.Object.getDefaultInstance()) {
-          req_ = com.aserto.directory.common.v3.Object.newBuilder((com.aserto.directory.common.v3.Object) req_)
-              .mergeFrom(value).buildPartial();
+    public Builder mergeReq(com.aserto.directory.importer.v3.ImportRequest value) {
+      if (reqBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          req_ != null &&
+          req_ != com.aserto.directory.importer.v3.ImportRequest.getDefaultInstance()) {
+          getReqBuilder().mergeFrom(value);
         } else {
           req_ = value;
         }
+      } else {
+        reqBuilder_.mergeFrom(value);
+      }
+      if (req_ != null) {
+        bitField0_ |= 0x00000004;
         onChanged();
-      } else {
-        if (reqCase_ == 5) {
-          objectBuilder_.mergeFrom(value);
-        } else {
-          objectBuilder_.setMessage(value);
-        }
-      }
-      reqCase_ = 5;
-      return this;
-    }
-    /**
-     * <pre>
-     * failed object import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
-     */
-    public Builder clearObject() {
-      if (objectBuilder_ == null) {
-        if (reqCase_ == 5) {
-          reqCase_ = 0;
-          req_ = null;
-          onChanged();
-        }
-      } else {
-        if (reqCase_ == 5) {
-          reqCase_ = 0;
-          req_ = null;
-        }
-        objectBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
      */
-    public com.aserto.directory.common.v3.Object.Builder getObjectBuilder() {
-      return getObjectFieldBuilder().getBuilder();
+    public Builder clearReq() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      req_ = null;
+      if (reqBuilder_ != null) {
+        reqBuilder_.dispose();
+        reqBuilder_ = null;
+      }
+      onChanged();
+      return this;
     }
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
      */
-    @java.lang.Override
-    public com.aserto.directory.common.v3.ObjectOrBuilder getObjectOrBuilder() {
-      if ((reqCase_ == 5) && (objectBuilder_ != null)) {
-        return objectBuilder_.getMessageOrBuilder();
+    public com.aserto.directory.importer.v3.ImportRequest.Builder getReqBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getReqFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * req contains the original import request message
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
+     */
+    public com.aserto.directory.importer.v3.ImportRequestOrBuilder getReqOrBuilder() {
+      if (reqBuilder_ != null) {
+        return reqBuilder_.getMessageOrBuilder();
       } else {
-        if (reqCase_ == 5) {
-          return (com.aserto.directory.common.v3.Object) req_;
-        }
-        return com.aserto.directory.common.v3.Object.getDefaultInstance();
+        return req_ == null ?
+            com.aserto.directory.importer.v3.ImportRequest.getDefaultInstance() : req_;
       }
     }
     /**
      * <pre>
-     * failed object import message
+     * req contains the original import request message
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 5 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportRequest req = 3 [json_name = "req"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.aserto.directory.common.v3.Object, com.aserto.directory.common.v3.Object.Builder, com.aserto.directory.common.v3.ObjectOrBuilder> 
-        getObjectFieldBuilder() {
-      if (objectBuilder_ == null) {
-        if (!(reqCase_ == 5)) {
-          req_ = com.aserto.directory.common.v3.Object.getDefaultInstance();
-        }
-        objectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.aserto.directory.common.v3.Object, com.aserto.directory.common.v3.Object.Builder, com.aserto.directory.common.v3.ObjectOrBuilder>(
-                (com.aserto.directory.common.v3.Object) req_,
+        com.aserto.directory.importer.v3.ImportRequest, com.aserto.directory.importer.v3.ImportRequest.Builder, com.aserto.directory.importer.v3.ImportRequestOrBuilder> 
+        getReqFieldBuilder() {
+      if (reqBuilder_ == null) {
+        reqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.aserto.directory.importer.v3.ImportRequest, com.aserto.directory.importer.v3.ImportRequest.Builder, com.aserto.directory.importer.v3.ImportRequestOrBuilder>(
+                getReq(),
                 getParentForChildren(),
                 isClean());
         req_ = null;
       }
-      reqCase_ = 5;
-      onChanged();
-      return objectBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.aserto.directory.common.v3.Relation, com.aserto.directory.common.v3.Relation.Builder, com.aserto.directory.common.v3.RelationOrBuilder> relationBuilder_;
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     * @return Whether the relation field is set.
-     */
-    @java.lang.Override
-    public boolean hasRelation() {
-      return reqCase_ == 6;
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     * @return The relation.
-     */
-    @java.lang.Override
-    public com.aserto.directory.common.v3.Relation getRelation() {
-      if (relationBuilder_ == null) {
-        if (reqCase_ == 6) {
-          return (com.aserto.directory.common.v3.Relation) req_;
-        }
-        return com.aserto.directory.common.v3.Relation.getDefaultInstance();
-      } else {
-        if (reqCase_ == 6) {
-          return relationBuilder_.getMessage();
-        }
-        return com.aserto.directory.common.v3.Relation.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     */
-    public Builder setRelation(com.aserto.directory.common.v3.Relation value) {
-      if (relationBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        req_ = value;
-        onChanged();
-      } else {
-        relationBuilder_.setMessage(value);
-      }
-      reqCase_ = 6;
-      return this;
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     */
-    public Builder setRelation(
-        com.aserto.directory.common.v3.Relation.Builder builderForValue) {
-      if (relationBuilder_ == null) {
-        req_ = builderForValue.build();
-        onChanged();
-      } else {
-        relationBuilder_.setMessage(builderForValue.build());
-      }
-      reqCase_ = 6;
-      return this;
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     */
-    public Builder mergeRelation(com.aserto.directory.common.v3.Relation value) {
-      if (relationBuilder_ == null) {
-        if (reqCase_ == 6 &&
-            req_ != com.aserto.directory.common.v3.Relation.getDefaultInstance()) {
-          req_ = com.aserto.directory.common.v3.Relation.newBuilder((com.aserto.directory.common.v3.Relation) req_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          req_ = value;
-        }
-        onChanged();
-      } else {
-        if (reqCase_ == 6) {
-          relationBuilder_.mergeFrom(value);
-        } else {
-          relationBuilder_.setMessage(value);
-        }
-      }
-      reqCase_ = 6;
-      return this;
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     */
-    public Builder clearRelation() {
-      if (relationBuilder_ == null) {
-        if (reqCase_ == 6) {
-          reqCase_ = 0;
-          req_ = null;
-          onChanged();
-        }
-      } else {
-        if (reqCase_ == 6) {
-          reqCase_ = 0;
-          req_ = null;
-        }
-        relationBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     */
-    public com.aserto.directory.common.v3.Relation.Builder getRelationBuilder() {
-      return getRelationFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     */
-    @java.lang.Override
-    public com.aserto.directory.common.v3.RelationOrBuilder getRelationOrBuilder() {
-      if ((reqCase_ == 6) && (relationBuilder_ != null)) {
-        return relationBuilder_.getMessageOrBuilder();
-      } else {
-        if (reqCase_ == 6) {
-          return (com.aserto.directory.common.v3.Relation) req_;
-        }
-        return com.aserto.directory.common.v3.Relation.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * failed relation import message
-     * </pre>
-     *
-     * <code>.aserto.directory.common.v3.Relation relation = 6 [json_name = "relation"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.aserto.directory.common.v3.Relation, com.aserto.directory.common.v3.Relation.Builder, com.aserto.directory.common.v3.RelationOrBuilder> 
-        getRelationFieldBuilder() {
-      if (relationBuilder_ == null) {
-        if (!(reqCase_ == 6)) {
-          req_ = com.aserto.directory.common.v3.Relation.getDefaultInstance();
-        }
-        relationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.aserto.directory.common.v3.Relation, com.aserto.directory.common.v3.Relation.Builder, com.aserto.directory.common.v3.RelationOrBuilder>(
-                (com.aserto.directory.common.v3.Relation) req_,
-                getParentForChildren(),
-                isClean());
-        req_ = null;
-      }
-      reqCase_ = 6;
-      onChanged();
-      return relationBuilder_;
+      return reqBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

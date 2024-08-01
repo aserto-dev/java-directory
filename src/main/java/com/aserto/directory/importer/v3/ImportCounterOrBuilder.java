@@ -47,4 +47,24 @@ public interface ImportCounterOrBuilder extends
    * @return The error.
    */
   long getError();
+
+  /**
+   * <pre>
+   * counter of type (object|relation)
+   * </pre>
+   *
+   * <code>string type = 5 [json_name = "type"];</code>
+   * @return The type.
+   */
+  java.lang.String getType();
+  /**
+   * <pre>
+   * counter of type (object|relation)
+   * </pre>
+   *
+   * <code>string type = 5 [json_name = "type"];</code>
+   * @return The bytes for type.
+   */
+  com.google.protobuf.ByteString
+      getTypeBytes();
 }

@@ -40,6 +40,48 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
+  private int msgCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object msg_;
+  public enum MsgCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    STATUS(4),
+    COUNTER(5),
+    MSG_NOT_SET(0);
+    private final int value;
+    private MsgCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MsgCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static MsgCase forNumber(int value) {
+      switch (value) {
+        case 4: return STATUS;
+        case 5: return COUNTER;
+        case 0: return MSG_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public MsgCase
+  getMsgCase() {
+    return MsgCase.forNumber(
+        msgCase_);
+  }
+
   public static final int OBJECT_FIELD_NUMBER = 1;
   private com.aserto.directory.importer.v3.ImportCounter object_;
   /**
@@ -47,11 +89,13 @@ private static final long serialVersionUID = 0L;
    * object import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.object is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=26
    * @return Whether the object field is set.
    */
   @java.lang.Override
-  public boolean hasObject() {
+  @java.lang.Deprecated public boolean hasObject() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -59,11 +103,13 @@ private static final long serialVersionUID = 0L;
    * object import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.object is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=26
    * @return The object.
    */
   @java.lang.Override
-  public com.aserto.directory.importer.v3.ImportCounter getObject() {
+  @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounter getObject() {
     return object_ == null ? com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance() : object_;
   }
   /**
@@ -71,10 +117,10 @@ private static final long serialVersionUID = 0L;
    * object import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.aserto.directory.importer.v3.ImportCounterOrBuilder getObjectOrBuilder() {
+  @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounterOrBuilder getObjectOrBuilder() {
     return object_ == null ? com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance() : object_;
   }
 
@@ -85,11 +131,13 @@ private static final long serialVersionUID = 0L;
    * relation import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.relation is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=28
    * @return Whether the relation field is set.
    */
   @java.lang.Override
-  public boolean hasRelation() {
+  @java.lang.Deprecated public boolean hasRelation() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
@@ -97,11 +145,13 @@ private static final long serialVersionUID = 0L;
    * relation import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.relation is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=28
    * @return The relation.
    */
   @java.lang.Override
-  public com.aserto.directory.importer.v3.ImportCounter getRelation() {
+  @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounter getRelation() {
     return relation_ == null ? com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance() : relation_;
   }
   /**
@@ -109,49 +159,97 @@ private static final long serialVersionUID = 0L;
    * relation import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.aserto.directory.importer.v3.ImportCounterOrBuilder getRelationOrBuilder() {
+  @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounterOrBuilder getRelationOrBuilder() {
     return relation_ == null ? com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance() : relation_;
   }
 
-  public static final int STATUS_FIELD_NUMBER = 3;
-  private com.aserto.directory.importer.v3.ImportStatus status_;
+  public static final int STATUS_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * import status
+   * import status message
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
    * @return Whether the status field is set.
    */
   @java.lang.Override
   public boolean hasStatus() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return msgCase_ == 4;
   }
   /**
    * <pre>
-   * import status
+   * import status message
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
    * @return The status.
    */
   @java.lang.Override
   public com.aserto.directory.importer.v3.ImportStatus getStatus() {
-    return status_ == null ? com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+    if (msgCase_ == 4) {
+       return (com.aserto.directory.importer.v3.ImportStatus) msg_;
+    }
+    return com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance();
   }
   /**
    * <pre>
-   * import status
+   * import status message
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
    */
   @java.lang.Override
   public com.aserto.directory.importer.v3.ImportStatusOrBuilder getStatusOrBuilder() {
-    return status_ == null ? com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+    if (msgCase_ == 4) {
+       return (com.aserto.directory.importer.v3.ImportStatus) msg_;
+    }
+    return com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance();
+  }
+
+  public static final int COUNTER_FIELD_NUMBER = 5;
+  /**
+   * <pre>
+   * import counter per type
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+   * @return Whether the counter field is set.
+   */
+  @java.lang.Override
+  public boolean hasCounter() {
+    return msgCase_ == 5;
+  }
+  /**
+   * <pre>
+   * import counter per type
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+   * @return The counter.
+   */
+  @java.lang.Override
+  public com.aserto.directory.importer.v3.ImportCounter getCounter() {
+    if (msgCase_ == 5) {
+       return (com.aserto.directory.importer.v3.ImportCounter) msg_;
+    }
+    return com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * import counter per type
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+   */
+  @java.lang.Override
+  public com.aserto.directory.importer.v3.ImportCounterOrBuilder getCounterOrBuilder() {
+    if (msgCase_ == 5) {
+       return (com.aserto.directory.importer.v3.ImportCounter) msg_;
+    }
+    return com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -174,8 +272,11 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getRelation());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeMessage(3, getStatus());
+    if (msgCase_ == 4) {
+      output.writeMessage(4, (com.aserto.directory.importer.v3.ImportStatus) msg_);
+    }
+    if (msgCase_ == 5) {
+      output.writeMessage(5, (com.aserto.directory.importer.v3.ImportCounter) msg_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -194,9 +295,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getRelation());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (msgCase_ == 4) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getStatus());
+        .computeMessageSize(4, (com.aserto.directory.importer.v3.ImportStatus) msg_);
+    }
+    if (msgCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.aserto.directory.importer.v3.ImportCounter) msg_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -223,10 +328,18 @@ private static final long serialVersionUID = 0L;
       if (!getRelation()
           .equals(other.getRelation())) return false;
     }
-    if (hasStatus() != other.hasStatus()) return false;
-    if (hasStatus()) {
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
+    if (!getMsgCase().equals(other.getMsgCase())) return false;
+    switch (msgCase_) {
+      case 4:
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+        break;
+      case 5:
+        if (!getCounter()
+            .equals(other.getCounter())) return false;
+        break;
+      case 0:
+      default:
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -247,9 +360,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RELATION_FIELD_NUMBER;
       hash = (53 * hash) + getRelation().hashCode();
     }
-    if (hasStatus()) {
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
+    switch (msgCase_) {
+      case 4:
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+        break;
+      case 5:
+        hash = (37 * hash) + COUNTER_FIELD_NUMBER;
+        hash = (53 * hash) + getCounter().hashCode();
+        break;
+      case 0:
+      default:
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -383,7 +504,6 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getObjectFieldBuilder();
         getRelationFieldBuilder();
-        getStatusFieldBuilder();
       }
     }
     @java.lang.Override
@@ -400,11 +520,14 @@ private static final long serialVersionUID = 0L;
         relationBuilder_.dispose();
         relationBuilder_ = null;
       }
-      status_ = null;
       if (statusBuilder_ != null) {
-        statusBuilder_.dispose();
-        statusBuilder_ = null;
+        statusBuilder_.clear();
       }
+      if (counterBuilder_ != null) {
+        counterBuilder_.clear();
+      }
+      msgCase_ = 0;
+      msg_ = null;
       return this;
     }
 
@@ -432,6 +555,7 @@ private static final long serialVersionUID = 0L;
     public com.aserto.directory.importer.v3.ImportResponse buildPartial() {
       com.aserto.directory.importer.v3.ImportResponse result = new com.aserto.directory.importer.v3.ImportResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -451,13 +575,20 @@ private static final long serialVersionUID = 0L;
             : relationBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.status_ = statusBuilder_ == null
-            ? status_
-            : statusBuilder_.build();
-        to_bitField0_ |= 0x00000004;
-      }
       result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.aserto.directory.importer.v3.ImportResponse result) {
+      result.msgCase_ = msgCase_;
+      result.msg_ = this.msg_;
+      if (msgCase_ == 4 &&
+          statusBuilder_ != null) {
+        result.msg_ = statusBuilder_.build();
+      }
+      if (msgCase_ == 5 &&
+          counterBuilder_ != null) {
+        result.msg_ = counterBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -510,8 +641,18 @@ private static final long serialVersionUID = 0L;
       if (other.hasRelation()) {
         mergeRelation(other.getRelation());
       }
-      if (other.hasStatus()) {
-        mergeStatus(other.getStatus());
+      switch (other.getMsgCase()) {
+        case STATUS: {
+          mergeStatus(other.getStatus());
+          break;
+        }
+        case COUNTER: {
+          mergeCounter(other.getCounter());
+          break;
+        }
+        case MSG_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -553,13 +694,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
+            case 34: {
               input.readMessage(
                   getStatusFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000004;
+              msgCase_ = 4;
               break;
-            } // case 26
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getCounterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              msgCase_ = 5;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -575,6 +723,21 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int msgCase_ = 0;
+    private java.lang.Object msg_;
+    public MsgCase
+        getMsgCase() {
+      return MsgCase.forNumber(
+          msgCase_);
+    }
+
+    public Builder clearMsg() {
+      msgCase_ = 0;
+      msg_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private com.aserto.directory.importer.v3.ImportCounter object_;
@@ -585,10 +748,12 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
+     * @deprecated aserto.directory.importer.v3.ImportResponse.object is deprecated.
+     *     See aserto/directory/importer/v3/importer.proto;l=26
      * @return Whether the object field is set.
      */
-    public boolean hasObject() {
+    @java.lang.Deprecated public boolean hasObject() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -596,10 +761,12 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
+     * @deprecated aserto.directory.importer.v3.ImportResponse.object is deprecated.
+     *     See aserto/directory/importer/v3/importer.proto;l=26
      * @return The object.
      */
-    public com.aserto.directory.importer.v3.ImportCounter getObject() {
+    @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounter getObject() {
       if (objectBuilder_ == null) {
         return object_ == null ? com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance() : object_;
       } else {
@@ -611,9 +778,9 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
      */
-    public Builder setObject(com.aserto.directory.importer.v3.ImportCounter value) {
+    @java.lang.Deprecated public Builder setObject(com.aserto.directory.importer.v3.ImportCounter value) {
       if (objectBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -631,9 +798,9 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
      */
-    public Builder setObject(
+    @java.lang.Deprecated public Builder setObject(
         com.aserto.directory.importer.v3.ImportCounter.Builder builderForValue) {
       if (objectBuilder_ == null) {
         object_ = builderForValue.build();
@@ -649,9 +816,9 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
      */
-    public Builder mergeObject(com.aserto.directory.importer.v3.ImportCounter value) {
+    @java.lang.Deprecated public Builder mergeObject(com.aserto.directory.importer.v3.ImportCounter value) {
       if (objectBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           object_ != null &&
@@ -674,9 +841,9 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
      */
-    public Builder clearObject() {
+    @java.lang.Deprecated public Builder clearObject() {
       bitField0_ = (bitField0_ & ~0x00000001);
       object_ = null;
       if (objectBuilder_ != null) {
@@ -691,9 +858,9 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
      */
-    public com.aserto.directory.importer.v3.ImportCounter.Builder getObjectBuilder() {
+    @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounter.Builder getObjectBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getObjectFieldBuilder().getBuilder();
@@ -703,9 +870,9 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
      */
-    public com.aserto.directory.importer.v3.ImportCounterOrBuilder getObjectOrBuilder() {
+    @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounterOrBuilder getObjectOrBuilder() {
       if (objectBuilder_ != null) {
         return objectBuilder_.getMessageOrBuilder();
       } else {
@@ -718,7 +885,7 @@ private static final long serialVersionUID = 0L;
      * object import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aserto.directory.importer.v3.ImportCounter, com.aserto.directory.importer.v3.ImportCounter.Builder, com.aserto.directory.importer.v3.ImportCounterOrBuilder> 
@@ -742,10 +909,12 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
+     * @deprecated aserto.directory.importer.v3.ImportResponse.relation is deprecated.
+     *     See aserto/directory/importer/v3/importer.proto;l=28
      * @return Whether the relation field is set.
      */
-    public boolean hasRelation() {
+    @java.lang.Deprecated public boolean hasRelation() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -753,10 +922,12 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
+     * @deprecated aserto.directory.importer.v3.ImportResponse.relation is deprecated.
+     *     See aserto/directory/importer/v3/importer.proto;l=28
      * @return The relation.
      */
-    public com.aserto.directory.importer.v3.ImportCounter getRelation() {
+    @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounter getRelation() {
       if (relationBuilder_ == null) {
         return relation_ == null ? com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance() : relation_;
       } else {
@@ -768,9 +939,9 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
      */
-    public Builder setRelation(com.aserto.directory.importer.v3.ImportCounter value) {
+    @java.lang.Deprecated public Builder setRelation(com.aserto.directory.importer.v3.ImportCounter value) {
       if (relationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -788,9 +959,9 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
      */
-    public Builder setRelation(
+    @java.lang.Deprecated public Builder setRelation(
         com.aserto.directory.importer.v3.ImportCounter.Builder builderForValue) {
       if (relationBuilder_ == null) {
         relation_ = builderForValue.build();
@@ -806,9 +977,9 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
      */
-    public Builder mergeRelation(com.aserto.directory.importer.v3.ImportCounter value) {
+    @java.lang.Deprecated public Builder mergeRelation(com.aserto.directory.importer.v3.ImportCounter value) {
       if (relationBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           relation_ != null &&
@@ -831,9 +1002,9 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
      */
-    public Builder clearRelation() {
+    @java.lang.Deprecated public Builder clearRelation() {
       bitField0_ = (bitField0_ & ~0x00000002);
       relation_ = null;
       if (relationBuilder_ != null) {
@@ -848,9 +1019,9 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
      */
-    public com.aserto.directory.importer.v3.ImportCounter.Builder getRelationBuilder() {
+    @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounter.Builder getRelationBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getRelationFieldBuilder().getBuilder();
@@ -860,9 +1031,9 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
      */
-    public com.aserto.directory.importer.v3.ImportCounterOrBuilder getRelationOrBuilder() {
+    @java.lang.Deprecated public com.aserto.directory.importer.v3.ImportCounterOrBuilder getRelationOrBuilder() {
       if (relationBuilder_ != null) {
         return relationBuilder_.getMessageOrBuilder();
       } else {
@@ -875,7 +1046,7 @@ private static final long serialVersionUID = 0L;
      * relation import counter
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+     * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aserto.directory.importer.v3.ImportCounter, com.aserto.directory.importer.v3.ImportCounter.Builder, com.aserto.directory.importer.v3.ImportCounterOrBuilder> 
@@ -891,161 +1062,360 @@ private static final long serialVersionUID = 0L;
       return relationBuilder_;
     }
 
-    private com.aserto.directory.importer.v3.ImportStatus status_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aserto.directory.importer.v3.ImportStatus, com.aserto.directory.importer.v3.ImportStatus.Builder, com.aserto.directory.importer.v3.ImportStatusOrBuilder> statusBuilder_;
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      * @return Whether the status field is set.
      */
+    @java.lang.Override
     public boolean hasStatus() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return msgCase_ == 4;
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.aserto.directory.importer.v3.ImportStatus getStatus() {
       if (statusBuilder_ == null) {
-        return status_ == null ? com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+        if (msgCase_ == 4) {
+          return (com.aserto.directory.importer.v3.ImportStatus) msg_;
+        }
+        return com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance();
       } else {
-        return statusBuilder_.getMessage();
+        if (msgCase_ == 4) {
+          return statusBuilder_.getMessage();
+        }
+        return com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      */
     public Builder setStatus(com.aserto.directory.importer.v3.ImportStatus value) {
       if (statusBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        status_ = value;
+        msg_ = value;
+        onChanged();
       } else {
         statusBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      msgCase_ = 4;
       return this;
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      */
     public Builder setStatus(
         com.aserto.directory.importer.v3.ImportStatus.Builder builderForValue) {
       if (statusBuilder_ == null) {
-        status_ = builderForValue.build();
+        msg_ = builderForValue.build();
+        onChanged();
       } else {
         statusBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      msgCase_ = 4;
       return this;
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      */
     public Builder mergeStatus(com.aserto.directory.importer.v3.ImportStatus value) {
       if (statusBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          status_ != null &&
-          status_ != com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance()) {
-          getStatusBuilder().mergeFrom(value);
+        if (msgCase_ == 4 &&
+            msg_ != com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance()) {
+          msg_ = com.aserto.directory.importer.v3.ImportStatus.newBuilder((com.aserto.directory.importer.v3.ImportStatus) msg_)
+              .mergeFrom(value).buildPartial();
         } else {
-          status_ = value;
+          msg_ = value;
         }
-      } else {
-        statusBuilder_.mergeFrom(value);
-      }
-      if (status_ != null) {
-        bitField0_ |= 0x00000004;
         onChanged();
+      } else {
+        if (msgCase_ == 4) {
+          statusBuilder_.mergeFrom(value);
+        } else {
+          statusBuilder_.setMessage(value);
+        }
       }
+      msgCase_ = 4;
       return this;
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      */
     public Builder clearStatus() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      status_ = null;
-      if (statusBuilder_ != null) {
-        statusBuilder_.dispose();
-        statusBuilder_ = null;
+      if (statusBuilder_ == null) {
+        if (msgCase_ == 4) {
+          msgCase_ = 0;
+          msg_ = null;
+          onChanged();
+        }
+      } else {
+        if (msgCase_ == 4) {
+          msgCase_ = 0;
+          msg_ = null;
+        }
+        statusBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      */
     public com.aserto.directory.importer.v3.ImportStatus.Builder getStatusBuilder() {
-      bitField0_ |= 0x00000004;
-      onChanged();
       return getStatusFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      */
+    @java.lang.Override
     public com.aserto.directory.importer.v3.ImportStatusOrBuilder getStatusOrBuilder() {
-      if (statusBuilder_ != null) {
+      if ((msgCase_ == 4) && (statusBuilder_ != null)) {
         return statusBuilder_.getMessageOrBuilder();
       } else {
-        return status_ == null ?
-            com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance() : status_;
+        if (msgCase_ == 4) {
+          return (com.aserto.directory.importer.v3.ImportStatus) msg_;
+        }
+        return com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * import status
+     * import status message
      * </pre>
      *
-     * <code>.aserto.directory.importer.v3.ImportStatus status = 3 [json_name = "status"];</code>
+     * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aserto.directory.importer.v3.ImportStatus, com.aserto.directory.importer.v3.ImportStatus.Builder, com.aserto.directory.importer.v3.ImportStatusOrBuilder> 
         getStatusFieldBuilder() {
       if (statusBuilder_ == null) {
+        if (!(msgCase_ == 4)) {
+          msg_ = com.aserto.directory.importer.v3.ImportStatus.getDefaultInstance();
+        }
         statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.aserto.directory.importer.v3.ImportStatus, com.aserto.directory.importer.v3.ImportStatus.Builder, com.aserto.directory.importer.v3.ImportStatusOrBuilder>(
-                getStatus(),
+                (com.aserto.directory.importer.v3.ImportStatus) msg_,
                 getParentForChildren(),
                 isClean());
-        status_ = null;
+        msg_ = null;
       }
+      msgCase_ = 4;
+      onChanged();
       return statusBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aserto.directory.importer.v3.ImportCounter, com.aserto.directory.importer.v3.ImportCounter.Builder, com.aserto.directory.importer.v3.ImportCounterOrBuilder> counterBuilder_;
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     * @return Whether the counter field is set.
+     */
+    @java.lang.Override
+    public boolean hasCounter() {
+      return msgCase_ == 5;
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     * @return The counter.
+     */
+    @java.lang.Override
+    public com.aserto.directory.importer.v3.ImportCounter getCounter() {
+      if (counterBuilder_ == null) {
+        if (msgCase_ == 5) {
+          return (com.aserto.directory.importer.v3.ImportCounter) msg_;
+        }
+        return com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance();
+      } else {
+        if (msgCase_ == 5) {
+          return counterBuilder_.getMessage();
+        }
+        return com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     */
+    public Builder setCounter(com.aserto.directory.importer.v3.ImportCounter value) {
+      if (counterBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        msg_ = value;
+        onChanged();
+      } else {
+        counterBuilder_.setMessage(value);
+      }
+      msgCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     */
+    public Builder setCounter(
+        com.aserto.directory.importer.v3.ImportCounter.Builder builderForValue) {
+      if (counterBuilder_ == null) {
+        msg_ = builderForValue.build();
+        onChanged();
+      } else {
+        counterBuilder_.setMessage(builderForValue.build());
+      }
+      msgCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     */
+    public Builder mergeCounter(com.aserto.directory.importer.v3.ImportCounter value) {
+      if (counterBuilder_ == null) {
+        if (msgCase_ == 5 &&
+            msg_ != com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance()) {
+          msg_ = com.aserto.directory.importer.v3.ImportCounter.newBuilder((com.aserto.directory.importer.v3.ImportCounter) msg_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          msg_ = value;
+        }
+        onChanged();
+      } else {
+        if (msgCase_ == 5) {
+          counterBuilder_.mergeFrom(value);
+        } else {
+          counterBuilder_.setMessage(value);
+        }
+      }
+      msgCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     */
+    public Builder clearCounter() {
+      if (counterBuilder_ == null) {
+        if (msgCase_ == 5) {
+          msgCase_ = 0;
+          msg_ = null;
+          onChanged();
+        }
+      } else {
+        if (msgCase_ == 5) {
+          msgCase_ = 0;
+          msg_ = null;
+        }
+        counterBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     */
+    public com.aserto.directory.importer.v3.ImportCounter.Builder getCounterBuilder() {
+      return getCounterFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     */
+    @java.lang.Override
+    public com.aserto.directory.importer.v3.ImportCounterOrBuilder getCounterOrBuilder() {
+      if ((msgCase_ == 5) && (counterBuilder_ != null)) {
+        return counterBuilder_.getMessageOrBuilder();
+      } else {
+        if (msgCase_ == 5) {
+          return (com.aserto.directory.importer.v3.ImportCounter) msg_;
+        }
+        return com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * import counter per type
+     * </pre>
+     *
+     * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aserto.directory.importer.v3.ImportCounter, com.aserto.directory.importer.v3.ImportCounter.Builder, com.aserto.directory.importer.v3.ImportCounterOrBuilder> 
+        getCounterFieldBuilder() {
+      if (counterBuilder_ == null) {
+        if (!(msgCase_ == 5)) {
+          msg_ = com.aserto.directory.importer.v3.ImportCounter.getDefaultInstance();
+        }
+        counterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.aserto.directory.importer.v3.ImportCounter, com.aserto.directory.importer.v3.ImportCounter.Builder, com.aserto.directory.importer.v3.ImportCounterOrBuilder>(
+                (com.aserto.directory.importer.v3.ImportCounter) msg_,
+                getParentForChildren(),
+                isClean());
+        msg_ = null;
+      }
+      msgCase_ = 5;
+      onChanged();
+      return counterBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
