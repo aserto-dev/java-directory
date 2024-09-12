@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Assert() {
+    description_ = "";
   }
 
   @java.lang.Override
@@ -206,6 +207,53 @@ private static final long serialVersionUID = 0L;
     return com.aserto.directory.reader.v3.CheckPermissionRequest.getDefaultInstance();
   }
 
+  public static final int DESCRIPTION_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
+  /**
+   * <pre>
+   * description
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The description.
+   */
+  @java.lang.Override
+  public java.lang.String getDescription() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      description_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * description
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The bytes for description.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      description_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -234,6 +282,9 @@ private static final long serialVersionUID = 0L;
     }
     if (msgCase_ == 5) {
       output.writeMessage(5, (com.aserto.directory.reader.v3.CheckPermissionRequest) msg_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -264,6 +315,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, (com.aserto.directory.reader.v3.CheckPermissionRequest) msg_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -283,6 +337,8 @@ private static final long serialVersionUID = 0L;
         != other.getId()) return false;
     if (getExpected()
         != other.getExpected()) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
     if (!getMsgCase().equals(other.getMsgCase())) return false;
     switch (msgCase_) {
       case 3:
@@ -316,6 +372,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + EXPECTED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getExpected());
+    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getDescription().hashCode();
     switch (msgCase_) {
       case 3:
         hash = (37 * hash) + CHECK_FIELD_NUMBER;
@@ -474,6 +532,7 @@ private static final long serialVersionUID = 0L;
       if (checkPermissionBuilder_ != null) {
         checkPermissionBuilder_.clear();
       }
+      description_ = "";
       msgCase_ = 0;
       msg_ = null;
       return this;
@@ -515,6 +574,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.expected_ = expected_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.description_ = description_;
       }
     }
 
@@ -584,6 +646,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getExpected() != false) {
         setExpected(other.getExpected());
+      }
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
+        bitField0_ |= 0x00000020;
+        onChanged();
       }
       switch (other.getMsgCase()) {
         case CHECK: {
@@ -659,6 +726,11 @@ private static final long serialVersionUID = 0L;
               msgCase_ = 5;
               break;
             } // case 42
+            case 50: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1203,6 +1275,98 @@ private static final long serialVersionUID = 0L;
       msgCase_ = 5;
       onChanged();
       return checkPermissionBuilder_;
+    }
+
+    private java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * description
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * description
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * description
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @param value The description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      description_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * description
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDescription() {
+      description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * description
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      description_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
