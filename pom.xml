@@ -41,7 +41,7 @@
         <grpc.version>1.66.0</grpc.version>
         <protobuf.version>3.25.3</protobuf.version>
         <tomcat.annotation.api.version>6.0.53</tomcat.annotation.api.version>
-        <protovalidate.version>0.2.1</protovalidate.version>
+        <protovalidate.version>0.4.2</protovalidate.version>
     </properties>
 
     <dependencies>
