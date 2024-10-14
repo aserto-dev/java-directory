@@ -6,7 +6,7 @@
 
     <groupId>com.aserto</groupId>
     <artifactId>java-directory</artifactId>
-    <version>0.31.3</version>
+    <version>0.31.4</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Generated Java gRPC bindings for the Topaz and Aserto Directory Service; these are low-level bindings. For a more idiomatic development experience, we advise using the aserto-java and/or aserto-spring packages.</description>
@@ -70,7 +70,7 @@
             <groupId>build.buf</groupId>
             <artifactId>protovalidate</artifactId>
             <version>${protovalidate.version}</version>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>annotations-api</artifactId>
