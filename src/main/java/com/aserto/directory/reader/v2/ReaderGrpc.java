@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.64.0)",
+    value = "by gRPC proto compiler (version 1.68.1)",
     comments = "Source: aserto/directory/reader/v2/reader.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ReaderGrpc {
@@ -499,16 +499,21 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object type metadata methods
+     * get object type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     default void getObjectType(com.aserto.directory.reader.v2.GetObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectTypeMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * list object type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     default void getObjectTypes(com.aserto.directory.reader.v2.GetObjectTypesRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectTypesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectTypesMethod(), responseObserver);
@@ -516,16 +521,21 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation type metadata methods
+     * get relation type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     default void getRelationType(com.aserto.directory.reader.v2.GetRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationTypeMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * list relation type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     default void getRelationTypes(com.aserto.directory.reader.v2.GetRelationTypesRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationTypesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationTypesMethod(), responseObserver);
@@ -533,16 +543,21 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * permission metadata methods
+     * get permission metadata
      * </pre>
      */
+    @java.lang.Deprecated
     default void getPermission(com.aserto.directory.reader.v2.GetPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetPermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPermissionMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * list permission metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     default void getPermissions(com.aserto.directory.reader.v2.GetPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetPermissionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPermissionsMethod(), responseObserver);
@@ -550,23 +565,35 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object 
+     * Deprecated: directory.v2.GetObject is deprecated, use directory.v3.GetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getObject(com.aserto.directory.reader.v2.GetObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * Deprecated: directory.v2.GetObjectMany is deprecated, update to use directory.v3.GetObjectMany.
+     * </pre>
      */
+    @java.lang.Deprecated
     default void getObjectMany(com.aserto.directory.reader.v2.GetObjectManyRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectManyResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectManyMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * list objects
+     * Deprecated: directory.v2.GetObjects is deprecated, update to use directory.v3.GetObjects.
+     * </pre>
      */
+    @java.lang.Deprecated
     default void getObjects(com.aserto.directory.reader.v2.GetObjectsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectsMethod(), responseObserver);
@@ -574,16 +601,23 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
+     * Deprecated: directory.v2.GetRelation is deprecated, update to use directory.v3.GetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getRelation(com.aserto.directory.reader.v2.GetRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * list relations
+     * Deprecated: directory.v2.GetRelations is deprecated, update to use directory.v3.GetRelations.
+     * </pre>
      */
+    @java.lang.Deprecated
     default void getRelations(com.aserto.directory.reader.v2.GetRelationsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRelationsMethod(), responseObserver);
@@ -591,9 +625,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission
+     * Deprecated: directory.v2.CheckPermission is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     default void checkPermission(com.aserto.directory.reader.v2.CheckPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.CheckPermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckPermissionMethod(), responseObserver);
@@ -601,9 +637,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation
+     * Deprecated: directory.v2.CheckRelation is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     default void checkRelation(com.aserto.directory.reader.v2.CheckRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.CheckRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckRelationMethod(), responseObserver);
@@ -611,9 +649,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
+     * Deprecated: directory.v2.GetGraph is deprecated, update to use directory.v3.GetGraph.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getGraph(com.aserto.directory.reader.v2.GetGraphRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetGraphResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGraphMethod(), responseObserver);
@@ -649,9 +689,10 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object type metadata methods
+     * get object type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public void getObjectType(com.aserto.directory.reader.v2.GetObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -659,7 +700,11 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list object type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public void getObjectTypes(com.aserto.directory.reader.v2.GetObjectTypesRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectTypesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -668,9 +713,10 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation type metadata methods
+     * get relation type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public void getRelationType(com.aserto.directory.reader.v2.GetRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -678,7 +724,11 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relation type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public void getRelationTypes(com.aserto.directory.reader.v2.GetRelationTypesRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationTypesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -687,9 +737,10 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * permission metadata methods
+     * get permission metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public void getPermission(com.aserto.directory.reader.v2.GetPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetPermissionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -697,7 +748,11 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list permission metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public void getPermissions(com.aserto.directory.reader.v2.GetPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetPermissionsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -706,9 +761,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object 
+     * Deprecated: directory.v2.GetObject is deprecated, use directory.v3.GetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getObject(com.aserto.directory.reader.v2.GetObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -716,7 +773,12 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * Deprecated: directory.v2.GetObjectMany is deprecated, update to use directory.v3.GetObjectMany.
+     * </pre>
      */
+    @java.lang.Deprecated
     public void getObjectMany(com.aserto.directory.reader.v2.GetObjectManyRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectManyResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -724,7 +786,12 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list objects
+     * Deprecated: directory.v2.GetObjects is deprecated, update to use directory.v3.GetObjects.
+     * </pre>
      */
+    @java.lang.Deprecated
     public void getObjects(com.aserto.directory.reader.v2.GetObjectsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetObjectsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -733,9 +800,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
+     * Deprecated: directory.v2.GetRelation is deprecated, update to use directory.v3.GetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getRelation(com.aserto.directory.reader.v2.GetRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -743,7 +812,12 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relations
+     * Deprecated: directory.v2.GetRelations is deprecated, update to use directory.v3.GetRelations.
+     * </pre>
      */
+    @java.lang.Deprecated
     public void getRelations(com.aserto.directory.reader.v2.GetRelationsRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetRelationsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -752,9 +826,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission
+     * Deprecated: directory.v2.CheckPermission is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     public void checkPermission(com.aserto.directory.reader.v2.CheckPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.CheckPermissionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -763,9 +839,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation
+     * Deprecated: directory.v2.CheckRelation is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     public void checkRelation(com.aserto.directory.reader.v2.CheckRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.CheckRelationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -774,9 +852,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
+     * Deprecated: directory.v2.GetGraph is deprecated, update to use directory.v3.GetGraph.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getGraph(com.aserto.directory.reader.v2.GetGraphRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.reader.v2.GetGraphResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -802,16 +882,21 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object type metadata methods
+     * get object type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetObjectTypeResponse getObjectType(com.aserto.directory.reader.v2.GetObjectTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectTypeMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * list object type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetObjectTypesResponse getObjectTypes(com.aserto.directory.reader.v2.GetObjectTypesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectTypesMethod(), getCallOptions(), request);
@@ -819,16 +904,21 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation type metadata methods
+     * get relation type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetRelationTypeResponse getRelationType(com.aserto.directory.reader.v2.GetRelationTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRelationTypeMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * list relation type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetRelationTypesResponse getRelationTypes(com.aserto.directory.reader.v2.GetRelationTypesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRelationTypesMethod(), getCallOptions(), request);
@@ -836,16 +926,21 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * permission metadata methods
+     * get permission metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetPermissionResponse getPermission(com.aserto.directory.reader.v2.GetPermissionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPermissionMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * list permission metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetPermissionsResponse getPermissions(com.aserto.directory.reader.v2.GetPermissionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPermissionsMethod(), getCallOptions(), request);
@@ -853,23 +948,35 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object 
+     * Deprecated: directory.v2.GetObject is deprecated, use directory.v3.GetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetObjectResponse getObject(com.aserto.directory.reader.v2.GetObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * Deprecated: directory.v2.GetObjectMany is deprecated, update to use directory.v3.GetObjectMany.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetObjectManyResponse getObjectMany(com.aserto.directory.reader.v2.GetObjectManyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectManyMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * list objects
+     * Deprecated: directory.v2.GetObjects is deprecated, update to use directory.v3.GetObjects.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetObjectsResponse getObjects(com.aserto.directory.reader.v2.GetObjectsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectsMethod(), getCallOptions(), request);
@@ -877,16 +984,23 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
+     * Deprecated: directory.v2.GetRelation is deprecated, update to use directory.v3.GetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetRelationResponse getRelation(com.aserto.directory.reader.v2.GetRelationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRelationMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * list relations
+     * Deprecated: directory.v2.GetRelations is deprecated, update to use directory.v3.GetRelations.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetRelationsResponse getRelations(com.aserto.directory.reader.v2.GetRelationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRelationsMethod(), getCallOptions(), request);
@@ -894,9 +1008,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission
+     * Deprecated: directory.v2.CheckPermission is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.CheckPermissionResponse checkPermission(com.aserto.directory.reader.v2.CheckPermissionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckPermissionMethod(), getCallOptions(), request);
@@ -904,9 +1020,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation
+     * Deprecated: directory.v2.CheckRelation is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.CheckRelationResponse checkRelation(com.aserto.directory.reader.v2.CheckRelationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckRelationMethod(), getCallOptions(), request);
@@ -914,9 +1032,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
+     * Deprecated: directory.v2.GetGraph is deprecated, update to use directory.v3.GetGraph.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.reader.v2.GetGraphResponse getGraph(com.aserto.directory.reader.v2.GetGraphRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetGraphMethod(), getCallOptions(), request);
@@ -941,9 +1061,10 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object type metadata methods
+     * get object type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetObjectTypeResponse> getObjectType(
         com.aserto.directory.reader.v2.GetObjectTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -951,7 +1072,11 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list object type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetObjectTypesResponse> getObjectTypes(
         com.aserto.directory.reader.v2.GetObjectTypesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -960,9 +1085,10 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation type metadata methods
+     * get relation type metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetRelationTypeResponse> getRelationType(
         com.aserto.directory.reader.v2.GetRelationTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -970,7 +1096,11 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relation type metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetRelationTypesResponse> getRelationTypes(
         com.aserto.directory.reader.v2.GetRelationTypesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -979,9 +1109,10 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * permission metadata methods
+     * get permission metadata
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetPermissionResponse> getPermission(
         com.aserto.directory.reader.v2.GetPermissionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -989,7 +1120,11 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list permission metadata
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetPermissionsResponse> getPermissions(
         com.aserto.directory.reader.v2.GetPermissionsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -998,9 +1133,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * object methods
+     * get object 
+     * Deprecated: directory.v2.GetObject is deprecated, use directory.v3.GetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetObjectResponse> getObject(
         com.aserto.directory.reader.v2.GetObjectRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1008,7 +1145,12 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * get multiple objects
+     * Deprecated: directory.v2.GetObjectMany is deprecated, update to use directory.v3.GetObjectMany.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetObjectManyResponse> getObjectMany(
         com.aserto.directory.reader.v2.GetObjectManyRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1016,7 +1158,12 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list objects
+     * Deprecated: directory.v2.GetObjects is deprecated, update to use directory.v3.GetObjects.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetObjectsResponse> getObjects(
         com.aserto.directory.reader.v2.GetObjectsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1025,9 +1172,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * get relation
+     * Deprecated: directory.v2.GetRelation is deprecated, update to use directory.v3.GetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetRelationResponse> getRelation(
         com.aserto.directory.reader.v2.GetRelationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1035,7 +1184,12 @@ public final class ReaderGrpc {
     }
 
     /**
+     * <pre>
+     * list relations
+     * Deprecated: directory.v2.GetRelations is deprecated, update to use directory.v3.GetRelations.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetRelationsResponse> getRelations(
         com.aserto.directory.reader.v2.GetRelationsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1044,9 +1198,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check permission method
+     * check permission
+     * Deprecated: directory.v2.CheckPermission is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.CheckPermissionResponse> checkPermission(
         com.aserto.directory.reader.v2.CheckPermissionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1055,9 +1211,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * check relation method
+     * check relation
+     * Deprecated: directory.v2.CheckRelation is deprecated, update to use directory.v3.Check.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.CheckRelationResponse> checkRelation(
         com.aserto.directory.reader.v2.CheckRelationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1066,9 +1224,11 @@ public final class ReaderGrpc {
 
     /**
      * <pre>
-     * graph methods
+     * get object relationship graph
+     * Deprecated: directory.v2.GetGraph is deprecated, update to use directory.v3.GetGraph.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.reader.v2.GetGraphResponse> getGraph(
         com.aserto.directory.reader.v2.GetGraphRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

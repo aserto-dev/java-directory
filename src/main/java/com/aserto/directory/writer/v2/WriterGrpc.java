@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.64.0)",
+    value = "by gRPC proto compiler (version 1.68.1)",
     comments = "Source: aserto/directory/writer/v2/writer.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class WriterGrpc {
@@ -374,10 +374,8 @@ public final class WriterGrpc {
   public interface AsyncService {
 
     /**
-     * <pre>
-     * object type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     default void setObjectType(com.aserto.directory.writer.v2.SetObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetObjectTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetObjectTypeMethod(), responseObserver);
@@ -385,16 +383,15 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     default void deleteObjectType(com.aserto.directory.writer.v2.DeleteObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteObjectTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteObjectTypeMethod(), responseObserver);
     }
 
     /**
-     * <pre>
-     * relation type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     default void setRelationType(com.aserto.directory.writer.v2.SetRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetRelationTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetRelationTypeMethod(), responseObserver);
@@ -402,16 +399,15 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     default void deleteRelationType(com.aserto.directory.writer.v2.DeleteRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteRelationTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRelationTypeMethod(), responseObserver);
     }
 
     /**
-     * <pre>
-     * permission metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     default void setPermission(com.aserto.directory.writer.v2.SetPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetPermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPermissionMethod(), responseObserver);
@@ -419,6 +415,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     default void deletePermission(com.aserto.directory.writer.v2.DeletePermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeletePermissionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePermissionMethod(), responseObserver);
@@ -426,16 +423,23 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
+     * Deprecated: directory.v2.SetObject is deprecated, use directory.v3.SetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     default void setObject(com.aserto.directory.writer.v2.SetObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetObjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetObjectMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * Deprecated: directory.v2.DeleteObject is deprecated, use directory.v3.DeleteObject.
+     * </pre>
      */
+    @java.lang.Deprecated
     default void deleteObject(com.aserto.directory.writer.v2.DeleteObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteObjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteObjectMethod(), responseObserver);
@@ -443,16 +447,23 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
+     * Deprecated: directory.v2.SetRelation is deprecated, use directory.v3.SetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     default void setRelation(com.aserto.directory.writer.v2.SetRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetRelationMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * Deprecated: directory.v2.DeleteRelation is deprecated, use directory.v3.DeleteRelation.
+     * </pre>
      */
+    @java.lang.Deprecated
     default void deleteRelation(com.aserto.directory.writer.v2.DeleteRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteRelationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRelationMethod(), responseObserver);
@@ -487,10 +498,8 @@ public final class WriterGrpc {
     }
 
     /**
-     * <pre>
-     * object type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public void setObjectType(com.aserto.directory.writer.v2.SetObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetObjectTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -499,6 +508,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public void deleteObjectType(com.aserto.directory.writer.v2.DeleteObjectTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteObjectTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -506,10 +516,8 @@ public final class WriterGrpc {
     }
 
     /**
-     * <pre>
-     * relation type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public void setRelationType(com.aserto.directory.writer.v2.SetRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetRelationTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -518,6 +526,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public void deleteRelationType(com.aserto.directory.writer.v2.DeleteRelationTypeRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteRelationTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -525,10 +534,8 @@ public final class WriterGrpc {
     }
 
     /**
-     * <pre>
-     * permission metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public void setPermission(com.aserto.directory.writer.v2.SetPermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetPermissionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -537,6 +544,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public void deletePermission(com.aserto.directory.writer.v2.DeletePermissionRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeletePermissionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -545,9 +553,11 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
+     * Deprecated: directory.v2.SetObject is deprecated, use directory.v3.SetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     public void setObject(com.aserto.directory.writer.v2.SetObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetObjectResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -555,7 +565,12 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * Deprecated: directory.v2.DeleteObject is deprecated, use directory.v3.DeleteObject.
+     * </pre>
      */
+    @java.lang.Deprecated
     public void deleteObject(com.aserto.directory.writer.v2.DeleteObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteObjectResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -564,9 +579,11 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
+     * Deprecated: directory.v2.SetRelation is deprecated, use directory.v3.SetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     public void setRelation(com.aserto.directory.writer.v2.SetRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.SetRelationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -574,7 +591,12 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * Deprecated: directory.v2.DeleteRelation is deprecated, use directory.v3.DeleteRelation.
+     * </pre>
      */
+    @java.lang.Deprecated
     public void deleteRelation(com.aserto.directory.writer.v2.DeleteRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v2.DeleteRelationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -599,10 +621,8 @@ public final class WriterGrpc {
     }
 
     /**
-     * <pre>
-     * object type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.SetObjectTypeResponse setObjectType(com.aserto.directory.writer.v2.SetObjectTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetObjectTypeMethod(), getCallOptions(), request);
@@ -610,16 +630,15 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.DeleteObjectTypeResponse deleteObjectType(com.aserto.directory.writer.v2.DeleteObjectTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteObjectTypeMethod(), getCallOptions(), request);
     }
 
     /**
-     * <pre>
-     * relation type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.SetRelationTypeResponse setRelationType(com.aserto.directory.writer.v2.SetRelationTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetRelationTypeMethod(), getCallOptions(), request);
@@ -627,16 +646,15 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.DeleteRelationTypeResponse deleteRelationType(com.aserto.directory.writer.v2.DeleteRelationTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRelationTypeMethod(), getCallOptions(), request);
     }
 
     /**
-     * <pre>
-     * permission metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.SetPermissionResponse setPermission(com.aserto.directory.writer.v2.SetPermissionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetPermissionMethod(), getCallOptions(), request);
@@ -644,6 +662,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.DeletePermissionResponse deletePermission(com.aserto.directory.writer.v2.DeletePermissionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePermissionMethod(), getCallOptions(), request);
@@ -651,16 +670,23 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
+     * Deprecated: directory.v2.SetObject is deprecated, use directory.v3.SetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.SetObjectResponse setObject(com.aserto.directory.writer.v2.SetObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetObjectMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * Deprecated: directory.v2.DeleteObject is deprecated, use directory.v3.DeleteObject.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.DeleteObjectResponse deleteObject(com.aserto.directory.writer.v2.DeleteObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteObjectMethod(), getCallOptions(), request);
@@ -668,16 +694,23 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
+     * Deprecated: directory.v2.SetRelation is deprecated, use directory.v3.SetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.SetRelationResponse setRelation(com.aserto.directory.writer.v2.SetRelationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetRelationMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * Deprecated: directory.v2.DeleteRelation is deprecated, use directory.v3.DeleteRelation.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.aserto.directory.writer.v2.DeleteRelationResponse deleteRelation(com.aserto.directory.writer.v2.DeleteRelationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRelationMethod(), getCallOptions(), request);
@@ -701,10 +734,8 @@ public final class WriterGrpc {
     }
 
     /**
-     * <pre>
-     * object type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.SetObjectTypeResponse> setObjectType(
         com.aserto.directory.writer.v2.SetObjectTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -713,6 +744,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.DeleteObjectTypeResponse> deleteObjectType(
         com.aserto.directory.writer.v2.DeleteObjectTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -720,10 +752,8 @@ public final class WriterGrpc {
     }
 
     /**
-     * <pre>
-     * relation type metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.SetRelationTypeResponse> setRelationType(
         com.aserto.directory.writer.v2.SetRelationTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -732,6 +762,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.DeleteRelationTypeResponse> deleteRelationType(
         com.aserto.directory.writer.v2.DeleteRelationTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -739,10 +770,8 @@ public final class WriterGrpc {
     }
 
     /**
-     * <pre>
-     * permission metadata methods
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.SetPermissionResponse> setPermission(
         com.aserto.directory.writer.v2.SetPermissionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -751,6 +780,7 @@ public final class WriterGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.DeletePermissionResponse> deletePermission(
         com.aserto.directory.writer.v2.DeletePermissionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -759,9 +789,11 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
+     * Deprecated: directory.v2.SetObject is deprecated, use directory.v3.SetObject.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.SetObjectResponse> setObject(
         com.aserto.directory.writer.v2.SetObjectRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -769,7 +801,12 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * Deprecated: directory.v2.DeleteObject is deprecated, use directory.v3.DeleteObject.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.DeleteObjectResponse> deleteObject(
         com.aserto.directory.writer.v2.DeleteObjectRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -778,9 +815,11 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
+     * Deprecated: directory.v2.SetRelation is deprecated, use directory.v3.SetRelation.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.SetRelationResponse> setRelation(
         com.aserto.directory.writer.v2.SetRelationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -788,7 +827,12 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * Deprecated: directory.v2.DeleteRelation is deprecated, use directory.v3.DeleteRelation.
+     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v2.DeleteRelationResponse> deleteRelation(
         com.aserto.directory.writer.v2.DeleteRelationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

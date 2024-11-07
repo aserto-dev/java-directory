@@ -75,6 +75,13 @@ buf-generate:
 	@${EXT_BIN_DIR}/buf generate buf.build/grpc-ecosystem/grpc-gateway:v${GRPC_GATEWAY}
 	@${EXT_BIN_DIR}/buf generate buf.build/bufbuild/protovalidate:v${PROTO_VALIDATE}
 
+.PHONY: buf-generate-tag
+buf-generate-tag:
+	@echo -e "$(ATTN_COLOR)==> $@ ${BUF_REPO}:${BUF_TAG}$(NO_COLOR)"
+	@${EXT_BIN_DIR}/buf generate ${BUF_REPO}:${BUF_TAG}
+	@${EXT_BIN_DIR}/buf generate buf.build/grpc-ecosystem/grpc-gateway:v${GRPC_GATEWAY}
+	@${EXT_BIN_DIR}/buf generate buf.build/bufbuild/protovalidate:v${PROTO_VALIDATE}
+
 .PHONY: buf-generate-dev
 buf-generate-dev:
 	@echo -e "$(ATTN_COLOR)==> $@ ../${PROTO_REPO}/bin/${BUF_DEV_IMAGE}$(NO_COLOR)"

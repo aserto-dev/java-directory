@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.64.0)",
+    value = "by gRPC proto compiler (version 1.68.1)",
     comments = "Source: aserto/directory/model/v3/model.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ModelGrpc {
@@ -157,6 +157,9 @@ public final class ModelGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * get manifest instance
+     * </pre>
      */
     default void getManifest(com.aserto.directory.model.v3.GetManifestRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.GetManifestResponse> responseObserver) {
@@ -164,6 +167,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * set manifest instance
+     * </pre>
      */
     default io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.SetManifestRequest> setManifest(
         io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.SetManifestResponse> responseObserver) {
@@ -171,6 +177,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * delete manifest instance
+     * </pre>
      */
     default void deleteManifest(com.aserto.directory.model.v3.DeleteManifestRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.DeleteManifestResponse> responseObserver) {
@@ -206,6 +215,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * get manifest instance
+     * </pre>
      */
     public void getManifest(com.aserto.directory.model.v3.GetManifestRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.GetManifestResponse> responseObserver) {
@@ -214,6 +226,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * set manifest instance
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.SetManifestRequest> setManifest(
         io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.SetManifestResponse> responseObserver) {
@@ -222,6 +237,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * delete manifest instance
+     * </pre>
      */
     public void deleteManifest(com.aserto.directory.model.v3.DeleteManifestRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.model.v3.DeleteManifestResponse> responseObserver) {
@@ -247,6 +265,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * get manifest instance
+     * </pre>
      */
     public java.util.Iterator<com.aserto.directory.model.v3.GetManifestResponse> getManifest(
         com.aserto.directory.model.v3.GetManifestRequest request) {
@@ -255,6 +276,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * delete manifest instance
+     * </pre>
      */
     public com.aserto.directory.model.v3.DeleteManifestResponse deleteManifest(com.aserto.directory.model.v3.DeleteManifestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -279,6 +303,9 @@ public final class ModelGrpc {
     }
 
     /**
+     * <pre>
+     * delete manifest instance
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.model.v3.DeleteManifestResponse> deleteManifest(
         com.aserto.directory.model.v3.DeleteManifestRequest request) {

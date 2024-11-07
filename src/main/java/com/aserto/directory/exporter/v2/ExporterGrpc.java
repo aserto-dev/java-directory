@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.64.0)",
+    value = "by gRPC proto compiler (version 1.68.1)",
     comments = "Source: aserto/directory/exporter/v2/exporter.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ExporterGrpc {
@@ -95,7 +95,11 @@ public final class ExporterGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
+    @java.lang.Deprecated
     default void export(com.aserto.directory.exporter.v2.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v2.ExportResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportMethod(), responseObserver);
@@ -130,7 +134,11 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
+    @java.lang.Deprecated
     public void export(com.aserto.directory.exporter.v2.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v2.ExportResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
@@ -155,7 +163,11 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
+    @java.lang.Deprecated
     public java.util.Iterator<com.aserto.directory.exporter.v2.ExportResponse> export(
         com.aserto.directory.exporter.v2.ExportRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(

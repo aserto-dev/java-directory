@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.64.0)",
+    value = "by gRPC proto compiler (version 1.68.1)",
     comments = "Source: aserto/directory/exporter/v3/exporter.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ExporterGrpc {
@@ -95,6 +95,9 @@ public final class ExporterGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     default void export(com.aserto.directory.exporter.v3.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v3.ExportResponse> responseObserver) {
@@ -130,6 +133,9 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     public void export(com.aserto.directory.exporter.v3.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v3.ExportResponse> responseObserver) {
@@ -155,6 +161,9 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     public java.util.Iterator<com.aserto.directory.exporter.v3.ExportResponse> export(
         com.aserto.directory.exporter.v3.ExportRequest request) {
