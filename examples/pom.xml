@@ -18,7 +18,7 @@
         <dependency>
             <groupId>com.aserto</groupId>
             <artifactId>java-directory</artifactId>
-            <version>0.31.2</version>
+            <version>[0.31.4,)</version>
         </dependency>
 
         <!-- Used to load .env files -->
