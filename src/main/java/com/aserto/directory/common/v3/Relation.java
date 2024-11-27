@@ -413,7 +413,7 @@ private static final long serialVersionUID = 0L;
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The etag.
    */
   @java.lang.Override
@@ -434,7 +434,7 @@ private static final long serialVersionUID = 0L;
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The bytes for etag.
    */
   @java.lang.Override
@@ -1877,7 +1877,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return The etag.
      */
     public java.lang.String getEtag() {
@@ -1897,7 +1897,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return The bytes for etag.
      */
     public com.google.protobuf.ByteString
@@ -1918,7 +1918,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @param value The etag to set.
      * @return This builder for chaining.
      */
@@ -1935,7 +1935,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearEtag() {
@@ -1949,7 +1949,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @param value The bytes for etag to set.
      * @return This builder for chaining.
      */
