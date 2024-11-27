@@ -189,7 +189,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
      * </pre>
      */
     default void setObject(com.aserto.directory.writer.v3.SetObjectRequest request,
@@ -198,6 +198,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * </pre>
      */
     default void deleteObject(com.aserto.directory.writer.v3.DeleteObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v3.DeleteObjectResponse> responseObserver) {
@@ -206,7 +209,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
      * </pre>
      */
     default void setRelation(com.aserto.directory.writer.v3.SetRelationRequest request,
@@ -215,6 +218,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * </pre>
      */
     default void deleteRelation(com.aserto.directory.writer.v3.DeleteRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v3.DeleteRelationResponse> responseObserver) {
@@ -251,7 +257,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
      * </pre>
      */
     public void setObject(com.aserto.directory.writer.v3.SetObjectRequest request,
@@ -261,6 +267,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * </pre>
      */
     public void deleteObject(com.aserto.directory.writer.v3.DeleteObjectRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v3.DeleteObjectResponse> responseObserver) {
@@ -270,7 +279,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
      * </pre>
      */
     public void setRelation(com.aserto.directory.writer.v3.SetRelationRequest request,
@@ -280,6 +289,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * </pre>
      */
     public void deleteRelation(com.aserto.directory.writer.v3.DeleteRelationRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.writer.v3.DeleteRelationResponse> responseObserver) {
@@ -306,7 +318,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
      * </pre>
      */
     public com.aserto.directory.writer.v3.SetObjectResponse setObject(com.aserto.directory.writer.v3.SetObjectRequest request) {
@@ -315,6 +327,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * </pre>
      */
     public com.aserto.directory.writer.v3.DeleteObjectResponse deleteObject(com.aserto.directory.writer.v3.DeleteObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -323,7 +338,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
      * </pre>
      */
     public com.aserto.directory.writer.v3.SetRelationResponse setRelation(com.aserto.directory.writer.v3.SetRelationRequest request) {
@@ -332,6 +347,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * </pre>
      */
     public com.aserto.directory.writer.v3.DeleteRelationResponse deleteRelation(com.aserto.directory.writer.v3.DeleteRelationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -357,7 +375,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * object methods
+     * set object instance
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v3.SetObjectResponse> setObject(
@@ -367,6 +385,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete object instance
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v3.DeleteObjectResponse> deleteObject(
         com.aserto.directory.writer.v3.DeleteObjectRequest request) {
@@ -376,7 +397,7 @@ public final class WriterGrpc {
 
     /**
      * <pre>
-     * relation methods
+     * set relation instance
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v3.SetRelationResponse> setRelation(
@@ -386,6 +407,9 @@ public final class WriterGrpc {
     }
 
     /**
+     * <pre>
+     * delete relation instance
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aserto.directory.writer.v3.DeleteRelationResponse> deleteRelation(
         com.aserto.directory.writer.v3.DeleteRelationRequest request) {

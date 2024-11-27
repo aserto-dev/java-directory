@@ -73,5 +73,25 @@ public interface AssertOrBuilder extends
    */
   com.aserto.directory.reader.v3.CheckPermissionRequestOrBuilder getCheckPermissionOrBuilder();
 
+  /**
+   * <pre>
+   * description
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The description.
+   */
+  java.lang.String getDescription();
+  /**
+   * <pre>
+   * description
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The bytes for description.
+   */
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
+
   com.aserto.directory.assertion.v3.Assert.MsgCase getMsgCase();
 }

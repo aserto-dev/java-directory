@@ -93,7 +93,7 @@ public final class AssertionProto {
       "ssertion.v3.AssertR\006result\"-\n\026DeleteAsse" +
       "rtionRequest\022\023\n\002id\030\001 \001(\rB\003\340A\002R\002id\"I\n\027Del" +
       "eteAssertionResponse\022.\n\006result\030\001 \001(\0132\026.g" +
-      "oogle.protobuf.EmptyR\006result\"\276\002\n\006Assert\022" +
+      "oogle.protobuf.EmptyR\006result\"\340\002\n\006Assert\022" +
       "\016\n\002id\030\001 \001(\rR\002id\022\037\n\010expected\030\002 \001(\010B\003\340A\002R\010" +
       "expected\022@\n\005check\030\003 \001(\0132(.aserto.directo" +
       "ry.reader.v3.CheckRequestH\000R\005check\022Y\n\016ch" +
@@ -101,44 +101,45 @@ public final class AssertionProto {
       "ader.v3.CheckRelationRequestH\000R\rcheckRel" +
       "ation\022_\n\020check_permission\030\005 \001(\01322.aserto" +
       ".directory.reader.v3.CheckPermissionRequ" +
-      "estH\000R\017checkPermissionB\005\n\003msg2\242\t\n\tAssert" +
-      "ion\022\256\002\n\014GetAssertion\0222.aserto.directory." +
-      "assertion.v3.GetAssertionRequest\0323.asert" +
-      "o.directory.assertion.v3.GetAssertionRes" +
-      "ponse\"\264\001\222A\210\001\n\tdirectory\022\026Get assertion i" +
-      "nstance\032\"Returns single assertion instan" +
-      "ce.*\032directory.v3.assertion.getb#\n\023\n\017Dir" +
-      "ectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\"\022 /api" +
-      "/v3/directory/assertion/{id}\022\255\002\n\016ListAss" +
-      "ertions\0224.aserto.directory.assertion.v3." +
-      "ListAssertionsRequest\0325.aserto.directory" +
-      ".assertion.v3.ListAssertionsResponse\"\255\001\222" +
-      "A\205\001\n\tdirectory\022\017List assertions\032$Returns" +
-      " list of assertion instances.*\034directory" +
-      ".v3.assertions.listb#\n\023\n\017DirectoryAPIKey" +
-      "\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\036\022\034/api/v3/director" +
-      "y/assertions\022\216\002\n\014SetAssertion\0222.aserto.d" +
-      "irectory.assertion.v3.SetAssertionReques" +
-      "t\0323.aserto.directory.assertion.v3.SetAss" +
-      "ertionResponse\"\224\001\222Ak\n\tdirectory\022\rSet ass" +
-      "ertion\032\016Set assertion.*\032directory.v3.ass" +
-      "ertion.setb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010Ten" +
-      "antID\022\000\202\323\344\223\002 \"\033/api/v3/directory/asserti" +
-      "on:\001*\022\242\002\n\017DeleteAssertion\0225.aserto.direc" +
-      "tory.assertion.v3.DeleteAssertionRequest" +
-      "\0326.aserto.directory.assertion.v3.DeleteA" +
-      "ssertionResponse\"\237\001\222At\n\tdirectory\022\020Delet" +
-      "e assertion\032\021Delete assertion.*\035director" +
-      "y.v3.assertion.deleteb#\n\023\n\017DirectoryAPIK" +
-      "ey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\"* /api/v3/direct" +
-      "ory/assertion/{id}B\230\002\n!com.aserto.direct" +
-      "ory.assertion.v3B\016AssertionProtoP\001ZJgith" +
-      "ub.com/aserto-dev/go-directory/aserto/di" +
-      "rectory/assertion/v3;assertion\242\002\003ADA\252\002\035A" +
-      "serto.Directory.Assertion.V3\312\002\036Aserto\\Di" +
-      "rectory_\\Assertion\\V3\342\002*Aserto\\Directory" +
-      "_\\Assertion\\V3\\GPBMetadata\352\002 Aserto::Dir" +
-      "ectory::Assertion::V3b\006proto3"
+      "estH\000R\017checkPermission\022 \n\013description\030\006 " +
+      "\001(\tR\013descriptionB\005\n\003msg2\242\t\n\tAssertion\022\256\002" +
+      "\n\014GetAssertion\0222.aserto.directory.assert" +
+      "ion.v3.GetAssertionRequest\0323.aserto.dire" +
+      "ctory.assertion.v3.GetAssertionResponse\"" +
+      "\264\001\222A\210\001\n\tdirectory\022\026Get assertion instanc" +
+      "e\032\"Returns single assertion instance.*\032d" +
+      "irectory.v3.assertion.getb#\n\023\n\017Directory" +
+      "APIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\"\022 /api/v3/di" +
+      "rectory/assertion/{id}\022\255\002\n\016ListAssertion" +
+      "s\0224.aserto.directory.assertion.v3.ListAs" +
+      "sertionsRequest\0325.aserto.directory.asser" +
+      "tion.v3.ListAssertionsResponse\"\255\001\222A\205\001\n\td" +
+      "irectory\022\017List assertions\032$Returns list " +
+      "of assertion instances.*\034directory.v3.as" +
+      "sertions.listb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010" +
+      "TenantID\022\000\202\323\344\223\002\036\022\034/api/v3/directory/asse" +
+      "rtions\022\216\002\n\014SetAssertion\0222.aserto.directo" +
+      "ry.assertion.v3.SetAssertionRequest\0323.as" +
+      "erto.directory.assertion.v3.SetAssertion" +
+      "Response\"\224\001\222Ak\n\tdirectory\022\rSet assertion" +
+      "\032\016Set assertion.*\032directory.v3.assertion" +
+      ".setb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022" +
+      "\000\202\323\344\223\002 \"\033/api/v3/directory/assertion:\001*\022" +
+      "\242\002\n\017DeleteAssertion\0225.aserto.directory.a" +
+      "ssertion.v3.DeleteAssertionRequest\0326.ase" +
+      "rto.directory.assertion.v3.DeleteAsserti" +
+      "onResponse\"\237\001\222At\n\tdirectory\022\020Delete asse" +
+      "rtion\032\021Delete assertion.*\035directory.v3.a" +
+      "ssertion.deleteb#\n\023\n\017DirectoryAPIKey\022\000\n\014" +
+      "\n\010TenantID\022\000\202\323\344\223\002\"* /api/v3/directory/as" +
+      "sertion/{id}B\230\002\n!com.aserto.directory.as" +
+      "sertion.v3B\016AssertionProtoP\001ZJgithub.com" +
+      "/aserto-dev/go-directory/aserto/director" +
+      "y/assertion/v3;assertion\242\002\003ADA\252\002\035Aserto." +
+      "Directory.Assertion.V3\312\002\036Aserto\\Director" +
+      "y_\\Assertion\\V3\342\002*Aserto\\Directory_\\Asse" +
+      "rtion\\V3\\GPBMetadata\352\002 Aserto::Directory" +
+      "::Assertion::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -203,7 +204,7 @@ public final class AssertionProto {
     internal_static_aserto_directory_assertion_v3_Assert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aserto_directory_assertion_v3_Assert_descriptor,
-        new java.lang.String[] { "Id", "Expected", "Check", "CheckRelation", "CheckPermission", "Msg", });
+        new java.lang.String[] { "Id", "Expected", "Check", "CheckRelation", "CheckPermission", "Description", "Msg", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

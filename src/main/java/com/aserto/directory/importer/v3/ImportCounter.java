@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ImportCounter() {
+    type_ = "";
   }
 
   @java.lang.Override
@@ -99,6 +100,53 @@ private static final long serialVersionUID = 0L;
     return error_;
   }
 
+  public static final int TYPE_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object type_ = "";
+  /**
+   * <pre>
+   * counter of type (object|relation)
+   * </pre>
+   *
+   * <code>string type = 5 [json_name = "type"];</code>
+   * @return The type.
+   */
+  @java.lang.Override
+  public java.lang.String getType() {
+    java.lang.Object ref = type_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      type_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * counter of type (object|relation)
+   * </pre>
+   *
+   * <code>string type = 5 [json_name = "type"];</code>
+   * @return The bytes for type.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTypeBytes() {
+    java.lang.Object ref = type_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      type_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -125,6 +173,9 @@ private static final long serialVersionUID = 0L;
     if (error_ != 0L) {
       output.writeUInt64(4, error_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, type_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -150,6 +201,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(4, error_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, type_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -173,6 +227,8 @@ private static final long serialVersionUID = 0L;
         != other.getDelete()) return false;
     if (getError()
         != other.getError()) return false;
+    if (!getType()
+        .equals(other.getType())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -196,6 +252,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ERROR_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getError());
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getType().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -331,6 +389,7 @@ private static final long serialVersionUID = 0L;
       set_ = 0L;
       delete_ = 0L;
       error_ = 0L;
+      type_ = "";
       return this;
     }
 
@@ -375,6 +434,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.error_ = error_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.type_ = type_;
       }
     }
 
@@ -434,6 +496,11 @@ private static final long serialVersionUID = 0L;
       if (other.getError() != 0L) {
         setError(other.getError());
       }
+      if (!other.getType().isEmpty()) {
+        type_ = other.type_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -480,6 +547,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              type_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -669,6 +741,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000008);
       error_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object type_ = "";
+    /**
+     * <pre>
+     * counter of type (object|relation)
+     * </pre>
+     *
+     * <code>string type = 5 [json_name = "type"];</code>
+     * @return The type.
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * counter of type (object|relation)
+     * </pre>
+     *
+     * <code>string type = 5 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * counter of type (object|relation)
+     * </pre>
+     *
+     * <code>string type = 5 [json_name = "type"];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      type_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * counter of type (object|relation)
+     * </pre>
+     *
+     * <code>string type = 5 [json_name = "type"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      type_ = getDefaultInstance().getType();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * counter of type (object|relation)
+     * </pre>
+     *
+     * <code>string type = 5 [json_name = "type"];</code>
+     * @param value The bytes for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      type_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

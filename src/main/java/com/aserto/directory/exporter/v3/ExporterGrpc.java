@@ -95,6 +95,9 @@ public final class ExporterGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     default void export(com.aserto.directory.exporter.v3.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v3.ExportResponse> responseObserver) {
@@ -130,6 +133,9 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     public void export(com.aserto.directory.exporter.v3.ExportRequest request,
         io.grpc.stub.StreamObserver<com.aserto.directory.exporter.v3.ExportResponse> responseObserver) {
@@ -155,6 +161,9 @@ public final class ExporterGrpc {
     }
 
     /**
+     * <pre>
+     * export objects and relations as a stream
+     * </pre>
      */
     public java.util.Iterator<com.aserto.directory.exporter.v3.ExportResponse> export(
         com.aserto.directory.exporter.v3.ExportRequest request) {

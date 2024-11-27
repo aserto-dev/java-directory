@@ -58,4 +58,31 @@ public interface CheckResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTraceBytes(int index);
+
+  /**
+   * <pre>
+   * context
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+   * @return Whether the context field is set.
+   */
+  boolean hasContext();
+  /**
+   * <pre>
+   * context
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+   * @return The context.
+   */
+  com.google.protobuf.Struct getContext();
+  /**
+   * <pre>
+   * context
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+   */
+  com.google.protobuf.StructOrBuilder getContextOrBuilder();
 }

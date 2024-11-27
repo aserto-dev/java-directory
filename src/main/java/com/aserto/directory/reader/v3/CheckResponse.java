@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
             com.aserto.directory.reader.v3.CheckResponse.class, com.aserto.directory.reader.v3.CheckResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CHECK_FIELD_NUMBER = 1;
   private boolean check_ = false;
   /**
@@ -109,6 +110,44 @@ private static final long serialVersionUID = 0L;
     return trace_.getByteString(index);
   }
 
+  public static final int CONTEXT_FIELD_NUMBER = 3;
+  private com.google.protobuf.Struct context_;
+  /**
+   * <pre>
+   * context
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+   * @return Whether the context field is set.
+   */
+  @java.lang.Override
+  public boolean hasContext() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * context
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+   * @return The context.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Struct getContext() {
+    return context_ == null ? com.google.protobuf.Struct.getDefaultInstance() : context_;
+  }
+  /**
+   * <pre>
+   * context
+   * </pre>
+   *
+   * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StructOrBuilder getContextOrBuilder() {
+    return context_ == null ? com.google.protobuf.Struct.getDefaultInstance() : context_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -128,6 +167,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < trace_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, trace_.getRaw(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(3, getContext());
     }
     getUnknownFields().writeTo(output);
   }
@@ -150,6 +192,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTraceList().size();
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getContext());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -169,6 +215,11 @@ private static final long serialVersionUID = 0L;
         != other.getCheck()) return false;
     if (!getTraceList()
         .equals(other.getTraceList())) return false;
+    if (hasContext() != other.hasContext()) return false;
+    if (hasContext()) {
+      if (!getContext()
+          .equals(other.getContext())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -186,6 +237,10 @@ private static final long serialVersionUID = 0L;
     if (getTraceCount() > 0) {
       hash = (37 * hash) + TRACE_FIELD_NUMBER;
       hash = (53 * hash) + getTraceList().hashCode();
+    }
+    if (hasContext()) {
+      hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getContext().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -306,13 +361,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.aserto.directory.reader.v3.CheckResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getContextFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -321,6 +382,11 @@ private static final long serialVersionUID = 0L;
       check_ = false;
       trace_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      context_ = null;
+      if (contextBuilder_ != null) {
+        contextBuilder_.dispose();
+        contextBuilder_ = null;
+      }
       return this;
     }
 
@@ -361,6 +427,14 @@ private static final long serialVersionUID = 0L;
         trace_.makeImmutable();
         result.trace_ = trace_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.context_ = contextBuilder_ == null
+            ? context_
+            : contextBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -420,6 +494,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasContext()) {
+        mergeContext(other.getContext());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -457,6 +534,13 @@ private static final long serialVersionUID = 0L;
               trace_.add(s);
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getContextFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -663,6 +747,163 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Struct context_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> contextBuilder_;
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     * @return Whether the context field is set.
+     */
+    public boolean hasContext() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     * @return The context.
+     */
+    public com.google.protobuf.Struct getContext() {
+      if (contextBuilder_ == null) {
+        return context_ == null ? com.google.protobuf.Struct.getDefaultInstance() : context_;
+      } else {
+        return contextBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     */
+    public Builder setContext(com.google.protobuf.Struct value) {
+      if (contextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        context_ = value;
+      } else {
+        contextBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     */
+    public Builder setContext(
+        com.google.protobuf.Struct.Builder builderForValue) {
+      if (contextBuilder_ == null) {
+        context_ = builderForValue.build();
+      } else {
+        contextBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     */
+    public Builder mergeContext(com.google.protobuf.Struct value) {
+      if (contextBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          context_ != null &&
+          context_ != com.google.protobuf.Struct.getDefaultInstance()) {
+          getContextBuilder().mergeFrom(value);
+        } else {
+          context_ = value;
+        }
+      } else {
+        contextBuilder_.mergeFrom(value);
+      }
+      if (context_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     */
+    public Builder clearContext() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      context_ = null;
+      if (contextBuilder_ != null) {
+        contextBuilder_.dispose();
+        contextBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     */
+    public com.google.protobuf.Struct.Builder getContextBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getContextFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     */
+    public com.google.protobuf.StructOrBuilder getContextOrBuilder() {
+      if (contextBuilder_ != null) {
+        return contextBuilder_.getMessageOrBuilder();
+      } else {
+        return context_ == null ?
+            com.google.protobuf.Struct.getDefaultInstance() : context_;
+      }
+    }
+    /**
+     * <pre>
+     * context
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct context = 3 [json_name = "context"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+        getContextFieldBuilder() {
+      if (contextBuilder_ == null) {
+        contextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                getContext(),
+                getParentForChildren(),
+                isClean());
+        context_ = null;
+      }
+      return contextBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -187,7 +187,7 @@ public interface RelationOrBuilder extends
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The etag.
    */
   java.lang.String getEtag();
@@ -196,7 +196,7 @@ public interface RelationOrBuilder extends
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The bytes for etag.
    */
   com.google.protobuf.ByteString

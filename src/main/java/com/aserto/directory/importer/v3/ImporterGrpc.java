@@ -95,6 +95,9 @@ public final class ImporterGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * import stream of objects and relations
+     * </pre>
      */
     default io.grpc.stub.StreamObserver<com.aserto.directory.importer.v3.ImportRequest> import_(
         io.grpc.stub.StreamObserver<com.aserto.directory.importer.v3.ImportResponse> responseObserver) {
@@ -130,6 +133,9 @@ public final class ImporterGrpc {
     }
 
     /**
+     * <pre>
+     * import stream of objects and relations
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<com.aserto.directory.importer.v3.ImportRequest> import_(
         io.grpc.stub.StreamObserver<com.aserto.directory.importer.v3.ImportResponse> responseObserver) {

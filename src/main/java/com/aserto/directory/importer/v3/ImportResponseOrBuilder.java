@@ -13,52 +13,116 @@ public interface ImportResponseOrBuilder extends
    * object import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.object is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=26
    * @return Whether the object field is set.
    */
-  boolean hasObject();
+  @java.lang.Deprecated boolean hasObject();
   /**
    * <pre>
    * object import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.object is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=26
    * @return The object.
    */
-  com.aserto.directory.importer.v3.ImportCounter getObject();
+  @java.lang.Deprecated com.aserto.directory.importer.v3.ImportCounter getObject();
   /**
    * <pre>
    * object import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter object = 1 [json_name = "object", deprecated = true];</code>
    */
-  com.aserto.directory.importer.v3.ImportCounterOrBuilder getObjectOrBuilder();
+  @java.lang.Deprecated com.aserto.directory.importer.v3.ImportCounterOrBuilder getObjectOrBuilder();
 
   /**
    * <pre>
    * relation import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.relation is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=28
    * @return Whether the relation field is set.
    */
-  boolean hasRelation();
+  @java.lang.Deprecated boolean hasRelation();
   /**
    * <pre>
    * relation import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
+   * @deprecated aserto.directory.importer.v3.ImportResponse.relation is deprecated.
+   *     See aserto/directory/importer/v3/importer.proto;l=28
    * @return The relation.
    */
-  com.aserto.directory.importer.v3.ImportCounter getRelation();
+  @java.lang.Deprecated com.aserto.directory.importer.v3.ImportCounter getRelation();
   /**
    * <pre>
    * relation import counter
    * </pre>
    *
-   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation"];</code>
+   * <code>.aserto.directory.importer.v3.ImportCounter relation = 2 [json_name = "relation", deprecated = true];</code>
    */
-  com.aserto.directory.importer.v3.ImportCounterOrBuilder getRelationOrBuilder();
+  @java.lang.Deprecated com.aserto.directory.importer.v3.ImportCounterOrBuilder getRelationOrBuilder();
+
+  /**
+   * <pre>
+   * import status message
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
+   * @return Whether the status field is set.
+   */
+  boolean hasStatus();
+  /**
+   * <pre>
+   * import status message
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.aserto.directory.importer.v3.ImportStatus getStatus();
+  /**
+   * <pre>
+   * import status message
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportStatus status = 4 [json_name = "status"];</code>
+   */
+  com.aserto.directory.importer.v3.ImportStatusOrBuilder getStatusOrBuilder();
+
+  /**
+   * <pre>
+   * import counter per type
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+   * @return Whether the counter field is set.
+   */
+  boolean hasCounter();
+  /**
+   * <pre>
+   * import counter per type
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+   * @return The counter.
+   */
+  com.aserto.directory.importer.v3.ImportCounter getCounter();
+  /**
+   * <pre>
+   * import counter per type
+   * </pre>
+   *
+   * <code>.aserto.directory.importer.v3.ImportCounter counter = 5 [json_name = "counter"];</code>
+   */
+  com.aserto.directory.importer.v3.ImportCounterOrBuilder getCounterOrBuilder();
+
+  com.aserto.directory.importer.v3.ImportResponse.MsgCase getMsgCase();
 }
