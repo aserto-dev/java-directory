@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * display name object
    * </pre>
    *
-   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The displayName.
    */
   @java.lang.Override
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * display name object
    * </pre>
    *
-   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The bytes for displayName.
    */
   @java.lang.Override
@@ -307,7 +307,7 @@ private static final long serialVersionUID = 0L;
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The etag.
    */
   @java.lang.Override
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
    * @return The bytes for etag.
    */
   @java.lang.Override
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
@@ -1075,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return The bytes for displayName.
      */
     public com.google.protobuf.ByteString
@@ -1096,7 +1096,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
@@ -1113,7 +1113,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
@@ -1127,7 +1127,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */
@@ -1618,7 +1618,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return The etag.
      */
     public java.lang.String getEtag() {
@@ -1638,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return The bytes for etag.
      */
     public com.google.protobuf.ByteString
@@ -1659,7 +1659,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @param value The etag to set.
      * @return This builder for chaining.
      */
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearEtag() {
@@ -1690,7 +1690,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
      * @param value The bytes for etag to set.
      * @return This builder for chaining.
      */
