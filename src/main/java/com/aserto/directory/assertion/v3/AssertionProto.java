@@ -102,34 +102,35 @@ public final class AssertionProto {
       "ation\022_\n\020check_permission\030\005 \001(\01322.aserto" +
       ".directory.reader.v3.CheckPermissionRequ" +
       "estH\000R\017checkPermission\022 \n\013description\030\006 " +
-      "\001(\tR\013descriptionB\005\n\003msg2\242\t\n\tAssertion\022\256\002" +
+      "\001(\tR\013descriptionB\005\n\003msg2\312\t\n\tAssertion\022\270\002" +
       "\n\014GetAssertion\0222.aserto.directory.assert" +
       "ion.v3.GetAssertionRequest\0323.aserto.dire" +
       "ctory.assertion.v3.GetAssertionResponse\"" +
-      "\264\001\222A\210\001\n\tdirectory\022\026Get assertion instanc" +
-      "e\032\"Returns single assertion instance.*\032d" +
-      "irectory.v3.assertion.getb#\n\023\n\017Directory" +
-      "APIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\"\022 /api/v3/di" +
-      "rectory/assertion/{id}\022\255\002\n\016ListAssertion" +
-      "s\0224.aserto.directory.assertion.v3.ListAs" +
-      "sertionsRequest\0325.aserto.directory.asser" +
-      "tion.v3.ListAssertionsResponse\"\255\001\222A\205\001\n\td" +
-      "irectory\022\017List assertions\032$Returns list " +
-      "of assertion instances.*\034directory.v3.as" +
-      "sertions.listb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010" +
-      "TenantID\022\000\202\323\344\223\002\036\022\034/api/v3/directory/asse" +
-      "rtions\022\216\002\n\014SetAssertion\0222.aserto.directo" +
-      "ry.assertion.v3.SetAssertionRequest\0323.as" +
-      "erto.directory.assertion.v3.SetAssertion" +
-      "Response\"\224\001\222Ak\n\tdirectory\022\rSet assertion" +
-      "\032\016Set assertion.*\032directory.v3.assertion" +
-      ".setb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022" +
-      "\000\202\323\344\223\002 \"\033/api/v3/directory/assertion:\001*\022" +
-      "\242\002\n\017DeleteAssertion\0225.aserto.directory.a" +
-      "ssertion.v3.DeleteAssertionRequest\0326.ase" +
-      "rto.directory.assertion.v3.DeleteAsserti" +
-      "onResponse\"\237\001\222At\n\tdirectory\022\020Delete asse" +
-      "rtion\032\021Delete assertion.*\035directory.v3.a" +
+      "\276\001\222A\222\001\n\tdirectory\022\026Get assertion instanc" +
+      "e\032\"Returns single assertion instance.*$d" +
+      "irectory.assertion.v3.assertion.getb#\n\023\n" +
+      "\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\"\022 " +
+      "/api/v3/directory/assertion/{id}\022\267\002\n\016Lis" +
+      "tAssertions\0224.aserto.directory.assertion" +
+      ".v3.ListAssertionsRequest\0325.aserto.direc" +
+      "tory.assertion.v3.ListAssertionsResponse" +
+      "\"\267\001\222A\217\001\n\tdirectory\022\017List assertions\032$Ret" +
+      "urns list of assertion instances.*&direc" +
+      "tory.assertion.v3.assertions.listb#\n\023\n\017D" +
+      "irectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\036\022\034/a" +
+      "pi/v3/directory/assertions\022\230\002\n\014SetAssert" +
+      "ion\0222.aserto.directory.assertion.v3.SetA" +
+      "ssertionRequest\0323.aserto.directory.asser" +
+      "tion.v3.SetAssertionResponse\"\236\001\222Au\n\tdire" +
+      "ctory\022\rSet assertion\032\016Set assertion.*$di" +
+      "rectory.assertion.v3.assertion.setb#\n\023\n\017" +
+      "DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002 \"\033/" +
+      "api/v3/directory/assertion:\001*\022\254\002\n\017Delete" +
+      "Assertion\0225.aserto.directory.assertion.v" +
+      "3.DeleteAssertionRequest\0326.aserto.direct" +
+      "ory.assertion.v3.DeleteAssertionResponse" +
+      "\"\251\001\222A~\n\tdirectory\022\020Delete assertion\032\021Del" +
+      "ete assertion.*\'directory.assertion.v3.a" +
       "ssertion.deleteb#\n\023\n\017DirectoryAPIKey\022\000\n\014" +
       "\n\010TenantID\022\000\202\323\344\223\002\"* /api/v3/directory/as" +
       "sertion/{id}B\230\002\n!com.aserto.directory.as" +

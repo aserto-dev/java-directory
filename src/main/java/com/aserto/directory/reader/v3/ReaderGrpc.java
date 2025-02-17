@@ -446,7 +446,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check permission (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated
@@ -458,7 +458,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check relation (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated
@@ -585,7 +585,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check permission (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated
@@ -598,7 +598,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check relation (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated
@@ -709,7 +709,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check permission (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated
@@ -721,7 +721,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check relation (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated
@@ -837,7 +837,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check permission (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated
@@ -850,7 +850,7 @@ public final class ReaderGrpc {
     /**
      * <pre>
      * check relation (deprecated, use the check method)
-     * Deprecated: use directory.v3.Check()
+     * Deprecated: use directory.reader.v3.Check()
      * </pre>
      */
     @java.lang.Deprecated

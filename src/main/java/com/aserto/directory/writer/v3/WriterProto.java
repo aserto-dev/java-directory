@@ -132,41 +132,42 @@ public final class WriterProto {
       "r digit\0322this.matches(\'^[a-z][a-z0-9\\\\._" +
       "-]{1,62}[a-z0-9]$\')\320\001\001R\017subjectRelation\"" +
       "H\n\026DeleteRelationResponse\022.\n\006result\030\001 \001(" +
-      "\0132\026.google.protobuf.EmptyR\006result2\264\010\n\006Wr" +
-      "iter\022\363\001\n\tSetObject\022,.aserto.directory.wr" +
+      "\0132\026.google.protobuf.EmptyR\006result2\320\010\n\006Wr" +
+      "iter\022\372\001\n\tSetObject\022,.aserto.directory.wr" +
       "iter.v3.SetObjectRequest\032-.aserto.direct" +
-      "ory.writer.v3.SetObjectResponse\"\210\001\222Ab\n\td" +
-      "irectory\022\nSet object\032\013Set object.*\027direc" +
-      "tory.v3.object.setb#\n\023\n\017DirectoryAPIKey\022" +
-      "\000\n\014\n\010TenantID\022\000\202\323\344\223\002\035\"\030/api/v3/directory" +
-      "/object:\001*\022\234\002\n\014DeleteObject\022/.aserto.dir" +
-      "ectory.writer.v3.DeleteObjectRequest\0320.a" +
-      "serto.directory.writer.v3.DeleteObjectRe" +
-      "sponse\"\250\001\222Ak\n\tdirectory\022\rDelete object\032\016" +
-      "Delete object.*\032directory.v3.object.dele" +
-      "teb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202" +
-      "\323\344\223\0024*2/api/v3/directory/object/{object_" +
-      "type}/{object_id}\022\201\002\n\013SetRelation\022..aser" +
-      "to.directory.writer.v3.SetRelationReques" +
-      "t\032/.aserto.directory.writer.v3.SetRelati" +
-      "onResponse\"\220\001\222Ah\n\tdirectory\022\014Set relatio" +
-      "n\032\rSet relation.*\031directory.v3.relation." +
-      "setb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000" +
-      "\202\323\344\223\002\037\"\032/api/v3/directory/relation:\001*\022\220\002" +
-      "\n\016DeleteRelation\0221.aserto.directory.writ" +
-      "er.v3.DeleteRelationRequest\0322.aserto.dir" +
-      "ectory.writer.v3.DeleteRelationResponse\"" +
-      "\226\001\222Aq\n\tdirectory\022\017Delete relation\032\020Delet" +
-      "e relation.*\034directory.v3.relation.delet" +
-      "eb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323" +
-      "\344\223\002\034*\032/api/v3/directory/relationB\200\002\n\036com" +
-      ".aserto.directory.writer.v3B\013WriterProto" +
-      "P\001ZDgithub.com/aserto-dev/go-directory/a" +
-      "serto/directory/writer/v3;writer\242\002\003ADW\252\002" +
-      "\032Aserto.Directory.Writer.V3\312\002\033Aserto\\Dir" +
-      "ectory_\\Writer\\V3\342\002\'Aserto\\Directory_\\Wr" +
-      "iter\\V3\\GPBMetadata\352\002\035Aserto::Directory:" +
-      ":Writer::V3b\006proto3"
+      "ory.writer.v3.SetObjectResponse\"\217\001\222Ai\n\td" +
+      "irectory\022\nSet object\032\013Set object.*\036direc" +
+      "tory.writer.v3.object.setb#\n\023\n\017Directory" +
+      "APIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\035\"\030/api/v3/di" +
+      "rectory/object:\001*\022\243\002\n\014DeleteObject\022/.ase" +
+      "rto.directory.writer.v3.DeleteObjectRequ" +
+      "est\0320.aserto.directory.writer.v3.DeleteO" +
+      "bjectResponse\"\257\001\222Ar\n\tdirectory\022\rDelete o" +
+      "bject\032\016Delete object.*!directory.writer." +
+      "v3.object.deleteb#\n\023\n\017DirectoryAPIKey\022\000\n" +
+      "\014\n\010TenantID\022\000\202\323\344\223\0024*2/api/v3/directory/o" +
+      "bject/{object_type}/{object_id}\022\210\002\n\013SetR" +
+      "elation\022..aserto.directory.writer.v3.Set" +
+      "RelationRequest\032/.aserto.directory.write" +
+      "r.v3.SetRelationResponse\"\227\001\222Ao\n\tdirector" +
+      "y\022\014Set relation\032\rSet relation.* director" +
+      "y.writer.v3.relation.setb#\n\023\n\017DirectoryA" +
+      "PIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\037\"\032/api/v3/dir" +
+      "ectory/relation:\001*\022\227\002\n\016DeleteRelation\0221." +
+      "aserto.directory.writer.v3.DeleteRelatio" +
+      "nRequest\0322.aserto.directory.writer.v3.De" +
+      "leteRelationResponse\"\235\001\222Ax\n\tdirectory\022\017D" +
+      "elete relation\032\020Delete relation.*#direct" +
+      "ory.writer.v3.relation.deleteb#\n\023\n\017Direc" +
+      "toryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\034*\032/api/v" +
+      "3/directory/relationB\200\002\n\036com.aserto.dire" +
+      "ctory.writer.v3B\013WriterProtoP\001ZDgithub.c" +
+      "om/aserto-dev/go-directory/aserto/direct" +
+      "ory/writer/v3;writer\242\002\003ADW\252\002\032Aserto.Dire" +
+      "ctory.Writer.V3\312\002\033Aserto\\Directory_\\Writ" +
+      "er\\V3\342\002\'Aserto\\Directory_\\Writer\\V3\\GPBM" +
+      "etadata\352\002\035Aserto::Directory::Writer::V3b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
