@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
    * relation instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the relation field is set.
    */
   @java.lang.Override
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
    * relation instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The relation.
    */
   @java.lang.Override
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
    * relation instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Override
   public com.aserto.directory.common.v3.RelationOrBuilder getRelationOrBuilder() {
@@ -433,7 +433,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the relation field is set.
      */
     public boolean hasRelation() {
@@ -444,7 +444,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The relation.
      */
     public com.aserto.directory.common.v3.Relation getRelation() {
@@ -459,7 +459,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setRelation(com.aserto.directory.common.v3.Relation value) {
       if (relationBuilder_ == null) {
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setRelation(
         com.aserto.directory.common.v3.Relation.Builder builderForValue) {
@@ -497,7 +497,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeRelation(com.aserto.directory.common.v3.Relation value) {
       if (relationBuilder_ == null) {
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearRelation() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.aserto.directory.common.v3.Relation.Builder getRelationBuilder() {
       bitField0_ |= 0x00000001;
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.aserto.directory.common.v3.RelationOrBuilder getRelationOrBuilder() {
       if (relationBuilder_ != null) {
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
      * relation instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aserto.directory.common.v3.Relation, com.aserto.directory.common.v3.Relation.Builder, com.aserto.directory.common.v3.RelationOrBuilder> 

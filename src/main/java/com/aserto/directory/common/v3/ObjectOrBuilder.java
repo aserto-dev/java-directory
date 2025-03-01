@@ -13,7 +13,7 @@ public interface ObjectOrBuilder extends
    * object type name
    * </pre>
    *
-   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The type.
    */
   java.lang.String getType();
@@ -22,7 +22,7 @@ public interface ObjectOrBuilder extends
    * object type name
    * </pre>
    *
-   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for type.
    */
   com.google.protobuf.ByteString
@@ -33,7 +33,7 @@ public interface ObjectOrBuilder extends
    * external object identifier (cs-string, no spaces or tabs)
    * </pre>
    *
-   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The id.
    */
   java.lang.String getId();
@@ -42,7 +42,7 @@ public interface ObjectOrBuilder extends
    * external object identifier (cs-string, no spaces or tabs)
    * </pre>
    *
-   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString
@@ -53,7 +53,7 @@ public interface ObjectOrBuilder extends
    * display name object
    * </pre>
    *
-   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The displayName.
    */
   java.lang.String getDisplayName();
@@ -62,7 +62,7 @@ public interface ObjectOrBuilder extends
    * display name object
    * </pre>
    *
-   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for displayName.
    */
   com.google.protobuf.ByteString
@@ -154,7 +154,7 @@ public interface ObjectOrBuilder extends
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The etag.
    */
   java.lang.String getEtag();
@@ -163,7 +163,7 @@ public interface ObjectOrBuilder extends
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for etag.
    */
   com.google.protobuf.ByteString

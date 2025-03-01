@@ -13,7 +13,7 @@ public interface SetRelationRequestOrBuilder extends
    * relation instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the relation field is set.
    */
   boolean hasRelation();
@@ -22,7 +22,7 @@ public interface SetRelationRequestOrBuilder extends
    * relation instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The relation.
    */
   com.aserto.directory.common.v3.Relation getRelation();
@@ -31,7 +31,7 @@ public interface SetRelationRequestOrBuilder extends
    * relation instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Relation relation = 1 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    */
   com.aserto.directory.common.v3.RelationOrBuilder getRelationOrBuilder();
 }

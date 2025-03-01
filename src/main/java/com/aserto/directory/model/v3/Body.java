@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
    * manifest content
    * </pre>
    *
-   * <code>bytes data = 2 [json_name = "data", (.buf.validate.field) = { ... }</code>
+   * <code>bytes data = 2 [json_name = "data"];</code>
    * @return The data.
    */
   @java.lang.Override
@@ -386,7 +386,7 @@ private static final long serialVersionUID = 0L;
      * manifest content
      * </pre>
      *
-     * <code>bytes data = 2 [json_name = "data", (.buf.validate.field) = { ... }</code>
+     * <code>bytes data = 2 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -398,7 +398,7 @@ private static final long serialVersionUID = 0L;
      * manifest content
      * </pre>
      *
-     * <code>bytes data = 2 [json_name = "data", (.buf.validate.field) = { ... }</code>
+     * <code>bytes data = 2 [json_name = "data"];</code>
      * @param value The data to set.
      * @return This builder for chaining.
      */
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
      * manifest content
      * </pre>
      *
-     * <code>bytes data = 2 [json_name = "data", (.buf.validate.field) = { ... }</code>
+     * <code>bytes data = 2 [json_name = "data"];</code>
      * @return This builder for chaining.
      */
     public Builder clearData() {

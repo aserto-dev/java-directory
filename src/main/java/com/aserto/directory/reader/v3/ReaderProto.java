@@ -139,384 +139,185 @@ public final class ReaderProto {
       "n-openapiv2/options/annotations.proto\032\034g" +
       "oogle/api/annotations.proto\032\037google/api/" +
       "field_behavior.proto\032\034google/protobuf/st" +
-      "ruct.proto\032\033buf/validate/validate.proto\032" +
-      "\'aserto/directory/common/v3/common.proto" +
-      "\"\257\004\n\020GetObjectRequest\022\216\002\n\013object_type\030\001 " +
-      "\001(\tB\354\001\340A\002\272H\345\001r\002\030@\272\001\332\001\n\026get_object.object" +
-      "_type\022\213\001must be all lowercase, start wit" +
-      "h a letter, can contain letters, digits," +
-      " dots, underscores, and dashes, and must" +
-      " end with a letter or digit\0322this.matche" +
-      "s(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\310" +
-      "\001\001R\nobjectType\022\225\001\n\tobject_id\030\002 \001(\tBx\272Hur" +
-      "\003\030\200\002\272\001j\n\024get_object.object_id\0228cannot co" +
-      "ntain any spaces or other whitespace cha" +
-      "racters\032\030this.matches(\'^[\\\\S]+$\')\310\001\001R\010ob" +
-      "jectId\022*\n\016with_relations\030\003 \001(\010B\003\340A\001R\rwit" +
-      "hRelations\022F\n\004page\030\t \001(\0132-.aserto.direct" +
-      "ory.common.v3.PaginationRequestB\003\340A\001R\004pa" +
-      "ge\"\327\001\n\021GetObjectResponse\022:\n\006result\030\001 \001(\013" +
-      "2\".aserto.directory.common.v3.ObjectR\006re" +
-      "sult\022B\n\trelations\030\004 \003(\0132$.aserto.directo" +
-      "ry.common.v3.RelationR\trelations\022B\n\004page" +
-      "\030\t \001(\0132..aserto.directory.common.v3.Pagi" +
-      "nationResponseR\004page\"_\n\024GetObjectManyReq" +
-      "uest\022G\n\005param\030\001 \003(\0132,.aserto.directory.c" +
-      "ommon.v3.ObjectIdentifierB\003\340A\002R\005param\"U\n" +
-      "\025GetObjectManyResponse\022<\n\007results\030\001 \003(\0132" +
-      "\".aserto.directory.common.v3.ObjectR\007res" +
-      "ults\"\355\002\n\021GetObjectsRequest\022\217\002\n\013object_ty" +
-      "pe\030\001 \001(\tB\355\001\340A\001\272H\346\001r\002\030@\272\001\333\001\n\027get_objects." +
-      "object_type\022\213\001must be all lowercase, sta" +
-      "rt with a letter, can contain letters, d" +
-      "igits, dots, underscores, and dashes, an" +
-      "d must end with a letter or digit\0322this." +
-      "matches(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-z0-" +
-      "9]$\')\320\001\001R\nobjectType\022F\n\004page\030\t \001(\0132-.ase" +
-      "rto.directory.common.v3.PaginationReques" +
-      "tB\003\340A\001R\004page\"\226\001\n\022GetObjectsResponse\022<\n\007r" +
-      "esults\030\001 \003(\0132\".aserto.directory.common.v" +
-      "3.ObjectR\007results\022B\n\004page\030\t \001(\0132..aserto" +
-      ".directory.common.v3.PaginationResponseR" +
-      "\004page\"\375\017\n\022GetRelationRequest\022\220\002\n\013object_" +
-      "type\030\001 \001(\tB\356\001\340A\002\272H\347\001r\002\030@\272\001\334\001\n\030get_relati" +
-      "on.object_type\022\213\001must be all lowercase, " +
-      "start with a letter, can contain letters" +
-      ", digits, dots, underscores, and dashes," +
-      " and must end with a letter or digit\0322th" +
-      "is.matches(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-" +
-      "z0-9]$\')\320\001\001R\nobjectType\022\232\001\n\tobject_id\030\002 " +
-      "\001(\tB}\340A\002\272Hwr\003\030\200\002\272\001l\n\026get_relation.object" +
-      "_id\0228cannot contain any spaces or other " +
-      "whitespace characters\032\030this.matches(\'^[\\" +
-      "\\S]+$\')\320\001\001R\010objectId\022\210\002\n\010relation\030\003 \001(\tB" +
-      "\353\001\340A\002\272H\344\001r\002\030@\272\001\331\001\n\025get_relation.relation" +
-      "\022\213\001must be all lowercase, start with a l" +
-      "etter, can contain letters, digits, dots" +
-      ", underscores, and dashes, and must end " +
-      "with a letter or digit\0322this.matches(\'^[" +
-      "a-z][a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\320\001\001R\010r" +
-      "elation\022\223\002\n\014subject_type\030\004 \001(\tB\357\001\340A\002\272H\350\001" +
-      "r\002\030@\272\001\335\001\n\031get_relation.subject_type\022\213\001mu" +
-      "st be all lowercase, start with a letter" +
-      ", can contain letters, digits, dots, und" +
-      "erscores, and dashes, and must end with " +
-      "a letter or digit\0322this.matches(\'^[a-z][" +
-      "a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\320\001\001R\013subjec" +
-      "tType\022\235\001\n\nsubject_id\030\005 \001(\tB~\340A\002\272Hxr\003\030\200\002\272" +
-      "\001m\n\027get_relation.subject_id\0228cannot cont" +
-      "ain any spaces or other whitespace chara" +
-      "cters\032\030this.matches(\'^[\\\\S]+$\')\320\001\001R\tsubj" +
-      "ectId\022\237\002\n\020subject_relation\030\006 \001(\tB\363\001\340A\001\272H" +
-      "\354\001r\002\030@\272\001\341\001\n\035get_relation.subject_relatio" +
-      "n\022\213\001must be all lowercase, start with a " +
-      "letter, can contain letters, digits, dot" +
-      "s, underscores, and dashes, and must end" +
-      " with a letter or digit\0322this.matches(\'^" +
-      "[a-z][a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\320\001\001R\017" +
-      "subjectRelation\022&\n\014with_objects\030\007 \001(\010B\003\340" +
-      "A\001R\013withObjects:\253\004\272H\247\004\032\214\002\n get_relation." +
-      "object_id_with_type\022Mwhen an object_id i" +
-      "s specified, the accompanying object_typ" +
-      "e must be provided\032\230\001(this.object_type =" +
-      "= \'\' && this.object_id == \'\') || (this.o" +
-      "bject_type != \'\' && this.object_id == \'\'" +
-      ") || (this.object_type != \'\' && this.obj" +
-      "ect_id != \'\')\032\225\002\n!get_relation.subject_i" +
-      "d_with_type\022Owhen an subject_id is speci" +
-      "fied, the accompanying subject_type must" +
-      " be provided\032\236\001(this.subject_type == \'\' " +
-      "&& this.subject_id == \'\') || (this.subje" +
-      "ct_type != \'\' && this.subject_id == \'\') " +
-      "|| (this.subject_type != \'\' && this.subj" +
-      "ect_id != \'\')\"\213\002\n\023GetRelationResponse\022<\n" +
-      "\006result\030\001 \001(\0132$.aserto.directory.common." +
-      "v3.RelationR\006result\022V\n\007objects\030\002 \003(\0132<.a" +
-      "serto.directory.reader.v3.GetRelationRes" +
-      "ponse.ObjectsEntryR\007objects\032^\n\014ObjectsEn" +
-      "try\022\020\n\003key\030\001 \001(\tR\003key\0228\n\005value\030\002 \001(\0132\".a" +
-      "serto.directory.common.v3.ObjectR\005value:" +
-      "\0028\001\"\222\021\n\023GetRelationsRequest\022\221\002\n\013object_t" +
-      "ype\030\001 \001(\tB\357\001\340A\001\272H\350\001r\002\030@\272\001\335\001\n\031get_relatio" +
-      "ns.object_type\022\213\001must be all lowercase, " +
-      "start with a letter, can contain letters" +
-      ", digits, dots, underscores, and dashes," +
-      " and must end with a letter or digit\0322th" +
-      "is.matches(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-" +
-      "z0-9]$\')\320\001\001R\nobjectType\022\233\001\n\tobject_id\030\002 " +
-      "\001(\tB~\340A\001\272Hxr\003\030\200\002\272\001m\n\027get_relations.objec" +
-      "t_id\0228cannot contain any spaces or other" +
-      " whitespace characters\032\030this.matches(\'^[" +
-      "\\\\S]+$\')\320\001\001R\010objectId\022\211\002\n\010relation\030\003 \001(\t" +
-      "B\354\001\340A\001\272H\345\001r\002\030@\272\001\332\001\n\026get_relations.relati" +
-      "on\022\213\001must be all lowercase, start with a" +
-      " letter, can contain letters, digits, do" +
-      "ts, underscores, and dashes, and must en" +
-      "d with a letter or digit\0322this.matches(\'" +
-      "^[a-z][a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\320\001\001R" +
-      "\010relation\022\224\002\n\014subject_type\030\004 \001(\tB\360\001\340A\001\272H" +
-      "\351\001r\002\030@\272\001\336\001\n\032get_relations.subject_type\022\213" +
-      "\001must be all lowercase, start with a let" +
-      "ter, can contain letters, digits, dots, " +
-      "underscores, and dashes, and must end wi" +
-      "th a letter or digit\0322this.matches(\'^[a-" +
-      "z][a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\320\001\001R\013sub" +
-      "jectType\022\236\001\n\nsubject_id\030\005 \001(\tB\177\340A\001\272Hyr\003\030" +
-      "\200\002\272\001n\n\030get_relations.subject_id\0228cannot " +
-      "contain any spaces or other whitespace c" +
-      "haracters\032\030this.matches(\'^[\\\\S]+$\')\320\001\001R\t" +
-      "subjectId\022\240\002\n\020subject_relation\030\006 \001(\tB\364\001\340" +
-      "A\001\272H\355\001r\002\030@\272\001\342\001\n\036get_relations.subject_re" +
-      "lation\022\213\001must be all lowercase, start wi" +
-      "th a letter, can contain letters, digits" +
-      ", dots, underscores, and dashes, and mus" +
-      "t end with a letter or digit\0322this.match" +
-      "es(\'^[a-z][a-z0-9\\\\._-]{1,62}[a-z0-9]$\')" +
-      "\320\001\001R\017subjectRelation\022&\n\014with_objects\030\007 \001" +
-      "(\010B\003\340A\001R\013withObjects\022B\n\033with_empty_subje" +
-      "ct_relation\030\010 \001(\010B\003\340A\001R\030withEmptySubject" +
-      "Relation\022F\n\004page\030\t \001(\0132-.aserto.director" +
-      "y.common.v3.PaginationRequestB\003\340A\001R\004page" +
-      ":\255\004\272H\251\004\032\215\002\n!get_relations.object_id_with" +
-      "_type\022Mwhen an object_id is specified, t" +
-      "he accompanying object_type must be prov" +
-      "ided\032\230\001(this.object_type == \'\' && this.o" +
-      "bject_id == \'\') || (this.object_type != " +
-      "\'\' && this.object_id == \'\') || (this.obj" +
-      "ect_type != \'\' && this.object_id != \'\')\032" +
-      "\226\002\n\"get_relations.subject_id_with_type\022O" +
-      "when an subject_id is specified, the acc" +
-      "ompanying subject_type must be provided\032" +
-      "\236\001(this.subject_type == \'\' && this.subje" +
-      "ct_id == \'\') || (this.subject_type != \'\'" +
-      " && this.subject_id == \'\') || (this.subj" +
-      "ect_type != \'\' && this.subject_id != \'\')" +
-      "\"\323\002\n\024GetRelationsResponse\022>\n\007results\030\001 \003" +
-      "(\0132$.aserto.directory.common.v3.Relation" +
-      "R\007results\022W\n\007objects\030\002 \003(\0132=.aserto.dire" +
-      "ctory.reader.v3.GetRelationsResponse.Obj" +
-      "ectsEntryR\007objects\022B\n\004page\030\t \001(\0132..asert" +
-      "o.directory.common.v3.PaginationResponse" +
-      "R\004page\032^\n\014ObjectsEntry\022\020\n\003key\030\001 \001(\tR\003key" +
-      "\0228\n\005value\030\002 \001(\0132\".aserto.directory.commo" +
-      "n.v3.ObjectR\005value:\0028\001\"\207\010\n\014CheckRequest\022" +
-      "\211\002\n\013object_type\030\001 \001(\tB\347\001\340A\002\272H\340\001r\002\030@\272\001\325\001\n" +
-      "\021check.object_type\022\213\001must be all lowerca" +
-      "se, start with a letter, can contain let" +
-      "ters, digits, dots, underscores, and das" +
-      "hes, and must end with a letter or digit" +
-      "\0322this.matches(\'^[a-z][a-z0-9\\\\._-]{1,62" +
-      "}[a-z0-9]$\')\310\001\001R\nobjectType\022\223\001\n\tobject_i" +
-      "d\030\002 \001(\tBv\340A\002\272Hpr\003\030\200\002\272\001e\n\017check.object_id" +
-      "\0228cannot contain any spaces or other whi" +
-      "tespace characters\032\030this.matches(\'^[\\\\S]" +
-      "+$\')\310\001\001R\010objectId\022\221\001\n\010relation\030\003 \001(\tBu\340A" +
-      "\002\272Hor\003\030\200\002\272\001d\n\016check.relation\0228cannot con" +
-      "tain any spaces or other whitespace char" +
-      "acters\032\030this.matches(\'^[\\\\S]+$\')\310\001\001R\010rel" +
-      "ation\022\214\002\n\014subject_type\030\004 \001(\tB\350\001\340A\002\272H\341\001r\002" +
-      "\030@\272\001\326\001\n\022check.subject_type\022\213\001must be all" +
-      " lowercase, start with a letter, can con" +
-      "tain letters, digits, dots, underscores," +
-      " and dashes, and must end with a letter " +
-      "or digit\0322this.matches(\'^[a-z][a-z0-9\\\\." +
-      "_-]{1,62}[a-z0-9]$\')\310\001\001R\013subjectType\022\226\001\n" +
-      "\nsubject_id\030\005 \001(\tBw\340A\002\272Hqr\003\030\200\002\272\001f\n\020check" +
-      ".subject_id\0228cannot contain any spaces o" +
-      "r other whitespace characters\032\030this.matc" +
-      "hes(\'^[\\\\S]+$\')\310\001\001R\tsubjectId\022\031\n\005trace\030\007" +
-      " \001(\010B\003\340A\001R\005trace\"n\n\rCheckResponse\022\024\n\005che" +
-      "ck\030\001 \001(\010R\005check\022\024\n\005trace\030\002 \003(\tR\005trace\0221\n" +
-      "\007context\030\003 \001(\0132\027.google.protobuf.StructR" +
-      "\007context\"\225\001\n\rChecksRequest\022B\n\007default\030\001 " +
-      "\001(\0132(.aserto.directory.reader.v3.CheckRe" +
-      "questR\007default\022@\n\006checks\030\002 \003(\0132(.aserto." +
-      "directory.reader.v3.CheckRequestR\006checks" +
-      "\"S\n\016ChecksResponse\022A\n\006checks\030\001 \003(\0132).ase" +
-      "rto.directory.reader.v3.CheckResponseR\006c" +
-      "hecks\"\321\010\n\026CheckPermissionRequest\022\224\002\n\013obj" +
-      "ect_type\030\001 \001(\tB\362\001\340A\002\272H\353\001r\002\030@\272\001\340\001\n\034check_" +
-      "permission.object_type\022\213\001must be all low" +
-      "ercase, start with a letter, can contain" +
-      " letters, digits, dots, underscores, and" +
-      " dashes, and must end with a letter or d" +
-      "igit\0322this.matches(\'^[a-z][a-z0-9\\\\._-]{" +
-      "1,62}[a-z0-9]$\')\310\001\001R\nobjectType\022\237\001\n\tobje" +
-      "ct_id\030\002 \001(\tB\201\001\340A\002\272H{r\003\030\200\002\272\001p\n\032check_perm" +
-      "ission.object_id\0228cannot contain any spa" +
-      "ces or other whitespace characters\032\030this" +
-      ".matches(\'^[\\\\S]+$\')\310\001\001R\010objectId\022\243\001\n\npe" +
-      "rmission\030\003 \001(\tB\202\001\340A\002\272H|r\003\030\200\002\272\001q\n\033check_p" +
-      "ermission.permission\0228cannot contain any" +
-      " spaces or other whitespace characters\032\030" +
-      "this.matches(\'^[\\\\S]+$\')\310\001\001R\npermission\022" +
-      "\227\002\n\014subject_type\030\004 \001(\tB\363\001\340A\002\272H\354\001r\002\030@\272\001\341\001" +
-      "\n\035check_permission.subject_type\022\213\001must b" +
-      "e all lowercase, start with a letter, ca" +
-      "n contain letters, digits, dots, undersc" +
-      "ores, and dashes, and must end with a le" +
-      "tter or digit\0322this.matches(\'^[a-z][a-z0" +
-      "-9\\\\._-]{1,62}[a-z0-9]$\')\310\001\001R\013subjectTyp" +
-      "e\022\242\001\n\nsubject_id\030\005 \001(\tB\202\001\340A\002\272H|r\003\030\200\002\272\001q\n" +
-      "\033check_permission.subject_id\0228cannot con" +
-      "tain any spaces or other whitespace char" +
-      "acters\032\030this.matches(\'^[\\\\S]+$\')\310\001\001R\tsub" +
-      "jectId\022\031\n\005trace\030\007 \001(\010B\003\340A\001R\005trace\"E\n\027Che" +
-      "ckPermissionResponse\022\024\n\005check\030\001 \001(\010R\005che" +
-      "ck\022\024\n\005trace\030\002 \003(\tR\005trace\"\255\t\n\024CheckRelati" +
-      "onRequest\022\222\002\n\013object_type\030\001 \001(\tB\360\001\340A\002\272H\351" +
-      "\001r\002\030@\272\001\336\001\n\032check_relation.object_type\022\213\001" +
-      "must be all lowercase, start with a lett" +
-      "er, can contain letters, digits, dots, u" +
-      "nderscores, and dashes, and must end wit" +
-      "h a letter or digit\0322this.matches(\'^[a-z" +
-      "][a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\310\001\001R\nobje" +
-      "ctType\022\234\001\n\tobject_id\030\002 \001(\tB\177\340A\002\272Hyr\003\030\200\002\272" +
-      "\001n\n\030check_relation.object_id\0228cannot con" +
-      "tain any spaces or other whitespace char" +
-      "acters\032\030this.matches(\'^[\\\\S]+$\')\310\001\001R\010obj" +
-      "ectId\022\212\002\n\010relation\030\003 \001(\tB\355\001\340A\002\272H\346\001r\002\030@\272\001" +
-      "\333\001\n\027check_relation.relation\022\213\001must be al" +
-      "l lowercase, start with a letter, can co" +
-      "ntain letters, digits, dots, underscores" +
-      ", and dashes, and must end with a letter" +
-      " or digit\0322this.matches(\'^[a-z][a-z0-9\\\\" +
-      "._-]{1,62}[a-z0-9]$\')\310\001\001R\010relation\022\225\002\n\014s" +
-      "ubject_type\030\004 \001(\tB\361\001\340A\002\272H\352\001r\002\030@\272\001\337\001\n\033che" +
-      "ck_relation.subject_type\022\213\001must be all l" +
-      "owercase, start with a letter, can conta" +
-      "in letters, digits, dots, underscores, a" +
-      "nd dashes, and must end with a letter or" +
-      " digit\0322this.matches(\'^[a-z][a-z0-9\\\\._-" +
-      "]{1,62}[a-z0-9]$\')\310\001\001R\013subjectType\022\240\001\n\ns" +
-      "ubject_id\030\005 \001(\tB\200\001\340A\002\272Hzr\003\030\200\002\272\001o\n\031check_" +
-      "relation.subject_id\0228cannot contain any " +
-      "spaces or other whitespace characters\032\030t" +
-      "his.matches(\'^[\\\\S]+$\')\310\001\001R\tsubjectId\022\031\n" +
-      "\005trace\030\007 \001(\010B\003\340A\001R\005trace\"C\n\025CheckRelatio" +
-      "nResponse\022\024\n\005check\030\001 \001(\010R\005check\022\024\n\005trace" +
-      "\030\002 \003(\tR\005trace\"\360\013\n\017GetGraphRequest\022\215\002\n\013ob" +
-      "ject_type\030\003 \001(\tB\353\001\340A\002\272H\344\001r\002\030@\272\001\331\001\n\025get_g" +
-      "raph.object_type\022\213\001must be all lowercase" +
-      ", start with a letter, can contain lette" +
-      "rs, digits, dots, underscores, and dashe" +
-      "s, and must end with a letter or digit\0322" +
-      "this.matches(\'^[a-z][a-z0-9\\\\._-]{1,62}[" +
-      "a-z0-9]$\')\320\001\001R\nobjectType\022\227\001\n\tobject_id\030" +
-      "\004 \001(\tBz\340A\001\272Htr\003\030\200\002\272\001i\n\023get_graph.object_" +
-      "id\0228cannot contain any spaces or other w" +
-      "hitespace characters\032\030this.matches(\'^[\\\\" +
-      "S]+$\')\320\001\001R\010objectId\022\205\002\n\010relation\030\005 \001(\tB\350" +
-      "\001\340A\002\272H\341\001r\002\030@\272\001\326\001\n\022get_graph.relation\022\213\001m" +
-      "ust be all lowercase, start with a lette" +
-      "r, can contain letters, digits, dots, un" +
-      "derscores, and dashes, and must end with" +
-      " a letter or digit\0322this.matches(\'^[a-z]" +
-      "[a-z0-9\\\\._-]{1,62}[a-z0-9]$\')\320\001\001R\010relat" +
-      "ion\022\220\002\n\014subject_type\030\006 \001(\tB\354\001\340A\002\272H\345\001r\002\030@" +
-      "\272\001\332\001\n\026get_graph.subject_type\022\213\001must be a" +
-      "ll lowercase, start with a letter, can c" +
-      "ontain letters, digits, dots, underscore" +
-      "s, and dashes, and must end with a lette" +
-      "r or digit\0322this.matches(\'^[a-z][a-z0-9\\" +
-      "\\._-]{1,62}[a-z0-9]$\')\320\001\001R\013subjectType\022\232" +
-      "\001\n\nsubject_id\030\007 \001(\tB{\340A\001\272Hur\003\030\200\002\272\001j\n\024get" +
-      "_graph.subject_id\0228cannot contain any sp" +
-      "aces or other whitespace characters\032\030thi" +
-      "s.matches(\'^[\\\\S]+$\')\320\001\001R\tsubjectId\022\234\002\n\020" +
-      "subject_relation\030\010 \001(\tB\360\001\340A\001\272H\351\001r\002\030@\272\001\336\001" +
-      "\n\032get_graph.subject_relation\022\213\001must be a" +
-      "ll lowercase, start with a letter, can c" +
-      "ontain letters, digits, dots, underscore" +
-      "s, and dashes, and must end with a lette" +
-      "r or digit\0322this.matches(\'^[a-z][a-z0-9\\" +
-      "\\._-]{1,62}[a-z0-9]$\')\320\001\001R\017subjectRelati" +
-      "on\022\035\n\007explain\030\t \001(\010B\003\340A\001R\007explain\022\031\n\005tra" +
-      "ce\030\n \001(\010B\003\340A\001R\005traceJ\004\010\001\020\002J\004\010\002\020\003R\013anchor" +
-      "_typeR\tanchor_id\"\261\001\n\020GetGraphResponse\022F\n" +
-      "\007results\030\002 \003(\0132,.aserto.directory.common" +
-      ".v3.ObjectIdentifierR\007results\0229\n\013explana" +
-      "tion\030\003 \001(\0132\027.google.protobuf.StructR\013exp" +
-      "lanation\022\024\n\005trace\030\004 \003(\tR\005traceJ\004\010\001\020\0022\305\026\n" +
-      "\006Reader\022\351\002\n\tGetObject\022,.aserto.directory" +
-      ".reader.v3.GetObjectRequest\032-.aserto.dir" +
-      "ectory.reader.v3.GetObjectResponse\"\376\001\222A\300" +
-      "\001\n\tdirectory\022\023Get object instance\032:Retur" +
-      "ns single object instance, optionally wi" +
-      "th relations.*\036directory.reader.v3.objec" +
-      "t.getJ\035\n\003304\022\026\n\024Object not modified.b#\n\023" +
-      "\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\0024\022" +
-      "2/api/v3/directory/object/{object_type}/" +
-      "{object_id}\022v\n\rGetObjectMany\0220.aserto.di" +
-      "rectory.reader.v3.GetObjectManyRequest\0321" +
-      ".aserto.directory.reader.v3.GetObjectMan" +
-      "yResponse\"\000\022\237\002\n\nGetObjects\022-.aserto.dire" +
-      "ctory.reader.v3.GetObjectsRequest\032..aser" +
-      "to.directory.reader.v3.GetObjectsRespons" +
-      "e\"\261\001\222A\214\001\n\tdirectory\022\025List object instanc" +
-      "es\032!Returns list of object instances.* d" +
-      "irectory.reader.v3.objects.listb#\n\023\n\017Dir" +
-      "ectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\033\022\031/api" +
-      "/v3/directory/objects\022\335\002\n\013GetRelation\022.." +
-      "aserto.directory.reader.v3.GetRelationRe" +
-      "quest\032/.aserto.directory.reader.v3.GetRe" +
-      "lationResponse\"\354\001\222A\306\001\n\tdirectory\022\025Get re" +
-      "lation instance\032:Returns single relation" +
-      " instance, optionally with objects.* dir" +
-      "ectory.reader.v3.relation.getJ\037\n\003304\022\030\n\026" +
-      "Relation not modified.b#\n\023\n\017DirectoryAPI" +
-      "Key\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\034\022\032/api/v3/direc" +
-      "tory/relation\022\256\002\n\014GetRelations\022/.aserto." +
-      "directory.reader.v3.GetRelationsRequest\032" +
-      "0.aserto.directory.reader.v3.GetRelation" +
-      "sResponse\"\272\001\222A\223\001\n\tdirectory\022\030List relati" +
-      "ons instances\032#Returns list of relation " +
-      "instances.*\"directory.reader.v3.relation" +
-      "s.listb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantI" +
-      "D\022\000\202\323\344\223\002\035\022\033/api/v3/directory/relations\022\356" +
-      "\001\n\005Check\022(.aserto.directory.reader.v3.Ch" +
-      "eckRequest\032).aserto.directory.reader.v3." +
-      "CheckResponse\"\217\001\222Aj\n\tdirectory\022\005Check\032\026R" +
-      "eturns check outcome.*\031directory.reader." +
-      "v3.checkb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010Tenan" +
-      "tID\022\000\202\323\344\223\002\034\"\027/api/v3/directory/check:\001*\022" +
-      "\376\001\n\006Checks\022).aserto.directory.reader.v3." +
-      "ChecksRequest\032*.aserto.directory.reader." +
-      "v3.ChecksResponse\"\234\001\222Av\n\tdirectory\022\006Chec" +
-      "ks\032 Returns multiple check outcomes.*\032di" +
-      "rectory.reader.v3.checksb#\n\023\n\017DirectoryA" +
-      "PIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\035\"\030/api/v3/dir" +
-      "ectory/checks:\001*\022\274\002\n\017CheckPermission\0222.a" +
-      "serto.directory.reader.v3.CheckPermissio" +
-      "nRequest\0323.aserto.directory.reader.v3.Ch" +
-      "eckPermissionResponse\"\277\001\210\002\001\222A\213\001\n\tdirecto" +
-      "ry\022\020Check permission\032!Returns check perm" +
-      "ission outcome.*$directory.reader.v3.che" +
-      "ck.permissionb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010" +
-      "TenantID\022\000\202\323\344\223\002\'\"\"/api/v3/directory/chec" +
-      "k/permission:\001*\022\256\002\n\rCheckRelation\0220.aser" +
-      "to.directory.reader.v3.CheckRelationRequ" +
-      "est\0321.aserto.directory.reader.v3.CheckRe" +
-      "lationResponse\"\267\001\210\002\001\222A\205\001\n\tdirectory\022\016Che" +
-      "ck relation\032\037Returns check relation outc" +
-      "ome.*\"directory.reader.v3.check.relation" +
-      "b#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344" +
-      "\223\002%\" /api/v3/directory/check/relation:\001*" +
-      "\022\301\002\n\010GetGraph\022+.aserto.directory.reader." +
-      "v3.GetGraphRequest\032,.aserto.directory.re" +
-      "ader.v3.GetGraphResponse\"\331\001\222A\216\001\n\tdirecto" +
-      "ry\022\tGet graph\0326Returns object graph from" +
-      " anchor to subject or object.*\031directory" +
-      ".reader.v3.graphb#\n\023\n\017DirectoryAPIKey\022\000\n" +
-      "\014\n\010TenantID\022\000\202\323\344\223\002A\022?/api/v3/directory/g" +
-      "raph/{object_type}/{relation}/{subject_t" +
-      "ype}B\200\002\n\036com.aserto.directory.reader.v3B" +
-      "\013ReaderProtoP\001ZDgithub.com/aserto-dev/go" +
-      "-directory/aserto/directory/reader/v3;re" +
-      "ader\242\002\003ADR\252\002\032Aserto.Directory.Reader.V3\312" +
-      "\002\033Aserto\\Directory_\\Reader\\V3\342\002\'Aserto\\D" +
-      "irectory_\\Reader\\V3\\GPBMetadata\352\002\035Aserto" +
-      "::Directory::Reader::V3b\006proto3"
+      "ruct.proto\032\'aserto/directory/common/v3/c" +
+      "ommon.proto\"\316\001\n\020GetObjectRequest\022$\n\013obje" +
+      "ct_type\030\001 \001(\tB\003\340A\002R\nobjectType\022 \n\tobject" +
+      "_id\030\002 \001(\tB\003\340A\002R\010objectId\022*\n\016with_relatio" +
+      "ns\030\003 \001(\010B\003\340A\001R\rwithRelations\022F\n\004page\030\t \001" +
+      "(\0132-.aserto.directory.common.v3.Paginati" +
+      "onRequestB\003\340A\001R\004page\"\327\001\n\021GetObjectRespon" +
+      "se\022:\n\006result\030\001 \001(\0132\".aserto.directory.co" +
+      "mmon.v3.ObjectR\006result\022B\n\trelations\030\004 \003(" +
+      "\0132$.aserto.directory.common.v3.RelationR" +
+      "\trelations\022B\n\004page\030\t \001(\0132..aserto.direct" +
+      "ory.common.v3.PaginationResponseR\004page\"_" +
+      "\n\024GetObjectManyRequest\022G\n\005param\030\001 \003(\0132,." +
+      "aserto.directory.common.v3.ObjectIdentif" +
+      "ierB\003\340A\002R\005param\"U\n\025GetObjectManyResponse" +
+      "\022<\n\007results\030\001 \003(\0132\".aserto.directory.com" +
+      "mon.v3.ObjectR\007results\"\201\001\n\021GetObjectsReq" +
+      "uest\022$\n\013object_type\030\001 \001(\tB\003\340A\001R\nobjectTy" +
+      "pe\022F\n\004page\030\t \001(\0132-.aserto.directory.comm" +
+      "on.v3.PaginationRequestB\003\340A\001R\004page\"\226\001\n\022G" +
+      "etObjectsResponse\022<\n\007results\030\001 \003(\0132\".ase" +
+      "rto.directory.common.v3.ObjectR\007results\022" +
+      "B\n\004page\030\t \001(\0132..aserto.directory.common." +
+      "v3.PaginationResponseR\004page\"\241\002\n\022GetRelat" +
+      "ionRequest\022$\n\013object_type\030\001 \001(\tB\003\340A\002R\nob" +
+      "jectType\022 \n\tobject_id\030\002 \001(\tB\003\340A\002R\010object" +
+      "Id\022\037\n\010relation\030\003 \001(\tB\003\340A\002R\010relation\022&\n\014s" +
+      "ubject_type\030\004 \001(\tB\003\340A\002R\013subjectType\022\"\n\ns" +
+      "ubject_id\030\005 \001(\tB\003\340A\002R\tsubjectId\022.\n\020subje" +
+      "ct_relation\030\006 \001(\tB\003\340A\001R\017subjectRelation\022" +
+      "&\n\014with_objects\030\007 \001(\010B\003\340A\001R\013withObjects\"" +
+      "\213\002\n\023GetRelationResponse\022<\n\006result\030\001 \001(\0132" +
+      "$.aserto.directory.common.v3.RelationR\006r" +
+      "esult\022V\n\007objects\030\002 \003(\0132<.aserto.director" +
+      "y.reader.v3.GetRelationResponse.ObjectsE" +
+      "ntryR\007objects\032^\n\014ObjectsEntry\022\020\n\003key\030\001 \001" +
+      "(\tR\003key\0228\n\005value\030\002 \001(\0132\".aserto.director" +
+      "y.common.v3.ObjectR\005value:\0028\001\"\256\003\n\023GetRel" +
+      "ationsRequest\022$\n\013object_type\030\001 \001(\tB\003\340A\001R" +
+      "\nobjectType\022 \n\tobject_id\030\002 \001(\tB\003\340A\001R\010obj" +
+      "ectId\022\037\n\010relation\030\003 \001(\tB\003\340A\001R\010relation\022&" +
+      "\n\014subject_type\030\004 \001(\tB\003\340A\001R\013subjectType\022\"" +
+      "\n\nsubject_id\030\005 \001(\tB\003\340A\001R\tsubjectId\022.\n\020su" +
+      "bject_relation\030\006 \001(\tB\003\340A\001R\017subjectRelati" +
+      "on\022&\n\014with_objects\030\007 \001(\010B\003\340A\001R\013withObjec" +
+      "ts\022B\n\033with_empty_subject_relation\030\010 \001(\010B" +
+      "\003\340A\001R\030withEmptySubjectRelation\022F\n\004page\030\t" +
+      " \001(\0132-.aserto.directory.common.v3.Pagina" +
+      "tionRequestB\003\340A\001R\004page\"\323\002\n\024GetRelationsR" +
+      "esponse\022>\n\007results\030\001 \003(\0132$.aserto.direct" +
+      "ory.common.v3.RelationR\007results\022W\n\007objec" +
+      "ts\030\002 \003(\0132=.aserto.directory.reader.v3.Ge" +
+      "tRelationsResponse.ObjectsEntryR\007objects" +
+      "\022B\n\004page\030\t \001(\0132..aserto.directory.common" +
+      ".v3.PaginationResponseR\004page\032^\n\014ObjectsE" +
+      "ntry\022\020\n\003key\030\001 \001(\tR\003key\0228\n\005value\030\002 \001(\0132\"." +
+      "aserto.directory.common.v3.ObjectR\005value" +
+      ":\0028\001\"\336\001\n\014CheckRequest\022$\n\013object_type\030\001 \001" +
+      "(\tB\003\340A\002R\nobjectType\022 \n\tobject_id\030\002 \001(\tB\003" +
+      "\340A\002R\010objectId\022\037\n\010relation\030\003 \001(\tB\003\340A\002R\010re" +
+      "lation\022&\n\014subject_type\030\004 \001(\tB\003\340A\002R\013subje" +
+      "ctType\022\"\n\nsubject_id\030\005 \001(\tB\003\340A\002R\tsubject" +
+      "Id\022\031\n\005trace\030\007 \001(\010B\003\340A\001R\005trace\"n\n\rCheckRe" +
+      "sponse\022\024\n\005check\030\001 \001(\010R\005check\022\024\n\005trace\030\002 " +
+      "\003(\tR\005trace\0221\n\007context\030\003 \001(\0132\027.google.pro" +
+      "tobuf.StructR\007context\"\225\001\n\rChecksRequest\022" +
+      "B\n\007default\030\001 \001(\0132(.aserto.directory.read" +
+      "er.v3.CheckRequestR\007default\022@\n\006checks\030\002 " +
+      "\003(\0132(.aserto.directory.reader.v3.CheckRe" +
+      "questR\006checks\"S\n\016ChecksResponse\022A\n\006check" +
+      "s\030\001 \003(\0132).aserto.directory.reader.v3.Che" +
+      "ckResponseR\006checks\"\354\001\n\026CheckPermissionRe" +
+      "quest\022$\n\013object_type\030\001 \001(\tB\003\340A\002R\nobjectT" +
+      "ype\022 \n\tobject_id\030\002 \001(\tB\003\340A\002R\010objectId\022#\n" +
+      "\npermission\030\003 \001(\tB\003\340A\002R\npermission\022&\n\014su" +
+      "bject_type\030\004 \001(\tB\003\340A\002R\013subjectType\022\"\n\nsu" +
+      "bject_id\030\005 \001(\tB\003\340A\002R\tsubjectId\022\031\n\005trace\030" +
+      "\007 \001(\010B\003\340A\001R\005trace\"E\n\027CheckPermissionResp" +
+      "onse\022\024\n\005check\030\001 \001(\010R\005check\022\024\n\005trace\030\002 \003(" +
+      "\tR\005trace\"\346\001\n\024CheckRelationRequest\022$\n\013obj" +
+      "ect_type\030\001 \001(\tB\003\340A\002R\nobjectType\022 \n\tobjec" +
+      "t_id\030\002 \001(\tB\003\340A\002R\010objectId\022\037\n\010relation\030\003 " +
+      "\001(\tB\003\340A\002R\010relation\022&\n\014subject_type\030\004 \001(\t" +
+      "B\003\340A\002R\013subjectType\022\"\n\nsubject_id\030\005 \001(\tB\003" +
+      "\340A\002R\tsubjectId\022\031\n\005trace\030\007 \001(\010B\003\340A\001R\005trac" +
+      "e\"C\n\025CheckRelationResponse\022\024\n\005check\030\001 \001(" +
+      "\010R\005check\022\024\n\005trace\030\002 \003(\tR\005trace\"\324\002\n\017GetGr" +
+      "aphRequest\022$\n\013object_type\030\003 \001(\tB\003\340A\002R\nob" +
+      "jectType\022 \n\tobject_id\030\004 \001(\tB\003\340A\001R\010object" +
+      "Id\022\037\n\010relation\030\005 \001(\tB\003\340A\002R\010relation\022&\n\014s" +
+      "ubject_type\030\006 \001(\tB\003\340A\002R\013subjectType\022\"\n\ns" +
+      "ubject_id\030\007 \001(\tB\003\340A\001R\tsubjectId\022.\n\020subje" +
+      "ct_relation\030\010 \001(\tB\003\340A\001R\017subjectRelation\022" +
+      "\035\n\007explain\030\t \001(\010B\003\340A\001R\007explain\022\031\n\005trace\030" +
+      "\n \001(\010B\003\340A\001R\005traceJ\004\010\001\020\002J\004\010\002\020\003R\013anchor_ty" +
+      "peR\tanchor_id\"\261\001\n\020GetGraphResponse\022F\n\007re" +
+      "sults\030\002 \003(\0132,.aserto.directory.common.v3" +
+      ".ObjectIdentifierR\007results\0229\n\013explanatio" +
+      "n\030\003 \001(\0132\027.google.protobuf.StructR\013explan" +
+      "ation\022\024\n\005trace\030\004 \003(\tR\005traceJ\004\010\001\020\0022\305\026\n\006Re" +
+      "ader\022\351\002\n\tGetObject\022,.aserto.directory.re" +
+      "ader.v3.GetObjectRequest\032-.aserto.direct" +
+      "ory.reader.v3.GetObjectResponse\"\376\001\222A\300\001\n\t" +
+      "directory\022\023Get object instance\032:Returns " +
+      "single object instance, optionally with " +
+      "relations.*\036directory.reader.v3.object.g" +
+      "etJ\035\n\003304\022\026\n\024Object not modified.b#\n\023\n\017D" +
+      "irectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\0024\0222/a" +
+      "pi/v3/directory/object/{object_type}/{ob" +
+      "ject_id}\022v\n\rGetObjectMany\0220.aserto.direc" +
+      "tory.reader.v3.GetObjectManyRequest\0321.as" +
+      "erto.directory.reader.v3.GetObjectManyRe" +
+      "sponse\"\000\022\237\002\n\nGetObjects\022-.aserto.directo" +
+      "ry.reader.v3.GetObjectsRequest\032..aserto." +
+      "directory.reader.v3.GetObjectsResponse\"\261" +
+      "\001\222A\214\001\n\tdirectory\022\025List object instances\032" +
+      "!Returns list of object instances.* dire" +
+      "ctory.reader.v3.objects.listb#\n\023\n\017Direct" +
+      "oryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\033\022\031/api/v3" +
+      "/directory/objects\022\335\002\n\013GetRelation\022..ase" +
+      "rto.directory.reader.v3.GetRelationReque" +
+      "st\032/.aserto.directory.reader.v3.GetRelat" +
+      "ionResponse\"\354\001\222A\306\001\n\tdirectory\022\025Get relat" +
+      "ion instance\032:Returns single relation in" +
+      "stance, optionally with objects.* direct" +
+      "ory.reader.v3.relation.getJ\037\n\003304\022\030\n\026Rel" +
+      "ation not modified.b#\n\023\n\017DirectoryAPIKey" +
+      "\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\034\022\032/api/v3/director" +
+      "y/relation\022\256\002\n\014GetRelations\022/.aserto.dir" +
+      "ectory.reader.v3.GetRelationsRequest\0320.a" +
+      "serto.directory.reader.v3.GetRelationsRe" +
+      "sponse\"\272\001\222A\223\001\n\tdirectory\022\030List relations" +
+      " instances\032#Returns list of relation ins" +
+      "tances.*\"directory.reader.v3.relations.l" +
+      "istb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000" +
+      "\202\323\344\223\002\035\022\033/api/v3/directory/relations\022\356\001\n\005" +
+      "Check\022(.aserto.directory.reader.v3.Check" +
+      "Request\032).aserto.directory.reader.v3.Che" +
+      "ckResponse\"\217\001\222Aj\n\tdirectory\022\005Check\032\026Retu" +
+      "rns check outcome.*\031directory.reader.v3." +
+      "checkb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID" +
+      "\022\000\202\323\344\223\002\034\"\027/api/v3/directory/check:\001*\022\376\001\n" +
+      "\006Checks\022).aserto.directory.reader.v3.Che" +
+      "cksRequest\032*.aserto.directory.reader.v3." +
+      "ChecksResponse\"\234\001\222Av\n\tdirectory\022\006Checks\032" +
+      " Returns multiple check outcomes.*\032direc" +
+      "tory.reader.v3.checksb#\n\023\n\017DirectoryAPIK" +
+      "ey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002\035\"\030/api/v3/direct" +
+      "ory/checks:\001*\022\274\002\n\017CheckPermission\0222.aser" +
+      "to.directory.reader.v3.CheckPermissionRe" +
+      "quest\0323.aserto.directory.reader.v3.Check" +
+      "PermissionResponse\"\277\001\210\002\001\222A\213\001\n\tdirectory\022" +
+      "\020Check permission\032!Returns check permiss" +
+      "ion outcome.*$directory.reader.v3.check." +
+      "permissionb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010Ten" +
+      "antID\022\000\202\323\344\223\002\'\"\"/api/v3/directory/check/p" +
+      "ermission:\001*\022\256\002\n\rCheckRelation\0220.aserto." +
+      "directory.reader.v3.CheckRelationRequest" +
+      "\0321.aserto.directory.reader.v3.CheckRelat" +
+      "ionResponse\"\267\001\210\002\001\222A\205\001\n\tdirectory\022\016Check " +
+      "relation\032\037Returns check relation outcome" +
+      ".*\"directory.reader.v3.check.relationb#\n" +
+      "\023\n\017DirectoryAPIKey\022\000\n\014\n\010TenantID\022\000\202\323\344\223\002%" +
+      "\" /api/v3/directory/check/relation:\001*\022\301\002" +
+      "\n\010GetGraph\022+.aserto.directory.reader.v3." +
+      "GetGraphRequest\032,.aserto.directory.reade" +
+      "r.v3.GetGraphResponse\"\331\001\222A\216\001\n\tdirectory\022" +
+      "\tGet graph\0326Returns object graph from an" +
+      "chor to subject or object.*\031directory.re" +
+      "ader.v3.graphb#\n\023\n\017DirectoryAPIKey\022\000\n\014\n\010" +
+      "TenantID\022\000\202\323\344\223\002A\022?/api/v3/directory/grap" +
+      "h/{object_type}/{relation}/{subject_type" +
+      "}B\200\002\n\036com.aserto.directory.reader.v3B\013Re" +
+      "aderProtoP\001ZDgithub.com/aserto-dev/go-di" +
+      "rectory/aserto/directory/reader/v3;reade" +
+      "r\242\002\003ADR\252\002\032Aserto.Directory.Reader.V3\312\002\033A" +
+      "serto\\Directory_\\Reader\\V3\342\002\'Aserto\\Dire" +
+      "ctory_\\Reader\\V3\\GPBMetadata\352\002\035Aserto::D" +
+      "irectory::Reader::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -525,7 +326,6 @@ public final class ReaderProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
-          com.buf.validate.ValidateProto.getDescriptor(),
           com.aserto.directory.common.v3.CommonProto.getDescriptor(),
         });
     internal_static_aserto_directory_reader_v3_GetObjectRequest_descriptor =
@@ -662,8 +462,6 @@ public final class ReaderProto {
         new java.lang.String[] { "Results", "Explanation", "Trace", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.buf.validate.ValidateProto.field);
-    registry.add(com.buf.validate.ValidateProto.message);
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Operation);
@@ -673,7 +471,6 @@ public final class ReaderProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
-    com.buf.validate.ValidateProto.getDescriptor();
     com.aserto.directory.common.v3.CommonProto.getDescriptor();
   }
 

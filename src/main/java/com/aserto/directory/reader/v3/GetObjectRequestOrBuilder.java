@@ -13,7 +13,7 @@ public interface GetObjectRequestOrBuilder extends
    * object type name (lc-string)
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectType.
    */
   java.lang.String getObjectType();
@@ -22,7 +22,7 @@ public interface GetObjectRequestOrBuilder extends
    * object type name (lc-string)
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectType.
    */
   com.google.protobuf.ByteString
@@ -33,7 +33,7 @@ public interface GetObjectRequestOrBuilder extends
    * object identifier (cs-string)
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectId.
    */
   java.lang.String getObjectId();
@@ -42,7 +42,7 @@ public interface GetObjectRequestOrBuilder extends
    * object identifier (cs-string)
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectId.
    */
   com.google.protobuf.ByteString

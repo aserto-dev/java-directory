@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
    * object type name
    * </pre>
    *
-   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The type.
    */
   @java.lang.Override
@@ -73,7 +73,7 @@ private static final long serialVersionUID = 0L;
    * object type name
    * </pre>
    *
-   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -99,7 +99,7 @@ private static final long serialVersionUID = 0L;
    * external object identifier (cs-string, no spaces or tabs)
    * </pre>
    *
-   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * external object identifier (cs-string, no spaces or tabs)
    * </pre>
    *
-   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * display name object
    * </pre>
    *
-   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The displayName.
    */
   @java.lang.Override
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * display name object
    * </pre>
    *
-   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for displayName.
    */
   @java.lang.Override
@@ -307,7 +307,7 @@ private static final long serialVersionUID = 0L;
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The etag.
    */
   @java.lang.Override
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
    * object instance etag
    * </pre>
    *
-   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for etag.
    */
   @java.lang.Override
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
      * object type name
      * </pre>
      *
-     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The type.
      */
     public java.lang.String getType() {
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
      * object type name
      * </pre>
      *
-     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * object type name
      * </pre>
      *
-     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
      * object type name
      * </pre>
      *
-     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
      * object type name
      * </pre>
      *
-     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string type = 1 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */
@@ -963,7 +963,7 @@ private static final long serialVersionUID = 0L;
      * external object identifier (cs-string, no spaces or tabs)
      * </pre>
      *
-     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -983,7 +983,7 @@ private static final long serialVersionUID = 0L;
      * external object identifier (cs-string, no spaces or tabs)
      * </pre>
      *
-     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -1004,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * external object identifier (cs-string, no spaces or tabs)
      * </pre>
      *
-     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1021,7 +1021,7 @@ private static final long serialVersionUID = 0L;
      * external object identifier (cs-string, no spaces or tabs)
      * </pre>
      *
-     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1035,7 +1035,7 @@ private static final long serialVersionUID = 0L;
      * external object identifier (cs-string, no spaces or tabs)
      * </pre>
      *
-     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string id = 2 [json_name = "id", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
@@ -1075,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The bytes for displayName.
      */
     public com.google.protobuf.ByteString
@@ -1096,7 +1096,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
@@ -1113,7 +1113,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
@@ -1127,7 +1127,7 @@ private static final long serialVersionUID = 0L;
      * display name object
      * </pre>
      *
-     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string display_name = 3 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */
@@ -1618,7 +1618,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The etag.
      */
     public java.lang.String getEtag() {
@@ -1638,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The bytes for etag.
      */
     public com.google.protobuf.ByteString
@@ -1659,7 +1659,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The etag to set.
      * @return This builder for chaining.
      */
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearEtag() {
@@ -1690,7 +1690,7 @@ private static final long serialVersionUID = 0L;
      * object instance etag
      * </pre>
      *
-     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string etag = 23 [json_name = "etag", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The bytes for etag to set.
      * @return This builder for chaining.
      */

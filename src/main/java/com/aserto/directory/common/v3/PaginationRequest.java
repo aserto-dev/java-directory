@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * requested page size, valid value between 1-100 rows (default 100)
    * </pre>
    *
-   * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The size.
    */
   @java.lang.Override
@@ -465,7 +465,7 @@ private static final long serialVersionUID = 0L;
      * requested page size, valid value between 1-100 rows (default 100)
      * </pre>
      *
-     * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The size.
      */
     @java.lang.Override
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
      * requested page size, valid value between 1-100 rows (default 100)
      * </pre>
      *
-     * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The size to set.
      * @return This builder for chaining.
      */
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
      * requested page size, valid value between 1-100 rows (default 100)
      * </pre>
      *
-     * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearSize() {

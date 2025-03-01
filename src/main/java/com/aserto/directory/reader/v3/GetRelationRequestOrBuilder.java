@@ -13,7 +13,7 @@ public interface GetRelationRequestOrBuilder extends
    * object type
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectType.
    */
   java.lang.String getObjectType();
@@ -22,7 +22,7 @@ public interface GetRelationRequestOrBuilder extends
    * object type
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectType.
    */
   com.google.protobuf.ByteString
@@ -33,7 +33,7 @@ public interface GetRelationRequestOrBuilder extends
    * object identifier
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectId.
    */
   java.lang.String getObjectId();
@@ -42,7 +42,7 @@ public interface GetRelationRequestOrBuilder extends
    * object identifier
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectId.
    */
   com.google.protobuf.ByteString
@@ -53,7 +53,7 @@ public interface GetRelationRequestOrBuilder extends
    * relation name
    * </pre>
    *
-   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The relation.
    */
   java.lang.String getRelation();
@@ -62,7 +62,7 @@ public interface GetRelationRequestOrBuilder extends
    * relation name
    * </pre>
    *
-   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for relation.
    */
   com.google.protobuf.ByteString
@@ -73,7 +73,7 @@ public interface GetRelationRequestOrBuilder extends
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The subjectType.
    */
   java.lang.String getSubjectType();
@@ -82,7 +82,7 @@ public interface GetRelationRequestOrBuilder extends
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for subjectType.
    */
   com.google.protobuf.ByteString
@@ -93,7 +93,7 @@ public interface GetRelationRequestOrBuilder extends
    * subject identifier
    * </pre>
    *
-   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The subjectId.
    */
   java.lang.String getSubjectId();
@@ -102,7 +102,7 @@ public interface GetRelationRequestOrBuilder extends
    * subject identifier
    * </pre>
    *
-   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for subjectId.
    */
   com.google.protobuf.ByteString
@@ -113,7 +113,7 @@ public interface GetRelationRequestOrBuilder extends
    * optional subject relation name
    * </pre>
    *
-   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The subjectRelation.
    */
   java.lang.String getSubjectRelation();
@@ -122,7 +122,7 @@ public interface GetRelationRequestOrBuilder extends
    * optional subject relation name
    * </pre>
    *
-   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for subjectRelation.
    */
   com.google.protobuf.ByteString

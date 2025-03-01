@@ -13,7 +13,7 @@ public interface BodyOrBuilder extends
    * manifest content
    * </pre>
    *
-   * <code>bytes data = 2 [json_name = "data", (.buf.validate.field) = { ... }</code>
+   * <code>bytes data = 2 [json_name = "data"];</code>
    * @return The data.
    */
   com.google.protobuf.ByteString getData();

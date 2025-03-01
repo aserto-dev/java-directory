@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
    * object type name (lc-string)
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectType.
    */
   @java.lang.Override
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
    * object type name (lc-string)
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectType.
    */
   @java.lang.Override
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
    * object identifier (cs-string)
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectId.
    */
   @java.lang.Override
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * object identifier (cs-string)
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectId.
    */
   @java.lang.Override
@@ -614,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * object type name (lc-string)
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The objectType.
      */
     public java.lang.String getObjectType() {
@@ -634,7 +634,7 @@ private static final long serialVersionUID = 0L;
      * object type name (lc-string)
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for objectType.
      */
     public com.google.protobuf.ByteString
@@ -655,7 +655,7 @@ private static final long serialVersionUID = 0L;
      * object type name (lc-string)
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The objectType to set.
      * @return This builder for chaining.
      */
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
      * object type name (lc-string)
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearObjectType() {
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * object type name (lc-string)
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for objectType to set.
      * @return This builder for chaining.
      */
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
      * object identifier (cs-string)
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The objectId.
      */
     public java.lang.String getObjectId() {
@@ -726,7 +726,7 @@ private static final long serialVersionUID = 0L;
      * object identifier (cs-string)
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for objectId.
      */
     public com.google.protobuf.ByteString
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * object identifier (cs-string)
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The objectId to set.
      * @return This builder for chaining.
      */
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
      * object identifier (cs-string)
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearObjectId() {
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
      * object identifier (cs-string)
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for objectId to set.
      * @return This builder for chaining.
      */

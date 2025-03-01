@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
    * object instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the object field is set.
    */
   @java.lang.Override
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
    * object instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The object.
    */
   @java.lang.Override
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
    * object instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Override
   public com.aserto.directory.common.v3.ObjectOrBuilder getObjectOrBuilder() {
@@ -433,7 +433,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the object field is set.
      */
     public boolean hasObject() {
@@ -444,7 +444,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The object.
      */
     public com.aserto.directory.common.v3.Object getObject() {
@@ -459,7 +459,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setObject(com.aserto.directory.common.v3.Object value) {
       if (objectBuilder_ == null) {
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setObject(
         com.aserto.directory.common.v3.Object.Builder builderForValue) {
@@ -497,7 +497,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeObject(com.aserto.directory.common.v3.Object value) {
       if (objectBuilder_ == null) {
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearObject() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.aserto.directory.common.v3.Object.Builder getObjectBuilder() {
       bitField0_ |= 0x00000001;
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.aserto.directory.common.v3.ObjectOrBuilder getObjectOrBuilder() {
       if (objectBuilder_ != null) {
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
      * object instance
      * </pre>
      *
-     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aserto.directory.common.v3.Object, com.aserto.directory.common.v3.Object.Builder, com.aserto.directory.common.v3.ObjectOrBuilder> 

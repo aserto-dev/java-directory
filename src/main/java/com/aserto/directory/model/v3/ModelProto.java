@@ -70,26 +70,25 @@ public final class ModelProto {
       "ior.proto\032\033google/protobuf/empty.proto\032\034" +
       "google/protobuf/struct.proto\032\037google/pro" +
       "tobuf/timestamp.proto\032.protoc-gen-openap" +
-      "iv2/options/annotations.proto\032\033buf/valid" +
-      "ate/validate.proto\"B\n\022GetManifestRequest" +
-      "\022,\n\005empty\030\001 \001(\0132\026.google.protobuf.EmptyR" +
-      "\005empty\"\307\001\n\023GetManifestResponse\022A\n\010metada" +
-      "ta\030\001 \001(\0132#.aserto.directory.model.v3.Met" +
-      "adataH\000R\010metadata\0225\n\004body\030\002 \001(\0132\037.aserto" +
-      ".directory.model.v3.BodyH\000R\004body\022/\n\005mode" +
-      "l\030\003 \001(\0132\027.google.protobuf.StructH\000R\005mode" +
-      "lB\005\n\003msg\"R\n\022SetManifestRequest\0225\n\004body\030\001" +
-      " \001(\0132\037.aserto.directory.model.v3.BodyH\000R" +
-      "\004bodyB\005\n\003msg\"E\n\023SetManifestResponse\022.\n\006r" +
-      "esult\030\001 \001(\0132\026.google.protobuf.EmptyR\006res" +
-      "ult\"E\n\025DeleteManifestRequest\022,\n\005empty\030\001 " +
-      "\001(\0132\026.google.protobuf.EmptyR\005empty\"H\n\026De" +
-      "leteManifestResponse\022.\n\006result\030\001 \001(\0132\026.g" +
-      "oogle.protobuf.EmptyR\006result\"c\n\010Metadata" +
-      "\022>\n\nupdated_at\030\025 \001(\0132\032.google.protobuf.T" +
-      "imestampB\003\340A\003R\tupdatedAt\022\027\n\004etag\030\027 \001(\tB\003" +
-      "\340A\001R\004etag\"%\n\004Body\022\035\n\004data\030\002 \001(\014B\t\272H\006z\004\030\200" +
-      "\200\004R\004data2\216\004\n\005Model\022v\n\013GetManifest\022-.aser" +
+      "iv2/options/annotations.proto\"B\n\022GetMani" +
+      "festRequest\022,\n\005empty\030\001 \001(\0132\026.google.prot" +
+      "obuf.EmptyR\005empty\"\307\001\n\023GetManifestRespons" +
+      "e\022A\n\010metadata\030\001 \001(\0132#.aserto.directory.m" +
+      "odel.v3.MetadataH\000R\010metadata\0225\n\004body\030\002 \001" +
+      "(\0132\037.aserto.directory.model.v3.BodyH\000R\004b" +
+      "ody\022/\n\005model\030\003 \001(\0132\027.google.protobuf.Str" +
+      "uctH\000R\005modelB\005\n\003msg\"R\n\022SetManifestReques" +
+      "t\0225\n\004body\030\001 \001(\0132\037.aserto.directory.model" +
+      ".v3.BodyH\000R\004bodyB\005\n\003msg\"E\n\023SetManifestRe" +
+      "sponse\022.\n\006result\030\001 \001(\0132\026.google.protobuf" +
+      ".EmptyR\006result\"E\n\025DeleteManifestRequest\022" +
+      ",\n\005empty\030\001 \001(\0132\026.google.protobuf.EmptyR\005" +
+      "empty\"H\n\026DeleteManifestResponse\022.\n\006resul" +
+      "t\030\001 \001(\0132\026.google.protobuf.EmptyR\006result\"" +
+      "c\n\010Metadata\022>\n\nupdated_at\030\025 \001(\0132\032.google" +
+      ".protobuf.TimestampB\003\340A\003R\tupdatedAt\022\027\n\004e" +
+      "tag\030\027 \001(\tB\003\340A\001R\004etag\"\032\n\004Body\022\022\n\004data\030\002 \001" +
+      "(\014R\004data2\216\004\n\005Model\022v\n\013GetManifest\022-.aser" +
       "to.directory.model.v3.GetManifestRequest" +
       "\032..aserto.directory.model.v3.GetManifest" +
       "Response\"\006\202\323\344\223\002\0000\001\022v\n\013SetManifest\022-.aser" +
@@ -119,7 +118,6 @@ public final class ModelProto {
           com.google.protobuf.StructProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
-          com.buf.validate.ValidateProto.getDescriptor(),
         });
     internal_static_aserto_directory_model_v3_GetManifestRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -171,7 +169,6 @@ public final class ModelProto {
         new java.lang.String[] { "Data", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.buf.validate.ValidateProto.field);
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Operation);
@@ -183,7 +180,6 @@ public final class ModelProto {
     com.google.protobuf.StructProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
-    com.buf.validate.ValidateProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -13,7 +13,7 @@ public interface SetObjectRequestOrBuilder extends
    * object instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the object field is set.
    */
   boolean hasObject();
@@ -22,7 +22,7 @@ public interface SetObjectRequestOrBuilder extends
    * object instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The object.
    */
   com.aserto.directory.common.v3.Object getObject();
@@ -31,7 +31,7 @@ public interface SetObjectRequestOrBuilder extends
    * object instance
    * </pre>
    *
-   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>.aserto.directory.common.v3.Object object = 1 [json_name = "object", (.google.api.field_behavior) = REQUIRED];</code>
    */
   com.aserto.directory.common.v3.ObjectOrBuilder getObjectOrBuilder();
 }

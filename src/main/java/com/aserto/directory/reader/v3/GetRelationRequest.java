@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
    * object type
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectType.
    */
   @java.lang.Override
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
    * object type
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectType.
    */
   @java.lang.Override
@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * object identifier
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The objectId.
    */
   @java.lang.Override
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    * object identifier
    * </pre>
    *
-   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for objectId.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * relation name
    * </pre>
    *
-   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The relation.
    */
   @java.lang.Override
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * relation name
    * </pre>
    *
-   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for relation.
    */
   @java.lang.Override
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The subjectType.
    */
   @java.lang.Override
@@ -215,7 +215,7 @@ private static final long serialVersionUID = 0L;
    * subject type
    * </pre>
    *
-   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for subjectType.
    */
   @java.lang.Override
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
    * subject identifier
    * </pre>
    *
-   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The subjectId.
    */
   @java.lang.Override
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * subject identifier
    * </pre>
    *
-   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for subjectId.
    */
   @java.lang.Override
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
    * optional subject relation name
    * </pre>
    *
-   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The subjectRelation.
    */
   @java.lang.Override
@@ -309,7 +309,7 @@ private static final long serialVersionUID = 0L;
    * optional subject relation name
    * </pre>
    *
-   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for subjectRelation.
    */
   @java.lang.Override
@@ -818,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The objectType.
      */
     public java.lang.String getObjectType() {
@@ -838,7 +838,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for objectType.
      */
     public com.google.protobuf.ByteString
@@ -859,7 +859,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The objectType to set.
      * @return This builder for chaining.
      */
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearObjectType() {
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
      * object type
      * </pre>
      *
-     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for objectType to set.
      * @return This builder for chaining.
      */
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * object identifier
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The objectId.
      */
     public java.lang.String getObjectId() {
@@ -930,7 +930,7 @@ private static final long serialVersionUID = 0L;
      * object identifier
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for objectId.
      */
     public com.google.protobuf.ByteString
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * object identifier
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The objectId to set.
      * @return This builder for chaining.
      */
@@ -968,7 +968,7 @@ private static final long serialVersionUID = 0L;
      * object identifier
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearObjectId() {
@@ -982,7 +982,7 @@ private static final long serialVersionUID = 0L;
      * object identifier
      * </pre>
      *
-     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string object_id = 2 [json_name = "objectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for objectId to set.
      * @return This builder for chaining.
      */
@@ -1002,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The relation.
      */
     public java.lang.String getRelation() {
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for relation.
      */
     public com.google.protobuf.ByteString
@@ -1043,7 +1043,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The relation to set.
      * @return This builder for chaining.
      */
@@ -1060,7 +1060,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearRelation() {
@@ -1074,7 +1074,7 @@ private static final long serialVersionUID = 0L;
      * relation name
      * </pre>
      *
-     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string relation = 3 [json_name = "relation", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for relation to set.
      * @return This builder for chaining.
      */
@@ -1094,7 +1094,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The subjectType.
      */
     public java.lang.String getSubjectType() {
@@ -1114,7 +1114,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for subjectType.
      */
     public com.google.protobuf.ByteString
@@ -1135,7 +1135,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The subjectType to set.
      * @return This builder for chaining.
      */
@@ -1152,7 +1152,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearSubjectType() {
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      * subject type
      * </pre>
      *
-     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_type = 4 [json_name = "subjectType", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for subjectType to set.
      * @return This builder for chaining.
      */
@@ -1186,7 +1186,7 @@ private static final long serialVersionUID = 0L;
      * subject identifier
      * </pre>
      *
-     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The subjectId.
      */
     public java.lang.String getSubjectId() {
@@ -1206,7 +1206,7 @@ private static final long serialVersionUID = 0L;
      * subject identifier
      * </pre>
      *
-     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for subjectId.
      */
     public com.google.protobuf.ByteString
@@ -1227,7 +1227,7 @@ private static final long serialVersionUID = 0L;
      * subject identifier
      * </pre>
      *
-     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The subjectId to set.
      * @return This builder for chaining.
      */
@@ -1244,7 +1244,7 @@ private static final long serialVersionUID = 0L;
      * subject identifier
      * </pre>
      *
-     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearSubjectId() {
@@ -1258,7 +1258,7 @@ private static final long serialVersionUID = 0L;
      * subject identifier
      * </pre>
      *
-     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_id = 5 [json_name = "subjectId", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for subjectId to set.
      * @return This builder for chaining.
      */
@@ -1278,7 +1278,7 @@ private static final long serialVersionUID = 0L;
      * optional subject relation name
      * </pre>
      *
-     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The subjectRelation.
      */
     public java.lang.String getSubjectRelation() {
@@ -1298,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      * optional subject relation name
      * </pre>
      *
-     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The bytes for subjectRelation.
      */
     public com.google.protobuf.ByteString
@@ -1319,7 +1319,7 @@ private static final long serialVersionUID = 0L;
      * optional subject relation name
      * </pre>
      *
-     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The subjectRelation to set.
      * @return This builder for chaining.
      */
@@ -1336,7 +1336,7 @@ private static final long serialVersionUID = 0L;
      * optional subject relation name
      * </pre>
      *
-     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearSubjectRelation() {
@@ -1350,7 +1350,7 @@ private static final long serialVersionUID = 0L;
      * optional subject relation name
      * </pre>
      *
-     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+     * <code>string subject_relation = 6 [json_name = "subjectRelation", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The bytes for subjectRelation to set.
      * @return This builder for chaining.
      */

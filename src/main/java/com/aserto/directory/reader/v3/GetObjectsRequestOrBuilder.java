@@ -13,7 +13,7 @@ public interface GetObjectsRequestOrBuilder extends
    * object type name (lc-string)
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The objectType.
    */
   java.lang.String getObjectType();
@@ -22,7 +22,7 @@ public interface GetObjectsRequestOrBuilder extends
    * object type name (lc-string)
    * </pre>
    *
-   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>string object_type = 1 [json_name = "objectType", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for objectType.
    */
   com.google.protobuf.ByteString

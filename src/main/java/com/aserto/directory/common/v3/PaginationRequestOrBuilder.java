@@ -13,7 +13,7 @@ public interface PaginationRequestOrBuilder extends
    * requested page size, valid value between 1-100 rows (default 100)
    * </pre>
    *
-   * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL, (.buf.validate.field) = { ... }</code>
+   * <code>int32 size = 1 [json_name = "size", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The size.
    */
   int getSize();
