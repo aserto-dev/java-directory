@@ -135,12 +135,12 @@ public final class ReaderProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'aserto/directory/reader/v3/reader.prot" +
-      "o\022\032aserto.directory.reader.v3\032.protoc-ge" +
-      "n-openapiv2/options/annotations.proto\032\034g" +
-      "oogle/api/annotations.proto\032\037google/api/" +
-      "field_behavior.proto\032\034google/protobuf/st" +
-      "ruct.proto\032\'aserto/directory/common/v3/c" +
-      "ommon.proto\"\316\001\n\020GetObjectRequest\022$\n\013obje" +
+      "o\022\032aserto.directory.reader.v3\032\'aserto/di" +
+      "rectory/common/v3/common.proto\032\034google/a" +
+      "pi/annotations.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\034google/protobuf/struct.pr" +
+      "oto\032.protoc-gen-openapiv2/options/annota" +
+      "tions.proto\"\316\001\n\020GetObjectRequest\022$\n\013obje" +
       "ct_type\030\001 \001(\tB\003\340A\002R\nobjectType\022 \n\tobject" +
       "_id\030\002 \001(\tB\003\340A\002R\010objectId\022*\n\016with_relatio" +
       "ns\030\003 \001(\010B\003\340A\001R\rwithRelations\022F\n\004page\030\t \001" +
@@ -322,11 +322,11 @@ public final class ReaderProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
+          com.aserto.directory.common.v3.CommonProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
-          com.aserto.directory.common.v3.CommonProto.getDescriptor(),
+          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
         });
     internal_static_aserto_directory_reader_v3_GetObjectRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -467,11 +467,11 @@ public final class ReaderProto {
     registry.add(com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
+    com.aserto.directory.common.v3.CommonProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
-    com.aserto.directory.common.v3.CommonProto.getDescriptor();
+    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

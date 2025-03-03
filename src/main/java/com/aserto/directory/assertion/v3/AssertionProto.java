@@ -70,13 +70,13 @@ public final class AssertionProto {
   static {
     java.lang.String[] descriptorData = {
       "\n-aserto/directory/assertion/v3/assertio" +
-      "n.proto\022\035aserto.directory.assertion.v3\032\033" +
-      "google/protobuf/empty.proto\032\034google/api/" +
-      "annotations.proto\032\037google/api/field_beha" +
-      "vior.proto\032.protoc-gen-openapiv2/options" +
-      "/annotations.proto\032\'aserto/directory/com" +
-      "mon/v3/common.proto\032\'aserto/directory/re" +
-      "ader/v3/reader.proto\"*\n\023GetAssertionRequ" +
+      "n.proto\022\035aserto.directory.assertion.v3\032\'" +
+      "aserto/directory/common/v3/common.proto\032" +
+      "\'aserto/directory/reader/v3/reader.proto" +
+      "\032\034google/api/annotations.proto\032\037google/a" +
+      "pi/field_behavior.proto\032\033google/protobuf" +
+      "/empty.proto\032.protoc-gen-openapiv2/optio" +
+      "ns/annotations.proto\"*\n\023GetAssertionRequ" +
       "est\022\023\n\002id\030\001 \001(\rB\003\340A\002R\002id\"U\n\024GetAssertion" +
       "Response\022=\n\006result\030\001 \001(\0132%.aserto.direct" +
       "ory.assertion.v3.AssertR\006result\"_\n\025ListA" +
@@ -145,12 +145,12 @@ public final class AssertionProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.EmptyProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.FieldBehaviorProto.getDescriptor(),
-          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           com.aserto.directory.common.v3.CommonProto.getDescriptor(),
           com.aserto.directory.reader.v3.ReaderProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
+          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
         });
     internal_static_aserto_directory_assertion_v3_GetAssertionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -213,12 +213,12 @@ public final class AssertionProto {
     registry.add(com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.EmptyProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.FieldBehaviorProto.getDescriptor();
-    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     com.aserto.directory.common.v3.CommonProto.getDescriptor();
     com.aserto.directory.reader.v3.ReaderProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
+    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

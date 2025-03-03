@@ -65,12 +65,12 @@ public final class WriterProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'aserto/directory/writer/v3/writer.prot" +
-      "o\022\032aserto.directory.writer.v3\032.protoc-ge" +
-      "n-openapiv2/options/annotations.proto\032\033g" +
-      "oogle/protobuf/empty.proto\032\034google/api/a" +
-      "nnotations.proto\032\037google/api/field_behav" +
-      "ior.proto\032\'aserto/directory/common/v3/co" +
-      "mmon.proto\"S\n\020SetObjectRequest\022?\n\006object" +
+      "o\022\032aserto.directory.writer.v3\032\'aserto/di" +
+      "rectory/common/v3/common.proto\032\034google/a" +
+      "pi/annotations.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\033google/protobuf/empty.pro" +
+      "to\032.protoc-gen-openapiv2/options/annotat" +
+      "ions.proto\"S\n\020SetObjectRequest\022?\n\006object" +
       "\030\001 \001(\0132\".aserto.directory.common.v3.Obje" +
       "ctB\003\340A\002R\006object\"O\n\021SetObjectResponse\022:\n\006" +
       "result\030\001 \001(\0132\".aserto.directory.common.v" +
@@ -131,11 +131,11 @@ public final class WriterProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.EmptyProto.getDescriptor(),
+          com.aserto.directory.common.v3.CommonProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
-          com.aserto.directory.common.v3.CommonProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
+          com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
         });
     internal_static_aserto_directory_writer_v3_SetObjectRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -192,11 +192,11 @@ public final class WriterProto {
     registry.add(com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
-    com.google.protobuf.EmptyProto.getDescriptor();
+    com.aserto.directory.common.v3.CommonProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
-    com.aserto.directory.common.v3.CommonProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
+    com.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
